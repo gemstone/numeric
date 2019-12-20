@@ -1,5 +1,5 @@
 ﻿//******************************************************************************************************
-//  Class.cs - Gbtc
+//  NamespaceDoc.cs - Gbtc
 //
 //  Copyright © 2019, Grid Protection Alliance.  All Rights Reserved.
 //
@@ -16,17 +16,22 @@
 //
 //  Code Modification History:
 //  ----------------------------------------------------------------------------------------------------
-//  11/04/2019 - J. Ritchie Carroll
+//  10/16/2019 - J. Ritchie Carroll
 //       Generated original version of source code.
 //
 //******************************************************************************************************
 
-namespace gemstone.gemtem
+using System.Runtime.CompilerServices;
+
+namespace gemstone.numeric
 {
     /// <summary>
-    /// Sample class for new GemTem library.
+    /// The <see cref="gemstone.numeric"/> namespace organizes all Gemstone library functionality
+    /// related to numeric. The root numeric namespace also includes common numeric classes,
+    /// e.g., <see cref="Class"/>.
     /// </summary>
-    public class Class
+    [CompilerGenerated]
+    class NamespaceDoc
     {
     }
 }
