@@ -1,5 +1,5 @@
 ﻿//******************************************************************************************************
-//  NamespaceDoc.cs - Gbtc
+//  Class.cs - Gbtc
 //
 //  Copyright © 2019, Grid Protection Alliance.  All Rights Reserved.
 //
@@ -16,22 +16,17 @@
 //
 //  Code Modification History:
 //  ----------------------------------------------------------------------------------------------------
-//  10/16/2019 - J. Ritchie Carroll
+//  11/04/2019 - J. Ritchie Carroll
 //       Generated original version of source code.
 //
 //******************************************************************************************************
 
-using System.Runtime.CompilerServices;
-
-namespace gemstone.numeric
+namespace gemstone.numeric.units
 {
     /// <summary>
-    /// The <see cref="gemstone.numeric"/> namespace organizes all Gemstone library functionality
-    /// related to numerics. The root numeric namespace also includes common numeric classes,
-    /// e.g., <see cref="Int24"/>, <see cref="UInt24"/> and <see cref="ComplexNumber"/>.
+    /// Sample class for new Units library.
     /// </summary>
-    [CompilerGenerated]
-    class NamespaceDoc
+    public class Class
     {
     }
 }
