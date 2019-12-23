@@ -23,10 +23,10 @@
 
 using System.Runtime.CompilerServices;
 
-namespace gemstone.numeric.units
+namespace Gemstone.Numeric.Units
 {
     /// <summary>
-    /// The <see cref="gemstone.numeric.units"/> namespace organizes all Gemstone library functionality
+    /// The <see cref="Gemstone.Numeric.Units"/> namespace organizes all Gemstone library functionality
     /// related to units useful for common unit and SI conversions. The root units namespace includes
     /// common units classes, e.g., <see cref="SI"/>, , <see cref="SI2"/> and , <see cref="Angle"/>.
     /// </summary>

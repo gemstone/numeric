@@ -72,11 +72,11 @@ using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
-using gemstone.numeric.units;
+using Gemstone.Numeric.Units;
 
 // ReSharper disable CompareOfFloatsByEqualityOperator
 // ReSharper disable PossibleInvalidOperationException
-namespace gemstone.numeric
+namespace Gemstone.Numeric
 {
     /// <summary>
     /// Represents a complex number.

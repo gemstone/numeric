@@ -23,7 +23,7 @@
 
 using System;
 
-namespace gemstone.numeric.interpolation
+namespace Gemstone.Numeric.Interpolation
 {
     /// <summary>
     /// Function definition for the inverse distance weighting algorithm.

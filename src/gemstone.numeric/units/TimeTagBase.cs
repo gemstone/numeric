@@ -66,7 +66,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace gemstone.numeric.units
+namespace Gemstone.Numeric.Units
 {
     /// <summary>
     /// Represents the base class for alternate timetag implementations.

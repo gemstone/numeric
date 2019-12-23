@@ -66,7 +66,7 @@
 using System;
 using System.Text;
 
-namespace gemstone.numeric.units
+namespace Gemstone.Numeric.Units
 {
     /// <summary>
     /// Defines constant factors for SI units of measure to handle metric conversions.

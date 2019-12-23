@@ -71,9 +71,9 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using gemstone.numeric.analysis;
+using Gemstone.Numeric.Analysis;
 
-namespace gemstone.numeric.units
+namespace Gemstone.Numeric.Units
 {
     #region [ Enumerations ]
 

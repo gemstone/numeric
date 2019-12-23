@@ -23,10 +23,10 @@
 
 using System.Runtime.CompilerServices;
 
-namespace gemstone.numeric
+namespace Gemstone.Numeric
 {
     /// <summary>
-    /// The <see cref="gemstone.numeric"/> namespace organizes all Gemstone library functionality
+    /// The <see cref="Gemstone.Numeric"/> namespace organizes all Gemstone library functionality
     /// related to numerics. The root numeric namespace also includes common numeric classes,
     /// e.g., <see cref="Int24"/>, <see cref="UInt24"/> and <see cref="ComplexNumber"/>.
     /// </summary>

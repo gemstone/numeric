@@ -65,8 +65,9 @@ using System;
 using System.ComponentModel;
 using System.Globalization;
 using System.Runtime.CompilerServices;
+using Gemstone.ArrayExtensions;
 
-namespace gemstone.numeric
+namespace Gemstone.Numeric
 {
     /// <summary>Represents a 3-byte, 24-bit unsigned integer.</summary>
     /// <remarks>

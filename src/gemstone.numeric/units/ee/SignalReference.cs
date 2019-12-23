@@ -26,7 +26,7 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace gemstone.numeric.units.ee
+namespace Gemstone.Numeric.Units.EE
 {
     /// <summary>
     /// Represents a signal that can be referenced by its constituent components.

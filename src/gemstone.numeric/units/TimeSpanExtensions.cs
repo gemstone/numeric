@@ -25,7 +25,7 @@
 
 using System;
 
-namespace gemstone.numeric.units
+namespace Gemstone.Numeric.Units
 {
     /// <summary>
     /// Extends the TimeSpan Class

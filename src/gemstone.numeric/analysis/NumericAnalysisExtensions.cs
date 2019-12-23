@@ -31,7 +31,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace gemstone.numeric.analysis
+namespace Gemstone.Numeric.Analysis
 {
     /// <summary>
     /// Defines extension functions related to numerical analysis over a sequence of data.

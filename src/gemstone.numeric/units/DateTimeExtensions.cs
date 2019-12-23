@@ -44,7 +44,7 @@
 using System;
 using System.Globalization;
 
-namespace gemstone.numeric.units
+namespace Gemstone.Numeric.Units
 {
     /// <summary>
     /// Defines extension functions related to Date/Time manipulation.

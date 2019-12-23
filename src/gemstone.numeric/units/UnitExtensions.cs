@@ -23,7 +23,7 @@
 
 using System.Collections.Generic;
 
-namespace gemstone.numeric.units
+namespace Gemstone.Numeric.Units
 {
     /// <summary>
     /// Defines extension functions related to unit structures.

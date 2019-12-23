@@ -23,7 +23,7 @@
 
 using System;
 
-namespace gemstone.numeric.units.ee
+namespace Gemstone.Numeric.Units.EE
 {
     /// <summary>
     /// Nominal line frequencies enumeration.

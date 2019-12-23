@@ -72,7 +72,7 @@ using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace gemstone.numeric.units
+namespace Gemstone.Numeric.Units
 {
     #region [ Enumerations ]
 

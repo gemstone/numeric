@@ -21,7 +21,7 @@
 //
 //******************************************************************************************************
 
-namespace gemstone.numeric.units
+namespace Gemstone.Numeric.Units
 {
     /// <summary>
     /// Sample class for new Units library.

@@ -25,7 +25,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace gemstone.numeric.analysis
+namespace Gemstone.Numeric.Analysis
 {
     /// <summary>
     /// Contains an implementation of greatest common denominator

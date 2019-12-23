@@ -25,7 +25,7 @@
 
 using System.Runtime.CompilerServices;
 
-namespace gemstone.numeric.analysis
+namespace Gemstone.Numeric.Analysis
 {
     /// <summary>
     /// Contains classes and extension functions used to calculate common numerical operations such as curve fits and standard deviations.

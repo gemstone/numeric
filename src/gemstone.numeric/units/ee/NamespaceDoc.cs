@@ -23,7 +23,7 @@
 
 using System.Runtime.CompilerServices;
 
-namespace gemstone.numeric.units.ee
+namespace Gemstone.Numeric.Units.EE
 {
     /// <summary>
     /// Contains classes that represent standard Electrical Engineering units and types.

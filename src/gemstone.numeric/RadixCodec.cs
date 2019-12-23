@@ -24,7 +24,7 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace gemstone.numeric
+namespace Gemstone.Numeric
 {
     /// <summary>
     /// Represents a radix value codec for conversion of base-10 integer values to and from other base values.

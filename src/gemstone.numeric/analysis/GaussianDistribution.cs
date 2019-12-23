@@ -27,7 +27,7 @@
 
 using System;
 
-namespace gemstone.numeric.analysis
+namespace Gemstone.Numeric.Analysis
 {
     /// <summary>
     /// Implements a BoxMuller method for generating statistically normal random numbers.

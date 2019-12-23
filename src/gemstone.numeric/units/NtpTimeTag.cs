@@ -62,7 +62,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace gemstone.numeric.units
+namespace Gemstone.Numeric.Units
 {
     /// <summary>
     /// Represents a standard Network Time Protocol (NTP) timetag.

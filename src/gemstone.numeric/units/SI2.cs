@@ -66,7 +66,7 @@
 using System;
 using System.Text;
 
-namespace gemstone.numeric.units
+namespace Gemstone.Numeric.Units
 {
     /// <summary>
     /// Defines constant factors based on 1024 for related binary SI units of measure used in computational measurements.
