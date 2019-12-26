@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
-    <RootNamespace>gemstone.numeric</RootNamespace>
-    <PackageId>gemstone.numeric</PackageId>
+    <RootNamespace>Gemstone.Numeric</RootNamespace>
+    <PackageId>Gemstone.Numeric</PackageId>
     <Authors>Grid Protection Alliance</Authors>
     <Company>Grid Protection Alliance</Company>
-    <Product>gemstone</Product>
+    <Product>Gemstone</Product>
     <PackageDescription>GPA Gemstone Numeric Library</PackageDescription>
     <Description>GPA Gemstone Numeric Library</Description>
     <Copyright>Copyright © 2019</Copyright>
@@ -16,7 +16,7 @@
     <RepositoryType>git</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageTags>GPA;gemstone;library;numeric</PackageTags>
+    <PackageTags>GPA;Gemstone;library;numeric</PackageTags>
     <LangVersion>7.3</LangVersion>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,8 +43,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\common\src\gemstone\gemstone.common.csproj" Condition="'$(Configuration)'=='Development'" />
-    <PackageReference Include="gemstone.common" Version="1.0.0" Condition="'$(Configuration)'!='Development'" />
+    <ProjectReference Include="..\..\..\common\src\Gemstone\Gemstone.Common.csproj" Condition="'$(Configuration)'=='Development'" />
+    <PackageReference Include="Gemstone.Common" Version="1.0.0" Condition="'$(Configuration)'!='Development'" />
   </ItemGroup>
 
 </Project>
