@@ -61,6 +61,7 @@
 
 using System;
 using System.Runtime.Serialization;
+using Gemstone.WordExtensions;
 
 namespace Gemstone.Numeric.Units
 {
