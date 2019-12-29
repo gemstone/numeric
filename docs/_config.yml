@@ -1,8 +1,8 @@
 theme: jekyll-theme-cayman
-title: gemstone.numeric
+title: Gemstone.Numeric
 description: GPA Gemstone Numeric Library
 github:
-  repository_name: gemstone.numeric
+  repository_name: Gemstone.Numeric
   owner_url: https://www.gridprotectionalliance.org
   owner_name: Grid Protection Alliance
 plugins:
