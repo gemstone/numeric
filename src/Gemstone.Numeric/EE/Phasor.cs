@@ -27,8 +27,9 @@ using System;
 using System.ComponentModel;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+using Gemstone.Numeric;
 
-namespace Gemstone.Numeric.Units.EE
+namespace Gemstone.Units.EE
 {
     /// <summary>
     /// Represents a phasor as a complex number value and a type (i.e., a voltage or a current).

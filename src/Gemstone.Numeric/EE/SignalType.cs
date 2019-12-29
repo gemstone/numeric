@@ -24,7 +24,7 @@
 using System;
 using Gemstone.EnumExtensions;
 
-namespace Gemstone.Numeric.Units.EE
+namespace Gemstone.Units.EE
 {
     /// <summary>
     /// Fundamental signal type enumeration for common EE measurements that represents an explicit type of signal.

@@ -72,7 +72,7 @@ using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
-using Gemstone.Numeric.Units;
+using Gemstone.Units;
 
 // ReSharper disable CompareOfFloatsByEqualityOperator
 // ReSharper disable PossibleInvalidOperationException
@@ -355,7 +355,7 @@ namespace Gemstone.Numeric
         #region [ Operators ]
 
         /// <summary>
-        /// Implicitly converts a <see cref="Double"/> to a <see cref="ComplexNumber"/>.
+        /// Implicitly converts a <see cref="double"/> to a <see cref="ComplexNumber"/>.
         /// </summary>
         /// <param name="value">Operand.</param>
         /// <returns>ComplexNumber representing the result of the operation.</returns>

@@ -1,5 +1,5 @@
 ﻿//******************************************************************************************************
-//  LineFrequency.cs - Gbtc
+//  PhasorType.cs - Gbtc
 //
 //  Copyright © 2010, Grid Protection Alliance.  All Rights Reserved.
 //
@@ -23,21 +23,21 @@
 
 using System;
 
-namespace Gemstone.Numeric.Units.EE
+namespace Gemstone.Units.EE
 {
     /// <summary>
-    /// Nominal line frequencies enumeration.
+    /// Phasor types enumeration.
     /// </summary>
     [Serializable]
-    public enum LineFrequency
+    public enum PhasorType : byte
     {
         /// <summary>
-        /// 50Hz nominal frequency.
+        /// Voltage phasor.
         /// </summary>
-        Hz50 = 50,
+        Voltage,
         /// <summary>
-        /// 60Hz nominal frequency.
+        /// Current phasor.
         /// </summary>
-        Hz60 = 60
+        Current
     }
 }

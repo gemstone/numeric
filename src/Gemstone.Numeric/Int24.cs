@@ -861,7 +861,7 @@ namespace Gemstone.Numeric
         }
 
         /// <summary>
-        /// Explicitly converts <see cref="Int24"/> to <see cref="Int16"/>.
+        /// Explicitly converts <see cref="Int24"/> to <see cref="short"/>.
         /// </summary>
         /// <param name="value">Int24 value that is converted.</param>
         /// <returns>Short</returns>
@@ -871,7 +871,7 @@ namespace Gemstone.Numeric
         }
 
         /// <summary>
-        /// Explicitly converts <see cref="Int24"/> to <see cref="UInt16"/>.
+        /// Explicitly converts <see cref="Int24"/> to <see cref="ushort"/>.
         /// </summary>
         /// <param name="value">Int24 value that is converted.</param>
         /// <returns>Unsigned Short</returns>
@@ -881,7 +881,7 @@ namespace Gemstone.Numeric
         }
 
         /// <summary>
-        /// Explicitly converts <see cref="Int24"/> to <see cref="Byte"/>.
+        /// Explicitly converts <see cref="Int24"/> to <see cref="byte"/>.
         /// </summary>
         /// <param name="value">Int24 value that is converted.</param>
         /// <returns>Byte</returns>
@@ -925,17 +925,17 @@ namespace Gemstone.Numeric
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="Int24"/> to <see cref="Int32"/>.
+        /// Implicitly converts <see cref="Int24"/> to <see cref="int"/>.
         /// </summary>
-        /// <param name="value"><see cref="Int24"/> value that is converted to an <see cref="Int32"/>.</param>
-        /// <returns>An <see cref="Int32"/> value.</returns>
+        /// <param name="value"><see cref="Int24"/> value that is converted to an <see cref="int"/>.</param>
+        /// <returns>An <see cref="int"/> value.</returns>
         public static implicit operator int(Int24 value)
         {
             return ((IConvertible)value).ToInt32(null);
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="Int24"/> to <see cref="UInt32"/>.
+        /// Implicitly converts <see cref="Int24"/> to <see cref="uint"/>.
         /// </summary>
         /// <param name="value"><see cref="Int24"/> value that is converted to an unsigned integer.</param>
         /// <returns>Unsigned integer</returns>
@@ -945,60 +945,60 @@ namespace Gemstone.Numeric
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="Int24"/> to <see cref="Int64"/>.
+        /// Implicitly converts <see cref="Int24"/> to <see cref="long"/>.
         /// </summary>
-        /// <param name="value"><see cref="Int24"/> value that is converted to an <see cref="Int64"/>.</param>
-        /// <returns>An <see cref="Int64"/> value.</returns>
+        /// <param name="value"><see cref="Int24"/> value that is converted to an <see cref="long"/>.</param>
+        /// <returns>An <see cref="long"/> value.</returns>
         public static implicit operator long(Int24 value)
         {
             return ((IConvertible)value).ToInt64(null);
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="Int24"/> to <see cref="UInt64"/>.
+        /// Implicitly converts <see cref="Int24"/> to <see cref="ulong"/>.
         /// </summary>
-        /// <param name="value"><see cref="Int24"/> value that is converted to an <see cref="UInt64"/>.</param>
-        /// <returns>An <see cref="UInt64"/> value.</returns>
+        /// <param name="value"><see cref="Int24"/> value that is converted to an <see cref="ulong"/>.</param>
+        /// <returns>An <see cref="ulong"/> value.</returns>
         public static implicit operator ulong(Int24 value)
         {
             return ((IConvertible)value).ToUInt64(null);
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="Int24"/> to <see cref="Double"/>.
+        /// Implicitly converts <see cref="Int24"/> to <see cref="double"/>.
         /// </summary>
-        /// <param name="value"><see cref="Int24"/> value that is converted to an <see cref="Double"/>.</param>
-        /// <returns>A <see cref="Double"/> value.</returns>
+        /// <param name="value"><see cref="Int24"/> value that is converted to an <see cref="double"/>.</param>
+        /// <returns>A <see cref="double"/> value.</returns>
         public static implicit operator double(Int24 value)
         {
             return ((IConvertible)value).ToDouble(null);
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="Int24"/> to <see cref="Single"/>.
+        /// Implicitly converts <see cref="Int24"/> to <see cref="float"/>.
         /// </summary>
-        /// <param name="value"><see cref="Int24"/> value that is converted to an <see cref="Single"/>.</param>
-        /// <returns>A <see cref="Single"/> value.</returns>
+        /// <param name="value"><see cref="Int24"/> value that is converted to an <see cref="float"/>.</param>
+        /// <returns>A <see cref="float"/> value.</returns>
         public static implicit operator float(Int24 value)
         {
             return ((IConvertible)value).ToSingle(null);
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="Int24"/> to <see cref="Decimal"/>.
+        /// Implicitly converts <see cref="Int24"/> to <see cref="decimal"/>.
         /// </summary>
-        /// <param name="value"><see cref="Int24"/> value that is converted to an <see cref="Decimal"/>.</param>
-        /// <returns>A <see cref="Decimal"/> value.</returns>
+        /// <param name="value"><see cref="Int24"/> value that is converted to an <see cref="decimal"/>.</param>
+        /// <returns>A <see cref="decimal"/> value.</returns>
         public static implicit operator decimal(Int24 value)
         {
             return ((IConvertible)value).ToDecimal(null);
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="Int24"/> to <see cref="String"/>.
+        /// Implicitly converts <see cref="Int24"/> to <see cref="string"/>.
         /// </summary>
-        /// <param name="value"><see cref="Int24"/> value that is converted to an <see cref="String"/>.</param>
-        /// <returns>A <see cref="String"/> value.</returns>
+        /// <param name="value"><see cref="Int24"/> value that is converted to an <see cref="string"/>.</param>
+        /// <returns>A <see cref="string"/> value.</returns>
         public static implicit operator string(Int24 value)
         {
             return value.ToString(CultureInfo.InvariantCulture);
@@ -1143,7 +1143,7 @@ namespace Gemstone.Numeric
         /// Returns value after right shifts of first value by the number of bits specified by second value.
         /// </summary>
         /// <param name="value"><see cref="Int24"/> value to shift.</param>
-        /// <param name="shifts"><see cref="Int32"/> shifts indicates how many places to shift.</param>
+        /// <param name="shifts"><see cref="int"/> shifts indicates how many places to shift.</param>
         /// <returns>An <see cref="Int24"/> value.</returns>
         public static Int24 operator >>(Int24 value, int shifts)
         {
@@ -1154,7 +1154,7 @@ namespace Gemstone.Numeric
         /// Returns value after left shifts of first value by the number of bits specified by second value.
         /// </summary>
         /// <param name="value"><see cref="Int24"/> value to shift.</param>
-        /// <param name="shifts"><see cref="Int32"/> shifts indicates how many places to shift.</param>
+        /// <param name="shifts"><see cref="int"/> shifts indicates how many places to shift.</param>
         /// <returns>An <see cref="Int24"/> value.</returns>
         public static Int24 operator <<(Int24 value, int shifts)
         {
@@ -1179,9 +1179,9 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Returns computed remainder after dividing first value by the second.
         /// </summary>
-        /// <param name="value1"><see cref="Int32"/> value as numerator.</param>
+        /// <param name="value1"><see cref="int"/> value as numerator.</param>
         /// <param name="value2"><see cref="Int24"/> value as denominator.</param>
-        /// <returns><see cref="Int32"/> as remainder</returns>
+        /// <returns><see cref="int"/> as remainder</returns>
         public static int operator %(int value1, Int24 value2)
         {
             return value1 % (int)value2;
@@ -1191,8 +1191,8 @@ namespace Gemstone.Numeric
         /// Returns computed remainder after dividing first value by the second.
         /// </summary>
         /// <param name="value1"><see cref="Int24"/> value as numerator.</param>
-        /// <param name="value2"><see cref="Int32"/> value as denominator.</param>
-        /// <returns><see cref="Int32"/> as remainder</returns>
+        /// <param name="value2"><see cref="int"/> value as denominator.</param>
+        /// <returns><see cref="int"/> as remainder</returns>
         public static int operator %(Int24 value1, int value2)
         {
             return (int)value1 % value2;
@@ -1298,9 +1298,9 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Returns computed product of values.
         /// </summary>
-        /// <param name="value1"><see cref="Int32"/> value as left hand operand.</param>
+        /// <param name="value1"><see cref="int"/> value as left hand operand.</param>
         /// <param name="value2"><see cref="Int24"/> value as right hand operand.</param>
-        /// <returns><see cref="Int32"/> as result</returns>
+        /// <returns><see cref="int"/> as result</returns>
         public static int operator *(int value1, Int24 value2)
         {
             return value1 * (int)value2;
@@ -1310,8 +1310,8 @@ namespace Gemstone.Numeric
         /// Returns computed product of values.
         /// </summary>
         /// <param name="value1"><see cref="Int24"/> value as left hand operand.</param>
-        /// <param name="value2"><see cref="Int32"/> value as right hand operand.</param>
-        /// <returns><see cref="Int32"/> as result</returns>
+        /// <param name="value2"><see cref="int"/> value as right hand operand.</param>
+        /// <returns><see cref="int"/> as result</returns>
         public static int operator *(Int24 value1, int value2)
         {
             return (int)value1 * value2;

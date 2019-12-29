@@ -16,19 +16,17 @@
 //
 //  Code Modification History:
 //  ----------------------------------------------------------------------------------------------------
-//  10/16/2019 - J. Ritchie Carroll
+//  12/27/2019 - J. Ritchie Carroll
 //       Generated original version of source code.
 //
 //******************************************************************************************************
 
 using System.Runtime.CompilerServices;
 
-namespace Gemstone.Numeric.Units
+namespace Gemstone.Numeric.UnitExtensions
 {
     /// <summary>
-    /// The <see cref="Gemstone.Numeric.Units"/> namespace organizes all Gemstone library functionality
-    /// related to units useful for common unit and SI conversions. The root units namespace includes
-    /// common units classes, e.g., <see cref="SI"/>, , <see cref="SI2"/> and , <see cref="Angle"/>.
+    /// Contains numeric extension methods for types in <see cref="Gemstone.Units"/> namespace.
     /// </summary>
     [CompilerGenerated]
     class NamespaceDoc

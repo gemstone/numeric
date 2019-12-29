@@ -601,7 +601,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Compares the two values for equality.
         /// </summary>
-        /// <param name="value1"><see cref="UInt32"/> left hand operand.</param>
+        /// <param name="value1"><see cref="uint"/> left hand operand.</param>
         /// <param name="value2"><see cref="UInt24"/> right hand operand.</param>
         /// <returns><see cref="bool"/> value representing the result.</returns>
         public static bool operator ==(uint value1, UInt24 value2)
@@ -613,7 +613,7 @@ namespace Gemstone.Numeric
         /// Compares the two values for equality.
         /// </summary>
         /// <param name="value1"><see cref="UInt24"/> left hand operand.</param>
-        /// <param name="value2"><see cref="UInt32"/> right hand operand.</param>
+        /// <param name="value2"><see cref="uint"/> right hand operand.</param>
         /// <returns><see cref="bool"/> value representing the result.</returns>
         public static bool operator ==(UInt24 value1, uint value2)
         {
@@ -634,7 +634,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Compares the two values for inequality.
         /// </summary>
-        /// <param name="value1"><see cref="UInt32"/> left hand operand.</param>
+        /// <param name="value1"><see cref="uint"/> left hand operand.</param>
         /// <param name="value2"><see cref="UInt24"/> right hand operand.</param>
         /// <returns><see cref="bool"/> value representing the result.</returns>
         public static bool operator !=(uint value1, UInt24 value2)
@@ -646,7 +646,7 @@ namespace Gemstone.Numeric
         /// Compares the two values for inequality.
         /// </summary>
         /// <param name="value1"><see cref="UInt24"/> left hand operand.</param>
-        /// <param name="value2"><see cref="UInt32"/> right hand operand.</param>
+        /// <param name="value2"><see cref="uint"/> right hand operand.</param>
         /// <returns><see cref="bool"/> value representing the result.</returns>
         public static bool operator !=(UInt24 value1, uint value2)
         {
@@ -667,7 +667,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Returns true if left value is less than right value.
         /// </summary>
-        /// <param name="value1"><see cref="UInt32"/> left hand operand.</param>
+        /// <param name="value1"><see cref="uint"/> left hand operand.</param>
         /// <param name="value2"><see cref="UInt24"/> right hand operand.</param>
         /// <returns><see cref="bool"/> value representing the result.</returns>
         public static bool operator <(uint value1, UInt24 value2)
@@ -679,7 +679,7 @@ namespace Gemstone.Numeric
         /// Returns true if left value is less than right value.
         /// </summary>
         /// <param name="value1"><see cref="UInt24"/> left hand operand.</param>
-        /// <param name="value2"><see cref="UInt32"/> right hand operand.</param>
+        /// <param name="value2"><see cref="uint"/> right hand operand.</param>
         /// <returns><see cref="bool"/> value representing the result.</returns>
         public static bool operator <(UInt24 value1, uint value2)
         {
@@ -700,7 +700,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Returns true if left value is less or equal to than right value.
         /// </summary>
-        /// <param name="value1"><see cref="UInt32"/> left hand operand.</param>
+        /// <param name="value1"><see cref="uint"/> left hand operand.</param>
         /// <param name="value2"><see cref="UInt24"/> right hand operand.</param>
         /// <returns><see cref="bool"/> value representing the result.</returns>
         public static bool operator <=(uint value1, UInt24 value2)
@@ -712,7 +712,7 @@ namespace Gemstone.Numeric
         /// Returns true if left value is less or equal to than right value.
         /// </summary>
         /// <param name="value1"><see cref="UInt24"/> left hand operand.</param>
-        /// <param name="value2"><see cref="UInt32"/> right hand operand.</param>
+        /// <param name="value2"><see cref="uint"/> right hand operand.</param>
         /// <returns><see cref="bool"/> value representing the result.</returns>
         public static bool operator <=(UInt24 value1, uint value2)
         {
@@ -733,7 +733,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Returns true if left value is greater than right value.
         /// </summary>
-        /// <param name="value1"><see cref="UInt32"/> left hand operand.</param>
+        /// <param name="value1"><see cref="uint"/> left hand operand.</param>
         /// <param name="value2"><see cref="UInt24"/> right hand operand.</param>
         /// <returns><see cref="bool"/> value representing the result.</returns>
         public static bool operator >(uint value1, UInt24 value2)
@@ -745,7 +745,7 @@ namespace Gemstone.Numeric
         /// Returns true if left value is greater than right value.
         /// </summary>
         /// <param name="value1"><see cref="UInt24"/> left hand operand.</param>
-        /// <param name="value2"><see cref="UInt32"/> right hand operand.</param>
+        /// <param name="value2"><see cref="uint"/> right hand operand.</param>
         /// <returns><see cref="bool"/> value representing the result.</returns>
         public static bool operator >(UInt24 value1, uint value2)
         {
@@ -766,7 +766,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Returns true if left value is greater than or equal to right value.
         /// </summary>
-        /// <param name="value1"><see cref="UInt32"/> left hand operand.</param>
+        /// <param name="value1"><see cref="uint"/> left hand operand.</param>
         /// <param name="value2"><see cref="UInt24"/> right hand operand.</param>
         /// <returns><see cref="bool"/> value representing the result.</returns>
         public static bool operator >=(uint value1, UInt24 value2)
@@ -778,7 +778,7 @@ namespace Gemstone.Numeric
         /// Returns true if left value is greater than or equal to right value.
         /// </summary>
         /// <param name="value1"><see cref="UInt24"/> left hand operand.</param>
-        /// <param name="value2"><see cref="UInt32"/> right hand operand.</param>
+        /// <param name="value2"><see cref="uint"/> right hand operand.</param>
         /// <returns><see cref="bool"/> value representing the result.</returns>
         public static bool operator >=(UInt24 value1, uint value2)
         {
@@ -804,7 +804,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Explicitly converts value to an <see cref="UInt24"/>.
         /// </summary>
-        /// <param name="value"><see cref="String"/> value to be converted.</param>
+        /// <param name="value"><see cref="string"/> value to be converted.</param>
         /// <returns><see cref="UInt24"/> value that is the result of the conversion.</returns>
         public static explicit operator UInt24(string value)
         {
@@ -814,7 +814,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Explicitly converts value to an <see cref="UInt24"/>.
         /// </summary>
-        /// <param name="value"><see cref="Decimal"/> value to be converted.</param>
+        /// <param name="value"><see cref="decimal"/> value to be converted.</param>
         /// <returns><see cref="UInt24"/> value that is the result of the conversion.</returns>
         public static explicit operator UInt24(decimal value)
         {
@@ -824,7 +824,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Explicitly converts value to an <see cref="UInt24"/>.
         /// </summary>
-        /// <param name="value"><see cref="Double"/> value to be converted.</param>
+        /// <param name="value"><see cref="double"/> value to be converted.</param>
         /// <returns><see cref="UInt24"/> value that is the result of the conversion.</returns>
         public static explicit operator UInt24(double value)
         {
@@ -834,7 +834,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Explicitly converts value to an <see cref="UInt24"/>.
         /// </summary>
-        /// <param name="value"><see cref="Single"/> value to be converted.</param>
+        /// <param name="value"><see cref="float"/> value to be converted.</param>
         /// <returns><see cref="UInt24"/> value that is the result of the conversion.</returns>
         public static explicit operator UInt24(float value)
         {
@@ -844,7 +844,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Explicitly converts value to an <see cref="UInt24"/>.
         /// </summary>
-        /// <param name="value"><see cref="UInt64"/> value to be converted.</param>
+        /// <param name="value"><see cref="ulong"/> value to be converted.</param>
         /// <returns><see cref="UInt24"/> value that is the result of the conversion.</returns>
         public static explicit operator UInt24(ulong value)
         {
@@ -854,7 +854,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Explicitly converts value to an <see cref="UInt24"/>.
         /// </summary>
-        /// <param name="value"><see cref="UInt32"/> value to be converted.</param>
+        /// <param name="value"><see cref="uint"/> value to be converted.</param>
         /// <returns><see cref="UInt24"/> value that is the result of the conversion.</returns>
         public static explicit operator UInt24(uint value)
         {
@@ -882,30 +882,30 @@ namespace Gemstone.Numeric
         }
 
         /// <summary>
-        /// Explicitly converts <see cref="UInt24"/> to <see cref="Int16"/>.
+        /// Explicitly converts <see cref="UInt24"/> to <see cref="short"/>.
         /// </summary>
         /// <param name="value"><see cref="UInt24"/> value to be converted.</param>
-        /// <returns><see cref="Int16"/> value that is the result of the conversion.</returns>
+        /// <returns><see cref="short"/> value that is the result of the conversion.</returns>
         public static explicit operator short(UInt24 value)
         {
             return (short)(uint)value;
         }
 
         /// <summary>
-        /// Explicitly converts <see cref="UInt24"/> to <see cref="UInt16"/>.
+        /// Explicitly converts <see cref="UInt24"/> to <see cref="ushort"/>.
         /// </summary>
         /// <param name="value"><see cref="UInt24"/> value to be converted.</param>
-        /// <returns><see cref="UInt16"/> value that is the result of the conversion.</returns>
+        /// <returns><see cref="ushort"/> value that is the result of the conversion.</returns>
         public static explicit operator ushort(UInt24 value)
         {
             return (ushort)(uint)value;
         }
 
         /// <summary>
-        /// Explicitly converts <see cref="UInt24"/> to <see cref="Byte"/>.
+        /// Explicitly converts <see cref="UInt24"/> to <see cref="byte"/>.
         /// </summary>
         /// <param name="value"><see cref="UInt24"/> value to be converted.</param>
-        /// <returns><see cref="Byte"/> value that is the result of the conversion.</returns>
+        /// <returns><see cref="byte"/> value that is the result of the conversion.</returns>
         public static explicit operator byte(UInt24 value)
         {
             return (byte)(uint)value;
@@ -918,7 +918,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Implicitly converts value to an <see cref="UInt24"/>.
         /// </summary>
-        /// <param name="value"><see cref="Byte"/> value to be converted.</param>
+        /// <param name="value"><see cref="byte"/> value to be converted.</param>
         /// <returns><see cref="UInt24"/> value that is the result of the conversion.</returns>
         public static implicit operator UInt24(byte value)
         {
@@ -928,7 +928,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Implicitly converts value to an <see cref="UInt24"/>.
         /// </summary>
-        /// <param name="value"><see cref="Char"/> value to be converted.</param>
+        /// <param name="value"><see cref="char"/> value to be converted.</param>
         /// <returns><see cref="UInt24"/> value that is the result of the conversion.</returns>
         public static implicit operator UInt24(char value)
         {
@@ -938,7 +938,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Implicitly converts value to an <see cref="UInt24"/>.
         /// </summary>
-        /// <param name="value"><see cref="UInt16"/> value to be converted.</param>
+        /// <param name="value"><see cref="ushort"/> value to be converted.</param>
         /// <returns><see cref="UInt24"/> value that is the result of the conversion.</returns>
         public static implicit operator UInt24(ushort value)
         {
@@ -946,80 +946,80 @@ namespace Gemstone.Numeric
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="UInt24"/> to <see cref="Int32"/>.
+        /// Implicitly converts <see cref="UInt24"/> to <see cref="int"/>.
         /// </summary>
         /// <param name="value"><see cref="UInt24"/> value to be converted.</param>
-        /// <returns><see cref="Int32"/> value that is the result of the conversion.</returns>
+        /// <returns><see cref="int"/> value that is the result of the conversion.</returns>
         public static implicit operator int(UInt24 value)
         {
             return ((IConvertible)value).ToInt32(null);
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="UInt24"/> to <see cref="UInt32"/>.
+        /// Implicitly converts <see cref="UInt24"/> to <see cref="uint"/>.
         /// </summary>
         /// <param name="value"><see cref="UInt24"/> value to be converted.</param>
-        /// <returns><see cref="UInt32"/> value that is the result of the conversion.</returns>
+        /// <returns><see cref="uint"/> value that is the result of the conversion.</returns>
         public static implicit operator uint(UInt24 value)
         {
             return ((IConvertible)value).ToUInt32(null);
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="UInt24"/> to <see cref="Int64"/>.
+        /// Implicitly converts <see cref="UInt24"/> to <see cref="long"/>.
         /// </summary>
         /// <param name="value"><see cref="UInt24"/> value to be converted.</param>
-        /// <returns><see cref="Int64"/> value that is the result of the conversion.</returns>
+        /// <returns><see cref="long"/> value that is the result of the conversion.</returns>
         public static implicit operator long(UInt24 value)
         {
             return ((IConvertible)value).ToInt64(null);
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="UInt24"/> to <see cref="UInt64"/>.
+        /// Implicitly converts <see cref="UInt24"/> to <see cref="ulong"/>.
         /// </summary>
         /// <param name="value"><see cref="UInt24"/> value to be converted.</param>
-        /// <returns><see cref="UInt64"/> value that is the result of the conversion.</returns>
+        /// <returns><see cref="ulong"/> value that is the result of the conversion.</returns>
         public static implicit operator ulong(UInt24 value)
         {
             return ((IConvertible)value).ToUInt64(null);
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="UInt24"/> to <see cref="Double"/>.
+        /// Implicitly converts <see cref="UInt24"/> to <see cref="double"/>.
         /// </summary>
         /// <param name="value"><see cref="UInt24"/> value to be converted.</param>
-        /// <returns><see cref="Double"/> value that is the result of the conversion.</returns>
+        /// <returns><see cref="double"/> value that is the result of the conversion.</returns>
         public static implicit operator double(UInt24 value)
         {
             return ((IConvertible)value).ToDouble(null);
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="UInt24"/> to <see cref="Single"/>.
+        /// Implicitly converts <see cref="UInt24"/> to <see cref="float"/>.
         /// </summary>
         /// <param name="value"><see cref="UInt24"/> value to be converted.</param>
-        /// <returns><see cref="Single"/> value that is the result of the conversion.</returns>
+        /// <returns><see cref="float"/> value that is the result of the conversion.</returns>
         public static implicit operator float(UInt24 value)
         {
             return ((IConvertible)value).ToSingle(null);
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="UInt24"/> to <see cref="Decimal"/>.
+        /// Implicitly converts <see cref="UInt24"/> to <see cref="decimal"/>.
         /// </summary>
         /// <param name="value"><see cref="UInt24"/> value to be converted.</param>
-        /// <returns><see cref="Decimal"/> value that is the result of the conversion.</returns>
+        /// <returns><see cref="decimal"/> value that is the result of the conversion.</returns>
         public static implicit operator decimal(UInt24 value)
         {
             return ((IConvertible)value).ToDecimal(null);
         }
 
         /// <summary>
-        /// Implicitly converts <see cref="UInt24"/> to <see cref="String"/>.
+        /// Implicitly converts <see cref="UInt24"/> to <see cref="string"/>.
         /// </summary>
         /// <param name="value"><see cref="UInt24"/> value to be converted.</param>
-        /// <returns><see cref="String"/> value that is the result of the conversion.</returns>
+        /// <returns><see cref="string"/> value that is the result of the conversion.</returns>
         public static implicit operator string(UInt24 value)
         {
             return value.ToString(CultureInfo.InvariantCulture);
@@ -1075,9 +1075,9 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Returns logical bitwise AND of values.
         /// </summary>
-        /// <param name="value1"><see cref="UInt32"/> left hand operand.</param>
+        /// <param name="value1"><see cref="uint"/> left hand operand.</param>
         /// <param name="value2"><see cref="UInt24"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value representing the logical bitwise AND of the values.</returns>
+        /// <returns><see cref="uint"/> value representing the logical bitwise AND of the values.</returns>
         public static uint operator &(uint value1, UInt24 value2)
         {
             return value1 & (uint)value2;
@@ -1087,8 +1087,8 @@ namespace Gemstone.Numeric
         /// Returns logical bitwise AND of values.
         /// </summary>
         /// <param name="value1"><see cref="UInt24"/> left hand operand.</param>
-        /// <param name="value2"><see cref="UInt32"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value representing the logical bitwise AND of the values.</returns>
+        /// <param name="value2"><see cref="uint"/> right hand operand.</param>
+        /// <returns><see cref="uint"/> value representing the logical bitwise AND of the values.</returns>
         public static uint operator &(UInt24 value1, uint value2)
         {
             return (uint)value1 & value2;
@@ -1108,9 +1108,9 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Returns logical bitwise OR of values.
         /// </summary>
-        /// <param name="value1"><see cref="UInt32"/> left hand operand.</param>
+        /// <param name="value1"><see cref="uint"/> left hand operand.</param>
         /// <param name="value2"><see cref="UInt24"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value representing the logical bitwise OR of the values.</returns>
+        /// <returns><see cref="uint"/> value representing the logical bitwise OR of the values.</returns>
         public static uint operator |(uint value1, UInt24 value2)
         {
             return value1 | (uint)value2;
@@ -1120,8 +1120,8 @@ namespace Gemstone.Numeric
         /// Returns logical bitwise OR of values.
         /// </summary>
         /// <param name="value1"><see cref="UInt24"/> left hand operand.</param>
-        /// <param name="value2"><see cref="UInt32"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value representing the logical bitwise OR of the values.</returns>
+        /// <param name="value2"><see cref="uint"/> right hand operand.</param>
+        /// <returns><see cref="uint"/> value representing the logical bitwise OR of the values.</returns>
         public static uint operator |(UInt24 value1, uint value2)
         {
             return (uint)value1 | value2;
@@ -1141,9 +1141,9 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Returns logical bitwise exclusive-OR of values.
         /// </summary>
-        /// <param name="value1"><see cref="UInt32"/> left hand operand.</param>
+        /// <param name="value1"><see cref="uint"/> left hand operand.</param>
         /// <param name="value2"><see cref="UInt24"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value representing the logical bitwise exclusive-OR of the values.</returns>
+        /// <returns><see cref="uint"/> value representing the logical bitwise exclusive-OR of the values.</returns>
         public static uint operator ^(uint value1, UInt24 value2)
         {
             return value1 ^ (uint)value2;
@@ -1153,8 +1153,8 @@ namespace Gemstone.Numeric
         /// Returns logical bitwise exclusive-OR of values.
         /// </summary>
         /// <param name="value1"><see cref="UInt24"/> left hand operand.</param>
-        /// <param name="value2"><see cref="UInt32"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value representing the logical bitwise exclusive-OR of the values.</returns>
+        /// <param name="value2"><see cref="uint"/> right hand operand.</param>
+        /// <returns><see cref="uint"/> value representing the logical bitwise exclusive-OR of the values.</returns>
         public static uint operator ^(UInt24 value1, uint value2)
         {
             return (uint)value1 ^ value2;
@@ -1164,7 +1164,7 @@ namespace Gemstone.Numeric
         /// Returns value after right shifts of first value by the number of bits specified by second value.
         /// </summary>
         /// <param name="value"><see cref="UInt24"/> value to right shift.</param>
-        /// <param name="shifts"><see cref="Int32"/> value indicating the number of bits to right shift by.</param>
+        /// <param name="shifts"><see cref="int"/> value indicating the number of bits to right shift by.</param>
         /// <returns><see cref="UInt24"/> value as result of right shift operation.</returns>
         public static UInt24 operator >>(UInt24 value, int shifts)
         {
@@ -1175,7 +1175,7 @@ namespace Gemstone.Numeric
         /// Returns value after left shifts of first value by the number of bits specified by second value.
         /// </summary>
         /// <param name="value"><see cref="UInt24"/> value to left shift.</param>
-        /// <param name="shifts"><see cref="Int32"/> value indicating the number of bits to left shift by.</param>
+        /// <param name="shifts"><see cref="int"/> value indicating the number of bits to left shift by.</param>
         /// <returns><see cref="UInt24"/> value as result of left shift operation.</returns>
         public static UInt24 operator <<(UInt24 value, int shifts)
         {
@@ -1200,9 +1200,9 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Returns computed remainder after dividing first value by the second.
         /// </summary>
-        /// <param name="value1"><see cref="UInt32"/> left hand operand.</param>
+        /// <param name="value1"><see cref="uint"/> left hand operand.</param>
         /// <param name="value2"><see cref="UInt24"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value as result of modulus operation.</returns>
+        /// <returns><see cref="uint"/> value as result of modulus operation.</returns>
         public static uint operator %(uint value1, UInt24 value2)
         {
             return value1 % (uint)value2;
@@ -1212,8 +1212,8 @@ namespace Gemstone.Numeric
         /// Returns computed remainder after dividing first value by the second.
         /// </summary>
         /// <param name="value1"><see cref="UInt24"/> left hand operand.</param>
-        /// <param name="value2"><see cref="UInt32"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value as result of modulus operation.</returns>
+        /// <param name="value2"><see cref="uint"/> right hand operand.</param>
+        /// <returns><see cref="uint"/> value as result of modulus operation.</returns>
         public static uint operator %(UInt24 value1, uint value2)
         {
             return (uint)value1 % value2;
@@ -1233,9 +1233,9 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Returns computed sum of values.
         /// </summary>
-        /// <param name="value1"><see cref="UInt32"/> left hand operand.</param>
+        /// <param name="value1"><see cref="uint"/> left hand operand.</param>
         /// <param name="value2"><see cref="UInt24"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value as result of addition operation.</returns>
+        /// <returns><see cref="uint"/> value as result of addition operation.</returns>
         public static uint operator +(uint value1, UInt24 value2)
         {
             return value1 + (uint)value2;
@@ -1245,8 +1245,8 @@ namespace Gemstone.Numeric
         /// Returns computed sum of values.
         /// </summary>
         /// <param name="value1"><see cref="UInt24"/> left hand operand.</param>
-        /// <param name="value2"><see cref="UInt32"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value as result of addition operation.</returns>
+        /// <param name="value2"><see cref="uint"/> right hand operand.</param>
+        /// <returns><see cref="uint"/> value as result of addition operation.</returns>
         public static uint operator +(UInt24 value1, uint value2)
         {
             return (uint)value1 + value2;
@@ -1266,9 +1266,9 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Returns computed difference of values.
         /// </summary>
-        /// <param name="value1"><see cref="UInt32"/> left hand operand.</param>
+        /// <param name="value1"><see cref="uint"/> left hand operand.</param>
         /// <param name="value2"><see cref="UInt24"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value as result of subtraction operation.</returns>
+        /// <returns><see cref="uint"/> value as result of subtraction operation.</returns>
         public static uint operator -(uint value1, UInt24 value2)
         {
             return value1 - (uint)value2;
@@ -1278,8 +1278,8 @@ namespace Gemstone.Numeric
         /// Returns computed difference of values.
         /// </summary>
         /// <param name="value1"><see cref="UInt24"/> left hand operand.</param>
-        /// <param name="value2"><see cref="UInt32"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value as result of subtraction operation.</returns>
+        /// <param name="value2"><see cref="uint"/> right hand operand.</param>
+        /// <returns><see cref="uint"/> value as result of subtraction operation.</returns>
         public static uint operator -(UInt24 value1, uint value2)
         {
             return (uint)value1 - value2;
@@ -1319,9 +1319,9 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Returns computed product of values.
         /// </summary>
-        /// <param name="value1"><see cref="UInt32"/> left hand operand.</param>
+        /// <param name="value1"><see cref="uint"/> left hand operand.</param>
         /// <param name="value2"><see cref="UInt24"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value as result of multiplication operation.</returns>
+        /// <returns><see cref="uint"/> value as result of multiplication operation.</returns>
         public static uint operator *(uint value1, UInt24 value2)
         {
             return value1 * (uint)value2;
@@ -1331,8 +1331,8 @@ namespace Gemstone.Numeric
         /// Returns computed product of values.
         /// </summary>
         /// <param name="value1"><see cref="UInt24"/> left hand operand.</param>
-        /// <param name="value2"><see cref="UInt32"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value as result of multiplication operation.</returns>
+        /// <param name="value2"><see cref="uint"/> right hand operand.</param>
+        /// <returns><see cref="uint"/> value as result of multiplication operation.</returns>
         public static uint operator *(UInt24 value1, uint value2)
         {
             return (uint)value1 * value2;
@@ -1354,9 +1354,9 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Returns computed division of values.
         /// </summary>
-        /// <param name="value1"><see cref="UInt32"/> left hand operand.</param>
+        /// <param name="value1"><see cref="uint"/> left hand operand.</param>
         /// <param name="value2"><see cref="UInt24"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value as result of division operation.</returns>
+        /// <returns><see cref="uint"/> value as result of division operation.</returns>
         public static uint operator /(uint value1, UInt24 value2)
         {
             return value1 / (uint)value2;
@@ -1366,8 +1366,8 @@ namespace Gemstone.Numeric
         /// Returns computed division of values.
         /// </summary>
         /// <param name="value1"><see cref="UInt24"/> left hand operand.</param>
-        /// <param name="value2"><see cref="UInt32"/> right hand operand.</param>
-        /// <returns><see cref="UInt32"/> value as result of division operation.</returns>
+        /// <param name="value2"><see cref="uint"/> right hand operand.</param>
+        /// <returns><see cref="uint"/> value as result of division operation.</returns>
         public static uint operator /(UInt24 value1, uint value2)
         {
             return (uint)value1 / value2;
@@ -1407,7 +1407,7 @@ namespace Gemstone.Numeric
         /// <summary>
         /// Returns result of first value raised to power of second value.
         /// </summary>
-        /// <param name="value1"><see cref="UInt32"/> left hand operand.</param>
+        /// <param name="value1"><see cref="uint"/> left hand operand.</param>
         /// <param name="value2"><see cref="UInt24"/> right hand operand.</param>
         /// <returns><see cref="double"/> value as result of operation.</returns>
         [EditorBrowsable(EditorBrowsableState.Advanced), SpecialName]
@@ -1420,7 +1420,7 @@ namespace Gemstone.Numeric
         /// Returns result of first value raised to power of second value.
         /// </summary>
         /// <param name="value1"><see cref="UInt24"/> left hand operand.</param>
-        /// <param name="value2"><see cref="UInt32"/> right hand operand.</param>
+        /// <param name="value2"><see cref="uint"/> right hand operand.</param>
         /// <returns><see cref="double"/> value as result of operation.</returns>
         [EditorBrowsable(EditorBrowsableState.Advanced), SpecialName]
         public static double op_Exponent(UInt24 value1, int value2)

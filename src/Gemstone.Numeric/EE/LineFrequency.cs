@@ -1,5 +1,5 @@
 ﻿//******************************************************************************************************
-//  NamespaceDoc.cs - Gbtc
+//  LineFrequency.cs - Gbtc
 //
 //  Copyright © 2010, Grid Protection Alliance.  All Rights Reserved.
 //
@@ -16,20 +16,28 @@
 //
 //  Code Modification History:
 //  ----------------------------------------------------------------------------------------------------
-//  07/17/2014 - J. Ritchie Carroll
+//  02/18/2005 - J. Ritchie Carroll
 //       Generated original version of source code.
 //
 //******************************************************************************************************
 
-using System.Runtime.CompilerServices;
+using System;
 
-namespace Gemstone.Numeric.Units.EE
+namespace Gemstone.Units.EE
 {
     /// <summary>
-    /// Contains classes that represent standard Electrical Engineering units and types.
+    /// Nominal line frequencies enumeration.
     /// </summary>
-    [CompilerGenerated]
-    internal class NamespaceDoc
+    [Serializable]
+    public enum LineFrequency
     {
+        /// <summary>
+        /// 50Hz nominal frequency.
+        /// </summary>
+        Hz50 = 50,
+        /// <summary>
+        /// 60Hz nominal frequency.
+        /// </summary>
+        Hz60 = 60
     }
 }
