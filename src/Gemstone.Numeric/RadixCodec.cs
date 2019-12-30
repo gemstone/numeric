@@ -58,7 +58,7 @@ namespace Gemstone.Numeric
 
             #region [ Constructors ]
 
-            public RadixIntegerCodec(RadixCodec parent, bool caseSensitive, int bitSize, T minValue, T zeroValue, Func<T, T> abs, Func<T, int, int> mod, Func<T, int, T> divide, Func<long, bool, T> convert, string minRadix = null)
+            public RadixIntegerCodec(RadixCodec parent, bool caseSensitive, int bitSize, T minValue, T zeroValue, Func<T, T> abs, Func<T, int, int> mod, Func<T, int, T> divide, Func<long, bool, T> convert, string? minRadix = null)
             {
                 m_parent = parent;
                 m_caseSensitive = caseSensitive;
@@ -460,13 +460,13 @@ namespace Gemstone.Numeric
         #region [ Static ]
 
         // Static Fields
-        private static readonly RadixCodec s_radix2;
-        private static readonly RadixCodec s_radix8;
-        private static readonly RadixCodec s_radix16;
-        private static readonly RadixCodec s_radix32;
-        private static readonly RadixCodec s_radix36;
-        private static readonly RadixCodec s_radix64;
-        private static readonly RadixCodec s_radix86;
+        private static readonly RadixCodec? s_radix2;
+        private static readonly RadixCodec? s_radix8;
+        private static readonly RadixCodec? s_radix16;
+        private static readonly RadixCodec? s_radix32;
+        private static readonly RadixCodec? s_radix36;
+        private static readonly RadixCodec? s_radix64;
+        private static readonly RadixCodec? s_radix86;
 
         // Static Properties
 
@@ -480,8 +480,8 @@ namespace Gemstone.Numeric
         /// long.MaxValue encodes to "111111111111111111111111111111111111111111111111111111111111111", 63 characters
         /// long.MinValue encodes to "-1000000000000000000000000000000000000000000000000000000000000000", 65 characters
         /// ulong.MaxValue encodes to "1111111111111111111111111111111111111111111111111111111111111111", 64 characters
-        /// </remarks>                                                            12
-        public static RadixCodec Radix2 = s_radix2 ?? (s_radix2 = new RadixCodec("01", false));
+        /// </remarks>                                                 12
+        public static RadixCodec Radix2 = s_radix2 ??= new RadixCodec("01", false);
 
         /// <summary>
         /// Gets a radix-8 value (octal) encoding.
@@ -493,8 +493,8 @@ namespace Gemstone.Numeric
         /// long.MaxValue encodes to "777777777777777777777", 21 characters
         /// long.MinValue encodes to "-1000000000000000000000", 23 characters
         /// ulong.MaxValue encodes to "1777777777777777777777", 22 characters
-        /// </remarks>                                                            12345678
-        public static RadixCodec Radix8 = s_radix8 ?? (s_radix8 = new RadixCodec("01234567", false));
+        /// </remarks>                                                 12345678
+        public static RadixCodec Radix8 = s_radix8 ??= new RadixCodec("01234567", false);
 
         /// <summary>
         /// Gets a radix-16 value (hex) encoding.
@@ -506,8 +506,8 @@ namespace Gemstone.Numeric
         /// long.MaxValue encodes to "7FFFFFFFFFFFFFFF", 16 characters
         /// long.MinValue encodes to "-8000000000000000", 17 characters
         /// ulong.MaxValue encodes to "FFFFFFFFFFFFFFFF", 16 characters
-        /// </remarks>                                                               1234567890123456
-        public static RadixCodec Radix16 = s_radix16 ?? (s_radix16 = new RadixCodec("0123456789ABCDEF", false));
+        /// </remarks>                                                   1234567890123456
+        public static RadixCodec Radix16 = s_radix16 ??= new RadixCodec("0123456789ABCDEF", false);
 
         /// <summary>
         /// Gets a radix-32 value encoding.
@@ -519,8 +519,8 @@ namespace Gemstone.Numeric
         /// long.MaxValue encodes to "7VVVVVVVVVVVV", 13 characters
         /// long.MinValue encodes to "-8000000000000", 14 characters
         /// ulong.MaxValue encodes to "FVVVVVVVVVVVV", 13 characters
-        /// </remarks>                                                               12345678901234567890123456789012
-        public static RadixCodec Radix32 = s_radix32 ?? (s_radix32 = new RadixCodec("0123456789ABCDEFGHIJKLMNOPQRSTUV", false));
+        /// </remarks>                                                   12345678901234567890123456789012
+        public static RadixCodec Radix32 = s_radix32 ??= new RadixCodec("0123456789ABCDEFGHIJKLMNOPQRSTUV", false);
 
         /// <summary>
         /// Gets a radix-36 value encoding.
@@ -532,8 +532,8 @@ namespace Gemstone.Numeric
         /// long.MaxValue encodes to "1Y2P0IJ32E8E7", 13 characters
         /// long.MinValue encodes to "-1Y2P0IJ32E8E8", 14 characters
         /// ulong.MaxValue encodes to "3W5E11264SGSF", 13 characters
-        /// </remarks>                                                               123456789012345678901234567890123456
-        public static RadixCodec Radix36 = s_radix36 ?? (s_radix36 = new RadixCodec("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", false));
+        /// </remarks>                                                   123456789012345678901234567890123456
+        public static RadixCodec Radix36 = s_radix36 ??= new RadixCodec("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", false);
 
         /// <summary>
         /// Gets a radix-64 value encoding.
@@ -545,8 +545,8 @@ namespace Gemstone.Numeric
         /// long.MaxValue encodes to "7//////////", 11 characters
         /// long.MinValue encodes to "-80000000000", 12 characters
         /// ulong.MaxValue encodes to "F//////////", 11 characters
-        /// </remarks>                                                               1234567890123456789012345678901234567890123456789012345678901234
-        public static RadixCodec Radix64 = s_radix64 ?? (s_radix64 = new RadixCodec("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/", true));
+        /// </remarks>                                                   1234567890123456789012345678901234567890123456789012345678901234
+        public static RadixCodec Radix64 = s_radix64 ??= new RadixCodec("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/", true);
 
         /// <summary>
         /// Gets a radix-86 value encoding.
@@ -558,8 +558,8 @@ namespace Gemstone.Numeric
         /// long.MaxValue encodes to "1X2qL^UmlIt", 11 characters
         /// long.MinValue encodes to "-1X2qL^UmlIu", 12 characters
         /// ulong.MaxValue encodes to "2&amp;5Sh]zLIbZ", 11 characters
-        /// </remarks>                                                               1234567890123456789012345678901234567890123456789012345678901234567890123456
-        public static RadixCodec Radix86 = s_radix86 ?? (s_radix86 = new RadixCodec("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&*+;=?@[]^", true));
+        /// </remarks>                                                   1234567890123456789012345678901234567890123456789012345678901234567890123456
+        public static RadixCodec Radix86 = s_radix86 ??= new RadixCodec("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&*+;=?@[]^", true);
 
         #endregion
     }

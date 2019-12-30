@@ -60,7 +60,7 @@ namespace Gemstone.Numeric.Interpolation
         #region [ Members ]
 
         // Fields
-        private Func<double, double> m_converter;
+        private Func<double, double>? m_converter;
 
         #endregion
 
@@ -69,12 +69,12 @@ namespace Gemstone.Numeric.Interpolation
         /// <summary>
         /// Gets the x-values of the pivot points in the piecewise linear function.
         /// </summary>
-        public double[] Domain { get; private set; }
+        public double[] Domain { get; private set; } = Array.Empty<double>();
 
         /// <summary>
         /// Gets the y-values of the pivot points in the piecewise linear function.
         /// </summary>
-        public double[] Range { get; private set; }
+        public double[] Range { get; private set; } = Array.Empty<double>();
 
         #endregion
 
@@ -106,8 +106,8 @@ namespace Gemstone.Numeric.Interpolation
 
         private Func<double, double> GetConverter()
         {
-            double[] domain = Domain ?? new double[0];
-            double[] range = Range ?? new double[0];
+            double[] domain = Domain;
+            double[] range = Range;
 
             if (domain.Length != range.Length)
                 throw new InvalidOperationException($"Domain of size {domain.Length} does not match range of size {range.Length}.");
@@ -115,7 +115,7 @@ namespace Gemstone.Numeric.Interpolation
             if (domain.Length < 2)
                 throw new InvalidOperationException($"At least two pivot points must be defined. Defined: {domain.Length}");
 
-            return m_converter ?? (m_converter = x =>
+            return m_converter ??= x =>
             {
                 int i = 0;
                 int j = domain.Length - 1;
@@ -145,7 +145,7 @@ namespace Gemstone.Numeric.Interpolation
                 double ri = range[i];
                 double rj = range[j];
                 return (x - di) / (dj - di) * (rj - ri) + ri;
-            });
+            };
         }
 
         #endregion

@@ -55,20 +55,7 @@ namespace Gemstone.Numeric.Interpolation
         #region [ Members ]
 
         // Fields
-        private IDWFunc m_converter;
-
-        #endregion
-
-        #region [ Constructors ]
-
-        /// <summary>
-        /// Creates a new instance of the <see cref="InverseDistanceWeightingFunction"/> class.
-        /// </summary>
-        public InverseDistanceWeightingFunction()
-        {
-            DistanceFunction = DefaultDistanceFunction;
-            Power = 1;
-        }
+        private IDWFunc? m_converter;
 
         #endregion
 
@@ -77,46 +64,27 @@ namespace Gemstone.Numeric.Interpolation
         /// <summary>
         /// Gets the collection of x-coordinates of points at which the values are known.
         /// </summary>
-        public double[] XCoordinates {
-            get;
-            private set;
-        }
+        public double[] XCoordinates { get; private set; } = Array.Empty<double>();
 
         /// <summary>
         /// Gets the collection of y-coordinates of points at which the values are known.
         /// </summary>
-        public double[] YCoordinates
-        {
-            get;
-            private set;
-        }
+        public double[] YCoordinates { get; private set; } = Array.Empty<double>();
 
         /// <summary>
         /// Gets the collection of values of points at which the values are known.
         /// </summary>
-        public double[] Values
-        {
-            get;
-            private set;
-        }
+        public double[] Values { get; private set; } = Array.Empty<double>();
 
         /// <summary>
         /// Gets the power applied to the inverse distance to control the speed of value's decay.
         /// </summary>
-        public double Power
-        {
-            get;
-            private set;
-        }
+        public double Power { get; private set; } = 1;
 
         /// <summary>
         /// Gets the function to be used to calculate the distance between two points.
         /// </summary>
-        public DistanceFunc DistanceFunction
-        {
-            get;
-            private set;
-        }
+        public DistanceFunc DistanceFunction { get; private set; } = DefaultDistanceFunction;
 
         #endregion
 
@@ -191,9 +159,9 @@ namespace Gemstone.Numeric.Interpolation
         private IDWFunc GetConverter()
         {
             DistanceFunc distanceFunction = DistanceFunction;
-            double[] xCoordinates = XCoordinates ?? new double[0];
-            double[] yCoordinates = YCoordinates ?? new double[0];
-            double[] values = Values ?? new double[0];
+            double[] xCoordinates = XCoordinates;
+            double[] yCoordinates = YCoordinates;
+            double[] values = Values;
             double power = Power;
 
             if (xCoordinates.Length != yCoordinates.Length)
@@ -205,7 +173,7 @@ namespace Gemstone.Numeric.Interpolation
             if (xCoordinates.Length == 0)
                 return (x, y) => 0.0D;
 
-            return m_converter ?? (m_converter = (x, y) =>
+            return m_converter ??= (x, y) =>
             {
                 double numerator = 0.0D;
                 double denominator = 0.0D;
@@ -223,7 +191,7 @@ namespace Gemstone.Numeric.Interpolation
                 }
 
                 return numerator / denominator;
-            });
+            };
         }
 
         #endregion
@@ -234,16 +202,13 @@ namespace Gemstone.Numeric.Interpolation
         /// Converts the <see cref="InverseDistanceWeightingFunction"/>
         /// object to an <see cref="IDWFunc"/> to start converting values.
         /// </summary>
-        /// <param name="idwFunction">The inverse distance weighting function to be converted.</param>
+        /// <param name="func">The inverse distance weighting function to be converted.</param>
         /// <exception cref="InvalidOperationException">
         /// <para>the number of x-coordinates does not equal the number of y-coordinates</para>
         /// <para>- or -</para>
         /// <para>the number of coordinates does not equal the number of values</para>
         /// </exception>
-        public static implicit operator IDWFunc(InverseDistanceWeightingFunction idwFunction)
-        {
-            return idwFunction.GetConverter();
-        }
+        public static implicit operator IDWFunc(InverseDistanceWeightingFunction func) => func.GetConverter();
 
         #endregion
 

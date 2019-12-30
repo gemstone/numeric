@@ -76,6 +76,9 @@ using Gemstone.Units;
 
 // ReSharper disable CompareOfFloatsByEqualityOperator
 // ReSharper disable PossibleInvalidOperationException
+
+#pragma warning disable CS8629 // Use cases validated -  - if changes are made, temporaily remove.
+
 namespace Gemstone.Numeric
 {
     /// <summary>
