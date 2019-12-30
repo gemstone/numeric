@@ -460,13 +460,13 @@ namespace Gemstone.Numeric
         #region [ Static ]
 
         // Static Fields
-        private static RadixCodec s_radix2;
-        private static RadixCodec s_radix8;
-        private static RadixCodec s_radix16;
-        private static RadixCodec s_radix32;
-        private static RadixCodec s_radix36;
-        private static RadixCodec s_radix64;
-        private static RadixCodec s_radix86;
+        private static readonly RadixCodec s_radix2;
+        private static readonly RadixCodec s_radix8;
+        private static readonly RadixCodec s_radix16;
+        private static readonly RadixCodec s_radix32;
+        private static readonly RadixCodec s_radix36;
+        private static readonly RadixCodec s_radix64;
+        private static readonly RadixCodec s_radix86;
 
         // Static Properties
 
