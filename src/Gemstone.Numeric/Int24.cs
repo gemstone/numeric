@@ -65,9 +65,12 @@
 
 using System;
 using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Runtime.CompilerServices;
 using Gemstone.ArrayExtensions;
+
+#pragma warning disable IDE1006 // Naming Styles
 
 namespace Gemstone.Numeric
 {
@@ -423,6 +426,7 @@ namespace Gemstone.Numeric
         /// This parameter is passed uninitialized.
         /// </param>
         /// <returns>true if s was converted successfully; otherwise, false.</returns>
+        [SuppressMessage("Design", "CA1031:Do not catch general exception types")]
         public static bool TryParse(string s, out Int24 result)
         {
             bool parseResponse;
@@ -441,6 +445,7 @@ namespace Gemstone.Numeric
 
             return parseResponse;
         }
+
 
         /// <summary>
         /// Converts the string representation of a number in a specified style and culture-specific format to its
@@ -465,6 +470,7 @@ namespace Gemstone.Numeric
         /// style is not a System.Globalization.NumberStyles value. -or- style is not a combination of
         /// System.Globalization.NumberStyles.AllowHexSpecifier and System.Globalization.NumberStyles.HexNumber values.
         /// </exception>
+        [SuppressMessage("Design", "CA1031:Do not catch general exception types")]
         public static bool TryParse(string s, NumberStyles style, IFormatProvider provider, out Int24 result)
         {
             bool parseResponse;
