@@ -24,6 +24,9 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 
+#pragma warning disable IDE1006 // Naming Styles
+#pragma warning disable CA1031 // Do not catch general exception types
+
 namespace Gemstone.Numeric
 {
     /// <summary>
