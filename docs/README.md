@@ -10,8 +10,6 @@ The Gemstone Numeric Library organizes all Gemstone functionality related to num
 
 This library includes helpful numeric classes like the following:
 
-* [Class](https://gemstone.github.io/numeric/help/html/T_gemstone_numeric_Class.htm):
-  * Represents a numeric class for handling numeric operations.
 
 Among others.
 
