@@ -24,7 +24,8 @@
 using System;
 using Gemstone.EnumExtensions;
 
-namespace Gemstone.Units.EE
+// ReSharper disable InconsistentNaming
+namespace Gemstone.Numeric.EE
 {
     /// <summary>
     /// Fundamental signal type enumeration for common EE measurements that represents an explicit type of signal.

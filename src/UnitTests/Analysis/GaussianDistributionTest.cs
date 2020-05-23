@@ -23,8 +23,8 @@
 
 using System.Diagnostics;
 using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Gemstone.Numeric.Analysis;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Gemstone.Numeric.UnitTests.Analysis
 {

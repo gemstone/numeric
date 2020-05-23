@@ -27,14 +27,14 @@ using System;
 using System.ComponentModel;
 using System.Numerics;
 using System.Runtime.CompilerServices;
-using Gemstone.Numeric;
+using Gemstone.Units;
 
-namespace Gemstone.Units.EE
+namespace Gemstone.Numeric.EE
 {
     /// <summary>
     /// Represents a phasor as a complex number value and a type (i.e., a voltage or a current).
     /// </summary>
-    public struct Phasor : IEquatable<Phasor>
+    public readonly struct Phasor : IEquatable<Phasor>
     {
         #region [ Members ]
 

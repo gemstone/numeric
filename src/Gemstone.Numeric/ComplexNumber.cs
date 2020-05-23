@@ -74,11 +74,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Gemstone.Units;
 
+#pragma warning disable CS8629 // Use cases validated -  - if changes are made, temporarily remove.
+
 // ReSharper disable CompareOfFloatsByEqualityOperator
 // ReSharper disable PossibleInvalidOperationException
-
-#pragma warning disable CS8629 // Use cases validated -  - if changes are made, temporaily remove.
-
 namespace Gemstone.Numeric
 {
     /// <summary>

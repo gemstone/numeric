@@ -26,7 +26,8 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Gemstone.Units.EE
+// ReSharper disable NonReadonlyMemberInGetHashCode
+namespace Gemstone.Numeric.EE
 {
     /// <summary>
     /// Represents a signal that can be referenced by its constituent components.

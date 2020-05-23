@@ -23,6 +23,7 @@
 
 using System;
 
+// ReSharper disable InconsistentNaming
 namespace Gemstone.Numeric.Interpolation
 {
     /// <summary>

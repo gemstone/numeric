@@ -24,7 +24,7 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Gemstone.Units.EE
+namespace Gemstone.Numeric.EE
 {
     /// <summary>
     /// Fundamental signal type enumeration for common EE measurements that represents a kind of signal, not an explicit type.

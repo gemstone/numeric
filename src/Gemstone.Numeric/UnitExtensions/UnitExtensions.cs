@@ -85,21 +85,21 @@ namespace Gemstone.Numeric.UnitExtensions
 
             if (sourceAngles.Length > 0)
             {
-                double offset = 0.0D, dis0, dis1, dis2;
+                double offset = 0.0D;
 
                 unwrappedAngles[0] = sourceAngles[0];
 
                 // Unwrap all source angles
                 for (int i = 1; i < sourceAngles.Length; i++)
                 {
-                    dis0 = Math.Abs(sourceAngles[i] + offset - unwrappedAngles[i - 1]);
-                    dis1 = Math.Abs(sourceAngles[i] + offset - unwrappedAngles[i - 1] + TwoPI);
-                    dis2 = Math.Abs(sourceAngles[i] + offset - unwrappedAngles[i - 1] - TwoPI);
+                    double dis0 = Math.Abs(sourceAngles[i] + offset - unwrappedAngles[i - 1]);
+                    double dis1 = Math.Abs(sourceAngles[i] + offset - unwrappedAngles[i - 1] + TwoPI);
+                    double dis2 = Math.Abs(sourceAngles[i] + offset - unwrappedAngles[i - 1] - TwoPI);
 
                     if (dis1 < dis0 && dis1 < dis2)
-                        offset = offset + TwoPI;
+                        offset += TwoPI;
                     else if (dis2 < dis0 && dis2 < dis1)
-                        offset = offset - TwoPI;
+                        offset -= TwoPI;
 
                     unwrappedAngles[i] = sourceAngles[i] + offset;
                 }

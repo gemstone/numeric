@@ -23,7 +23,7 @@
 
 using System;
 
-namespace Gemstone.Units.EE
+namespace Gemstone.Numeric.EE
 {
     /// <summary>
     /// Phasor types enumeration.
