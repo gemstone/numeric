@@ -1,29 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
-  <HelpKINode Title="Acronym field" Url="html/F_Gemstone_Units_EE_SignalReference_Acronym.htm" />
+  <HelpKINode Title="Acronym field" Url="html/F_Gemstone_Numeric_EE_SignalReference_Acronym.htm" />
   <HelpKINode Title="Addition operator">
     <HelpKINode Title="ComplexNumber.Addition Operator " Url="html/M_Gemstone_Numeric_ComplexNumber_op_Addition.htm" />
     <HelpKINode Title="Int24.Addition Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Addition.htm" />
-    <HelpKINode Title="Phasor.Addition Operator " Url="html/M_Gemstone_Units_EE_Phasor_op_Addition.htm" />
+    <HelpKINode Title="Phasor.Addition Operator " Url="html/M_Gemstone_Numeric_EE_Phasor_op_Addition.htm" />
     <HelpKINode Title="UInt24.Addition Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Addition.htm" />
   </HelpKINode>
-  <HelpKINode Title="Alarm enumeration member" Url="html/T_Gemstone_Units_EE_SignalKind.htm" />
+  <HelpKINode Title="Alarm enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
   <HelpKINode Title="AllAssigned property" Url="html/P_Gemstone_Numeric_ComplexNumber_AllAssigned.htm" />
-  <HelpKINode Title="ALOG enumeration member" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
-  <HelpKINode Title="ALRM enumeration member" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
-  <HelpKINode Title="Analog enumeration member" Url="html/T_Gemstone_Units_EE_SignalKind.htm" />
-  <HelpKINode Title="Angle enumeration member" Url="html/T_Gemstone_Units_EE_SignalKind.htm" />
+  <HelpKINode Title="ALOG enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
+  <HelpKINode Title="ALRM enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
+  <HelpKINode Title="Analog enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
+  <HelpKINode Title="Angle enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
   <HelpKINode Title="Angle property" Url="html/P_Gemstone_Numeric_ComplexNumber_Angle.htm" />
   <HelpKINode Title="Average method" Url="html/M_Gemstone_Numeric_UnitExtensions_UnitExtensions_Average.htm" />
   <HelpKINode Title="BigEndian class">
-    <HelpKINode Title="BigEndian Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_BigEndian.htm" />
     <HelpKINode Title="BigEndian Class" Url="html/T_Gemstone_Numeric_Int24Extensions_BigEndian.htm" />
+    <HelpKINode Title="BigEndian Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_BigEndian.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_Int24Extensions_BigEndian.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_UInt24Extensions_BigEndian.htm" />
   </HelpKINode>
   <HelpKINode Title="BigEndian.CopyBytes method">
-    <HelpKINode Title="BigEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BigEndian_CopyBytes.htm" />
     <HelpKINode Title="BigEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BigEndian_CopyBytes.htm" />
+    <HelpKINode Title="BigEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BigEndian_CopyBytes.htm" />
   </HelpKINode>
   <HelpKINode Title="BigEndian.GetBytes method">
     <HelpKINode Title="BigEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_Int24Extensions_BigEndian_GetBytes.htm" />
@@ -32,8 +32,8 @@
   <HelpKINode Title="BigEndian.ToInt24 method" Url="html/Overload_Gemstone_Numeric_Int24Extensions_BigEndian_ToInt24.htm" />
   <HelpKINode Title="BigEndian.ToUInt24 method" Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BigEndian_ToUInt24.htm" />
   <HelpKINode Title="BitExtensions class">
-    <HelpKINode Title="BitExtensions Class" Url="html/T_Gemstone_Numeric_Int24Extensions_BitExtensions.htm" />
     <HelpKINode Title="BitExtensions Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_BitExtensions.htm" />
+    <HelpKINode Title="BitExtensions Class" Url="html/T_Gemstone_Numeric_Int24Extensions_BitExtensions.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_UInt24Extensions_BitExtensions.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_Int24Extensions_BitExtensions.htm" />
   </HelpKINode>
@@ -42,8 +42,8 @@
     <HelpKINode Title="BitExtensions.BitRotL Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_BitRotL.htm" />
   </HelpKINode>
   <HelpKINode Title="BitExtensions.BitRotR method">
-    <HelpKINode Title="BitExtensions.BitRotR Method " Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_BitRotR.htm" />
     <HelpKINode Title="BitExtensions.BitRotR Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_BitRotR.htm" />
+    <HelpKINode Title="BitExtensions.BitRotR Method " Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_BitRotR.htm" />
   </HelpKINode>
   <HelpKINode Title="BitExtensions.CheckBits method">
     <HelpKINode Title="BitExtensions.CheckBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_CheckBits.htm" />
@@ -54,8 +54,8 @@
     <HelpKINode Title="BitExtensions.ClearBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_ClearBits.htm" />
   </HelpKINode>
   <HelpKINode Title="BitExtensions.GetMaskedValue method">
-    <HelpKINode Title="BitExtensions.GetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_GetMaskedValue.htm" />
     <HelpKINode Title="BitExtensions.GetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_GetMaskedValue.htm" />
+    <HelpKINode Title="BitExtensions.GetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_GetMaskedValue.htm" />
   </HelpKINode>
   <HelpKINode Title="BitExtensions.SetBits method">
     <HelpKINode Title="BitExtensions.SetBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_SetBits.htm" />
@@ -66,8 +66,8 @@
     <HelpKINode Title="BitExtensions.SetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_SetMaskedValue.htm" />
   </HelpKINode>
   <HelpKINode Title="BitExtensions.ToggleBits method">
-    <HelpKINode Title="BitExtensions.ToggleBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_ToggleBits.htm" />
     <HelpKINode Title="BitExtensions.ToggleBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_ToggleBits.htm" />
+    <HelpKINode Title="BitExtensions.ToggleBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_ToggleBits.htm" />
   </HelpKINode>
   <HelpKINode Title="BitMask field">
     <HelpKINode Title="Int24.BitMask Field" Url="html/F_Gemstone_Numeric_Int24_BitMask.htm" />
@@ -78,8 +78,8 @@
     <HelpKINode Title="BitExtensions.BitRotL Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_BitRotL.htm" />
   </HelpKINode>
   <HelpKINode Title="BitRotR method">
-    <HelpKINode Title="BitExtensions.BitRotR Method " Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_BitRotR.htm" />
     <HelpKINode Title="BitExtensions.BitRotR Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_BitRotR.htm" />
+    <HelpKINode Title="BitExtensions.BitRotR Method " Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_BitRotR.htm" />
   </HelpKINode>
   <HelpKINode Title="BitwiseAnd operator">
     <HelpKINode Title="Int24.BitwiseAnd Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_BitwiseAnd.htm" />
@@ -91,19 +91,19 @@
   </HelpKINode>
   <HelpKINode Title="Byte to Int24 conversion" Url="html/M_Gemstone_Numeric_Int24_op_Implicit_8.htm" />
   <HelpKINode Title="Byte to UInt24 conversion" Url="html/M_Gemstone_Numeric_UInt24_op_Implicit_8.htm" />
-  <HelpKINode Title="CALC enumeration member" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
-  <HelpKINode Title="CalculateActivePower method" Url="html/M_Gemstone_Units_EE_Phasor_CalculateActivePower.htm" />
-  <HelpKINode Title="CalculateApparentPower method" Url="html/M_Gemstone_Units_EE_Phasor_CalculateApparentPower.htm" />
-  <HelpKINode Title="CalculateComplexPower method" Url="html/M_Gemstone_Units_EE_Phasor_CalculateComplexPower.htm" />
-  <HelpKINode Title="CalculateReactivePower method" Url="html/M_Gemstone_Units_EE_Phasor_CalculateReactivePower.htm" />
-  <HelpKINode Title="CalculateRelativePhase method" Url="html/M_Gemstone_Units_EE_Phasor_CalculateRelativePhase.htm" />
-  <HelpKINode Title="Calculation enumeration member" Url="html/T_Gemstone_Units_EE_SignalKind.htm" />
-  <HelpKINode Title="CellIndex field" Url="html/F_Gemstone_Units_EE_SignalReference_CellIndex.htm" />
+  <HelpKINode Title="CALC enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
+  <HelpKINode Title="CalculateActivePower method" Url="html/M_Gemstone_Numeric_EE_Phasor_CalculateActivePower.htm" />
+  <HelpKINode Title="CalculateApparentPower method" Url="html/M_Gemstone_Numeric_EE_Phasor_CalculateApparentPower.htm" />
+  <HelpKINode Title="CalculateComplexPower method" Url="html/M_Gemstone_Numeric_EE_Phasor_CalculateComplexPower.htm" />
+  <HelpKINode Title="CalculateReactivePower method" Url="html/M_Gemstone_Numeric_EE_Phasor_CalculateReactivePower.htm" />
+  <HelpKINode Title="CalculateRelativePhase method" Url="html/M_Gemstone_Numeric_EE_Phasor_CalculateRelativePhase.htm" />
+  <HelpKINode Title="Calculation enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
+  <HelpKINode Title="CellIndex field" Url="html/F_Gemstone_Numeric_EE_SignalReference_CellIndex.htm" />
   <HelpKINode Title="Char to Int24 conversion" Url="html/M_Gemstone_Numeric_Int24_op_Implicit_9.htm" />
   <HelpKINode Title="Char to UInt24 conversion" Url="html/M_Gemstone_Numeric_UInt24_op_Implicit_9.htm" />
   <HelpKINode Title="CheckBits method">
-    <HelpKINode Title="BitExtensions.CheckBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_CheckBits.htm" />
     <HelpKINode Title="BitExtensions.CheckBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_CheckBits.htm" />
+    <HelpKINode Title="BitExtensions.CheckBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_CheckBits.htm" />
   </HelpKINode>
   <HelpKINode Title="ClearBits method">
     <HelpKINode Title="BitExtensions.ClearBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_ClearBits.htm" />
@@ -111,7 +111,7 @@
   </HelpKINode>
   <HelpKINode Title="CompareTo method">
     <HelpKINode Title="Int24.CompareTo Method " Url="html/Overload_Gemstone_Numeric_Int24_CompareTo.htm" />
-    <HelpKINode Title="SignalReference.CompareTo Method " Url="html/Overload_Gemstone_Units_EE_SignalReference_CompareTo.htm" />
+    <HelpKINode Title="SignalReference.CompareTo Method " Url="html/Overload_Gemstone_Numeric_EE_SignalReference_CompareTo.htm" />
     <HelpKINode Title="UInt24.CompareTo Method " Url="html/Overload_Gemstone_Numeric_UInt24_CompareTo.htm" />
   </HelpKINode>
   <HelpKINode Title="Complex to ComplexNumber conversion" Url="html/M_Gemstone_Numeric_ComplexNumber_op_Implicit_2.htm" />
@@ -146,7 +146,7 @@
   <HelpKINode Title="ComplexNumber.UnaryNegation operator" Url="html/M_Gemstone_Numeric_ComplexNumber_op_UnaryNegation.htm" />
   <HelpKINode Title="Conjugate property">
     <HelpKINode Title="ComplexNumber.Conjugate Property " Url="html/P_Gemstone_Numeric_ComplexNumber_Conjugate.htm" />
-    <HelpKINode Title="Phasor.Conjugate Property " Url="html/P_Gemstone_Units_EE_Phasor_Conjugate.htm" />
+    <HelpKINode Title="Phasor.Conjugate Property " Url="html/P_Gemstone_Numeric_EE_Phasor_Conjugate.htm" />
   </HelpKINode>
   <HelpKINode Title="CopyBytes method">
     <HelpKINode Title="BigEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BigEndian_CopyBytes.htm" />
@@ -154,7 +154,7 @@
     <HelpKINode Title="LittleEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_LittleEndian_CopyBytes.htm" />
     <HelpKINode Title="LittleEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_LittleEndian_CopyBytes.htm" />
   </HelpKINode>
-  <HelpKINode Title="Current enumeration member" Url="html/T_Gemstone_Units_EE_PhasorType.htm" />
+  <HelpKINode Title="Current enumeration member" Url="html/T_Gemstone_Numeric_EE_PhasorType.htm" />
   <HelpKINode Title="Decimal to Int24 conversion" Url="html/M_Gemstone_Numeric_Int24_op_Explicit_3.htm" />
   <HelpKINode Title="Decimal to UInt24 conversion" Url="html/M_Gemstone_Numeric_UInt24_op_Explicit_5.htm" />
   <HelpKINode Title="Decode method" Url="html/Overload_Gemstone_Numeric_RadixCodec_Decode.htm" />
@@ -163,17 +163,17 @@
     <HelpKINode Title="UInt24.Decrement Operator " Url="html/M_Gemstone_Numeric_UInt24_op_Decrement.htm" />
   </HelpKINode>
   <HelpKINode Title="DefaultDistanceFunction method" Url="html/M_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_DefaultDistanceFunction.htm" />
-  <HelpKINode Title="DfDt enumeration member" Url="html/T_Gemstone_Units_EE_SignalKind.htm" />
-  <HelpKINode Title="DFDT enumeration member" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
-  <HelpKINode Title="DIGI enumeration member" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
-  <HelpKINode Title="Digital enumeration member" Url="html/T_Gemstone_Units_EE_SignalKind.htm" />
+  <HelpKINode Title="DfDt enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
+  <HelpKINode Title="DFDT enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
+  <HelpKINode Title="DIGI enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
+  <HelpKINode Title="Digital enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
   <HelpKINode Title="Digits field" Url="html/F_Gemstone_Numeric_RadixCodec_Digits.htm" />
   <HelpKINode Title="DistanceFunc delegate" Url="html/T_Gemstone_Numeric_Interpolation_DistanceFunc.htm" />
   <HelpKINode Title="DistanceFunction property" Url="html/P_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_DistanceFunction.htm" />
   <HelpKINode Title="Division operator">
     <HelpKINode Title="ComplexNumber.Division Operator " Url="html/M_Gemstone_Numeric_ComplexNumber_op_Division.htm" />
     <HelpKINode Title="Int24.Division Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Division.htm" />
-    <HelpKINode Title="Phasor.Division Operator " Url="html/M_Gemstone_Units_EE_Phasor_op_Division.htm" />
+    <HelpKINode Title="Phasor.Division Operator " Url="html/M_Gemstone_Numeric_EE_Phasor_op_Division.htm" />
     <HelpKINode Title="UInt24.Division Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Division.htm" />
   </HelpKINode>
   <HelpKINode Title="Domain property" Url="html/P_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction_Domain.htm" />
@@ -186,15 +186,15 @@
   <HelpKINode Title="Equality operator">
     <HelpKINode Title="ComplexNumber.Equality Operator " Url="html/M_Gemstone_Numeric_ComplexNumber_op_Equality.htm" />
     <HelpKINode Title="Int24.Equality Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Equality.htm" />
-    <HelpKINode Title="Phasor.Equality Operator " Url="html/M_Gemstone_Units_EE_Phasor_op_Equality.htm" />
-    <HelpKINode Title="SignalReference.Equality Operator " Url="html/M_Gemstone_Units_EE_SignalReference_op_Equality.htm" />
+    <HelpKINode Title="Phasor.Equality Operator " Url="html/M_Gemstone_Numeric_EE_Phasor_op_Equality.htm" />
+    <HelpKINode Title="SignalReference.Equality Operator " Url="html/M_Gemstone_Numeric_EE_SignalReference_op_Equality.htm" />
     <HelpKINode Title="UInt24.Equality Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Equality.htm" />
   </HelpKINode>
   <HelpKINode Title="Equals method">
     <HelpKINode Title="ComplexNumber.Equals Method " Url="html/Overload_Gemstone_Numeric_ComplexNumber_Equals.htm" />
     <HelpKINode Title="Int24.Equals Method " Url="html/Overload_Gemstone_Numeric_Int24_Equals.htm" />
-    <HelpKINode Title="Phasor.Equals Method " Url="html/Overload_Gemstone_Units_EE_Phasor_Equals.htm" />
-    <HelpKINode Title="SignalReference.Equals Method " Url="html/Overload_Gemstone_Units_EE_SignalReference_Equals.htm" />
+    <HelpKINode Title="Phasor.Equals Method " Url="html/Overload_Gemstone_Numeric_EE_Phasor_Equals.htm" />
+    <HelpKINode Title="SignalReference.Equals Method " Url="html/Overload_Gemstone_Numeric_EE_SignalReference_Equals.htm" />
     <HelpKINode Title="UInt24.Equals Method " Url="html/Overload_Gemstone_Numeric_UInt24_Equals.htm" />
   </HelpKINode>
   <HelpKINode Title="Euclidean class">
@@ -212,16 +212,16 @@
   <HelpKINode Title="Exponent operator">
     <HelpKINode Title="ComplexNumber.Exponent Operator " Url="html/M_Gemstone_Numeric_ComplexNumber_op_Exponent.htm" />
     <HelpKINode Title="Int24.Exponent Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Exponent.htm" />
-    <HelpKINode Title="Phasor.Exponent Operator " Url="html/M_Gemstone_Units_EE_Phasor_op_Exponent.htm" />
+    <HelpKINode Title="Phasor.Exponent Operator " Url="html/M_Gemstone_Numeric_EE_Phasor_op_Exponent.htm" />
     <HelpKINode Title="UInt24.Exponent Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Exponent.htm" />
   </HelpKINode>
   <HelpKINode Title="False operator">
     <HelpKINode Title="Int24.False Operator " Url="html/M_Gemstone_Numeric_Int24_op_False.htm" />
     <HelpKINode Title="UInt24.False Operator " Url="html/M_Gemstone_Numeric_UInt24_op_False.htm" />
   </HelpKINode>
-  <HelpKINode Title="FLAG enumeration member" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
-  <HelpKINode Title="FREQ enumeration member" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
-  <HelpKINode Title="Frequency enumeration member" Url="html/T_Gemstone_Units_EE_SignalKind.htm" />
+  <HelpKINode Title="FLAG enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
+  <HelpKINode Title="FREQ enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
+  <HelpKINode Title="Frequency enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
   <HelpKINode Title="GaussianDistribution class">
     <HelpKINode Title="GaussianDistribution Class" Url="html/T_Gemstone_Numeric_Analysis_GaussianDistribution.htm" />
     <HelpKINode Title="constructor" Url="html/M_Gemstone_Numeric_Analysis_GaussianDistribution__ctor.htm" />
@@ -235,6 +235,15 @@
   <HelpKINode Title="Gemstone.Numeric.Analysis.GaussianDistribution class" Url="html/T_Gemstone_Numeric_Analysis_GaussianDistribution.htm" />
   <HelpKINode Title="Gemstone.Numeric.Analysis.NumericAnalysisExtensions class" Url="html/T_Gemstone_Numeric_Analysis_NumericAnalysisExtensions.htm" />
   <HelpKINode Title="Gemstone.Numeric.ComplexNumber structure" Url="html/T_Gemstone_Numeric_ComplexNumber.htm" />
+  <HelpKINode Title="Gemstone.Numeric.EE namespace" Url="html/N_Gemstone_Numeric_EE.htm" />
+  <HelpKINode Title="Gemstone.Numeric.EE.LineFrequency enumeration" Url="html/T_Gemstone_Numeric_EE_LineFrequency.htm" />
+  <HelpKINode Title="Gemstone.Numeric.EE.Phasor structure" Url="html/T_Gemstone_Numeric_EE_Phasor.htm" />
+  <HelpKINode Title="Gemstone.Numeric.EE.PhasorType enumeration" Url="html/T_Gemstone_Numeric_EE_PhasorType.htm" />
+  <HelpKINode Title="Gemstone.Numeric.EE.SignalKind enumeration" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
+  <HelpKINode Title="Gemstone.Numeric.EE.SignalKindExtensions class" Url="html/T_Gemstone_Numeric_EE_SignalKindExtensions.htm" />
+  <HelpKINode Title="Gemstone.Numeric.EE.SignalReference structure" Url="html/T_Gemstone_Numeric_EE_SignalReference.htm" />
+  <HelpKINode Title="Gemstone.Numeric.EE.SignalType enumeration" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
+  <HelpKINode Title="Gemstone.Numeric.EE.SignalTypeExtensions class" Url="html/T_Gemstone_Numeric_EE_SignalTypeExtensions.htm" />
   <HelpKINode Title="Gemstone.Numeric.Int24 structure" Url="html/T_Gemstone_Numeric_Int24.htm" />
   <HelpKINode Title="Gemstone.Numeric.Int24Extensions namespace" Url="html/N_Gemstone_Numeric_Int24Extensions.htm" />
   <HelpKINode Title="Gemstone.Numeric.Int24Extensions.BigEndian class" Url="html/T_Gemstone_Numeric_Int24Extensions_BigEndian.htm" />
@@ -253,16 +262,7 @@
   <HelpKINode Title="Gemstone.Numeric.UInt24Extensions.LittleEndian class" Url="html/T_Gemstone_Numeric_UInt24Extensions_LittleEndian.htm" />
   <HelpKINode Title="Gemstone.Numeric.UnitExtensions namespace" Url="html/N_Gemstone_Numeric_UnitExtensions.htm" />
   <HelpKINode Title="Gemstone.Numeric.UnitExtensions.UnitExtensions class" Url="html/T_Gemstone_Numeric_UnitExtensions_UnitExtensions.htm" />
-  <HelpKINode Title="Gemstone.Units.EE namespace" Url="html/N_Gemstone_Units_EE.htm" />
-  <HelpKINode Title="Gemstone.Units.EE.LineFrequency enumeration" Url="html/T_Gemstone_Units_EE_LineFrequency.htm" />
-  <HelpKINode Title="Gemstone.Units.EE.Phasor structure" Url="html/T_Gemstone_Units_EE_Phasor.htm" />
-  <HelpKINode Title="Gemstone.Units.EE.PhasorType enumeration" Url="html/T_Gemstone_Units_EE_PhasorType.htm" />
-  <HelpKINode Title="Gemstone.Units.EE.SignalKind enumeration" Url="html/T_Gemstone_Units_EE_SignalKind.htm" />
-  <HelpKINode Title="Gemstone.Units.EE.SignalKindExtensions class" Url="html/T_Gemstone_Units_EE_SignalKindExtensions.htm" />
-  <HelpKINode Title="Gemstone.Units.EE.SignalReference structure" Url="html/T_Gemstone_Units_EE_SignalReference.htm" />
-  <HelpKINode Title="Gemstone.Units.EE.SignalType enumeration" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
-  <HelpKINode Title="Gemstone.Units.EE.SignalTypeExtensions class" Url="html/T_Gemstone_Units_EE_SignalTypeExtensions.htm" />
-  <HelpKINode Title="GetAcronym method" Url="html/M_Gemstone_Units_EE_SignalKindExtensions_GetAcronym.htm" />
+  <HelpKINode Title="GetAcronym method" Url="html/M_Gemstone_Numeric_EE_SignalKindExtensions_GetAcronym.htm" />
   <HelpKINode Title="GetBytes method">
     <HelpKINode Title="BigEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_Int24Extensions_BigEndian_GetBytes.htm" />
     <HelpKINode Title="BigEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_BigEndian_GetBytes.htm" />
@@ -271,17 +271,17 @@
     <HelpKINode Title="LittleEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_LittleEndian_GetBytes.htm" />
     <HelpKINode Title="UInt24.GetBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24_GetBytes.htm" />
   </HelpKINode>
-  <HelpKINode Title="GetFormattedName method" Url="html/M_Gemstone_Units_EE_SignalTypeExtensions_GetFormattedName.htm" />
+  <HelpKINode Title="GetFormattedName method" Url="html/M_Gemstone_Numeric_EE_SignalTypeExtensions_GetFormattedName.htm" />
   <HelpKINode Title="GetHashCode method">
     <HelpKINode Title="ComplexNumber.GetHashCode Method " Url="html/M_Gemstone_Numeric_ComplexNumber_GetHashCode.htm" />
     <HelpKINode Title="Int24.GetHashCode Method " Url="html/M_Gemstone_Numeric_Int24_GetHashCode.htm" />
-    <HelpKINode Title="Phasor.GetHashCode Method " Url="html/M_Gemstone_Units_EE_Phasor_GetHashCode.htm" />
-    <HelpKINode Title="SignalReference.GetHashCode Method " Url="html/M_Gemstone_Units_EE_SignalReference_GetHashCode.htm" />
+    <HelpKINode Title="Phasor.GetHashCode Method " Url="html/M_Gemstone_Numeric_EE_Phasor_GetHashCode.htm" />
+    <HelpKINode Title="SignalReference.GetHashCode Method " Url="html/M_Gemstone_Numeric_EE_SignalReference_GetHashCode.htm" />
     <HelpKINode Title="UInt24.GetHashCode Method " Url="html/M_Gemstone_Numeric_UInt24_GetHashCode.htm" />
   </HelpKINode>
   <HelpKINode Title="GetMaskedValue method">
-    <HelpKINode Title="BitExtensions.GetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_GetMaskedValue.htm" />
     <HelpKINode Title="BitExtensions.GetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_GetMaskedValue.htm" />
+    <HelpKINode Title="BitExtensions.GetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_GetMaskedValue.htm" />
   </HelpKINode>
   <HelpKINode Title="GetTypeCode method">
     <HelpKINode Title="Int24.GetTypeCode Method " Url="html/M_Gemstone_Numeric_Int24_GetTypeCode.htm" />
@@ -293,29 +293,29 @@
   </HelpKINode>
   <HelpKINode Title="GreaterThan operator">
     <HelpKINode Title="Int24.GreaterThan Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_GreaterThan.htm" />
-    <HelpKINode Title="SignalReference.GreaterThan Operator " Url="html/M_Gemstone_Units_EE_SignalReference_op_GreaterThan.htm" />
+    <HelpKINode Title="SignalReference.GreaterThan Operator " Url="html/M_Gemstone_Numeric_EE_SignalReference_op_GreaterThan.htm" />
     <HelpKINode Title="UInt24.GreaterThan Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_GreaterThan.htm" />
   </HelpKINode>
   <HelpKINode Title="GreaterThanOrEqual operator">
     <HelpKINode Title="Int24.GreaterThanOrEqual Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_GreaterThanOrEqual.htm" />
-    <HelpKINode Title="SignalReference.GreaterThanOrEqual Operator " Url="html/M_Gemstone_Units_EE_SignalReference_op_GreaterThanOrEqual.htm" />
+    <HelpKINode Title="SignalReference.GreaterThanOrEqual Operator " Url="html/M_Gemstone_Numeric_EE_SignalReference_op_GreaterThanOrEqual.htm" />
     <HelpKINode Title="UInt24.GreaterThanOrEqual Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_GreaterThanOrEqual.htm" />
   </HelpKINode>
   <HelpKINode Title="GreatestCommonDenominator method" Url="html/Overload_Gemstone_Numeric_Analysis_Euclidean_GreatestCommonDenominator.htm" />
-  <HelpKINode Title="Hz50 enumeration member" Url="html/T_Gemstone_Units_EE_LineFrequency.htm" />
-  <HelpKINode Title="Hz60 enumeration member" Url="html/T_Gemstone_Units_EE_LineFrequency.htm" />
+  <HelpKINode Title="Hz50 enumeration member" Url="html/T_Gemstone_Numeric_EE_LineFrequency.htm" />
+  <HelpKINode Title="Hz60 enumeration member" Url="html/T_Gemstone_Numeric_EE_LineFrequency.htm" />
   <HelpKINode Title="IDWFunc delegate" Url="html/T_Gemstone_Numeric_Interpolation_IDWFunc.htm" />
   <HelpKINode Title="Imaginary property" Url="html/P_Gemstone_Numeric_ComplexNumber_Imaginary.htm" />
   <HelpKINode Title="Increment operator">
     <HelpKINode Title="Int24.Increment Operator " Url="html/M_Gemstone_Numeric_Int24_op_Increment.htm" />
     <HelpKINode Title="UInt24.Increment Operator " Url="html/M_Gemstone_Numeric_UInt24_op_Increment.htm" />
   </HelpKINode>
-  <HelpKINode Title="Index field" Url="html/F_Gemstone_Units_EE_SignalReference_Index.htm" />
+  <HelpKINode Title="Index field" Url="html/F_Gemstone_Numeric_EE_SignalReference_Index.htm" />
   <HelpKINode Title="Inequality operator">
     <HelpKINode Title="ComplexNumber.Inequality Operator " Url="html/M_Gemstone_Numeric_ComplexNumber_op_Inequality.htm" />
     <HelpKINode Title="Int24.Inequality Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Inequality.htm" />
-    <HelpKINode Title="Phasor.Inequality Operator " Url="html/M_Gemstone_Units_EE_Phasor_op_Inequality.htm" />
-    <HelpKINode Title="SignalReference.Inequality Operator " Url="html/M_Gemstone_Units_EE_SignalReference_op_Inequality.htm" />
+    <HelpKINode Title="Phasor.Inequality Operator " Url="html/M_Gemstone_Numeric_EE_Phasor_op_Inequality.htm" />
+    <HelpKINode Title="SignalReference.Inequality Operator " Url="html/M_Gemstone_Numeric_EE_SignalReference_op_Inequality.htm" />
     <HelpKINode Title="UInt24.Inequality Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Inequality.htm" />
   </HelpKINode>
   <HelpKINode Title="Int16 to Int24 conversion" Url="html/M_Gemstone_Numeric_Int24_op_Implicit_10.htm" />
@@ -395,9 +395,9 @@
   <HelpKINode Title="InverseDistanceWeightingFunction.Values property" Url="html/P_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_Values.htm" />
   <HelpKINode Title="InverseDistanceWeightingFunction.XCoordinates property" Url="html/P_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_XCoordinates.htm" />
   <HelpKINode Title="InverseDistanceWeightingFunction.YCoordinates property" Url="html/P_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_YCoordinates.htm" />
-  <HelpKINode Title="IPHA enumeration member" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
-  <HelpKINode Title="IPHM enumeration member" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
-  <HelpKINode Title="Kind field" Url="html/F_Gemstone_Units_EE_SignalReference_Kind.htm" />
+  <HelpKINode Title="IPHA enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
+  <HelpKINode Title="IPHM enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
+  <HelpKINode Title="Kind field" Url="html/F_Gemstone_Numeric_EE_SignalReference_Kind.htm" />
   <HelpKINode Title="LeastCommonMultiple method" Url="html/Overload_Gemstone_Numeric_Analysis_Euclidean_LeastCommonMultiple.htm" />
   <HelpKINode Title="LeftShift operator">
     <HelpKINode Title="Int24.LeftShift Operator " Url="html/M_Gemstone_Numeric_Int24_op_LeftShift.htm" />
@@ -405,15 +405,15 @@
   </HelpKINode>
   <HelpKINode Title="LessThan operator">
     <HelpKINode Title="Int24.LessThan Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_LessThan.htm" />
-    <HelpKINode Title="SignalReference.LessThan Operator " Url="html/M_Gemstone_Units_EE_SignalReference_op_LessThan.htm" />
+    <HelpKINode Title="SignalReference.LessThan Operator " Url="html/M_Gemstone_Numeric_EE_SignalReference_op_LessThan.htm" />
     <HelpKINode Title="UInt24.LessThan Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_LessThan.htm" />
   </HelpKINode>
   <HelpKINode Title="LessThanOrEqual operator">
     <HelpKINode Title="Int24.LessThanOrEqual Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_LessThanOrEqual.htm" />
-    <HelpKINode Title="SignalReference.LessThanOrEqual Operator " Url="html/M_Gemstone_Units_EE_SignalReference_op_LessThanOrEqual.htm" />
+    <HelpKINode Title="SignalReference.LessThanOrEqual Operator " Url="html/M_Gemstone_Numeric_EE_SignalReference_op_LessThanOrEqual.htm" />
     <HelpKINode Title="UInt24.LessThanOrEqual Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_LessThanOrEqual.htm" />
   </HelpKINode>
-  <HelpKINode Title="LineFrequency enumeration" Url="html/T_Gemstone_Units_EE_LineFrequency.htm" />
+  <HelpKINode Title="LineFrequency enumeration" Url="html/T_Gemstone_Numeric_EE_LineFrequency.htm" />
   <HelpKINode Title="LittleEndian class">
     <HelpKINode Title="LittleEndian Class" Url="html/T_Gemstone_Numeric_Int24Extensions_LittleEndian.htm" />
     <HelpKINode Title="LittleEndian Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_LittleEndian.htm" />
@@ -421,16 +421,16 @@
     <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_UInt24Extensions_LittleEndian.htm" />
   </HelpKINode>
   <HelpKINode Title="LittleEndian.CopyBytes method">
-    <HelpKINode Title="LittleEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_LittleEndian_CopyBytes.htm" />
     <HelpKINode Title="LittleEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_LittleEndian_CopyBytes.htm" />
+    <HelpKINode Title="LittleEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_LittleEndian_CopyBytes.htm" />
   </HelpKINode>
   <HelpKINode Title="LittleEndian.GetBytes method">
-    <HelpKINode Title="LittleEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_Int24Extensions_LittleEndian_GetBytes.htm" />
     <HelpKINode Title="LittleEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_LittleEndian_GetBytes.htm" />
+    <HelpKINode Title="LittleEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_Int24Extensions_LittleEndian_GetBytes.htm" />
   </HelpKINode>
   <HelpKINode Title="LittleEndian.ToInt24 method" Url="html/Overload_Gemstone_Numeric_Int24Extensions_LittleEndian_ToInt24.htm" />
   <HelpKINode Title="LittleEndian.ToUInt24 method" Url="html/Overload_Gemstone_Numeric_UInt24Extensions_LittleEndian_ToUInt24.htm" />
-  <HelpKINode Title="Magnitude enumeration member" Url="html/T_Gemstone_Units_EE_SignalKind.htm" />
+  <HelpKINode Title="Magnitude enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
   <HelpKINode Title="Magnitude property" Url="html/P_Gemstone_Numeric_ComplexNumber_Magnitude.htm" />
   <HelpKINode Title="MaxValue field">
     <HelpKINode Title="Int24.MaxValue Field" Url="html/F_Gemstone_Numeric_Int24_MaxValue.htm" />
@@ -448,11 +448,11 @@
   <HelpKINode Title="Multiply operator">
     <HelpKINode Title="ComplexNumber.Multiply Operator " Url="html/M_Gemstone_Numeric_ComplexNumber_op_Multiply.htm" />
     <HelpKINode Title="Int24.Multiply Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Multiply.htm" />
-    <HelpKINode Title="Phasor.Multiply Operator " Url="html/M_Gemstone_Units_EE_Phasor_op_Multiply.htm" />
+    <HelpKINode Title="Phasor.Multiply Operator " Url="html/M_Gemstone_Numeric_EE_Phasor_op_Multiply.htm" />
     <HelpKINode Title="UInt24.Multiply Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Multiply.htm" />
   </HelpKINode>
   <HelpKINode Title="Next method" Url="html/M_Gemstone_Numeric_Analysis_GaussianDistribution_Next.htm" />
-  <HelpKINode Title="NONE enumeration member" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
+  <HelpKINode Title="NONE enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
   <HelpKINode Title="NoneAssigned property" Url="html/P_Gemstone_Numeric_ComplexNumber_NoneAssigned.htm" />
   <HelpKINode Title="NumericAnalysisExtensions class">
     <HelpKINode Title="NumericAnalysisExtensions Class" Url="html/T_Gemstone_Numeric_Analysis_NumericAnalysisExtensions.htm" />
@@ -468,39 +468,39 @@
     <HelpKINode Title="Int24.Parse Method " Url="html/Overload_Gemstone_Numeric_Int24_Parse.htm" />
     <HelpKINode Title="UInt24.Parse Method " Url="html/Overload_Gemstone_Numeric_UInt24_Parse.htm" />
   </HelpKINode>
-  <HelpKINode Title="ParseSignalKind method" Url="html/M_Gemstone_Units_EE_SignalKindExtensions_ParseSignalKind.htm" />
+  <HelpKINode Title="ParseSignalKind method" Url="html/M_Gemstone_Numeric_EE_SignalKindExtensions_ParseSignalKind.htm" />
   <HelpKINode Title="Phasor structure">
-    <HelpKINode Title="Phasor Structure" Url="html/T_Gemstone_Units_EE_Phasor.htm" />
-    <HelpKINode Title="constructor" Url="html/Overload_Gemstone_Units_EE_Phasor__ctor.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Gemstone_Units_EE_Phasor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Units_EE_Phasor.htm" />
-    <HelpKINode Title="operators and type conversions" Url="html/Operators_T_Gemstone_Units_EE_Phasor.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_Gemstone_Units_EE_Phasor.htm" />
+    <HelpKINode Title="Phasor Structure" Url="html/T_Gemstone_Numeric_EE_Phasor.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_Gemstone_Numeric_EE_Phasor__ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Gemstone_Numeric_EE_Phasor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_EE_Phasor.htm" />
+    <HelpKINode Title="operators and type conversions" Url="html/Operators_T_Gemstone_Numeric_EE_Phasor.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_Gemstone_Numeric_EE_Phasor.htm" />
   </HelpKINode>
-  <HelpKINode Title="Phasor to Complex conversion" Url="html/M_Gemstone_Units_EE_Phasor_op_Implicit_1.htm" />
-  <HelpKINode Title="Phasor to ComplexNumber conversion" Url="html/M_Gemstone_Units_EE_Phasor_op_Implicit.htm" />
-  <HelpKINode Title="Phasor.Addition operator" Url="html/M_Gemstone_Units_EE_Phasor_op_Addition.htm" />
-  <HelpKINode Title="Phasor.CalculateActivePower method" Url="html/M_Gemstone_Units_EE_Phasor_CalculateActivePower.htm" />
-  <HelpKINode Title="Phasor.CalculateApparentPower method" Url="html/M_Gemstone_Units_EE_Phasor_CalculateApparentPower.htm" />
-  <HelpKINode Title="Phasor.CalculateComplexPower method" Url="html/M_Gemstone_Units_EE_Phasor_CalculateComplexPower.htm" />
-  <HelpKINode Title="Phasor.CalculateReactivePower method" Url="html/M_Gemstone_Units_EE_Phasor_CalculateReactivePower.htm" />
-  <HelpKINode Title="Phasor.CalculateRelativePhase method" Url="html/M_Gemstone_Units_EE_Phasor_CalculateRelativePhase.htm" />
-  <HelpKINode Title="Phasor.Conjugate property" Url="html/P_Gemstone_Units_EE_Phasor_Conjugate.htm" />
-  <HelpKINode Title="Phasor.Division operator" Url="html/M_Gemstone_Units_EE_Phasor_op_Division.htm" />
-  <HelpKINode Title="Phasor.Equality operator" Url="html/M_Gemstone_Units_EE_Phasor_op_Equality.htm" />
-  <HelpKINode Title="Phasor.Equals method" Url="html/Overload_Gemstone_Units_EE_Phasor_Equals.htm" />
-  <HelpKINode Title="Phasor.Exponent operator" Url="html/M_Gemstone_Units_EE_Phasor_op_Exponent.htm" />
-  <HelpKINode Title="Phasor.GetHashCode method" Url="html/M_Gemstone_Units_EE_Phasor_GetHashCode.htm" />
-  <HelpKINode Title="Phasor.Inequality operator" Url="html/M_Gemstone_Units_EE_Phasor_op_Inequality.htm" />
-  <HelpKINode Title="Phasor.Multiply operator" Url="html/M_Gemstone_Units_EE_Phasor_op_Multiply.htm" />
-  <HelpKINode Title="Phasor.Phasor constructor" Url="html/Overload_Gemstone_Units_EE_Phasor__ctor.htm" />
-  <HelpKINode Title="Phasor.Pow method" Url="html/M_Gemstone_Units_EE_Phasor_Pow.htm" />
-  <HelpKINode Title="Phasor.Subtraction operator" Url="html/M_Gemstone_Units_EE_Phasor_op_Subtraction.htm" />
-  <HelpKINode Title="Phasor.ToString method" Url="html/M_Gemstone_Units_EE_Phasor_ToString.htm" />
-  <HelpKINode Title="Phasor.Type field" Url="html/F_Gemstone_Units_EE_Phasor_Type.htm" />
-  <HelpKINode Title="Phasor.UnaryNegation operator" Url="html/M_Gemstone_Units_EE_Phasor_op_UnaryNegation.htm" />
-  <HelpKINode Title="Phasor.Value field" Url="html/F_Gemstone_Units_EE_Phasor_Value.htm" />
-  <HelpKINode Title="PhasorType enumeration" Url="html/T_Gemstone_Units_EE_PhasorType.htm" />
+  <HelpKINode Title="Phasor to Complex conversion" Url="html/M_Gemstone_Numeric_EE_Phasor_op_Implicit_1.htm" />
+  <HelpKINode Title="Phasor to ComplexNumber conversion" Url="html/M_Gemstone_Numeric_EE_Phasor_op_Implicit.htm" />
+  <HelpKINode Title="Phasor.Addition operator" Url="html/M_Gemstone_Numeric_EE_Phasor_op_Addition.htm" />
+  <HelpKINode Title="Phasor.CalculateActivePower method" Url="html/M_Gemstone_Numeric_EE_Phasor_CalculateActivePower.htm" />
+  <HelpKINode Title="Phasor.CalculateApparentPower method" Url="html/M_Gemstone_Numeric_EE_Phasor_CalculateApparentPower.htm" />
+  <HelpKINode Title="Phasor.CalculateComplexPower method" Url="html/M_Gemstone_Numeric_EE_Phasor_CalculateComplexPower.htm" />
+  <HelpKINode Title="Phasor.CalculateReactivePower method" Url="html/M_Gemstone_Numeric_EE_Phasor_CalculateReactivePower.htm" />
+  <HelpKINode Title="Phasor.CalculateRelativePhase method" Url="html/M_Gemstone_Numeric_EE_Phasor_CalculateRelativePhase.htm" />
+  <HelpKINode Title="Phasor.Conjugate property" Url="html/P_Gemstone_Numeric_EE_Phasor_Conjugate.htm" />
+  <HelpKINode Title="Phasor.Division operator" Url="html/M_Gemstone_Numeric_EE_Phasor_op_Division.htm" />
+  <HelpKINode Title="Phasor.Equality operator" Url="html/M_Gemstone_Numeric_EE_Phasor_op_Equality.htm" />
+  <HelpKINode Title="Phasor.Equals method" Url="html/Overload_Gemstone_Numeric_EE_Phasor_Equals.htm" />
+  <HelpKINode Title="Phasor.Exponent operator" Url="html/M_Gemstone_Numeric_EE_Phasor_op_Exponent.htm" />
+  <HelpKINode Title="Phasor.GetHashCode method" Url="html/M_Gemstone_Numeric_EE_Phasor_GetHashCode.htm" />
+  <HelpKINode Title="Phasor.Inequality operator" Url="html/M_Gemstone_Numeric_EE_Phasor_op_Inequality.htm" />
+  <HelpKINode Title="Phasor.Multiply operator" Url="html/M_Gemstone_Numeric_EE_Phasor_op_Multiply.htm" />
+  <HelpKINode Title="Phasor.Phasor constructor" Url="html/Overload_Gemstone_Numeric_EE_Phasor__ctor.htm" />
+  <HelpKINode Title="Phasor.Pow method" Url="html/M_Gemstone_Numeric_EE_Phasor_Pow.htm" />
+  <HelpKINode Title="Phasor.Subtraction operator" Url="html/M_Gemstone_Numeric_EE_Phasor_op_Subtraction.htm" />
+  <HelpKINode Title="Phasor.ToString method" Url="html/M_Gemstone_Numeric_EE_Phasor_ToString.htm" />
+  <HelpKINode Title="Phasor.Type field" Url="html/F_Gemstone_Numeric_EE_Phasor_Type.htm" />
+  <HelpKINode Title="Phasor.UnaryNegation operator" Url="html/M_Gemstone_Numeric_EE_Phasor_op_UnaryNegation.htm" />
+  <HelpKINode Title="Phasor.Value field" Url="html/F_Gemstone_Numeric_EE_Phasor_Value.htm" />
+  <HelpKINode Title="PhasorType enumeration" Url="html/T_Gemstone_Numeric_EE_PhasorType.htm" />
   <HelpKINode Title="PiecewiseLinearFunction class">
     <HelpKINode Title="PiecewiseLinearFunction Class" Url="html/T_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction.htm" />
     <HelpKINode Title="constructor" Url="html/M_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction__ctor.htm" />
@@ -517,11 +517,11 @@
   <HelpKINode Title="PiecewiseLinearFunction.SetRange method" Url="html/M_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction_SetRange.htm" />
   <HelpKINode Title="Pow method">
     <HelpKINode Title="ComplexNumber.Pow Method " Url="html/M_Gemstone_Numeric_ComplexNumber_Pow.htm" />
-    <HelpKINode Title="Phasor.Pow Method " Url="html/M_Gemstone_Units_EE_Phasor_Pow.htm" />
+    <HelpKINode Title="Phasor.Pow Method " Url="html/M_Gemstone_Numeric_EE_Phasor_Pow.htm" />
   </HelpKINode>
   <HelpKINode Title="Power property" Url="html/P_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_Power.htm" />
-  <HelpKINode Title="QUAL enumeration member" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
-  <HelpKINode Title="Quality enumeration member" Url="html/T_Gemstone_Units_EE_SignalKind.htm" />
+  <HelpKINode Title="QUAL enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
+  <HelpKINode Title="Quality enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
   <HelpKINode Title="Radix16 field" Url="html/F_Gemstone_Numeric_RadixCodec_Radix16.htm" />
   <HelpKINode Title="Radix2 field" Url="html/F_Gemstone_Numeric_RadixCodec_Radix2.htm" />
   <HelpKINode Title="Radix32 field" Url="html/F_Gemstone_Numeric_RadixCodec_Radix32.htm" />
@@ -568,53 +568,53 @@
   <HelpKINode Title="SetValues method" Url="html/M_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_SetValues.htm" />
   <HelpKINode Title="SetXCoordinates method" Url="html/M_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_SetXCoordinates.htm" />
   <HelpKINode Title="SetYCoordinates method" Url="html/M_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_SetYCoordinates.htm" />
-  <HelpKINode Title="SignalKind enumeration" Url="html/T_Gemstone_Units_EE_SignalKind.htm" />
+  <HelpKINode Title="SignalKind enumeration" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
   <HelpKINode Title="SignalKindExtensions class">
-    <HelpKINode Title="SignalKindExtensions Class" Url="html/T_Gemstone_Units_EE_SignalKindExtensions.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Units_EE_SignalKindExtensions.htm" />
+    <HelpKINode Title="SignalKindExtensions Class" Url="html/T_Gemstone_Numeric_EE_SignalKindExtensions.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_EE_SignalKindExtensions.htm" />
   </HelpKINode>
-  <HelpKINode Title="SignalKindExtensions.GetAcronym method" Url="html/M_Gemstone_Units_EE_SignalKindExtensions_GetAcronym.htm" />
-  <HelpKINode Title="SignalKindExtensions.ParseSignalKind method" Url="html/M_Gemstone_Units_EE_SignalKindExtensions_ParseSignalKind.htm" />
+  <HelpKINode Title="SignalKindExtensions.GetAcronym method" Url="html/M_Gemstone_Numeric_EE_SignalKindExtensions_GetAcronym.htm" />
+  <HelpKINode Title="SignalKindExtensions.ParseSignalKind method" Url="html/M_Gemstone_Numeric_EE_SignalKindExtensions_ParseSignalKind.htm" />
   <HelpKINode Title="SignalReference structure">
-    <HelpKINode Title="SignalReference Structure" Url="html/T_Gemstone_Units_EE_SignalReference.htm" />
-    <HelpKINode Title="constructor" Url="html/M_Gemstone_Units_EE_SignalReference__ctor.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_Gemstone_Units_EE_SignalReference.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Units_EE_SignalReference.htm" />
-    <HelpKINode Title="operators" Url="html/Operators_T_Gemstone_Units_EE_SignalReference.htm" />
+    <HelpKINode Title="SignalReference Structure" Url="html/T_Gemstone_Numeric_EE_SignalReference.htm" />
+    <HelpKINode Title="constructor" Url="html/M_Gemstone_Numeric_EE_SignalReference__ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_Gemstone_Numeric_EE_SignalReference.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_EE_SignalReference.htm" />
+    <HelpKINode Title="operators" Url="html/Operators_T_Gemstone_Numeric_EE_SignalReference.htm" />
   </HelpKINode>
-  <HelpKINode Title="SignalReference.Acronym field" Url="html/F_Gemstone_Units_EE_SignalReference_Acronym.htm" />
-  <HelpKINode Title="SignalReference.CellIndex field" Url="html/F_Gemstone_Units_EE_SignalReference_CellIndex.htm" />
-  <HelpKINode Title="SignalReference.CompareTo method" Url="html/Overload_Gemstone_Units_EE_SignalReference_CompareTo.htm" />
-  <HelpKINode Title="SignalReference.Equality operator" Url="html/M_Gemstone_Units_EE_SignalReference_op_Equality.htm" />
-  <HelpKINode Title="SignalReference.Equals method" Url="html/Overload_Gemstone_Units_EE_SignalReference_Equals.htm" />
-  <HelpKINode Title="SignalReference.GetHashCode method" Url="html/M_Gemstone_Units_EE_SignalReference_GetHashCode.htm" />
-  <HelpKINode Title="SignalReference.GreaterThan operator" Url="html/M_Gemstone_Units_EE_SignalReference_op_GreaterThan.htm" />
-  <HelpKINode Title="SignalReference.GreaterThanOrEqual operator" Url="html/M_Gemstone_Units_EE_SignalReference_op_GreaterThanOrEqual.htm" />
-  <HelpKINode Title="SignalReference.Index field" Url="html/F_Gemstone_Units_EE_SignalReference_Index.htm" />
-  <HelpKINode Title="SignalReference.Inequality operator" Url="html/M_Gemstone_Units_EE_SignalReference_op_Inequality.htm" />
-  <HelpKINode Title="SignalReference.Kind field" Url="html/F_Gemstone_Units_EE_SignalReference_Kind.htm" />
-  <HelpKINode Title="SignalReference.LessThan operator" Url="html/M_Gemstone_Units_EE_SignalReference_op_LessThan.htm" />
-  <HelpKINode Title="SignalReference.LessThanOrEqual operator" Url="html/M_Gemstone_Units_EE_SignalReference_op_LessThanOrEqual.htm" />
-  <HelpKINode Title="SignalReference.SignalReference constructor" Url="html/M_Gemstone_Units_EE_SignalReference__ctor.htm" />
-  <HelpKINode Title="SignalReference.ToString method" Url="html/Overload_Gemstone_Units_EE_SignalReference_ToString.htm" />
-  <HelpKINode Title="SignalType enumeration" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
+  <HelpKINode Title="SignalReference.Acronym field" Url="html/F_Gemstone_Numeric_EE_SignalReference_Acronym.htm" />
+  <HelpKINode Title="SignalReference.CellIndex field" Url="html/F_Gemstone_Numeric_EE_SignalReference_CellIndex.htm" />
+  <HelpKINode Title="SignalReference.CompareTo method" Url="html/Overload_Gemstone_Numeric_EE_SignalReference_CompareTo.htm" />
+  <HelpKINode Title="SignalReference.Equality operator" Url="html/M_Gemstone_Numeric_EE_SignalReference_op_Equality.htm" />
+  <HelpKINode Title="SignalReference.Equals method" Url="html/Overload_Gemstone_Numeric_EE_SignalReference_Equals.htm" />
+  <HelpKINode Title="SignalReference.GetHashCode method" Url="html/M_Gemstone_Numeric_EE_SignalReference_GetHashCode.htm" />
+  <HelpKINode Title="SignalReference.GreaterThan operator" Url="html/M_Gemstone_Numeric_EE_SignalReference_op_GreaterThan.htm" />
+  <HelpKINode Title="SignalReference.GreaterThanOrEqual operator" Url="html/M_Gemstone_Numeric_EE_SignalReference_op_GreaterThanOrEqual.htm" />
+  <HelpKINode Title="SignalReference.Index field" Url="html/F_Gemstone_Numeric_EE_SignalReference_Index.htm" />
+  <HelpKINode Title="SignalReference.Inequality operator" Url="html/M_Gemstone_Numeric_EE_SignalReference_op_Inequality.htm" />
+  <HelpKINode Title="SignalReference.Kind field" Url="html/F_Gemstone_Numeric_EE_SignalReference_Kind.htm" />
+  <HelpKINode Title="SignalReference.LessThan operator" Url="html/M_Gemstone_Numeric_EE_SignalReference_op_LessThan.htm" />
+  <HelpKINode Title="SignalReference.LessThanOrEqual operator" Url="html/M_Gemstone_Numeric_EE_SignalReference_op_LessThanOrEqual.htm" />
+  <HelpKINode Title="SignalReference.SignalReference constructor" Url="html/M_Gemstone_Numeric_EE_SignalReference__ctor.htm" />
+  <HelpKINode Title="SignalReference.ToString method" Url="html/Overload_Gemstone_Numeric_EE_SignalReference_ToString.htm" />
+  <HelpKINode Title="SignalType enumeration" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
   <HelpKINode Title="SignalTypeExtensions class">
-    <HelpKINode Title="SignalTypeExtensions Class" Url="html/T_Gemstone_Units_EE_SignalTypeExtensions.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Units_EE_SignalTypeExtensions.htm" />
+    <HelpKINode Title="SignalTypeExtensions Class" Url="html/T_Gemstone_Numeric_EE_SignalTypeExtensions.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_EE_SignalTypeExtensions.htm" />
   </HelpKINode>
-  <HelpKINode Title="SignalTypeExtensions.GetFormattedName method" Url="html/M_Gemstone_Units_EE_SignalTypeExtensions_GetFormattedName.htm" />
+  <HelpKINode Title="SignalTypeExtensions.GetFormattedName method" Url="html/M_Gemstone_Numeric_EE_SignalTypeExtensions_GetFormattedName.htm" />
   <HelpKINode Title="Single to Int24 conversion" Url="html/M_Gemstone_Numeric_Int24_op_Explicit_8.htm" />
   <HelpKINode Title="Single to UInt24 conversion" Url="html/M_Gemstone_Numeric_UInt24_op_Explicit_8.htm" />
   <HelpKINode Title="StandardDeviation method" Url="html/Overload_Gemstone_Numeric_Analysis_NumericAnalysisExtensions_StandardDeviation.htm" />
-  <HelpKINode Title="STAT enumeration member" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
-  <HelpKINode Title="Statistic enumeration member" Url="html/T_Gemstone_Units_EE_SignalKind.htm" />
-  <HelpKINode Title="Status enumeration member" Url="html/T_Gemstone_Units_EE_SignalKind.htm" />
+  <HelpKINode Title="STAT enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
+  <HelpKINode Title="Statistic enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
+  <HelpKINode Title="Status enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
   <HelpKINode Title="String to Int24 conversion" Url="html/M_Gemstone_Numeric_Int24_op_Explicit_9.htm" />
   <HelpKINode Title="String to UInt24 conversion" Url="html/M_Gemstone_Numeric_UInt24_op_Explicit_9.htm" />
   <HelpKINode Title="Subtraction operator">
     <HelpKINode Title="ComplexNumber.Subtraction Operator " Url="html/M_Gemstone_Numeric_ComplexNumber_op_Subtraction.htm" />
     <HelpKINode Title="Int24.Subtraction Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Subtraction.htm" />
-    <HelpKINode Title="Phasor.Subtraction Operator " Url="html/M_Gemstone_Units_EE_Phasor_op_Subtraction.htm" />
+    <HelpKINode Title="Phasor.Subtraction Operator " Url="html/M_Gemstone_Numeric_EE_Phasor_op_Subtraction.htm" />
     <HelpKINode Title="UInt24.Subtraction Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Subtraction.htm" />
   </HelpKINode>
   <HelpKINode Title="ToggleBits method">
@@ -629,8 +629,8 @@
   <HelpKINode Title="ToString method">
     <HelpKINode Title="ComplexNumber.ToString Method " Url="html/M_Gemstone_Numeric_ComplexNumber_ToString.htm" />
     <HelpKINode Title="Int24.ToString Method " Url="html/Overload_Gemstone_Numeric_Int24_ToString.htm" />
-    <HelpKINode Title="Phasor.ToString Method " Url="html/M_Gemstone_Units_EE_Phasor_ToString.htm" />
-    <HelpKINode Title="SignalReference.ToString Method " Url="html/Overload_Gemstone_Units_EE_SignalReference_ToString.htm" />
+    <HelpKINode Title="Phasor.ToString Method " Url="html/M_Gemstone_Numeric_EE_Phasor_ToString.htm" />
+    <HelpKINode Title="SignalReference.ToString Method " Url="html/Overload_Gemstone_Numeric_EE_SignalReference_ToString.htm" />
     <HelpKINode Title="UInt24.ToString Method " Url="html/Overload_Gemstone_Numeric_UInt24_ToString.htm" />
   </HelpKINode>
   <HelpKINode Title="ToUInt24 method">
@@ -646,7 +646,7 @@
     <HelpKINode Title="Int24.TryParse Method " Url="html/Overload_Gemstone_Numeric_Int24_TryParse.htm" />
     <HelpKINode Title="UInt24.TryParse Method " Url="html/Overload_Gemstone_Numeric_UInt24_TryParse.htm" />
   </HelpKINode>
-  <HelpKINode Title="Type field" Url="html/F_Gemstone_Units_EE_Phasor_Type.htm" />
+  <HelpKINode Title="Type field" Url="html/F_Gemstone_Numeric_EE_Phasor_Type.htm" />
   <HelpKINode Title="UInt16 to UInt24 conversion" Url="html/M_Gemstone_Numeric_UInt24_op_Implicit_10.htm" />
   <HelpKINode Title="UInt24 structure">
     <HelpKINode Title="UInt24 Structure" Url="html/T_Gemstone_Numeric_UInt24.htm" />
@@ -706,7 +706,7 @@
   <HelpKINode Title="UInt64 to UInt24 conversion" Url="html/M_Gemstone_Numeric_UInt24_op_Explicit_11.htm" />
   <HelpKINode Title="UnaryNegation operator">
     <HelpKINode Title="ComplexNumber.UnaryNegation Operator " Url="html/M_Gemstone_Numeric_ComplexNumber_op_UnaryNegation.htm" />
-    <HelpKINode Title="Phasor.UnaryNegation Operator " Url="html/M_Gemstone_Units_EE_Phasor_op_UnaryNegation.htm" />
+    <HelpKINode Title="Phasor.UnaryNegation Operator " Url="html/M_Gemstone_Numeric_EE_Phasor_op_UnaryNegation.htm" />
   </HelpKINode>
   <HelpKINode Title="UnitExtensions class">
     <HelpKINode Title="UnitExtensions Class" Url="html/T_Gemstone_Numeric_UnitExtensions_UnitExtensions.htm" />
@@ -715,13 +715,13 @@
   <HelpKINode Title="UnitExtensions.Average method" Url="html/M_Gemstone_Numeric_UnitExtensions_UnitExtensions_Average.htm" />
   <HelpKINode Title="UnitExtensions.ToRange method" Url="html/M_Gemstone_Numeric_UnitExtensions_UnitExtensions_ToRange.htm" />
   <HelpKINode Title="UnitExtensions.Unwrap method" Url="html/M_Gemstone_Numeric_UnitExtensions_UnitExtensions_Unwrap.htm" />
-  <HelpKINode Title="Unknown enumeration member" Url="html/T_Gemstone_Units_EE_SignalKind.htm" />
+  <HelpKINode Title="Unknown enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
   <HelpKINode Title="Unwrap method" Url="html/M_Gemstone_Numeric_UnitExtensions_UnitExtensions_Unwrap.htm" />
-  <HelpKINode Title="Value field" Url="html/F_Gemstone_Units_EE_Phasor_Value.htm" />
+  <HelpKINode Title="Value field" Url="html/F_Gemstone_Numeric_EE_Phasor_Value.htm" />
   <HelpKINode Title="Values property" Url="html/P_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_Values.htm" />
-  <HelpKINode Title="Voltage enumeration member" Url="html/T_Gemstone_Units_EE_PhasorType.htm" />
-  <HelpKINode Title="VPHA enumeration member" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
-  <HelpKINode Title="VPHM enumeration member" Url="html/T_Gemstone_Units_EE_SignalType.htm" />
+  <HelpKINode Title="Voltage enumeration member" Url="html/T_Gemstone_Numeric_EE_PhasorType.htm" />
+  <HelpKINode Title="VPHA enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
+  <HelpKINode Title="VPHM enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
   <HelpKINode Title="welcome">
     <HelpKINode Title="getting started, root, gemstone" Url="html/About.htm" />
   </HelpKINode>

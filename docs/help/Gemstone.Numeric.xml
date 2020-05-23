@@ -2586,6 +2586,566 @@
       <exception cref="T:System.ArgumentOutOfRangeException">
         <paramref name="source" /> does not contain enough values to produce a result.</exception>
     </member>
+    <member name="T:Gemstone.Numeric.EE.LineFrequency">
+      <summary>
+            Nominal line frequencies enumeration.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.LineFrequency.Hz50">
+      <summary>
+            50Hz nominal frequency.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.LineFrequency.Hz60">
+      <summary>
+            60Hz nominal frequency.
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.EE.Phasor">
+      <summary>
+            Represents a phasor as a complex number value and a type (i.e., a voltage or a current).
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.#ctor(Gemstone.Numeric.EE.PhasorType,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Creates a <see cref="T:Gemstone.Numeric.EE.Phasor" /> of the specified <paramref name="type" /> from the given <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+      <param name="type">Type of phasor, i.e., current or voltage.</param>
+      <param name="z">
+        <see cref="T:Gemstone.Numeric.ComplexNumber" /> to be copied.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.#ctor(Gemstone.Numeric.EE.PhasorType,Gemstone.Units.Angle,System.Double)">
+      <summary>
+            Creates a <see cref="T:Gemstone.Numeric.EE.Phasor" /> of the specified <paramref name="type" /> from the given polar values.
+            </summary>
+      <param name="type">Type of phasor, i.e., current or voltage.</param>
+      <param name="angle">The <see cref="T:Gemstone.Units.Angle" /> component, in radians, of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
+      <param name="magnitude">The magnitude (or absolute value) component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.#ctor(Gemstone.Numeric.EE.PhasorType,System.Double,System.Double)">
+      <summary>
+            Creates a <see cref="T:Gemstone.Numeric.EE.Phasor" /> of the specified <paramref name="type" /> from the given rectangular values. 
+            </summary>
+      <param name="type">Type of phasor, i.e., current or voltage.</param>
+      <param name="real">The real component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
+      <param name="imaginary">The imaginary component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.CalculateActivePower(Gemstone.Numeric.EE.Phasor,Gemstone.Numeric.EE.Phasor)">
+      <summary>
+            Calculates active (or real) power P, i.e., total watts, from imaginary and real components of a voltage and current phasor.
+            </summary>
+      <param name="voltage">Voltage phasor.</param>
+      <param name="current">Current phasor.</param>
+      <returns>Calculated watts from imaginary and real components of specified <paramref name="voltage" /> and <paramref name="current" /> phasors.</returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="voltage" /> and <paramref name="current" /> must have proper <see cref="F:Gemstone.Numeric.EE.Phasor.Type" />.</exception>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.CalculateApparentPower(Gemstone.Numeric.EE.Phasor,Gemstone.Numeric.EE.Phasor)">
+      <summary>
+            Calculates apparent power |S|, i.e., magnitude of complex power, from a voltage and current phasor.
+            </summary>
+      <param name="voltage">Voltage phasor.</param>
+      <param name="current">Current phasor.</param>
+      <returns>Calculated complex volt-amperes magnitude from specified <paramref name="voltage" /> and <paramref name="current" /> phasors.</returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="voltage" /> and <paramref name="current" /> must have proper <see cref="F:Gemstone.Numeric.EE.Phasor.Type" />.</exception>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.CalculateComplexPower(Gemstone.Numeric.EE.Phasor,Gemstone.Numeric.EE.Phasor)">
+      <summary>
+            Calculates complex power S, i.e., total volt-amperes power vector, from a voltage and current phasor.
+            </summary>
+      <param name="voltage">Voltage phasor.</param>
+      <param name="current">Current phasor.</param>
+      <returns>Calculated complex volt-amperes from specified <paramref name="voltage" /> and <paramref name="current" /> phasors.</returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="voltage" /> and <paramref name="current" /> must have proper <see cref="F:Gemstone.Numeric.EE.Phasor.Type" />.</exception>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.CalculateReactivePower(Gemstone.Numeric.EE.Phasor,Gemstone.Numeric.EE.Phasor)">
+      <summary>
+            Calculates reactive power Q, i.e., total volt-amperes of reactive power, from imaginary and real components of a voltage and current phasor.
+            </summary>
+      <param name="voltage">Voltage phasor.</param>
+      <param name="current">Current phasor.</param>
+      <returns>Calculated vars from imaginary and real components of specified <paramref name="voltage" /> and <paramref name="current" /> phasors.</returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="voltage" /> and <paramref name="current" /> must have proper <see cref="F:Gemstone.Numeric.EE.Phasor.Type" />.</exception>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.CalculateRelativePhase(Gemstone.Numeric.EE.Phasor,Gemstone.Numeric.EE.Phasor)">
+      <summary>
+            Calculates phase φ of voltage relative to current, i.e., angle difference between current and voltage phasor.
+            </summary>
+      <param name="voltage">Voltage phasor.</param>
+      <param name="current">Current phasor.</param>
+      <returns>Calculated phase of specified <paramref name="voltage" /> phasor relative to specified <paramref name="current" /> phasor.</returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="voltage" /> and <paramref name="current" /> must have proper <see cref="F:Gemstone.Numeric.EE.Phasor.Type" />.</exception>
+    </member>
+    <member name="P:Gemstone.Numeric.EE.Phasor.Conjugate">
+      <summary>
+            Gets the complex conjugate of this <see cref="T:Gemstone.Numeric.EE.Phasor" />.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.Equals(Gemstone.Numeric.EE.Phasor)">
+      <summary>
+            Returns a value indicating whether this instance is equal to a specified Phasor value.
+            </summary>
+      <param name="obj">A <see cref="T:Gemstone.Numeric.EE.Phasor" /> to compare to this instance.</param>
+      <returns>
+            True if <paramref name="obj" /> has the same value as this instance; otherwise, False.
+            </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.Equals(System.Object)">
+      <summary>
+            Returns a value indicating whether this instance is equal to a specified object.
+            </summary>
+      <param name="obj">An object to compare, or null.</param>
+      <returns>
+            True if <paramref name="obj" /> is an instance of Phasor and equals the value of this instance;
+            otherwise, False.
+            </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.GetHashCode">
+      <summary>
+            Returns the hash code for this instance.
+            </summary>
+      <returns>
+            A 32-bit signed integer hash code.
+            </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.op_Addition(Gemstone.Numeric.EE.Phasor,Gemstone.Numeric.EE.Phasor)">
+      <summary>
+            Returns computed sum of values.
+            </summary>
+      <param name="phasor1">Left hand operand.</param>
+      <param name="phasor2">Right hand operand.</param>
+      <returns>ComplexNumber representing the result of the addition operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.op_Division(Gemstone.Numeric.EE.Phasor,Gemstone.Numeric.EE.Phasor)">
+      <summary>
+            Returns computed division of values.
+            </summary>
+      <param name="phasor1">Left hand operand.</param>
+      <param name="phasor2">Right hand operand.</param>
+      <returns>ComplexNumber representing the result of the division operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.op_Equality(Gemstone.Numeric.EE.Phasor,Gemstone.Numeric.EE.Phasor)">
+      <summary>
+            Compares the two values for equality.
+            </summary>
+      <param name="phasor1">Left hand operand.</param>
+      <param name="phasor2">Right hand operand.</param>
+      <returns>Boolean representing the result of the addition operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.op_Exponent(Gemstone.Numeric.EE.Phasor,System.Double)">
+      <summary>
+             Returns result of first value raised to power of second value.
+             </summary>
+      <param name="z">Phasor to be raised to power <paramref name="y" />.</param>
+      <param name="y">Power to raise <see cref="T:Gemstone.Numeric.EE.Phasor" /><paramref name="z" />.</param>
+      <returns>Phasor representing the result of the operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.op_Implicit(Gemstone.Numeric.EE.Phasor)~Gemstone.Numeric.ComplexNumber">
+      <summary>
+            Implicitly converts a <see cref="T:Gemstone.Numeric.EE.Phasor" /> to a <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+      <param name="phasor">Operand.</param>
+      <returns>ComplexNumber representing the result of the operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.op_Implicit(Gemstone.Numeric.EE.Phasor)~System.Numerics.Complex">
+      <summary>
+            Implicitly converts a <see cref="T:Gemstone.Numeric.EE.Phasor" /> to a .NET <see cref="T:System.Numerics.Complex" /> value.
+            </summary>
+      <param name="phasor">Operand.</param>
+      <returns>ComplexNumber representing the result of the operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.op_Inequality(Gemstone.Numeric.EE.Phasor,Gemstone.Numeric.EE.Phasor)">
+      <summary>
+            Compares the two values for inequality.
+            </summary>
+      <param name="phasor1">Left hand operand.</param>
+      <param name="phasor2">Right hand operand.</param>
+      <returns>Boolean representing the result of the inequality operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.op_Multiply(Gemstone.Numeric.EE.Phasor,Gemstone.Numeric.EE.Phasor)">
+      <summary>
+            Returns computed product of values.
+            </summary>
+      <param name="phasor1">Left hand operand.</param>
+      <param name="phasor2">Right hand operand.</param>
+      <returns>ComplexNumber representing the result of the multiplication operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.op_Subtraction(Gemstone.Numeric.EE.Phasor,Gemstone.Numeric.EE.Phasor)">
+      <summary>
+            Returns computed difference of values.
+            </summary>
+      <param name="phasor1">Left hand operand.</param>
+      <param name="phasor2">Right hand operand.</param>
+      <returns>ComplexNumber representing the result of the subtraction operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.op_UnaryNegation(Gemstone.Numeric.EE.Phasor)">
+      <summary>
+            Returns the negated value.
+            </summary>
+      <param name="z">Left hand operand.</param>
+      <returns>Phasor representing the result of the unary negation operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.Pow(Gemstone.Numeric.EE.Phasor,System.Double)">
+      <summary>
+             Returns specified <see cref="T:Gemstone.Numeric.EE.Phasor" /> raised to the specified power.
+            </summary>
+      <param name="z">Phasor to be raised to power <paramref name="y" />.</param>
+      <param name="y">Power to raise <see cref="T:Gemstone.Numeric.EE.Phasor" /><paramref name="z" />.</param>
+      <returns>Phasor representing the result of the operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.ToString">
+      <summary>
+            Converts the numeric value of this instance to its equivalent string representation.
+            </summary>
+      <returns>
+            The string representation of the value of this <see cref="T:Gemstone.Numeric.ComplexNumber" /> instance.
+            </returns>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.Phasor.Type">
+      <summary>
+            Phasor type.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.Phasor.Value">
+      <summary>
+            Phasor value.
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.EE.PhasorType">
+      <summary>
+            Phasor types enumeration.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.PhasorType.Voltage">
+      <summary>
+            Voltage phasor.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.PhasorType.Current">
+      <summary>
+            Current phasor.
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.EE.SignalKind">
+      <summary>
+            Fundamental signal type enumeration for common EE measurements that represents a kind of signal, not an explicit type.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalKind.Angle">
+      <summary>
+            Phase angle.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalKind.Magnitude">
+      <summary>
+            Phase magnitude.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalKind.Frequency">
+      <summary>
+            Line frequency.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalKind.DfDt">
+      <summary>
+            Frequency delta over time (dF/dt).
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalKind.Status">
+      <summary>
+            Status flags.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalKind.Digital">
+      <summary>
+            Digital value.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalKind.Analog">
+      <summary>
+            Analog value.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalKind.Calculation">
+      <summary>
+            Calculated value.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalKind.Statistic">
+      <summary>
+            Statistical value.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalKind.Alarm">
+      <summary>
+            Alarm value.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalKind.Quality">
+      <summary>
+            Quality flags.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalKind.Unknown">
+      <summary>
+            Undetermined signal type.
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.EE.SignalKindExtensions">
+      <summary>
+            Defines extension functions for the <see cref="T:Gemstone.Numeric.EE.SignalKind" /> enumeration.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalKindExtensions.GetAcronym(Gemstone.Numeric.EE.SignalKind)">
+      <summary>
+            Gets the acronym for the specified <see cref="T:Gemstone.Numeric.EE.SignalKind" />.
+            </summary>
+      <param name="signal">
+        <see cref="T:Gemstone.Numeric.EE.SignalKind" /> to convert to an acronym.</param>
+      <returns>The acronym for the specified <see cref="T:Gemstone.Numeric.EE.SignalKind" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalKindExtensions.ParseSignalKind(System.String)">
+      <summary>
+            Gets the <see cref="T:Gemstone.Numeric.EE.SignalKind" /> for the specified <paramref name="acronym" />.
+            </summary>
+      <param name="acronym">Acronym of the desired <see cref="T:Gemstone.Numeric.EE.SignalKind" />.</param>
+      <returns>The <see cref="T:Gemstone.Numeric.EE.SignalKind" /> for the specified <paramref name="acronym" />.</returns>
+    </member>
+    <member name="T:Gemstone.Numeric.EE.SignalReference">
+      <summary>
+            Represents a signal that can be referenced by its constituent components.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalReference.#ctor(System.String)">
+      <summary>
+            Creates a new <see cref="T:Gemstone.Numeric.EE.SignalReference" />.
+            </summary>
+      <param name="signal">
+        <see cref="T:System.String" /> representation of this <see cref="T:Gemstone.Numeric.EE.SignalReference" />.</param>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalReference.Acronym">
+      <summary>
+            Gets or sets the acronym of this <see cref="T:Gemstone.Numeric.EE.SignalReference" />.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalReference.CellIndex">
+      <summary>
+            Gets or sets the cell index, if applicable, of this <see cref="T:Gemstone.Numeric.EE.SignalReference" />.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalReference.CompareTo(Gemstone.Numeric.EE.SignalReference)">
+      <summary>
+            Compares the current object with another object of the same type.
+            </summary>
+      <param name="other">Another <see cref="T:Gemstone.Numeric.EE.SignalReference" /> to compare with this <see cref="T:Gemstone.Numeric.EE.SignalReference" />.</param>
+      <returns>A 32-bit signed integer that indicates the relative order of the objects being compared.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalReference.CompareTo(System.Object)">
+      <summary>
+            Compares the current object with another object of the same type.
+            </summary>
+      <param name="obj">An object to compare with this <see cref="T:Gemstone.Numeric.EE.SignalReference" />.</param>
+      <returns>A 32-bit signed integer that indicates the relative order of the objects being compared.</returns>
+      <exception cref="T:System.ArgumentException">Object is not a <see cref="T:Gemstone.Numeric.EE.SignalReference" />.</exception>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalReference.Equals(Gemstone.Numeric.EE.SignalReference)">
+      <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+      <param name="other">An object to compare with this object.</param>
+      <returns>
+        <c>true</c> if the current object is equal to the other parameter; otherwise, <c>false</c>.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalReference.Equals(System.Object)">
+      <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+      <param name="obj">An object to compare with this object.</param>
+      <returns>
+        <c>true</c> if the current object is equal to the other parameter; otherwise, <c>false</c>.</returns>
+      <exception cref="T:System.ArgumentException">Object is not a <see cref="T:Gemstone.Numeric.EE.SignalReference" />.</exception>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalReference.GetHashCode">
+      <summary>
+            Returns the hash code for this <see cref="T:Gemstone.Numeric.EE.SignalReference" />.
+            </summary>
+      <returns>A 32-bit signed integer hash code.</returns>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalReference.Index">
+      <summary>
+            Gets or sets the signal index of this <see cref="T:Gemstone.Numeric.EE.SignalReference" />.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalReference.Kind">
+      <summary>
+            Gets or sets the <see cref="T:Gemstone.Numeric.EE.SignalKind" /> of this <see cref="T:Gemstone.Numeric.EE.SignalReference" />.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalReference.op_Equality(Gemstone.Numeric.EE.SignalReference,Gemstone.Numeric.EE.SignalReference)">
+      <summary>
+            Compares two <see cref="T:Gemstone.Numeric.EE.SignalReference" /> values for equality.
+            </summary>
+      <param name="signal1">A <see cref="T:Gemstone.Numeric.EE.SignalReference" /> left hand operand.</param>
+      <param name="signal2">A <see cref="T:Gemstone.Numeric.EE.SignalReference" /> right hand operand.</param>
+      <returns>A boolean representing the result.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalReference.op_GreaterThan(Gemstone.Numeric.EE.SignalReference,Gemstone.Numeric.EE.SignalReference)">
+      <summary>
+            Returns true if left <see cref="T:Gemstone.Numeric.EE.SignalReference" /> value is greater than right <see cref="T:Gemstone.Numeric.EE.SignalReference" /> value.
+            </summary>
+      <param name="signal1">A <see cref="T:Gemstone.Numeric.EE.SignalReference" /> left hand operand.</param>
+      <param name="signal2">A <see cref="T:Gemstone.Numeric.EE.SignalReference" /> right hand operand.</param>
+      <returns>A boolean representing the result.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalReference.op_GreaterThanOrEqual(Gemstone.Numeric.EE.SignalReference,Gemstone.Numeric.EE.SignalReference)">
+      <summary>
+            Returns true if left <see cref="T:Gemstone.Numeric.EE.SignalReference" /> value is greater than or equal to right <see cref="T:Gemstone.Numeric.EE.SignalReference" /> value.
+            </summary>
+      <param name="signal1">A <see cref="T:Gemstone.Numeric.EE.SignalReference" /> left hand operand.</param>
+      <param name="signal2">A <see cref="T:Gemstone.Numeric.EE.SignalReference" /> right hand operand.</param>
+      <returns>A boolean representing the result.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalReference.op_Inequality(Gemstone.Numeric.EE.SignalReference,Gemstone.Numeric.EE.SignalReference)">
+      <summary>
+            Compares two <see cref="T:Gemstone.Numeric.EE.SignalReference" /> values for inequality.
+            </summary>
+      <param name="signal1">A <see cref="T:Gemstone.Numeric.EE.SignalReference" /> left hand operand.</param>
+      <param name="signal2">A <see cref="T:Gemstone.Numeric.EE.SignalReference" /> right hand operand.</param>
+      <returns>A boolean representing the result.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalReference.op_LessThan(Gemstone.Numeric.EE.SignalReference,Gemstone.Numeric.EE.SignalReference)">
+      <summary>
+            Returns true if left <see cref="T:Gemstone.Numeric.EE.SignalReference" /> value is less than right <see cref="T:Gemstone.Numeric.EE.SignalReference" /> value.
+            </summary>
+      <param name="signal1">A <see cref="T:Gemstone.Numeric.EE.SignalReference" /> left hand operand.</param>
+      <param name="signal2">A <see cref="T:Gemstone.Numeric.EE.SignalReference" /> right hand operand.</param>
+      <returns>A boolean representing the result.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalReference.op_LessThanOrEqual(Gemstone.Numeric.EE.SignalReference,Gemstone.Numeric.EE.SignalReference)">
+      <summary>
+            Returns true if left <see cref="T:Gemstone.Numeric.EE.SignalReference" /> value is less than or equal to right <see cref="T:Gemstone.Numeric.EE.SignalReference" /> value.
+            </summary>
+      <param name="signal1">A <see cref="T:Gemstone.Numeric.EE.SignalReference" /> left hand operand.</param>
+      <param name="signal2">A <see cref="T:Gemstone.Numeric.EE.SignalReference" /> right hand operand.</param>
+      <returns>A boolean representing the result.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalReference.ToString">
+      <summary>
+            Returns a <see cref="T:System.String" /> that represents the current <see cref="T:Gemstone.Numeric.EE.SignalReference" />.
+            </summary>
+      <returns>A <see cref="T:System.String" /> that represents the current <see cref="T:Gemstone.Numeric.EE.SignalReference" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalReference.ToString(System.String,Gemstone.Numeric.EE.SignalKind)">
+      <summary>
+            Returns a <see cref="T:System.String" /> that represents the specified <paramref name="acronym" /> and <see cref="T:Gemstone.Numeric.EE.SignalKind" />.
+            </summary>
+      <param name="acronym">Acronym portion of the desired <see cref="T:System.String" /> representation.</param>
+      <param name="type">
+        <see cref="T:Gemstone.Numeric.EE.SignalKind" /> portion of the desired <see cref="T:System.String" /> representation.</param>
+      <returns>A <see cref="T:System.String" /> that represents the specified <paramref name="acronym" /> and <see cref="T:Gemstone.Numeric.EE.SignalKind" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalReference.ToString(System.String,Gemstone.Numeric.EE.SignalKind,System.Int32)">
+      <summary>
+            Returns a <see cref="T:System.String" /> that represents the specified <paramref name="acronym" />, <see cref="T:Gemstone.Numeric.EE.SignalKind" /> and <paramref name="index" />.
+            </summary>
+      <param name="acronym">Acronym portion of the desired <see cref="T:System.String" /> representation.</param>
+      <param name="type">
+        <see cref="T:Gemstone.Numeric.EE.SignalKind" /> portion of the desired <see cref="T:System.String" /> representation.</param>
+      <param name="index">Index of <see cref="T:Gemstone.Numeric.EE.SignalKind" /> portion of the desired <see cref="T:System.String" /> representation.</param>
+      <returns>A <see cref="T:System.String" /> that represents the specified <paramref name="acronym" />, <see cref="T:Gemstone.Numeric.EE.SignalKind" /> and <paramref name="index" />.</returns>
+    </member>
+    <member name="T:Gemstone.Numeric.EE.SignalType">
+      <summary>
+            Fundamental signal type enumeration for common EE measurements that represents an explicit type of signal.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.IPHM">
+      <summary>
+            Current phase magnitude.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.IPHA">
+      <summary>
+            Current phase angle.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.VPHM">
+      <summary>
+            Voltage phase magnitude.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.VPHA">
+      <summary>
+            Voltage phase angle.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.FREQ">
+      <summary>
+            Frequency.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.DFDT">
+      <summary>
+            Frequency delta (dF/dt).
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.ALOG">
+      <summary>
+            Analog value.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.FLAG">
+      <summary>
+            Status flags.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.DIGI">
+      <summary>
+            Digital values.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.CALC">
+      <summary>
+            Calculated value.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.STAT">
+      <summary>
+            Statistical value.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.ALRM">
+      <summary>
+            Alarm value.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.QUAL">
+      <summary>
+            Quality flags.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.NONE">
+      <summary>
+            Undefined signal.
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.EE.SignalTypeExtensions">
+      <summary>
+            Defines extension functions for the <see cref="T:Gemstone.Numeric.EE.SignalType" /> enumeration.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.SignalTypeExtensions.GetFormattedName(Gemstone.Numeric.EE.SignalType)">
+      <summary>
+            Returns display friendly signal type name.
+            </summary>
+      <param name="signalType">
+        <see cref="T:Gemstone.Numeric.EE.SignalType" /> to return display name for.</param>
+      <returns>Friendly protocol display name for specified <paramref name="signalType" />.</returns>
+    </member>
     <member name="T:Gemstone.Numeric.Int24Extensions.BigEndian">
       <summary>
             Defines methods related to <see cref="T:Gemstone.Numeric.Int24" /> big endian operations.
@@ -3303,566 +3863,6 @@
             </summary>
       <param name="source">Sequence of <see cref="T:Gemstone.Units.Angle" /> values to unwrap.</param>
       <returns>Unwrapped set of <see cref="T:Gemstone.Units.Angle" /> values.</returns>
-    </member>
-    <member name="T:Gemstone.Units.EE.LineFrequency">
-      <summary>
-            Nominal line frequencies enumeration.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.LineFrequency.Hz50">
-      <summary>
-            50Hz nominal frequency.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.LineFrequency.Hz60">
-      <summary>
-            60Hz nominal frequency.
-            </summary>
-    </member>
-    <member name="T:Gemstone.Units.EE.Phasor">
-      <summary>
-            Represents a phasor as a complex number value and a type (i.e., a voltage or a current).
-            </summary>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.#ctor(Gemstone.Units.EE.PhasorType,Gemstone.Numeric.ComplexNumber)">
-      <summary>
-            Creates a <see cref="T:Gemstone.Units.EE.Phasor" /> of the specified <paramref name="type" /> from the given <see cref="T:Gemstone.Numeric.ComplexNumber" />.
-            </summary>
-      <param name="type">Type of phasor, i.e., current or voltage.</param>
-      <param name="z">
-        <see cref="T:Gemstone.Numeric.ComplexNumber" /> to be copied.</param>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.#ctor(Gemstone.Units.EE.PhasorType,Gemstone.Units.Angle,System.Double)">
-      <summary>
-            Creates a <see cref="T:Gemstone.Units.EE.Phasor" /> of the specified <paramref name="type" /> from the given polar values.
-            </summary>
-      <param name="type">Type of phasor, i.e., current or voltage.</param>
-      <param name="angle">The <see cref="T:Gemstone.Units.Angle" /> component, in radians, of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
-      <param name="magnitude">The magnitude (or absolute value) component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.#ctor(Gemstone.Units.EE.PhasorType,System.Double,System.Double)">
-      <summary>
-            Creates a <see cref="T:Gemstone.Units.EE.Phasor" /> of the specified <paramref name="type" /> from the given rectangular values. 
-            </summary>
-      <param name="type">Type of phasor, i.e., current or voltage.</param>
-      <param name="real">The real component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
-      <param name="imaginary">The imaginary component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.CalculateActivePower(Gemstone.Units.EE.Phasor,Gemstone.Units.EE.Phasor)">
-      <summary>
-            Calculates active (or real) power P, i.e., total watts, from imaginary and real components of a voltage and current phasor.
-            </summary>
-      <param name="voltage">Voltage phasor.</param>
-      <param name="current">Current phasor.</param>
-      <returns>Calculated watts from imaginary and real components of specified <paramref name="voltage" /> and <paramref name="current" /> phasors.</returns>
-      <exception cref="T:System.ArgumentException">
-        <paramref name="voltage" /> and <paramref name="current" /> must have proper <see cref="F:Gemstone.Units.EE.Phasor.Type" />.</exception>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.CalculateApparentPower(Gemstone.Units.EE.Phasor,Gemstone.Units.EE.Phasor)">
-      <summary>
-            Calculates apparent power |S|, i.e., magnitude of complex power, from a voltage and current phasor.
-            </summary>
-      <param name="voltage">Voltage phasor.</param>
-      <param name="current">Current phasor.</param>
-      <returns>Calculated complex volt-amperes magnitude from specified <paramref name="voltage" /> and <paramref name="current" /> phasors.</returns>
-      <exception cref="T:System.ArgumentException">
-        <paramref name="voltage" /> and <paramref name="current" /> must have proper <see cref="F:Gemstone.Units.EE.Phasor.Type" />.</exception>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.CalculateComplexPower(Gemstone.Units.EE.Phasor,Gemstone.Units.EE.Phasor)">
-      <summary>
-            Calculates complex power S, i.e., total volt-amperes power vector, from a voltage and current phasor.
-            </summary>
-      <param name="voltage">Voltage phasor.</param>
-      <param name="current">Current phasor.</param>
-      <returns>Calculated complex volt-amperes from specified <paramref name="voltage" /> and <paramref name="current" /> phasors.</returns>
-      <exception cref="T:System.ArgumentException">
-        <paramref name="voltage" /> and <paramref name="current" /> must have proper <see cref="F:Gemstone.Units.EE.Phasor.Type" />.</exception>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.CalculateReactivePower(Gemstone.Units.EE.Phasor,Gemstone.Units.EE.Phasor)">
-      <summary>
-            Calculates reactive power Q, i.e., total volt-amperes of reactive power, from imaginary and real components of a voltage and current phasor.
-            </summary>
-      <param name="voltage">Voltage phasor.</param>
-      <param name="current">Current phasor.</param>
-      <returns>Calculated vars from imaginary and real components of specified <paramref name="voltage" /> and <paramref name="current" /> phasors.</returns>
-      <exception cref="T:System.ArgumentException">
-        <paramref name="voltage" /> and <paramref name="current" /> must have proper <see cref="F:Gemstone.Units.EE.Phasor.Type" />.</exception>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.CalculateRelativePhase(Gemstone.Units.EE.Phasor,Gemstone.Units.EE.Phasor)">
-      <summary>
-            Calculates phase φ of voltage relative to current, i.e., angle difference between current and voltage phasor.
-            </summary>
-      <param name="voltage">Voltage phasor.</param>
-      <param name="current">Current phasor.</param>
-      <returns>Calculated phase of specified <paramref name="voltage" /> phasor relative to specified <paramref name="current" /> phasor.</returns>
-      <exception cref="T:System.ArgumentException">
-        <paramref name="voltage" /> and <paramref name="current" /> must have proper <see cref="F:Gemstone.Units.EE.Phasor.Type" />.</exception>
-    </member>
-    <member name="P:Gemstone.Units.EE.Phasor.Conjugate">
-      <summary>
-            Gets the complex conjugate of this <see cref="T:Gemstone.Units.EE.Phasor" />.
-            </summary>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.Equals(Gemstone.Units.EE.Phasor)">
-      <summary>
-            Returns a value indicating whether this instance is equal to a specified Phasor value.
-            </summary>
-      <param name="obj">A <see cref="T:Gemstone.Units.EE.Phasor" /> to compare to this instance.</param>
-      <returns>
-            True if <paramref name="obj" /> has the same value as this instance; otherwise, False.
-            </returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.Equals(System.Object)">
-      <summary>
-            Returns a value indicating whether this instance is equal to a specified object.
-            </summary>
-      <param name="obj">An object to compare, or null.</param>
-      <returns>
-            True if <paramref name="obj" /> is an instance of Phasor and equals the value of this instance;
-            otherwise, False.
-            </returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.GetHashCode">
-      <summary>
-            Returns the hash code for this instance.
-            </summary>
-      <returns>
-            A 32-bit signed integer hash code.
-            </returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.op_Addition(Gemstone.Units.EE.Phasor,Gemstone.Units.EE.Phasor)">
-      <summary>
-            Returns computed sum of values.
-            </summary>
-      <param name="phasor1">Left hand operand.</param>
-      <param name="phasor2">Right hand operand.</param>
-      <returns>ComplexNumber representing the result of the addition operation.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.op_Division(Gemstone.Units.EE.Phasor,Gemstone.Units.EE.Phasor)">
-      <summary>
-            Returns computed division of values.
-            </summary>
-      <param name="phasor1">Left hand operand.</param>
-      <param name="phasor2">Right hand operand.</param>
-      <returns>ComplexNumber representing the result of the division operation.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.op_Equality(Gemstone.Units.EE.Phasor,Gemstone.Units.EE.Phasor)">
-      <summary>
-            Compares the two values for equality.
-            </summary>
-      <param name="phasor1">Left hand operand.</param>
-      <param name="phasor2">Right hand operand.</param>
-      <returns>Boolean representing the result of the addition operation.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.op_Exponent(Gemstone.Units.EE.Phasor,System.Double)">
-      <summary>
-             Returns result of first value raised to power of second value.
-             </summary>
-      <param name="z">Phasor to be raised to power <paramref name="y" />.</param>
-      <param name="y">Power to raise <see cref="T:Gemstone.Units.EE.Phasor" /><paramref name="z" />.</param>
-      <returns>Phasor representing the result of the operation.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.op_Implicit(Gemstone.Units.EE.Phasor)~Gemstone.Numeric.ComplexNumber">
-      <summary>
-            Implicitly converts a <see cref="T:Gemstone.Units.EE.Phasor" /> to a <see cref="T:Gemstone.Numeric.ComplexNumber" />.
-            </summary>
-      <param name="phasor">Operand.</param>
-      <returns>ComplexNumber representing the result of the operation.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.op_Implicit(Gemstone.Units.EE.Phasor)~System.Numerics.Complex">
-      <summary>
-            Implicitly converts a <see cref="T:Gemstone.Units.EE.Phasor" /> to a .NET <see cref="T:System.Numerics.Complex" /> value.
-            </summary>
-      <param name="phasor">Operand.</param>
-      <returns>ComplexNumber representing the result of the operation.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.op_Inequality(Gemstone.Units.EE.Phasor,Gemstone.Units.EE.Phasor)">
-      <summary>
-            Compares the two values for inequality.
-            </summary>
-      <param name="phasor1">Left hand operand.</param>
-      <param name="phasor2">Right hand operand.</param>
-      <returns>Boolean representing the result of the inequality operation.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.op_Multiply(Gemstone.Units.EE.Phasor,Gemstone.Units.EE.Phasor)">
-      <summary>
-            Returns computed product of values.
-            </summary>
-      <param name="phasor1">Left hand operand.</param>
-      <param name="phasor2">Right hand operand.</param>
-      <returns>ComplexNumber representing the result of the multiplication operation.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.op_Subtraction(Gemstone.Units.EE.Phasor,Gemstone.Units.EE.Phasor)">
-      <summary>
-            Returns computed difference of values.
-            </summary>
-      <param name="phasor1">Left hand operand.</param>
-      <param name="phasor2">Right hand operand.</param>
-      <returns>ComplexNumber representing the result of the subtraction operation.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.op_UnaryNegation(Gemstone.Units.EE.Phasor)">
-      <summary>
-            Returns the negated value.
-            </summary>
-      <param name="z">Left hand operand.</param>
-      <returns>Phasor representing the result of the unary negation operation.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.Pow(Gemstone.Units.EE.Phasor,System.Double)">
-      <summary>
-             Returns specified <see cref="T:Gemstone.Units.EE.Phasor" /> raised to the specified power.
-            </summary>
-      <param name="z">Phasor to be raised to power <paramref name="y" />.</param>
-      <param name="y">Power to raise <see cref="T:Gemstone.Units.EE.Phasor" /><paramref name="z" />.</param>
-      <returns>Phasor representing the result of the operation.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.Phasor.ToString">
-      <summary>
-            Converts the numeric value of this instance to its equivalent string representation.
-            </summary>
-      <returns>
-            The string representation of the value of this <see cref="T:Gemstone.Numeric.ComplexNumber" /> instance.
-            </returns>
-    </member>
-    <member name="F:Gemstone.Units.EE.Phasor.Type">
-      <summary>
-            Phasor type.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.Phasor.Value">
-      <summary>
-            Phasor value.
-            </summary>
-    </member>
-    <member name="T:Gemstone.Units.EE.PhasorType">
-      <summary>
-            Phasor types enumeration.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.PhasorType.Voltage">
-      <summary>
-            Voltage phasor.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.PhasorType.Current">
-      <summary>
-            Current phasor.
-            </summary>
-    </member>
-    <member name="T:Gemstone.Units.EE.SignalKind">
-      <summary>
-            Fundamental signal type enumeration for common EE measurements that represents a kind of signal, not an explicit type.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalKind.Angle">
-      <summary>
-            Phase angle.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalKind.Magnitude">
-      <summary>
-            Phase magnitude.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalKind.Frequency">
-      <summary>
-            Line frequency.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalKind.DfDt">
-      <summary>
-            Frequency delta over time (dF/dt).
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalKind.Status">
-      <summary>
-            Status flags.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalKind.Digital">
-      <summary>
-            Digital value.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalKind.Analog">
-      <summary>
-            Analog value.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalKind.Calculation">
-      <summary>
-            Calculated value.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalKind.Statistic">
-      <summary>
-            Statistical value.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalKind.Alarm">
-      <summary>
-            Alarm value.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalKind.Quality">
-      <summary>
-            Quality flags.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalKind.Unknown">
-      <summary>
-            Undetermined signal type.
-            </summary>
-    </member>
-    <member name="T:Gemstone.Units.EE.SignalKindExtensions">
-      <summary>
-            Defines extension functions for the <see cref="T:Gemstone.Units.EE.SignalKind" /> enumeration.
-            </summary>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalKindExtensions.GetAcronym(Gemstone.Units.EE.SignalKind)">
-      <summary>
-            Gets the acronym for the specified <see cref="T:Gemstone.Units.EE.SignalKind" />.
-            </summary>
-      <param name="signal">
-        <see cref="T:Gemstone.Units.EE.SignalKind" /> to convert to an acronym.</param>
-      <returns>The acronym for the specified <see cref="T:Gemstone.Units.EE.SignalKind" />.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalKindExtensions.ParseSignalKind(System.String)">
-      <summary>
-            Gets the <see cref="T:Gemstone.Units.EE.SignalKind" /> for the specified <paramref name="acronym" />.
-            </summary>
-      <param name="acronym">Acronym of the desired <see cref="T:Gemstone.Units.EE.SignalKind" />.</param>
-      <returns>The <see cref="T:Gemstone.Units.EE.SignalKind" /> for the specified <paramref name="acronym" />.</returns>
-    </member>
-    <member name="T:Gemstone.Units.EE.SignalReference">
-      <summary>
-            Represents a signal that can be referenced by its constituent components.
-            </summary>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalReference.#ctor(System.String)">
-      <summary>
-            Creates a new <see cref="T:Gemstone.Units.EE.SignalReference" />.
-            </summary>
-      <param name="signal">
-        <see cref="T:System.String" /> representation of this <see cref="T:Gemstone.Units.EE.SignalReference" />.</param>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalReference.Acronym">
-      <summary>
-            Gets or sets the acronym of this <see cref="T:Gemstone.Units.EE.SignalReference" />.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalReference.CellIndex">
-      <summary>
-            Gets or sets the cell index, if applicable, of this <see cref="T:Gemstone.Units.EE.SignalReference" />.
-            </summary>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalReference.CompareTo(Gemstone.Units.EE.SignalReference)">
-      <summary>
-            Compares the current object with another object of the same type.
-            </summary>
-      <param name="other">Another <see cref="T:Gemstone.Units.EE.SignalReference" /> to compare with this <see cref="T:Gemstone.Units.EE.SignalReference" />.</param>
-      <returns>A 32-bit signed integer that indicates the relative order of the objects being compared.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalReference.CompareTo(System.Object)">
-      <summary>
-            Compares the current object with another object of the same type.
-            </summary>
-      <param name="obj">An object to compare with this <see cref="T:Gemstone.Units.EE.SignalReference" />.</param>
-      <returns>A 32-bit signed integer that indicates the relative order of the objects being compared.</returns>
-      <exception cref="T:System.ArgumentException">Object is not a <see cref="T:Gemstone.Units.EE.SignalReference" />.</exception>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalReference.Equals(Gemstone.Units.EE.SignalReference)">
-      <summary>
-            Indicates whether the current object is equal to another object of the same type.
-            </summary>
-      <param name="other">An object to compare with this object.</param>
-      <returns>
-        <c>true</c> if the current object is equal to the other parameter; otherwise, <c>false</c>.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalReference.Equals(System.Object)">
-      <summary>
-            Indicates whether the current object is equal to another object of the same type.
-            </summary>
-      <param name="obj">An object to compare with this object.</param>
-      <returns>
-        <c>true</c> if the current object is equal to the other parameter; otherwise, <c>false</c>.</returns>
-      <exception cref="T:System.ArgumentException">Object is not a <see cref="T:Gemstone.Units.EE.SignalReference" />.</exception>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalReference.GetHashCode">
-      <summary>
-            Returns the hash code for this <see cref="T:Gemstone.Units.EE.SignalReference" />.
-            </summary>
-      <returns>A 32-bit signed integer hash code.</returns>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalReference.Index">
-      <summary>
-            Gets or sets the signal index of this <see cref="T:Gemstone.Units.EE.SignalReference" />.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalReference.Kind">
-      <summary>
-            Gets or sets the <see cref="T:Gemstone.Units.EE.SignalKind" /> of this <see cref="T:Gemstone.Units.EE.SignalReference" />.
-            </summary>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalReference.op_Equality(Gemstone.Units.EE.SignalReference,Gemstone.Units.EE.SignalReference)">
-      <summary>
-            Compares two <see cref="T:Gemstone.Units.EE.SignalReference" /> values for equality.
-            </summary>
-      <param name="signal1">A <see cref="T:Gemstone.Units.EE.SignalReference" /> left hand operand.</param>
-      <param name="signal2">A <see cref="T:Gemstone.Units.EE.SignalReference" /> right hand operand.</param>
-      <returns>A boolean representing the result.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalReference.op_GreaterThan(Gemstone.Units.EE.SignalReference,Gemstone.Units.EE.SignalReference)">
-      <summary>
-            Returns true if left <see cref="T:Gemstone.Units.EE.SignalReference" /> value is greater than right <see cref="T:Gemstone.Units.EE.SignalReference" /> value.
-            </summary>
-      <param name="signal1">A <see cref="T:Gemstone.Units.EE.SignalReference" /> left hand operand.</param>
-      <param name="signal2">A <see cref="T:Gemstone.Units.EE.SignalReference" /> right hand operand.</param>
-      <returns>A boolean representing the result.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalReference.op_GreaterThanOrEqual(Gemstone.Units.EE.SignalReference,Gemstone.Units.EE.SignalReference)">
-      <summary>
-            Returns true if left <see cref="T:Gemstone.Units.EE.SignalReference" /> value is greater than or equal to right <see cref="T:Gemstone.Units.EE.SignalReference" /> value.
-            </summary>
-      <param name="signal1">A <see cref="T:Gemstone.Units.EE.SignalReference" /> left hand operand.</param>
-      <param name="signal2">A <see cref="T:Gemstone.Units.EE.SignalReference" /> right hand operand.</param>
-      <returns>A boolean representing the result.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalReference.op_Inequality(Gemstone.Units.EE.SignalReference,Gemstone.Units.EE.SignalReference)">
-      <summary>
-            Compares two <see cref="T:Gemstone.Units.EE.SignalReference" /> values for inequality.
-            </summary>
-      <param name="signal1">A <see cref="T:Gemstone.Units.EE.SignalReference" /> left hand operand.</param>
-      <param name="signal2">A <see cref="T:Gemstone.Units.EE.SignalReference" /> right hand operand.</param>
-      <returns>A boolean representing the result.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalReference.op_LessThan(Gemstone.Units.EE.SignalReference,Gemstone.Units.EE.SignalReference)">
-      <summary>
-            Returns true if left <see cref="T:Gemstone.Units.EE.SignalReference" /> value is less than right <see cref="T:Gemstone.Units.EE.SignalReference" /> value.
-            </summary>
-      <param name="signal1">A <see cref="T:Gemstone.Units.EE.SignalReference" /> left hand operand.</param>
-      <param name="signal2">A <see cref="T:Gemstone.Units.EE.SignalReference" /> right hand operand.</param>
-      <returns>A boolean representing the result.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalReference.op_LessThanOrEqual(Gemstone.Units.EE.SignalReference,Gemstone.Units.EE.SignalReference)">
-      <summary>
-            Returns true if left <see cref="T:Gemstone.Units.EE.SignalReference" /> value is less than or equal to right <see cref="T:Gemstone.Units.EE.SignalReference" /> value.
-            </summary>
-      <param name="signal1">A <see cref="T:Gemstone.Units.EE.SignalReference" /> left hand operand.</param>
-      <param name="signal2">A <see cref="T:Gemstone.Units.EE.SignalReference" /> right hand operand.</param>
-      <returns>A boolean representing the result.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalReference.ToString">
-      <summary>
-            Returns a <see cref="T:System.String" /> that represents the current <see cref="T:Gemstone.Units.EE.SignalReference" />.
-            </summary>
-      <returns>A <see cref="T:System.String" /> that represents the current <see cref="T:Gemstone.Units.EE.SignalReference" />.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalReference.ToString(System.String,Gemstone.Units.EE.SignalKind)">
-      <summary>
-            Returns a <see cref="T:System.String" /> that represents the specified <paramref name="acronym" /> and <see cref="T:Gemstone.Units.EE.SignalKind" />.
-            </summary>
-      <param name="acronym">Acronym portion of the desired <see cref="T:System.String" /> representation.</param>
-      <param name="type">
-        <see cref="T:Gemstone.Units.EE.SignalKind" /> portion of the desired <see cref="T:System.String" /> representation.</param>
-      <returns>A <see cref="T:System.String" /> that represents the specified <paramref name="acronym" /> and <see cref="T:Gemstone.Units.EE.SignalKind" />.</returns>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalReference.ToString(System.String,Gemstone.Units.EE.SignalKind,System.Int32)">
-      <summary>
-            Returns a <see cref="T:System.String" /> that represents the specified <paramref name="acronym" />, <see cref="T:Gemstone.Units.EE.SignalKind" /> and <paramref name="index" />.
-            </summary>
-      <param name="acronym">Acronym portion of the desired <see cref="T:System.String" /> representation.</param>
-      <param name="type">
-        <see cref="T:Gemstone.Units.EE.SignalKind" /> portion of the desired <see cref="T:System.String" /> representation.</param>
-      <param name="index">Index of <see cref="T:Gemstone.Units.EE.SignalKind" /> portion of the desired <see cref="T:System.String" /> representation.</param>
-      <returns>A <see cref="T:System.String" /> that represents the specified <paramref name="acronym" />, <see cref="T:Gemstone.Units.EE.SignalKind" /> and <paramref name="index" />.</returns>
-    </member>
-    <member name="T:Gemstone.Units.EE.SignalType">
-      <summary>
-            Fundamental signal type enumeration for common EE measurements that represents an explicit type of signal.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalType.IPHM">
-      <summary>
-            Current phase magnitude.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalType.IPHA">
-      <summary>
-            Current phase angle.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalType.VPHM">
-      <summary>
-            Voltage phase magnitude.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalType.VPHA">
-      <summary>
-            Voltage phase angle.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalType.FREQ">
-      <summary>
-            Frequency.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalType.DFDT">
-      <summary>
-            Frequency delta (dF/dt).
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalType.ALOG">
-      <summary>
-            Analog value.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalType.FLAG">
-      <summary>
-            Status flags.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalType.DIGI">
-      <summary>
-            Digital values.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalType.CALC">
-      <summary>
-            Calculated value.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalType.STAT">
-      <summary>
-            Statistical value.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalType.ALRM">
-      <summary>
-            Alarm value.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalType.QUAL">
-      <summary>
-            Quality flags.
-            </summary>
-    </member>
-    <member name="F:Gemstone.Units.EE.SignalType.NONE">
-      <summary>
-            Undefined signal.
-            </summary>
-    </member>
-    <member name="T:Gemstone.Units.EE.SignalTypeExtensions">
-      <summary>
-            Defines extension functions for the <see cref="T:Gemstone.Units.EE.SignalType" /> enumeration.
-            </summary>
-    </member>
-    <member name="M:Gemstone.Units.EE.SignalTypeExtensions.GetFormattedName(Gemstone.Units.EE.SignalType)">
-      <summary>
-            Returns display friendly signal type name.
-            </summary>
-      <param name="signalType">
-        <see cref="T:Gemstone.Units.EE.SignalType" /> to return display name for.</param>
-      <returns>Friendly protocol display name for specified <paramref name="signalType" />.</returns>
     </member>
   </members>
 </doc>
