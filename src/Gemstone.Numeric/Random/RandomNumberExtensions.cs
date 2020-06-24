@@ -21,6 +21,7 @@
 //
 //******************************************************************************************************
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -39,6 +40,16 @@ namespace Gemstone.Numeric.Random
         /// <param name="variance">Variance of normal distribution</param>
         /// <returns><see cref="IEnumerable{NormalRandomNumber}"/></returns>
         public static IEnumerable<NormalRandomNumber> ToNormalDistribution(this IEnumerable<UniformRandomNumber> uniforms, double mean = 0, double variance = 1) => uniforms.Select(x => new NormalRandomNumber(x, mean, variance));
+
+        /// <summary>
+        /// Linq extension function used to Transform an enumerable of <see cref="UniformRandomNumber"/> to an enumerable of <see cref="LogNormalRandomNumber"/>
+        /// </summary>
+        /// <param name="uniforms">enumerable of <see cref="UniformRandomNumber"/></param>
+        /// <param name="power">Power of the Log Normal distribution</param>
+        /// <param name="mean">Mean of normal distribution</param>
+        /// <param name="variance">Variance of normal distribution</param>
+        /// <returns><see cref="IEnumerable{LogNormalRandomNumber}"/></returns>
+        public static IEnumerable<LogNormalRandomNumber> ToLogNormalDistribution(this IEnumerable<UniformRandomNumber> uniforms, double power = Math.E, double mean = 0, double variance = 1) => uniforms.Select(x => new LogNormalRandomNumber(x, power, mean, variance));
 
         /// <summary>
         /// Linq extension function used to Transform an enumerable of <see cref="UniformRandomNumber"/> to an enumerable of <see cref="DiscreteUniformRandomNumber"/>
