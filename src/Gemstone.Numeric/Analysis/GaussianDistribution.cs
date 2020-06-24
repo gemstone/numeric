@@ -37,7 +37,7 @@ namespace Gemstone.Numeric.Analysis
         #region [ Members ]
 
         // Fields
-        private readonly Random m_random;
+        private readonly System.Random m_random;
         private readonly double m_mean;
         private readonly double m_standardDeviation;
         private readonly double m_min;
@@ -67,7 +67,7 @@ namespace Gemstone.Numeric.Analysis
             if (max < mean + 0.25 * standardDeviation)
                 throw new ArgumentOutOfRangeException(nameof(max), "must be greater than 1/4 standard deviations away from the mean");
 
-            m_random = new Random(Guid.NewGuid().GetHashCode());
+            m_random = new System.Random(Guid.NewGuid().GetHashCode());
             m_mean = mean;
             m_standardDeviation = standardDeviation;
             m_min = min;
