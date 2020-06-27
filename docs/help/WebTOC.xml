@@ -2,14 +2,14 @@
 <HelpTOC>
 
   <HelpTOCNode Title="About" Url="html/About.htm" />
-  <HelpTOCNode Id="22f4b2f5-3c5b-4ff6-bf95-3e0b8580f869" Title="Gemstone.Numeric" Url="html/N_Gemstone_Numeric.htm">
-    <HelpTOCNode Id="033114f4-9c96-4f4f-867d-add9342c9ace" Title="ComplexNumber Structure" Url="html/T_Gemstone_Numeric_ComplexNumber.htm">
-      <HelpTOCNode Id="316780af-ac7e-4b54-a452-3b1c48e6d094" Title="ComplexNumber Constructor " Url="html/Overload_Gemstone_Numeric_ComplexNumber__ctor.htm">
+  <HelpTOCNode Id="cd51f934-aa81-45e7-8cc1-452c93a475ca" Title="Gemstone.Numeric" Url="html/N_Gemstone_Numeric.htm">
+    <HelpTOCNode Id="9323c618-95b8-4c1b-99bf-af1cee1bb41f" Title="ComplexNumber Structure" Url="html/T_Gemstone_Numeric_ComplexNumber.htm">
+      <HelpTOCNode Id="4a6d732e-a509-48c5-84ab-55ed4d50b2f5" Title="ComplexNumber Constructor " Url="html/Overload_Gemstone_Numeric_ComplexNumber__ctor.htm">
         <HelpTOCNode Title="ComplexNumber Constructor (ComplexNumber)" Url="html/M_Gemstone_Numeric_ComplexNumber__ctor.htm" />
         <HelpTOCNode Title="ComplexNumber Constructor (Angle, Double)" Url="html/M_Gemstone_Numeric_ComplexNumber__ctor_1.htm" />
         <HelpTOCNode Title="ComplexNumber Constructor (Double, Double)" Url="html/M_Gemstone_Numeric_ComplexNumber__ctor_2.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="164f467f-aa0b-4444-9c98-d6f6a23789b5" Title="ComplexNumber Properties" Url="html/Properties_T_Gemstone_Numeric_ComplexNumber.htm">
+      <HelpTOCNode Id="7809b2fd-9063-40ed-8d7e-8b03fff28bc7" Title="ComplexNumber Properties" Url="html/Properties_T_Gemstone_Numeric_ComplexNumber.htm">
         <HelpTOCNode Title="AllAssigned Property " Url="html/P_Gemstone_Numeric_ComplexNumber_AllAssigned.htm" />
         <HelpTOCNode Title="Angle Property " Url="html/P_Gemstone_Numeric_ComplexNumber_Angle.htm" />
         <HelpTOCNode Title="Conjugate Property " Url="html/P_Gemstone_Numeric_ComplexNumber_Conjugate.htm" />
@@ -18,8 +18,8 @@
         <HelpTOCNode Title="NoneAssigned Property " Url="html/P_Gemstone_Numeric_ComplexNumber_NoneAssigned.htm" />
         <HelpTOCNode Title="Real Property " Url="html/P_Gemstone_Numeric_ComplexNumber_Real.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="d5db462b-8e07-4d96-ba53-25bf57af168c" Title="ComplexNumber Methods" Url="html/Methods_T_Gemstone_Numeric_ComplexNumber.htm">
-        <HelpTOCNode Id="88321d13-4f59-4ddf-b00f-7b80575bedc7" Title="Equals Method " Url="html/Overload_Gemstone_Numeric_ComplexNumber_Equals.htm">
+      <HelpTOCNode Id="ffb41993-b85d-4a71-bdc5-e71bfdbd49f8" Title="ComplexNumber Methods" Url="html/Methods_T_Gemstone_Numeric_ComplexNumber.htm">
+        <HelpTOCNode Id="c3abd685-87c2-4117-94ca-6e9553aa626a" Title="Equals Method " Url="html/Overload_Gemstone_Numeric_ComplexNumber_Equals.htm">
           <HelpTOCNode Title="Equals Method (Object)" Url="html/M_Gemstone_Numeric_ComplexNumber_Equals_1.htm" />
           <HelpTOCNode Title="Equals Method (ComplexNumber)" Url="html/M_Gemstone_Numeric_ComplexNumber_Equals.htm" />
         </HelpTOCNode>
@@ -28,12 +28,12 @@
         <HelpTOCNode Title="Pow Method " Url="html/M_Gemstone_Numeric_ComplexNumber_Pow.htm" />
         <HelpTOCNode Title="ToString Method " Url="html/M_Gemstone_Numeric_ComplexNumber_ToString.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="927e9a56-bda5-4fa9-a0c7-e34d8c4bc5de" Title="ComplexNumber Operators and Type Conversions" Url="html/Operators_T_Gemstone_Numeric_ComplexNumber.htm">
+      <HelpTOCNode Id="a11927d5-9154-42d8-9132-3fbb81687f41" Title="ComplexNumber Operators and Type Conversions" Url="html/Operators_T_Gemstone_Numeric_ComplexNumber.htm">
         <HelpTOCNode Title="Addition Operator " Url="html/M_Gemstone_Numeric_ComplexNumber_op_Addition.htm" />
         <HelpTOCNode Title="Division Operator " Url="html/M_Gemstone_Numeric_ComplexNumber_op_Division.htm" />
         <HelpTOCNode Title="Equality Operator " Url="html/M_Gemstone_Numeric_ComplexNumber_op_Equality.htm" />
         <HelpTOCNode Title="Exponent Operator " Url="html/M_Gemstone_Numeric_ComplexNumber_op_Exponent.htm" />
-        <HelpTOCNode Id="a13a7b8c-5692-44e6-b1ae-9c06f21116bb" Title="Implicit Conversion Operators" Url="html/Overload_Gemstone_Numeric_ComplexNumber_op_Implicit.htm">
+        <HelpTOCNode Id="33bea661-9920-46b3-9554-c5dbdd079f0e" Title="Implicit Conversion Operators" Url="html/Overload_Gemstone_Numeric_ComplexNumber_op_Implicit.htm">
           <HelpTOCNode Title="Implicit Conversion (Double to ComplexNumber)" Url="html/M_Gemstone_Numeric_ComplexNumber_op_Implicit_1.htm" />
           <HelpTOCNode Title="Implicit Conversion (Complex to ComplexNumber)" Url="html/M_Gemstone_Numeric_ComplexNumber_op_Implicit_2.htm" />
           <HelpTOCNode Title="Implicit Conversion (ComplexNumber to Complex)" Url="html/M_Gemstone_Numeric_ComplexNumber_op_Implicit.htm" />
@@ -44,80 +44,80 @@
         <HelpTOCNode Title="UnaryNegation Operator " Url="html/M_Gemstone_Numeric_ComplexNumber_op_UnaryNegation.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="6d6682bb-eee1-452a-b6cc-86a8c57bbd29" Title="Int24 Structure" Url="html/T_Gemstone_Numeric_Int24.htm">
-      <HelpTOCNode Id="02c26733-4e06-49b8-a9a3-dbd50327270e" Title="Int24 Constructor " Url="html/Overload_Gemstone_Numeric_Int24__ctor.htm">
+    <HelpTOCNode Id="f122535f-7616-485d-adbb-5f66006634de" Title="Int24 Structure" Url="html/T_Gemstone_Numeric_Int24.htm">
+      <HelpTOCNode Id="8d58bd72-2dc7-48d6-bd41-7a98c7b78c5c" Title="Int24 Constructor " Url="html/Overload_Gemstone_Numeric_Int24__ctor.htm">
         <HelpTOCNode Title="Int24 Constructor (Int32)" Url="html/M_Gemstone_Numeric_Int24__ctor_2.htm" />
         <HelpTOCNode Title="Int24 Constructor (Int24)" Url="html/M_Gemstone_Numeric_Int24__ctor.htm" />
         <HelpTOCNode Title="Int24 Constructor (Byte[], Int32)" Url="html/M_Gemstone_Numeric_Int24__ctor_1.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="b848f54a-acc7-4a04-b7dc-16d75bf54291" Title="Int24 Methods" Url="html/Methods_T_Gemstone_Numeric_Int24.htm">
-        <HelpTOCNode Id="d4c436d3-6f55-4f40-9bc5-b1d8eef1800f" Title="CompareTo Method " Url="html/Overload_Gemstone_Numeric_Int24_CompareTo.htm">
+      <HelpTOCNode Id="57c91348-39b6-485c-a357-16b2b5d9cc6b" Title="Int24 Methods" Url="html/Methods_T_Gemstone_Numeric_Int24.htm">
+        <HelpTOCNode Id="536c45bb-62f5-4abf-9709-18c261cb73fa" Title="CompareTo Method " Url="html/Overload_Gemstone_Numeric_Int24_CompareTo.htm">
           <HelpTOCNode Title="CompareTo Method (Int32)" Url="html/M_Gemstone_Numeric_Int24_CompareTo_1.htm" />
           <HelpTOCNode Title="CompareTo Method (Object)" Url="html/M_Gemstone_Numeric_Int24_CompareTo_2.htm" />
           <HelpTOCNode Title="CompareTo Method (Int24)" Url="html/M_Gemstone_Numeric_Int24_CompareTo.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="72eb1d50-422a-42bb-a0cd-033a287270ba" Title="Equals Method " Url="html/Overload_Gemstone_Numeric_Int24_Equals.htm">
+        <HelpTOCNode Id="16f35944-144e-4d98-909e-e38cfc70c2f2" Title="Equals Method " Url="html/Overload_Gemstone_Numeric_Int24_Equals.htm">
           <HelpTOCNode Title="Equals Method (Int32)" Url="html/M_Gemstone_Numeric_Int24_Equals_1.htm" />
           <HelpTOCNode Title="Equals Method (Object)" Url="html/M_Gemstone_Numeric_Int24_Equals_2.htm" />
           <HelpTOCNode Title="Equals Method (Int24)" Url="html/M_Gemstone_Numeric_Int24_Equals.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="54cddad0-5b0a-43da-aee2-255bd75c3772" Title="GetBytes Method " Url="html/Overload_Gemstone_Numeric_Int24_GetBytes.htm">
+        <HelpTOCNode Id="83b3f94c-272a-492a-8174-24d9601be188" Title="GetBytes Method " Url="html/Overload_Gemstone_Numeric_Int24_GetBytes.htm">
           <HelpTOCNode Title="GetBytes Method " Url="html/M_Gemstone_Numeric_Int24_GetBytes.htm" />
           <HelpTOCNode Title="GetBytes Method (Int24)" Url="html/M_Gemstone_Numeric_Int24_GetBytes_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="GetHashCode Method " Url="html/M_Gemstone_Numeric_Int24_GetHashCode.htm" />
         <HelpTOCNode Title="GetTypeCode Method " Url="html/M_Gemstone_Numeric_Int24_GetTypeCode.htm" />
         <HelpTOCNode Title="GetValue Method " Url="html/M_Gemstone_Numeric_Int24_GetValue.htm" />
-        <HelpTOCNode Id="a871faae-594d-462f-aabb-0d201c3f8ca2" Title="Parse Method " Url="html/Overload_Gemstone_Numeric_Int24_Parse.htm">
+        <HelpTOCNode Id="9f2053df-be54-4a32-9de7-ad85776a00a9" Title="Parse Method " Url="html/Overload_Gemstone_Numeric_Int24_Parse.htm">
           <HelpTOCNode Title="Parse Method (String)" Url="html/M_Gemstone_Numeric_Int24_Parse.htm" />
           <HelpTOCNode Title="Parse Method (String, NumberStyles)" Url="html/M_Gemstone_Numeric_Int24_Parse_1.htm" />
           <HelpTOCNode Title="Parse Method (String, IFormatProvider)" Url="html/M_Gemstone_Numeric_Int24_Parse_3.htm" />
           <HelpTOCNode Title="Parse Method (String, NumberStyles, IFormatProvider)" Url="html/M_Gemstone_Numeric_Int24_Parse_2.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="06938c3d-5816-4e50-9e3a-8aca03dd7394" Title="ToString Method " Url="html/Overload_Gemstone_Numeric_Int24_ToString.htm">
+        <HelpTOCNode Id="470d3831-2565-48a6-bab0-16749c82ed16" Title="ToString Method " Url="html/Overload_Gemstone_Numeric_Int24_ToString.htm">
           <HelpTOCNode Title="ToString Method " Url="html/M_Gemstone_Numeric_Int24_ToString.htm" />
           <HelpTOCNode Title="ToString Method (IFormatProvider)" Url="html/M_Gemstone_Numeric_Int24_ToString_1.htm" />
           <HelpTOCNode Title="ToString Method (String)" Url="html/M_Gemstone_Numeric_Int24_ToString_2.htm" />
           <HelpTOCNode Title="ToString Method (String, IFormatProvider)" Url="html/M_Gemstone_Numeric_Int24_ToString_3.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="e1a10bf8-1ad1-41f8-8988-f0a524cfcdfa" Title="TryParse Method " Url="html/Overload_Gemstone_Numeric_Int24_TryParse.htm">
+        <HelpTOCNode Id="9b11ae84-e3c1-4230-835a-2a5998c99856" Title="TryParse Method " Url="html/Overload_Gemstone_Numeric_Int24_TryParse.htm">
           <HelpTOCNode Title="TryParse Method (String, Int24)" Url="html/M_Gemstone_Numeric_Int24_TryParse.htm" />
           <HelpTOCNode Title="TryParse Method (String, NumberStyles, IFormatProvider, Int24)" Url="html/M_Gemstone_Numeric_Int24_TryParse_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="78008807-7f87-4420-9d78-363097dd79f8" Title="Int24 Operators and Type Conversions" Url="html/Operators_T_Gemstone_Numeric_Int24.htm">
-        <HelpTOCNode Id="eeeaff66-ed51-4b12-a184-787aa61d00d4" Title="Addition Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Addition.htm">
+      <HelpTOCNode Id="c30f4577-72e0-4342-8378-89b04c1837f0" Title="Int24 Operators and Type Conversions" Url="html/Operators_T_Gemstone_Numeric_Int24.htm">
+        <HelpTOCNode Id="601154cc-3419-4d3d-a4bf-9e9a6538c682" Title="Addition Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Addition.htm">
           <HelpTOCNode Title="Addition Operator (Int32, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Addition_2.htm" />
           <HelpTOCNode Title="Addition Operator (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Addition.htm" />
           <HelpTOCNode Title="Addition Operator (Int24, Int32)" Url="html/M_Gemstone_Numeric_Int24_op_Addition_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="718cd351-ae7a-4549-8eb7-6eaa7c6607ec" Title="BitwiseAnd Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_BitwiseAnd.htm">
+        <HelpTOCNode Id="9747f1d9-b862-4a57-b001-fffe0ea9937b" Title="BitwiseAnd Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_BitwiseAnd.htm">
           <HelpTOCNode Title="BitwiseAnd Operator (Int32, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_BitwiseAnd_2.htm" />
           <HelpTOCNode Title="BitwiseAnd Operator (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_BitwiseAnd.htm" />
           <HelpTOCNode Title="BitwiseAnd Operator (Int24, Int32)" Url="html/M_Gemstone_Numeric_Int24_op_BitwiseAnd_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="fcaf1851-bd0d-41f3-ad96-ef801cf13782" Title="BitwiseOr Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_BitwiseOr.htm">
+        <HelpTOCNode Id="37a625f0-3fd2-46ad-833f-8a06c5a39374" Title="BitwiseOr Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_BitwiseOr.htm">
           <HelpTOCNode Title="BitwiseOr Operator (Int32, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_BitwiseOr_2.htm" />
           <HelpTOCNode Title="BitwiseOr Operator (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_BitwiseOr.htm" />
           <HelpTOCNode Title="BitwiseOr Operator (Int24, Int32)" Url="html/M_Gemstone_Numeric_Int24_op_BitwiseOr_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="Decrement Operator " Url="html/M_Gemstone_Numeric_Int24_op_Decrement.htm" />
-        <HelpTOCNode Id="044217f0-0a80-476d-87be-d839dd24aedc" Title="Division Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Division.htm">
+        <HelpTOCNode Id="5b1bfe0b-1c27-4a76-bbc7-6c64fd501f7b" Title="Division Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Division.htm">
           <HelpTOCNode Title="Division Operator (Int32, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Division_2.htm" />
           <HelpTOCNode Title="Division Operator (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Division.htm" />
           <HelpTOCNode Title="Division Operator (Int24, Int32)" Url="html/M_Gemstone_Numeric_Int24_op_Division_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="34df59a5-1d97-4a11-ae7c-da7763503ad4" Title="Equality Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Equality.htm">
+        <HelpTOCNode Id="9abfab1e-6094-476d-a229-bbb20c361a16" Title="Equality Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Equality.htm">
           <HelpTOCNode Title="Equality Operator (Int32, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Equality_2.htm" />
           <HelpTOCNode Title="Equality Operator (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Equality.htm" />
           <HelpTOCNode Title="Equality Operator (Int24, Int32)" Url="html/M_Gemstone_Numeric_Int24_op_Equality_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="788a0203-bbb0-4181-b8dc-c499b933fd78" Title="ExclusiveOr Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_ExclusiveOr.htm">
+        <HelpTOCNode Id="2dee0b49-13ab-44f7-92c1-869af31871a4" Title="ExclusiveOr Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_ExclusiveOr.htm">
           <HelpTOCNode Title="ExclusiveOr Operator (Int32, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_ExclusiveOr_2.htm" />
           <HelpTOCNode Title="ExclusiveOr Operator (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_ExclusiveOr.htm" />
           <HelpTOCNode Title="ExclusiveOr Operator (Int24, Int32)" Url="html/M_Gemstone_Numeric_Int24_op_ExclusiveOr_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="5bdfe9b9-4436-45c3-8581-fb8879e64187" Title="Explicit Conversion Operators" Url="html/Overload_Gemstone_Numeric_Int24_op_Explicit.htm">
+        <HelpTOCNode Id="c12ea486-da6b-4022-b5aa-aa71f291ef29" Title="Explicit Conversion Operators" Url="html/Overload_Gemstone_Numeric_Int24_op_Explicit.htm">
           <HelpTOCNode Title="Explicit Conversion (Decimal to Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Explicit_3.htm" />
           <HelpTOCNode Title="Explicit Conversion (Double to Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Explicit_4.htm" />
           <HelpTOCNode Title="Explicit Conversion (Enum to Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Explicit_5.htm" />
@@ -129,23 +129,23 @@
           <HelpTOCNode Title="Explicit Conversion (Int24 to UInt16)" Url="html/M_Gemstone_Numeric_Int24_op_Explicit_1.htm" />
           <HelpTOCNode Title="Explicit Conversion (Int24 to Byte)" Url="html/M_Gemstone_Numeric_Int24_op_Explicit_2.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="431d0ca0-f926-416c-8342-0c6d4526ac9e" Title="Exponent Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Exponent.htm">
+        <HelpTOCNode Id="974255c0-7100-4939-9afd-97ad4e147ffc" Title="Exponent Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Exponent.htm">
           <HelpTOCNode Title="Exponent Operator (Int32, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Exponent_2.htm" />
           <HelpTOCNode Title="Exponent Operator (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Exponent.htm" />
           <HelpTOCNode Title="Exponent Operator (Int24, Int32)" Url="html/M_Gemstone_Numeric_Int24_op_Exponent_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="False Operator " Url="html/M_Gemstone_Numeric_Int24_op_False.htm" />
-        <HelpTOCNode Id="5fd45516-4820-4e08-8e5e-e41d72f4692a" Title="GreaterThan Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_GreaterThan.htm">
+        <HelpTOCNode Id="c687e6aa-6d27-41b4-aef8-620c61ee3ab0" Title="GreaterThan Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_GreaterThan.htm">
           <HelpTOCNode Title="GreaterThan Operator (Int32, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_GreaterThan_2.htm" />
           <HelpTOCNode Title="GreaterThan Operator (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_GreaterThan.htm" />
           <HelpTOCNode Title="GreaterThan Operator (Int24, Int32)" Url="html/M_Gemstone_Numeric_Int24_op_GreaterThan_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="bfaacbc2-f5fa-46ba-9cb5-720c57ead044" Title="GreaterThanOrEqual Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_GreaterThanOrEqual.htm">
+        <HelpTOCNode Id="cf868faa-1df0-48c4-a66c-e9e946c31d73" Title="GreaterThanOrEqual Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_GreaterThanOrEqual.htm">
           <HelpTOCNode Title="GreaterThanOrEqual Operator (Int32, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_GreaterThanOrEqual_2.htm" />
           <HelpTOCNode Title="GreaterThanOrEqual Operator (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_GreaterThanOrEqual.htm" />
           <HelpTOCNode Title="GreaterThanOrEqual Operator (Int24, Int32)" Url="html/M_Gemstone_Numeric_Int24_op_GreaterThanOrEqual_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="823eeda1-2937-4208-9907-8d52c82c2c65" Title="Implicit Conversion Operators" Url="html/Overload_Gemstone_Numeric_Int24_op_Implicit.htm">
+        <HelpTOCNode Id="2714afe7-f7c4-4e6d-adf5-79a24fe324fa" Title="Implicit Conversion Operators" Url="html/Overload_Gemstone_Numeric_Int24_op_Implicit.htm">
           <HelpTOCNode Title="Implicit Conversion (Byte to Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Implicit_8.htm" />
           <HelpTOCNode Title="Implicit Conversion (Char to Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Implicit_9.htm" />
           <HelpTOCNode Title="Implicit Conversion (Int16 to Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Implicit_10.htm" />
@@ -159,55 +159,55 @@
           <HelpTOCNode Title="Implicit Conversion (Int24 to String)" Url="html/M_Gemstone_Numeric_Int24_op_Implicit_7.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="Increment Operator " Url="html/M_Gemstone_Numeric_Int24_op_Increment.htm" />
-        <HelpTOCNode Id="08f334b0-84cb-40d4-a03b-ae30ab6113f6" Title="Inequality Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Inequality.htm">
+        <HelpTOCNode Id="010f427c-9b38-457d-9cdc-a427d745ab2a" Title="Inequality Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Inequality.htm">
           <HelpTOCNode Title="Inequality Operator (Int32, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Inequality_2.htm" />
           <HelpTOCNode Title="Inequality Operator (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Inequality.htm" />
           <HelpTOCNode Title="Inequality Operator (Int24, Int32)" Url="html/M_Gemstone_Numeric_Int24_op_Inequality_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="LeftShift Operator " Url="html/M_Gemstone_Numeric_Int24_op_LeftShift.htm" />
-        <HelpTOCNode Id="65d9deb3-b890-4bd9-a1f9-757f46b5d86a" Title="LessThan Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_LessThan.htm">
+        <HelpTOCNode Id="ab084983-7fbe-42a2-b1bb-2ee703126283" Title="LessThan Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_LessThan.htm">
           <HelpTOCNode Title="LessThan Operator (Int32, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_LessThan_2.htm" />
           <HelpTOCNode Title="LessThan Operator (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_LessThan.htm" />
           <HelpTOCNode Title="LessThan Operator (Int24, Int32)" Url="html/M_Gemstone_Numeric_Int24_op_LessThan_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="cd8eaa8a-9fe1-46e0-a9d9-3e4568509551" Title="LessThanOrEqual Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_LessThanOrEqual.htm">
+        <HelpTOCNode Id="af1972ce-3656-4c5c-8684-492bd97a4ab0" Title="LessThanOrEqual Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_LessThanOrEqual.htm">
           <HelpTOCNode Title="LessThanOrEqual Operator (Int32, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_LessThanOrEqual_2.htm" />
           <HelpTOCNode Title="LessThanOrEqual Operator (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_LessThanOrEqual.htm" />
           <HelpTOCNode Title="LessThanOrEqual Operator (Int24, Int32)" Url="html/M_Gemstone_Numeric_Int24_op_LessThanOrEqual_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="e87b1677-10e2-4ee0-8a00-f10d9a997fea" Title="Modulus Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Modulus.htm">
+        <HelpTOCNode Id="e15e8f0a-805f-46be-8d25-5f518b8dfa58" Title="Modulus Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Modulus.htm">
           <HelpTOCNode Title="Modulus Operator (Int32, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Modulus_2.htm" />
           <HelpTOCNode Title="Modulus Operator (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Modulus.htm" />
           <HelpTOCNode Title="Modulus Operator (Int24, Int32)" Url="html/M_Gemstone_Numeric_Int24_op_Modulus_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="a9292695-cf6a-4f7d-95b7-ff939df2ff0b" Title="Multiply Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Multiply.htm">
+        <HelpTOCNode Id="d94b153e-20f6-4334-b522-239c4d0ec154" Title="Multiply Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Multiply.htm">
           <HelpTOCNode Title="Multiply Operator (Int32, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Multiply_2.htm" />
           <HelpTOCNode Title="Multiply Operator (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Multiply.htm" />
           <HelpTOCNode Title="Multiply Operator (Int24, Int32)" Url="html/M_Gemstone_Numeric_Int24_op_Multiply_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="OnesComplement Operator " Url="html/M_Gemstone_Numeric_Int24_op_OnesComplement.htm" />
         <HelpTOCNode Title="RightShift Operator " Url="html/M_Gemstone_Numeric_Int24_op_RightShift.htm" />
-        <HelpTOCNode Id="dfb87784-919c-43a1-aa64-3f5c369f6430" Title="Subtraction Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Subtraction.htm">
+        <HelpTOCNode Id="d7060653-6c0d-4725-8f41-f3b122ac204f" Title="Subtraction Operator " Url="html/Overload_Gemstone_Numeric_Int24_op_Subtraction.htm">
           <HelpTOCNode Title="Subtraction Operator (Int32, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Subtraction_2.htm" />
           <HelpTOCNode Title="Subtraction Operator (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24_op_Subtraction.htm" />
           <HelpTOCNode Title="Subtraction Operator (Int24, Int32)" Url="html/M_Gemstone_Numeric_Int24_op_Subtraction_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="True Operator " Url="html/M_Gemstone_Numeric_Int24_op_True.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="9a9d1701-29eb-48dc-ab4d-1189f371d0b2" Title="Int24 Fields" Url="html/Fields_T_Gemstone_Numeric_Int24.htm">
+      <HelpTOCNode Id="ac293656-32ff-4233-beed-bb71f5144b09" Title="Int24 Fields" Url="html/Fields_T_Gemstone_Numeric_Int24.htm">
         <HelpTOCNode Title="BitMask Field" Url="html/F_Gemstone_Numeric_Int24_BitMask.htm" />
         <HelpTOCNode Title="MaxValue Field" Url="html/F_Gemstone_Numeric_Int24_MaxValue.htm" />
         <HelpTOCNode Title="MinValue Field" Url="html/F_Gemstone_Numeric_Int24_MinValue.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d40e05e9-0f7a-4201-8eef-7fba5598a025" Title="RadixCodec Class" Url="html/T_Gemstone_Numeric_RadixCodec.htm">
+    <HelpTOCNode Id="f4ba26b3-91b4-4851-b39c-a6f5d1273ba5" Title="RadixCodec Class" Url="html/T_Gemstone_Numeric_RadixCodec.htm">
       <HelpTOCNode Title="RadixCodec Constructor " Url="html/M_Gemstone_Numeric_RadixCodec__ctor.htm" />
-      <HelpTOCNode Id="4a86acfd-88ed-48af-b4fc-316ac7c8d092" Title="RadixCodec Methods" Url="html/Methods_T_Gemstone_Numeric_RadixCodec.htm">
-        <HelpTOCNode Id="034f6a1f-99a3-49e6-ba74-fa5eb973af46" Title="Decode Method " Url="html/Overload_Gemstone_Numeric_RadixCodec_Decode.htm">
+      <HelpTOCNode Id="11be680d-3ea4-4245-9957-a5bfb0d117e0" Title="RadixCodec Methods" Url="html/Methods_T_Gemstone_Numeric_RadixCodec.htm">
+        <HelpTOCNode Id="3e90d696-c20e-4a01-ac59-c974e3122a5b" Title="Decode Method " Url="html/Overload_Gemstone_Numeric_RadixCodec_Decode.htm">
           <HelpTOCNode Title="Decode(T) Method (String)" Url="html/M_Gemstone_Numeric_RadixCodec_Decode__1.htm" />
           <HelpTOCNode Title="Decode Method (Type, String)" Url="html/M_Gemstone_Numeric_RadixCodec_Decode.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="3a2df628-5e63-4d33-bdb6-38e31252c396" Title="Encode Method " Url="html/Overload_Gemstone_Numeric_RadixCodec_Encode.htm">
+        <HelpTOCNode Id="a563d8bf-19cf-46f5-84ec-8e5230f57975" Title="Encode Method " Url="html/Overload_Gemstone_Numeric_RadixCodec_Encode.htm">
           <HelpTOCNode Title="Encode Method (Int16)" Url="html/M_Gemstone_Numeric_RadixCodec_Encode_2.htm" />
           <HelpTOCNode Title="Encode Method (Int32)" Url="html/M_Gemstone_Numeric_RadixCodec_Encode_3.htm" />
           <HelpTOCNode Title="Encode Method (Int64)" Url="html/M_Gemstone_Numeric_RadixCodec_Encode_4.htm" />
@@ -217,7 +217,7 @@
           <HelpTOCNode Title="Encode Method (Int24)" Url="html/M_Gemstone_Numeric_RadixCodec_Encode.htm" />
           <HelpTOCNode Title="Encode Method (UInt24)" Url="html/M_Gemstone_Numeric_RadixCodec_Encode_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="a2bcaaa2-c49e-4c81-bf58-31ee96c7bd58" Title="TryDecode Method " Url="html/Overload_Gemstone_Numeric_RadixCodec_TryDecode.htm">
+        <HelpTOCNode Id="c35eea57-13de-4484-9e6f-ab05214097bf" Title="TryDecode Method " Url="html/Overload_Gemstone_Numeric_RadixCodec_TryDecode.htm">
           <HelpTOCNode Title="TryDecode Method (String, Int24)" Url="html/M_Gemstone_Numeric_RadixCodec_TryDecode.htm" />
           <HelpTOCNode Title="TryDecode Method (String, UInt24)" Url="html/M_Gemstone_Numeric_RadixCodec_TryDecode_1.htm" />
           <HelpTOCNode Title="TryDecode Method (String, Int16)" Url="html/M_Gemstone_Numeric_RadixCodec_TryDecode_2.htm" />
@@ -228,7 +228,7 @@
           <HelpTOCNode Title="TryDecode Method (String, UInt64)" Url="html/M_Gemstone_Numeric_RadixCodec_TryDecode_7.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="0eeba69a-db16-4759-9cca-a0f1503d4982" Title="RadixCodec Fields" Url="html/Fields_T_Gemstone_Numeric_RadixCodec.htm">
+      <HelpTOCNode Id="5d8bc1b8-0685-4375-9080-389d4b80e8d6" Title="RadixCodec Fields" Url="html/Fields_T_Gemstone_Numeric_RadixCodec.htm">
         <HelpTOCNode Title="Digits Field" Url="html/F_Gemstone_Numeric_RadixCodec_Digits.htm" />
         <HelpTOCNode Title="Radix16 Field" Url="html/F_Gemstone_Numeric_RadixCodec_Radix16.htm" />
         <HelpTOCNode Title="Radix2 Field" Url="html/F_Gemstone_Numeric_RadixCodec_Radix2.htm" />
@@ -239,80 +239,80 @@
         <HelpTOCNode Title="Radix86 Field" Url="html/F_Gemstone_Numeric_RadixCodec_Radix86.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a47b8525-3657-423f-bfa3-0f8c54d95900" Title="UInt24 Structure" Url="html/T_Gemstone_Numeric_UInt24.htm">
-      <HelpTOCNode Id="e6ebb1ca-4586-49a8-89e6-2dfcc56fefd4" Title="UInt24 Constructor " Url="html/Overload_Gemstone_Numeric_UInt24__ctor.htm">
+    <HelpTOCNode Id="e715e192-dffc-472c-bc23-df4c12dfe5d7" Title="UInt24 Structure" Url="html/T_Gemstone_Numeric_UInt24.htm">
+      <HelpTOCNode Id="fc5cb697-6276-490d-8f67-b3e55e95a64c" Title="UInt24 Constructor " Url="html/Overload_Gemstone_Numeric_UInt24__ctor.htm">
         <HelpTOCNode Title="UInt24 Constructor (UInt32)" Url="html/M_Gemstone_Numeric_UInt24__ctor_2.htm" />
         <HelpTOCNode Title="UInt24 Constructor (UInt24)" Url="html/M_Gemstone_Numeric_UInt24__ctor.htm" />
         <HelpTOCNode Title="UInt24 Constructor (Byte[], Int32)" Url="html/M_Gemstone_Numeric_UInt24__ctor_1.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="9aa63c8f-3d85-4411-abf2-fcada7e63603" Title="UInt24 Methods" Url="html/Methods_T_Gemstone_Numeric_UInt24.htm">
-        <HelpTOCNode Id="fadeef72-1554-4565-97f8-257cab10c4aa" Title="CompareTo Method " Url="html/Overload_Gemstone_Numeric_UInt24_CompareTo.htm">
+      <HelpTOCNode Id="597eb758-7644-4b6f-9e42-1d20214c269e" Title="UInt24 Methods" Url="html/Methods_T_Gemstone_Numeric_UInt24.htm">
+        <HelpTOCNode Id="5177901e-cd08-4c7b-946b-2f2f5557a4c8" Title="CompareTo Method " Url="html/Overload_Gemstone_Numeric_UInt24_CompareTo.htm">
           <HelpTOCNode Title="CompareTo Method (Object)" Url="html/M_Gemstone_Numeric_UInt24_CompareTo_1.htm" />
           <HelpTOCNode Title="CompareTo Method (UInt32)" Url="html/M_Gemstone_Numeric_UInt24_CompareTo_2.htm" />
           <HelpTOCNode Title="CompareTo Method (UInt24)" Url="html/M_Gemstone_Numeric_UInt24_CompareTo.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="23a1f4cf-1540-4680-a9e0-bfd793838c37" Title="Equals Method " Url="html/Overload_Gemstone_Numeric_UInt24_Equals.htm">
+        <HelpTOCNode Id="04a6c876-13e0-48cb-aedd-c51357900d88" Title="Equals Method " Url="html/Overload_Gemstone_Numeric_UInt24_Equals.htm">
           <HelpTOCNode Title="Equals Method (Object)" Url="html/M_Gemstone_Numeric_UInt24_Equals_1.htm" />
           <HelpTOCNode Title="Equals Method (UInt32)" Url="html/M_Gemstone_Numeric_UInt24_Equals_2.htm" />
           <HelpTOCNode Title="Equals Method (UInt24)" Url="html/M_Gemstone_Numeric_UInt24_Equals.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="e9cd6fd6-bf1f-4aae-bb20-304793f64f35" Title="GetBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24_GetBytes.htm">
+        <HelpTOCNode Id="6f3fac00-8101-45af-91d0-ea9d8590d9fc" Title="GetBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24_GetBytes.htm">
           <HelpTOCNode Title="GetBytes Method " Url="html/M_Gemstone_Numeric_UInt24_GetBytes.htm" />
           <HelpTOCNode Title="GetBytes Method (UInt24)" Url="html/M_Gemstone_Numeric_UInt24_GetBytes_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="GetHashCode Method " Url="html/M_Gemstone_Numeric_UInt24_GetHashCode.htm" />
         <HelpTOCNode Title="GetTypeCode Method " Url="html/M_Gemstone_Numeric_UInt24_GetTypeCode.htm" />
         <HelpTOCNode Title="GetValue Method " Url="html/M_Gemstone_Numeric_UInt24_GetValue.htm" />
-        <HelpTOCNode Id="a42696d5-2684-4a3e-b237-2bb09e40c89e" Title="Parse Method " Url="html/Overload_Gemstone_Numeric_UInt24_Parse.htm">
+        <HelpTOCNode Id="0f727fb8-7742-48a0-a13f-8aad801d4824" Title="Parse Method " Url="html/Overload_Gemstone_Numeric_UInt24_Parse.htm">
           <HelpTOCNode Title="Parse Method (String)" Url="html/M_Gemstone_Numeric_UInt24_Parse.htm" />
           <HelpTOCNode Title="Parse Method (String, NumberStyles)" Url="html/M_Gemstone_Numeric_UInt24_Parse_1.htm" />
           <HelpTOCNode Title="Parse Method (String, IFormatProvider)" Url="html/M_Gemstone_Numeric_UInt24_Parse_3.htm" />
           <HelpTOCNode Title="Parse Method (String, NumberStyles, IFormatProvider)" Url="html/M_Gemstone_Numeric_UInt24_Parse_2.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="abdebca9-56cf-4087-9b72-6c5334144cb0" Title="ToString Method " Url="html/Overload_Gemstone_Numeric_UInt24_ToString.htm">
+        <HelpTOCNode Id="05000379-4be6-4f92-a43e-cca41ed16906" Title="ToString Method " Url="html/Overload_Gemstone_Numeric_UInt24_ToString.htm">
           <HelpTOCNode Title="ToString Method " Url="html/M_Gemstone_Numeric_UInt24_ToString.htm" />
           <HelpTOCNode Title="ToString Method (IFormatProvider)" Url="html/M_Gemstone_Numeric_UInt24_ToString_1.htm" />
           <HelpTOCNode Title="ToString Method (String)" Url="html/M_Gemstone_Numeric_UInt24_ToString_2.htm" />
           <HelpTOCNode Title="ToString Method (String, IFormatProvider)" Url="html/M_Gemstone_Numeric_UInt24_ToString_3.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="38904cd8-5492-41f7-baec-dce7f27ebf1d" Title="TryParse Method " Url="html/Overload_Gemstone_Numeric_UInt24_TryParse.htm">
+        <HelpTOCNode Id="b57b0ab4-35e3-4d87-a586-380566f807f3" Title="TryParse Method " Url="html/Overload_Gemstone_Numeric_UInt24_TryParse.htm">
           <HelpTOCNode Title="TryParse Method (String, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_TryParse.htm" />
           <HelpTOCNode Title="TryParse Method (String, NumberStyles, IFormatProvider, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_TryParse_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="eb5bb87a-0e82-4476-9117-0e61e42b368f" Title="UInt24 Operators and Type Conversions" Url="html/Operators_T_Gemstone_Numeric_UInt24.htm">
-        <HelpTOCNode Id="d6127afb-f74e-44fb-a7a8-2396fc456ce0" Title="Addition Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Addition.htm">
+      <HelpTOCNode Id="4106e903-d5af-48b5-9149-50fe85309ce7" Title="UInt24 Operators and Type Conversions" Url="html/Operators_T_Gemstone_Numeric_UInt24.htm">
+        <HelpTOCNode Id="98061885-2ef6-4c52-bb95-c950e935507b" Title="Addition Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Addition.htm">
           <HelpTOCNode Title="Addition Operator (UInt32, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Addition_2.htm" />
           <HelpTOCNode Title="Addition Operator (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Addition.htm" />
           <HelpTOCNode Title="Addition Operator (UInt24, UInt32)" Url="html/M_Gemstone_Numeric_UInt24_op_Addition_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="86b89791-8070-4bae-b4cb-6be48b783083" Title="BitwiseAnd Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_BitwiseAnd.htm">
+        <HelpTOCNode Id="abece832-390c-4124-970d-ac1717a2de6c" Title="BitwiseAnd Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_BitwiseAnd.htm">
           <HelpTOCNode Title="BitwiseAnd Operator (UInt32, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_BitwiseAnd_2.htm" />
           <HelpTOCNode Title="BitwiseAnd Operator (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_BitwiseAnd.htm" />
           <HelpTOCNode Title="BitwiseAnd Operator (UInt24, UInt32)" Url="html/M_Gemstone_Numeric_UInt24_op_BitwiseAnd_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="6ca9982c-5724-428b-923f-d70959322b5e" Title="BitwiseOr Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_BitwiseOr.htm">
+        <HelpTOCNode Id="05fe8073-0082-4d1a-81a6-f48fcb704017" Title="BitwiseOr Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_BitwiseOr.htm">
           <HelpTOCNode Title="BitwiseOr Operator (UInt32, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_BitwiseOr_2.htm" />
           <HelpTOCNode Title="BitwiseOr Operator (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_BitwiseOr.htm" />
           <HelpTOCNode Title="BitwiseOr Operator (UInt24, UInt32)" Url="html/M_Gemstone_Numeric_UInt24_op_BitwiseOr_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="Decrement Operator " Url="html/M_Gemstone_Numeric_UInt24_op_Decrement.htm" />
-        <HelpTOCNode Id="e484078a-c9cd-446b-bcc6-57282bcc9451" Title="Division Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Division.htm">
+        <HelpTOCNode Id="6af07c28-e750-48eb-9c19-b29c26a710a8" Title="Division Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Division.htm">
           <HelpTOCNode Title="Division Operator (UInt32, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Division_2.htm" />
           <HelpTOCNode Title="Division Operator (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Division.htm" />
           <HelpTOCNode Title="Division Operator (UInt24, UInt32)" Url="html/M_Gemstone_Numeric_UInt24_op_Division_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="c2b4713a-4f7a-4bab-84dc-e5846a3e009d" Title="Equality Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Equality.htm">
+        <HelpTOCNode Id="5aefff07-c44d-4f88-8d47-ca47159dff52" Title="Equality Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Equality.htm">
           <HelpTOCNode Title="Equality Operator (UInt32, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Equality_2.htm" />
           <HelpTOCNode Title="Equality Operator (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Equality.htm" />
           <HelpTOCNode Title="Equality Operator (UInt24, UInt32)" Url="html/M_Gemstone_Numeric_UInt24_op_Equality_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="3b0830d8-9583-417a-b2d5-23de5284962b" Title="ExclusiveOr Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_ExclusiveOr.htm">
+        <HelpTOCNode Id="6f018f04-5532-48fb-bc54-1b2b981a52f8" Title="ExclusiveOr Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_ExclusiveOr.htm">
           <HelpTOCNode Title="ExclusiveOr Operator (UInt32, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_ExclusiveOr_2.htm" />
           <HelpTOCNode Title="ExclusiveOr Operator (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_ExclusiveOr.htm" />
           <HelpTOCNode Title="ExclusiveOr Operator (UInt24, UInt32)" Url="html/M_Gemstone_Numeric_UInt24_op_ExclusiveOr_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="b568f666-5036-4f17-8e83-0a0199ff080b" Title="Explicit Conversion Operators" Url="html/Overload_Gemstone_Numeric_UInt24_op_Explicit.htm">
+        <HelpTOCNode Id="a6ccd9dd-b143-4597-9861-c4e44c22193a" Title="Explicit Conversion Operators" Url="html/Overload_Gemstone_Numeric_UInt24_op_Explicit.htm">
           <HelpTOCNode Title="Explicit Conversion (Decimal to UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Explicit_5.htm" />
           <HelpTOCNode Title="Explicit Conversion (Double to UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Explicit_6.htm" />
           <HelpTOCNode Title="Explicit Conversion (Enum to UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Explicit_7.htm" />
@@ -326,23 +326,23 @@
           <HelpTOCNode Title="Explicit Conversion (UInt24 to UInt16)" Url="html/M_Gemstone_Numeric_UInt24_op_Explicit_3.htm" />
           <HelpTOCNode Title="Explicit Conversion (UInt24 to Byte)" Url="html/M_Gemstone_Numeric_UInt24_op_Explicit_4.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="5ddda33f-4a9b-4b14-869a-6c70603f2c30" Title="Exponent Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Exponent.htm">
+        <HelpTOCNode Id="6dd978f1-060d-4de0-9204-8636c6b0579f" Title="Exponent Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Exponent.htm">
           <HelpTOCNode Title="Exponent Operator (Int32, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Exponent_2.htm" />
           <HelpTOCNode Title="Exponent Operator (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Exponent.htm" />
           <HelpTOCNode Title="Exponent Operator (UInt24, Int32)" Url="html/M_Gemstone_Numeric_UInt24_op_Exponent_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="False Operator " Url="html/M_Gemstone_Numeric_UInt24_op_False.htm" />
-        <HelpTOCNode Id="d44e8a1d-db96-4b53-a0b4-c9a4211c9327" Title="GreaterThan Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_GreaterThan.htm">
+        <HelpTOCNode Id="0f0c5930-9731-46ad-a366-90dcf184bb66" Title="GreaterThan Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_GreaterThan.htm">
           <HelpTOCNode Title="GreaterThan Operator (UInt32, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_GreaterThan_2.htm" />
           <HelpTOCNode Title="GreaterThan Operator (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_GreaterThan.htm" />
           <HelpTOCNode Title="GreaterThan Operator (UInt24, UInt32)" Url="html/M_Gemstone_Numeric_UInt24_op_GreaterThan_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="5039a4ec-c91f-4155-aff8-f6d895a92b99" Title="GreaterThanOrEqual Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_GreaterThanOrEqual.htm">
+        <HelpTOCNode Id="e8a19dd4-36a4-4601-80e0-a6a4be06d4a5" Title="GreaterThanOrEqual Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_GreaterThanOrEqual.htm">
           <HelpTOCNode Title="GreaterThanOrEqual Operator (UInt32, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_GreaterThanOrEqual_2.htm" />
           <HelpTOCNode Title="GreaterThanOrEqual Operator (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_GreaterThanOrEqual.htm" />
           <HelpTOCNode Title="GreaterThanOrEqual Operator (UInt24, UInt32)" Url="html/M_Gemstone_Numeric_UInt24_op_GreaterThanOrEqual_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="d179b75a-bdec-4a46-b08a-3560eb1f5bcd" Title="Implicit Conversion Operators" Url="html/Overload_Gemstone_Numeric_UInt24_op_Implicit.htm">
+        <HelpTOCNode Id="0a01bc7d-66c5-44ae-bd54-692bcb007f16" Title="Implicit Conversion Operators" Url="html/Overload_Gemstone_Numeric_UInt24_op_Implicit.htm">
           <HelpTOCNode Title="Implicit Conversion (Byte to UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Implicit_8.htm" />
           <HelpTOCNode Title="Implicit Conversion (Char to UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Implicit_9.htm" />
           <HelpTOCNode Title="Implicit Conversion (UInt16 to UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Implicit_10.htm" />
@@ -356,52 +356,52 @@
           <HelpTOCNode Title="Implicit Conversion (UInt24 to String)" Url="html/M_Gemstone_Numeric_UInt24_op_Implicit_7.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="Increment Operator " Url="html/M_Gemstone_Numeric_UInt24_op_Increment.htm" />
-        <HelpTOCNode Id="d7a5560a-439a-4449-b426-bc3ba44f3aac" Title="Inequality Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Inequality.htm">
+        <HelpTOCNode Id="6e4973c7-5e40-4bbf-8b6f-a4c663c7d48f" Title="Inequality Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Inequality.htm">
           <HelpTOCNode Title="Inequality Operator (UInt32, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Inequality_2.htm" />
           <HelpTOCNode Title="Inequality Operator (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Inequality.htm" />
           <HelpTOCNode Title="Inequality Operator (UInt24, UInt32)" Url="html/M_Gemstone_Numeric_UInt24_op_Inequality_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="LeftShift Operator " Url="html/M_Gemstone_Numeric_UInt24_op_LeftShift.htm" />
-        <HelpTOCNode Id="79b3f9c3-6bd4-4241-9f10-9fb5fac6bea3" Title="LessThan Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_LessThan.htm">
+        <HelpTOCNode Id="5407be08-9560-4475-b871-ef85d7cb9d8b" Title="LessThan Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_LessThan.htm">
           <HelpTOCNode Title="LessThan Operator (UInt32, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_LessThan_2.htm" />
           <HelpTOCNode Title="LessThan Operator (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_LessThan.htm" />
           <HelpTOCNode Title="LessThan Operator (UInt24, UInt32)" Url="html/M_Gemstone_Numeric_UInt24_op_LessThan_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="b91b0942-9185-485b-b930-d33362b7ec05" Title="LessThanOrEqual Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_LessThanOrEqual.htm">
+        <HelpTOCNode Id="4c30a58d-6e8e-4ba2-9da1-652cd4d49474" Title="LessThanOrEqual Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_LessThanOrEqual.htm">
           <HelpTOCNode Title="LessThanOrEqual Operator (UInt32, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_LessThanOrEqual_2.htm" />
           <HelpTOCNode Title="LessThanOrEqual Operator (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_LessThanOrEqual.htm" />
           <HelpTOCNode Title="LessThanOrEqual Operator (UInt24, UInt32)" Url="html/M_Gemstone_Numeric_UInt24_op_LessThanOrEqual_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="8ee09181-3a4c-4277-85eb-49c52c62100b" Title="Modulus Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Modulus.htm">
+        <HelpTOCNode Id="4dacdeb5-32f4-46a6-823d-6693c3bbc861" Title="Modulus Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Modulus.htm">
           <HelpTOCNode Title="Modulus Operator (UInt32, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Modulus_2.htm" />
           <HelpTOCNode Title="Modulus Operator (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Modulus.htm" />
           <HelpTOCNode Title="Modulus Operator (UInt24, UInt32)" Url="html/M_Gemstone_Numeric_UInt24_op_Modulus_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="afce53b4-0c94-45b7-aa9d-1f44f9da24d0" Title="Multiply Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Multiply.htm">
+        <HelpTOCNode Id="adc1b2f7-af72-4370-b221-6f51bb9e4d80" Title="Multiply Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Multiply.htm">
           <HelpTOCNode Title="Multiply Operator (UInt32, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Multiply_2.htm" />
           <HelpTOCNode Title="Multiply Operator (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Multiply.htm" />
           <HelpTOCNode Title="Multiply Operator (UInt24, UInt32)" Url="html/M_Gemstone_Numeric_UInt24_op_Multiply_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="OnesComplement Operator " Url="html/M_Gemstone_Numeric_UInt24_op_OnesComplement.htm" />
         <HelpTOCNode Title="RightShift Operator " Url="html/M_Gemstone_Numeric_UInt24_op_RightShift.htm" />
-        <HelpTOCNode Id="916d8732-75a8-4af2-b1b8-e9b02cb8fb7f" Title="Subtraction Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Subtraction.htm">
+        <HelpTOCNode Id="4281093b-4fea-4613-8b25-af3c7bd7ab2a" Title="Subtraction Operator " Url="html/Overload_Gemstone_Numeric_UInt24_op_Subtraction.htm">
           <HelpTOCNode Title="Subtraction Operator (UInt32, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Subtraction_2.htm" />
           <HelpTOCNode Title="Subtraction Operator (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24_op_Subtraction.htm" />
           <HelpTOCNode Title="Subtraction Operator (UInt24, UInt32)" Url="html/M_Gemstone_Numeric_UInt24_op_Subtraction_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="True Operator " Url="html/M_Gemstone_Numeric_UInt24_op_True.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="0548c55f-00ed-4ec2-bee0-0cc1cd80c576" Title="UInt24 Fields" Url="html/Fields_T_Gemstone_Numeric_UInt24.htm">
+      <HelpTOCNode Id="3543d84a-d6aa-4173-baea-ef68e724cd61" Title="UInt24 Fields" Url="html/Fields_T_Gemstone_Numeric_UInt24.htm">
         <HelpTOCNode Title="BitMask Field" Url="html/F_Gemstone_Numeric_UInt24_BitMask.htm" />
         <HelpTOCNode Title="MaxValue Field" Url="html/F_Gemstone_Numeric_UInt24_MaxValue.htm" />
         <HelpTOCNode Title="MinValue Field" Url="html/F_Gemstone_Numeric_UInt24_MinValue.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="db6ec426-9e90-4b71-859d-b87a844c47f4" Title="Gemstone.Numeric.Analysis" Url="html/N_Gemstone_Numeric_Analysis.htm">
-    <HelpTOCNode Id="dbc29216-ac69-4fe0-aaaf-e7485a1fcba1" Title="Euclidean Class" Url="html/T_Gemstone_Numeric_Analysis_Euclidean.htm">
-      <HelpTOCNode Id="1a0efcef-8083-4c1e-8c97-0385714e5b8f" Title="Euclidean Methods" Url="html/Methods_T_Gemstone_Numeric_Analysis_Euclidean.htm">
-        <HelpTOCNode Id="044a30ca-4a35-4467-8efe-43c1ce1f01d4" Title="GreatestCommonDenominator Method " Url="html/Overload_Gemstone_Numeric_Analysis_Euclidean_GreatestCommonDenominator.htm">
+  <HelpTOCNode Id="2902af2f-d01f-43d1-9caf-2994541beb71" Title="Gemstone.Numeric.Analysis" Url="html/N_Gemstone_Numeric_Analysis.htm">
+    <HelpTOCNode Id="75eb4c7c-2833-47f5-a67e-04b420a148e0" Title="Euclidean Class" Url="html/T_Gemstone_Numeric_Analysis_Euclidean.htm">
+      <HelpTOCNode Id="348efb10-1603-4b66-aa96-7fe218746d46" Title="Euclidean Methods" Url="html/Methods_T_Gemstone_Numeric_Analysis_Euclidean.htm">
+        <HelpTOCNode Id="99741928-ac60-413e-b254-3173bbabbd34" Title="GreatestCommonDenominator Method " Url="html/Overload_Gemstone_Numeric_Analysis_Euclidean_GreatestCommonDenominator.htm">
           <HelpTOCNode Title="GreatestCommonDenominator Method (IEnumerable(Int32))" Url="html/M_Gemstone_Numeric_Analysis_Euclidean_GreatestCommonDenominator.htm" />
           <HelpTOCNode Title="GreatestCommonDenominator Method (IEnumerable(Int64))" Url="html/M_Gemstone_Numeric_Analysis_Euclidean_GreatestCommonDenominator_1.htm" />
           <HelpTOCNode Title="GreatestCommonDenominator Method (Int32[])" Url="html/M_Gemstone_Numeric_Analysis_Euclidean_GreatestCommonDenominator_3.htm" />
@@ -409,7 +409,7 @@
           <HelpTOCNode Title="GreatestCommonDenominator Method (Int32, Int32)" Url="html/M_Gemstone_Numeric_Analysis_Euclidean_GreatestCommonDenominator_2.htm" />
           <HelpTOCNode Title="GreatestCommonDenominator Method (Int64, Int64)" Url="html/M_Gemstone_Numeric_Analysis_Euclidean_GreatestCommonDenominator_4.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="3e0e9801-57cc-4dbc-a864-1957f7f82a98" Title="LeastCommonMultiple Method " Url="html/Overload_Gemstone_Numeric_Analysis_Euclidean_LeastCommonMultiple.htm">
+        <HelpTOCNode Id="253f2e9a-009a-4bf0-99d8-4bf0061eeac1" Title="LeastCommonMultiple Method " Url="html/Overload_Gemstone_Numeric_Analysis_Euclidean_LeastCommonMultiple.htm">
           <HelpTOCNode Title="LeastCommonMultiple Method (IEnumerable(Int32))" Url="html/M_Gemstone_Numeric_Analysis_Euclidean_LeastCommonMultiple.htm" />
           <HelpTOCNode Title="LeastCommonMultiple Method (IEnumerable(Int64))" Url="html/M_Gemstone_Numeric_Analysis_Euclidean_LeastCommonMultiple_1.htm" />
           <HelpTOCNode Title="LeastCommonMultiple Method (Int32[])" Url="html/M_Gemstone_Numeric_Analysis_Euclidean_LeastCommonMultiple_3.htm" />
@@ -421,15 +421,15 @@
         <HelpTOCNode Title="Wrap Method " Url="html/M_Gemstone_Numeric_Analysis_Euclidean_Wrap.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="f4b8b70d-ac86-409c-a34d-4339b1c15586" Title="GaussianDistribution Class" Url="html/T_Gemstone_Numeric_Analysis_GaussianDistribution.htm">
+    <HelpTOCNode Id="946b26c6-89f2-4593-a42b-2dfc5b86cead" Title="GaussianDistribution Class" Url="html/T_Gemstone_Numeric_Analysis_GaussianDistribution.htm">
       <HelpTOCNode Title="GaussianDistribution Constructor " Url="html/M_Gemstone_Numeric_Analysis_GaussianDistribution__ctor.htm" />
-      <HelpTOCNode Id="f9fdce2f-ba9c-47fc-9677-cef353bc6ca6" Title="GaussianDistribution Methods" Url="html/Methods_T_Gemstone_Numeric_Analysis_GaussianDistribution.htm">
+      <HelpTOCNode Id="31127ce6-41b7-443e-be87-4362f2554281" Title="GaussianDistribution Methods" Url="html/Methods_T_Gemstone_Numeric_Analysis_GaussianDistribution.htm">
         <HelpTOCNode Title="Next Method " Url="html/M_Gemstone_Numeric_Analysis_GaussianDistribution_Next.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="542ba126-bb6f-4cd6-a465-60d5bd8a585c" Title="NumericAnalysisExtensions Class" Url="html/T_Gemstone_Numeric_Analysis_NumericAnalysisExtensions.htm">
-      <HelpTOCNode Id="5ed1a6e5-4631-4579-9c1a-ff378a64d7e5" Title="NumericAnalysisExtensions Methods" Url="html/Methods_T_Gemstone_Numeric_Analysis_NumericAnalysisExtensions.htm">
-        <HelpTOCNode Id="d00c6373-d20a-42bf-a847-9c329bece01d" Title="StandardDeviation Method " Url="html/Overload_Gemstone_Numeric_Analysis_NumericAnalysisExtensions_StandardDeviation.htm">
+    <HelpTOCNode Id="af84f817-0ba6-48ff-8462-7bbca586f73c" Title="NumericAnalysisExtensions Class" Url="html/T_Gemstone_Numeric_Analysis_NumericAnalysisExtensions.htm">
+      <HelpTOCNode Id="1fbb2d6c-74db-4ed6-9468-7236132bd82c" Title="NumericAnalysisExtensions Methods" Url="html/Methods_T_Gemstone_Numeric_Analysis_NumericAnalysisExtensions.htm">
+        <HelpTOCNode Id="bd28a8a0-90f2-4fff-98c9-83f15fda259a" Title="StandardDeviation Method " Url="html/Overload_Gemstone_Numeric_Analysis_NumericAnalysisExtensions_StandardDeviation.htm">
           <HelpTOCNode Title="StandardDeviation Method (IEnumerable(Decimal), Boolean)" Url="html/M_Gemstone_Numeric_Analysis_NumericAnalysisExtensions_StandardDeviation.htm" />
           <HelpTOCNode Title="StandardDeviation Method (IEnumerable(Double), Boolean)" Url="html/M_Gemstone_Numeric_Analysis_NumericAnalysisExtensions_StandardDeviation_1.htm" />
           <HelpTOCNode Title="StandardDeviation Method (IEnumerable(Single), Boolean)" Url="html/M_Gemstone_Numeric_Analysis_NumericAnalysisExtensions_StandardDeviation_2.htm" />
@@ -440,24 +440,24 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="4429bcb8-3444-426e-a465-19c36fc3e5f5" Title="Gemstone.Numeric.EE" Url="html/N_Gemstone_Numeric_EE.htm">
+  <HelpTOCNode Id="bd222dc7-032e-465c-89b0-c277d24ad8e2" Title="Gemstone.Numeric.EE" Url="html/N_Gemstone_Numeric_EE.htm">
     <HelpTOCNode Title="LineFrequency Enumeration" Url="html/T_Gemstone_Numeric_EE_LineFrequency.htm" />
-    <HelpTOCNode Id="9ecd2671-1205-4e57-ae3a-98c611e51e58" Title="Phasor Structure" Url="html/T_Gemstone_Numeric_EE_Phasor.htm">
-      <HelpTOCNode Id="43278ae2-1743-454b-b3ba-85c331b400d3" Title="Phasor Constructor " Url="html/Overload_Gemstone_Numeric_EE_Phasor__ctor.htm">
+    <HelpTOCNode Id="b8c82f63-b8a6-465c-ae19-68af435cf098" Title="Phasor Structure" Url="html/T_Gemstone_Numeric_EE_Phasor.htm">
+      <HelpTOCNode Id="dd8a7c17-f959-42a7-be51-cdc7fea1284d" Title="Phasor Constructor " Url="html/Overload_Gemstone_Numeric_EE_Phasor__ctor.htm">
         <HelpTOCNode Title="Phasor Constructor (PhasorType, ComplexNumber)" Url="html/M_Gemstone_Numeric_EE_Phasor__ctor.htm" />
         <HelpTOCNode Title="Phasor Constructor (PhasorType, Angle, Double)" Url="html/M_Gemstone_Numeric_EE_Phasor__ctor_1.htm" />
         <HelpTOCNode Title="Phasor Constructor (PhasorType, Double, Double)" Url="html/M_Gemstone_Numeric_EE_Phasor__ctor_2.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="c46c3f99-c097-4d7a-a607-9a559a9df3a4" Title="Phasor Properties" Url="html/Properties_T_Gemstone_Numeric_EE_Phasor.htm">
+      <HelpTOCNode Id="43e82cd9-25c5-4705-aae6-bbca6b5e1798" Title="Phasor Properties" Url="html/Properties_T_Gemstone_Numeric_EE_Phasor.htm">
         <HelpTOCNode Title="Conjugate Property " Url="html/P_Gemstone_Numeric_EE_Phasor_Conjugate.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="ab979a8f-5c09-4ccd-9f79-2ec7104a83b9" Title="Phasor Methods" Url="html/Methods_T_Gemstone_Numeric_EE_Phasor.htm">
+      <HelpTOCNode Id="5798f0ee-8958-422b-a8ff-82879a6d1efe" Title="Phasor Methods" Url="html/Methods_T_Gemstone_Numeric_EE_Phasor.htm">
         <HelpTOCNode Title="CalculateActivePower Method " Url="html/M_Gemstone_Numeric_EE_Phasor_CalculateActivePower.htm" />
         <HelpTOCNode Title="CalculateApparentPower Method " Url="html/M_Gemstone_Numeric_EE_Phasor_CalculateApparentPower.htm" />
         <HelpTOCNode Title="CalculateComplexPower Method " Url="html/M_Gemstone_Numeric_EE_Phasor_CalculateComplexPower.htm" />
         <HelpTOCNode Title="CalculateReactivePower Method " Url="html/M_Gemstone_Numeric_EE_Phasor_CalculateReactivePower.htm" />
         <HelpTOCNode Title="CalculateRelativePhase Method " Url="html/M_Gemstone_Numeric_EE_Phasor_CalculateRelativePhase.htm" />
-        <HelpTOCNode Id="030038b4-f850-4d44-9a19-b3e340db4fa3" Title="Equals Method " Url="html/Overload_Gemstone_Numeric_EE_Phasor_Equals.htm">
+        <HelpTOCNode Id="dda81985-5be9-4ff4-b01d-1abbb2f5f838" Title="Equals Method " Url="html/Overload_Gemstone_Numeric_EE_Phasor_Equals.htm">
           <HelpTOCNode Title="Equals Method (Object)" Url="html/M_Gemstone_Numeric_EE_Phasor_Equals_1.htm" />
           <HelpTOCNode Title="Equals Method (Phasor)" Url="html/M_Gemstone_Numeric_EE_Phasor_Equals.htm" />
         </HelpTOCNode>
@@ -465,12 +465,12 @@
         <HelpTOCNode Title="Pow Method " Url="html/M_Gemstone_Numeric_EE_Phasor_Pow.htm" />
         <HelpTOCNode Title="ToString Method " Url="html/M_Gemstone_Numeric_EE_Phasor_ToString.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="5367966b-4b3d-41bc-9548-e2627b1a2b04" Title="Phasor Operators and Type Conversions" Url="html/Operators_T_Gemstone_Numeric_EE_Phasor.htm">
+      <HelpTOCNode Id="dc94a4bb-1011-4da4-8793-9b99d1df9b0d" Title="Phasor Operators and Type Conversions" Url="html/Operators_T_Gemstone_Numeric_EE_Phasor.htm">
         <HelpTOCNode Title="Addition Operator " Url="html/M_Gemstone_Numeric_EE_Phasor_op_Addition.htm" />
         <HelpTOCNode Title="Division Operator " Url="html/M_Gemstone_Numeric_EE_Phasor_op_Division.htm" />
         <HelpTOCNode Title="Equality Operator " Url="html/M_Gemstone_Numeric_EE_Phasor_op_Equality.htm" />
         <HelpTOCNode Title="Exponent Operator " Url="html/M_Gemstone_Numeric_EE_Phasor_op_Exponent.htm" />
-        <HelpTOCNode Id="2c420051-bef3-4c64-a7b4-706304caf48f" Title="Implicit Conversion Operators" Url="html/Overload_Gemstone_Numeric_EE_Phasor_op_Implicit.htm">
+        <HelpTOCNode Id="42576c66-9c27-42db-b585-a3577454acd0" Title="Implicit Conversion Operators" Url="html/Overload_Gemstone_Numeric_EE_Phasor_op_Implicit.htm">
           <HelpTOCNode Title="Implicit Conversion (Phasor to ComplexNumber)" Url="html/M_Gemstone_Numeric_EE_Phasor_op_Implicit.htm" />
           <HelpTOCNode Title="Implicit Conversion (Phasor to Complex)" Url="html/M_Gemstone_Numeric_EE_Phasor_op_Implicit_1.htm" />
         </HelpTOCNode>
@@ -479,38 +479,38 @@
         <HelpTOCNode Title="Subtraction Operator " Url="html/M_Gemstone_Numeric_EE_Phasor_op_Subtraction.htm" />
         <HelpTOCNode Title="UnaryNegation Operator " Url="html/M_Gemstone_Numeric_EE_Phasor_op_UnaryNegation.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="c677bc64-b04e-43a9-aa41-fc579490a92d" Title="Phasor Fields" Url="html/Fields_T_Gemstone_Numeric_EE_Phasor.htm">
+      <HelpTOCNode Id="800ba395-99c8-4a48-a4c2-e1c7d3d8117e" Title="Phasor Fields" Url="html/Fields_T_Gemstone_Numeric_EE_Phasor.htm">
         <HelpTOCNode Title="Type Field" Url="html/F_Gemstone_Numeric_EE_Phasor_Type.htm" />
         <HelpTOCNode Title="Value Field" Url="html/F_Gemstone_Numeric_EE_Phasor_Value.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="PhasorType Enumeration" Url="html/T_Gemstone_Numeric_EE_PhasorType.htm" />
     <HelpTOCNode Title="SignalKind Enumeration" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
-    <HelpTOCNode Id="d7989d85-9ab5-4927-b120-b0587bbe57fb" Title="SignalKindExtensions Class" Url="html/T_Gemstone_Numeric_EE_SignalKindExtensions.htm">
-      <HelpTOCNode Id="63442a9f-e245-4470-846d-27e03db05513" Title="SignalKindExtensions Methods" Url="html/Methods_T_Gemstone_Numeric_EE_SignalKindExtensions.htm">
+    <HelpTOCNode Id="93b0ba73-70d4-4e6d-af0c-c08b45717d1f" Title="SignalKindExtensions Class" Url="html/T_Gemstone_Numeric_EE_SignalKindExtensions.htm">
+      <HelpTOCNode Id="6a7b0053-645c-4692-aad9-fcae6e0b589e" Title="SignalKindExtensions Methods" Url="html/Methods_T_Gemstone_Numeric_EE_SignalKindExtensions.htm">
         <HelpTOCNode Title="GetAcronym Method " Url="html/M_Gemstone_Numeric_EE_SignalKindExtensions_GetAcronym.htm" />
         <HelpTOCNode Title="ParseSignalKind Method " Url="html/M_Gemstone_Numeric_EE_SignalKindExtensions_ParseSignalKind.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="196d615f-80a7-439a-b7fb-169bc6625d42" Title="SignalReference Structure" Url="html/T_Gemstone_Numeric_EE_SignalReference.htm">
+    <HelpTOCNode Id="33f48fc8-2c8a-4141-ad74-51977b220d16" Title="SignalReference Structure" Url="html/T_Gemstone_Numeric_EE_SignalReference.htm">
       <HelpTOCNode Title="SignalReference Constructor " Url="html/M_Gemstone_Numeric_EE_SignalReference__ctor.htm" />
-      <HelpTOCNode Id="927a1f24-29c0-40fa-bb27-541e98963d4d" Title="SignalReference Methods" Url="html/Methods_T_Gemstone_Numeric_EE_SignalReference.htm">
-        <HelpTOCNode Id="1407a054-ce21-4979-913d-093f1cd89c32" Title="CompareTo Method " Url="html/Overload_Gemstone_Numeric_EE_SignalReference_CompareTo.htm">
+      <HelpTOCNode Id="e2814ba8-e1b9-4f2a-9531-4fb927749368" Title="SignalReference Methods" Url="html/Methods_T_Gemstone_Numeric_EE_SignalReference.htm">
+        <HelpTOCNode Id="218da607-af98-4f46-945a-a50b7e6c09f0" Title="CompareTo Method " Url="html/Overload_Gemstone_Numeric_EE_SignalReference_CompareTo.htm">
           <HelpTOCNode Title="CompareTo Method (Object)" Url="html/M_Gemstone_Numeric_EE_SignalReference_CompareTo_1.htm" />
           <HelpTOCNode Title="CompareTo Method (SignalReference)" Url="html/M_Gemstone_Numeric_EE_SignalReference_CompareTo.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="f80ea8ee-0609-404a-aea5-1e7d67ba8ded" Title="Equals Method " Url="html/Overload_Gemstone_Numeric_EE_SignalReference_Equals.htm">
+        <HelpTOCNode Id="5764e261-db67-4bd7-840e-86a38275e0ed" Title="Equals Method " Url="html/Overload_Gemstone_Numeric_EE_SignalReference_Equals.htm">
           <HelpTOCNode Title="Equals Method (Object)" Url="html/M_Gemstone_Numeric_EE_SignalReference_Equals_1.htm" />
           <HelpTOCNode Title="Equals Method (SignalReference)" Url="html/M_Gemstone_Numeric_EE_SignalReference_Equals.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="GetHashCode Method " Url="html/M_Gemstone_Numeric_EE_SignalReference_GetHashCode.htm" />
-        <HelpTOCNode Id="13f9c8bd-751e-4ea8-b9f7-d076322646b3" Title="ToString Method " Url="html/Overload_Gemstone_Numeric_EE_SignalReference_ToString.htm">
+        <HelpTOCNode Id="d02dfa6e-d811-4074-a24b-3d8cfe70fffa" Title="ToString Method " Url="html/Overload_Gemstone_Numeric_EE_SignalReference_ToString.htm">
           <HelpTOCNode Title="ToString Method " Url="html/M_Gemstone_Numeric_EE_SignalReference_ToString.htm" />
           <HelpTOCNode Title="ToString Method (String, SignalKind)" Url="html/M_Gemstone_Numeric_EE_SignalReference_ToString_1.htm" />
           <HelpTOCNode Title="ToString Method (String, SignalKind, Int32)" Url="html/M_Gemstone_Numeric_EE_SignalReference_ToString_2.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="79ea16bb-4051-43bd-bf8a-4f16428f1904" Title="SignalReference Operators" Url="html/Operators_T_Gemstone_Numeric_EE_SignalReference.htm">
+      <HelpTOCNode Id="61771f0d-3e4b-4b94-9d75-b7a2e6400b8e" Title="SignalReference Operators" Url="html/Operators_T_Gemstone_Numeric_EE_SignalReference.htm">
         <HelpTOCNode Title="Equality Operator " Url="html/M_Gemstone_Numeric_EE_SignalReference_op_Equality.htm" />
         <HelpTOCNode Title="GreaterThan Operator " Url="html/M_Gemstone_Numeric_EE_SignalReference_op_GreaterThan.htm" />
         <HelpTOCNode Title="GreaterThanOrEqual Operator " Url="html/M_Gemstone_Numeric_EE_SignalReference_op_GreaterThanOrEqual.htm" />
@@ -518,7 +518,7 @@
         <HelpTOCNode Title="LessThan Operator " Url="html/M_Gemstone_Numeric_EE_SignalReference_op_LessThan.htm" />
         <HelpTOCNode Title="LessThanOrEqual Operator " Url="html/M_Gemstone_Numeric_EE_SignalReference_op_LessThanOrEqual.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="912656bf-d7da-4471-bce5-fe613f301f3c" Title="SignalReference Fields" Url="html/Fields_T_Gemstone_Numeric_EE_SignalReference.htm">
+      <HelpTOCNode Id="1f1569ea-327a-4a9c-98ea-45f74cdf0f23" Title="SignalReference Fields" Url="html/Fields_T_Gemstone_Numeric_EE_SignalReference.htm">
         <HelpTOCNode Title="Acronym Field" Url="html/F_Gemstone_Numeric_EE_SignalReference_Acronym.htm" />
         <HelpTOCNode Title="CellIndex Field" Url="html/F_Gemstone_Numeric_EE_SignalReference_CellIndex.htm" />
         <HelpTOCNode Title="Index Field" Url="html/F_Gemstone_Numeric_EE_SignalReference_Index.htm" />
@@ -526,85 +526,85 @@
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="SignalType Enumeration" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
-    <HelpTOCNode Id="fdc4acfb-4de7-4aaf-84c5-27a76aa706dc" Title="SignalTypeExtensions Class" Url="html/T_Gemstone_Numeric_EE_SignalTypeExtensions.htm">
-      <HelpTOCNode Id="41467c7c-9409-4e44-84e5-cb827a514d77" Title="SignalTypeExtensions Methods" Url="html/Methods_T_Gemstone_Numeric_EE_SignalTypeExtensions.htm">
+    <HelpTOCNode Id="08440fa4-03e1-4abc-b3e7-1413ff9df52a" Title="SignalTypeExtensions Class" Url="html/T_Gemstone_Numeric_EE_SignalTypeExtensions.htm">
+      <HelpTOCNode Id="f8884bee-91b9-4557-ba50-08e4cf159052" Title="SignalTypeExtensions Methods" Url="html/Methods_T_Gemstone_Numeric_EE_SignalTypeExtensions.htm">
         <HelpTOCNode Title="GetFormattedName Method " Url="html/M_Gemstone_Numeric_EE_SignalTypeExtensions_GetFormattedName.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="416b6045-2e1c-44dd-82cf-b4785832c69f" Title="Gemstone.Numeric.Int24Extensions" Url="html/N_Gemstone_Numeric_Int24Extensions.htm">
-    <HelpTOCNode Id="67188930-5777-46b7-954b-5d05c5060248" Title="BigEndian Class" Url="html/T_Gemstone_Numeric_Int24Extensions_BigEndian.htm">
-      <HelpTOCNode Id="f365bd5f-e2fb-420b-90ef-bdd470d31eef" Title="BigEndian Methods" Url="html/Methods_T_Gemstone_Numeric_Int24Extensions_BigEndian.htm">
-        <HelpTOCNode Id="1f2f9de9-fba3-445b-9077-7af14d24d82a" Title="CopyBytes Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BigEndian_CopyBytes.htm">
+  <HelpTOCNode Id="7e8f591e-83eb-4b7e-947f-9a0e7c6cacd1" Title="Gemstone.Numeric.Int24Extensions" Url="html/N_Gemstone_Numeric_Int24Extensions.htm">
+    <HelpTOCNode Id="da98fbd3-c7d8-44c9-92ce-bb91a0954dc6" Title="BigEndian Class" Url="html/T_Gemstone_Numeric_Int24Extensions_BigEndian.htm">
+      <HelpTOCNode Id="f4592622-41b5-4733-88ca-0d28019545f6" Title="BigEndian Methods" Url="html/Methods_T_Gemstone_Numeric_Int24Extensions_BigEndian.htm">
+        <HelpTOCNode Id="20bc5f96-3be7-4075-8215-d7b0120b174f" Title="CopyBytes Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BigEndian_CopyBytes.htm">
           <HelpTOCNode Title="CopyBytes Method (Int24, Byte*)" Url="html/M_Gemstone_Numeric_Int24Extensions_BigEndian_CopyBytes.htm" />
           <HelpTOCNode Title="CopyBytes Method (Int24, Byte[], Int32)" Url="html/M_Gemstone_Numeric_Int24Extensions_BigEndian_CopyBytes_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="GetBytes Method " Url="html/M_Gemstone_Numeric_Int24Extensions_BigEndian_GetBytes.htm" />
-        <HelpTOCNode Id="494d30cd-cc84-4267-9f83-17adf8f1c9f0" Title="ToInt24 Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BigEndian_ToInt24.htm">
+        <HelpTOCNode Id="002ed1bc-caae-475f-9d77-a68bdda92cb5" Title="ToInt24 Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BigEndian_ToInt24.htm">
           <HelpTOCNode Title="ToInt24 Method (Byte*)" Url="html/M_Gemstone_Numeric_Int24Extensions_BigEndian_ToInt24.htm" />
           <HelpTOCNode Title="ToInt24 Method (Byte[], Int32)" Url="html/M_Gemstone_Numeric_Int24Extensions_BigEndian_ToInt24_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="7c37f16f-1596-4d75-8d12-418372622661" Title="BitExtensions Class" Url="html/T_Gemstone_Numeric_Int24Extensions_BitExtensions.htm">
-      <HelpTOCNode Id="f8afae96-f328-4e78-923d-b92b06edc76d" Title="BitExtensions Methods" Url="html/Methods_T_Gemstone_Numeric_Int24Extensions_BitExtensions.htm">
+    <HelpTOCNode Id="165f2564-44cb-4442-a2ca-359208bbe93d" Title="BitExtensions Class" Url="html/T_Gemstone_Numeric_Int24Extensions_BitExtensions.htm">
+      <HelpTOCNode Id="5a9886b0-c4b4-4f12-97a5-5a61a588b230" Title="BitExtensions Methods" Url="html/Methods_T_Gemstone_Numeric_Int24Extensions_BitExtensions.htm">
         <HelpTOCNode Title="BitRotL Method " Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_BitRotL.htm" />
         <HelpTOCNode Title="BitRotR Method " Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_BitRotR.htm" />
-        <HelpTOCNode Id="5eb68909-76cb-43a2-a60d-6f8cfefc0b99" Title="CheckBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_CheckBits.htm">
+        <HelpTOCNode Id="b6e5326c-8216-49b6-b733-242d6fb02fc6" Title="CheckBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_CheckBits.htm">
           <HelpTOCNode Title="CheckBits Method (Int24, Bits)" Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_CheckBits.htm" />
           <HelpTOCNode Title="CheckBits Method (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_CheckBits_2.htm" />
           <HelpTOCNode Title="CheckBits Method (Int24, Bits, Boolean)" Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_CheckBits_1.htm" />
           <HelpTOCNode Title="CheckBits Method (Int24, Int24, Boolean)" Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_CheckBits_3.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="a938e867-571d-4027-b92a-856e71881b32" Title="ClearBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_ClearBits.htm">
+        <HelpTOCNode Id="398229ef-5ebc-4dd2-9c73-665c2652e249" Title="ClearBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_ClearBits.htm">
           <HelpTOCNode Title="ClearBits Method (Int24, Bits)" Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_ClearBits.htm" />
           <HelpTOCNode Title="ClearBits Method (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_ClearBits_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="6984facf-96f0-4e0f-80e5-3bd664cd190a" Title="GetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_GetMaskedValue.htm">
+        <HelpTOCNode Id="e5bc735e-2a35-40a1-81d3-93a130238f71" Title="GetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_GetMaskedValue.htm">
           <HelpTOCNode Title="GetMaskedValue Method (Int24, Bits)" Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_GetMaskedValue.htm" />
           <HelpTOCNode Title="GetMaskedValue Method (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_GetMaskedValue_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="d497d2e9-974f-45dd-bd26-ae6760329f3a" Title="SetBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_SetBits.htm">
+        <HelpTOCNode Id="0bce336b-d6d3-482e-978c-33d291ef1705" Title="SetBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_SetBits.htm">
           <HelpTOCNode Title="SetBits Method (Int24, Bits)" Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_SetBits.htm" />
           <HelpTOCNode Title="SetBits Method (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_SetBits_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="c9105c08-0f84-4768-a08d-24df39a76e4f" Title="SetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_SetMaskedValue.htm">
+        <HelpTOCNode Id="5f4f3bc1-4199-4d79-9583-fc457dfc37ea" Title="SetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_SetMaskedValue.htm">
           <HelpTOCNode Title="SetMaskedValue Method (Int24, Bits, Int24)" Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_SetMaskedValue.htm" />
           <HelpTOCNode Title="SetMaskedValue Method (Int24, Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_SetMaskedValue_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="03db7871-892b-451b-af01-5bbdf2fa69a1" Title="ToggleBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_ToggleBits.htm">
+        <HelpTOCNode Id="6570ee74-4d24-4c8d-a70b-73de73986c88" Title="ToggleBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_ToggleBits.htm">
           <HelpTOCNode Title="ToggleBits Method (Int24, Bits)" Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_ToggleBits.htm" />
           <HelpTOCNode Title="ToggleBits Method (Int24, Int24)" Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_ToggleBits_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="0c8cf922-a749-45a7-9292-22404329bc57" Title="LittleEndian Class" Url="html/T_Gemstone_Numeric_Int24Extensions_LittleEndian.htm">
-      <HelpTOCNode Id="60353961-751c-4220-85f7-d84eef8813d8" Title="LittleEndian Methods" Url="html/Methods_T_Gemstone_Numeric_Int24Extensions_LittleEndian.htm">
-        <HelpTOCNode Id="a007d145-c615-4744-91d3-2bc190e20dca" Title="CopyBytes Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_LittleEndian_CopyBytes.htm">
+    <HelpTOCNode Id="0f8c6142-baff-4819-ac26-32d2b97c0083" Title="LittleEndian Class" Url="html/T_Gemstone_Numeric_Int24Extensions_LittleEndian.htm">
+      <HelpTOCNode Id="0b301306-763d-4d58-a502-584de56275f0" Title="LittleEndian Methods" Url="html/Methods_T_Gemstone_Numeric_Int24Extensions_LittleEndian.htm">
+        <HelpTOCNode Id="a6135a8e-4092-4d35-99f1-348e293309b5" Title="CopyBytes Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_LittleEndian_CopyBytes.htm">
           <HelpTOCNode Title="CopyBytes Method (Int24, Byte*)" Url="html/M_Gemstone_Numeric_Int24Extensions_LittleEndian_CopyBytes.htm" />
           <HelpTOCNode Title="CopyBytes Method (Int24, Byte[], Int32)" Url="html/M_Gemstone_Numeric_Int24Extensions_LittleEndian_CopyBytes_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="GetBytes Method " Url="html/M_Gemstone_Numeric_Int24Extensions_LittleEndian_GetBytes.htm" />
-        <HelpTOCNode Id="8d4a8343-13f9-4467-bd99-1b12cba8b3d1" Title="ToInt24 Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_LittleEndian_ToInt24.htm">
+        <HelpTOCNode Id="2f13e3b4-f710-4379-8362-0aed0b4e481d" Title="ToInt24 Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_LittleEndian_ToInt24.htm">
           <HelpTOCNode Title="ToInt24 Method (Byte*)" Url="html/M_Gemstone_Numeric_Int24Extensions_LittleEndian_ToInt24.htm" />
           <HelpTOCNode Title="ToInt24 Method (Byte[], Int32)" Url="html/M_Gemstone_Numeric_Int24Extensions_LittleEndian_ToInt24_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="d4f59f28-f432-4f01-8c2b-87076e25c629" Title="Gemstone.Numeric.Interpolation" Url="html/N_Gemstone_Numeric_Interpolation.htm">
+  <HelpTOCNode Id="9d534c47-ed3c-47cd-bd63-be25c6a13a3b" Title="Gemstone.Numeric.Interpolation" Url="html/N_Gemstone_Numeric_Interpolation.htm">
     <HelpTOCNode Title="DistanceFunc Delegate" Url="html/T_Gemstone_Numeric_Interpolation_DistanceFunc.htm" />
     <HelpTOCNode Title="IDWFunc Delegate" Url="html/T_Gemstone_Numeric_Interpolation_IDWFunc.htm" />
-    <HelpTOCNode Id="c64fd6e4-3cb2-449d-beb2-81eaeface8a3" Title="InverseDistanceWeightingFunction Class" Url="html/T_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction.htm">
+    <HelpTOCNode Id="c2cc9f83-9e22-4865-949c-a4eafb16298e" Title="InverseDistanceWeightingFunction Class" Url="html/T_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction.htm">
       <HelpTOCNode Title="InverseDistanceWeightingFunction Constructor " Url="html/M_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction__ctor.htm" />
-      <HelpTOCNode Id="f3774793-3ae2-4171-8a4d-e8ef55dba6a8" Title="InverseDistanceWeightingFunction Properties" Url="html/Properties_T_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction.htm">
+      <HelpTOCNode Id="5290ef7f-130f-4968-82d8-89675c468553" Title="InverseDistanceWeightingFunction Properties" Url="html/Properties_T_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction.htm">
         <HelpTOCNode Title="DistanceFunction Property " Url="html/P_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_DistanceFunction.htm" />
         <HelpTOCNode Title="Power Property " Url="html/P_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_Power.htm" />
         <HelpTOCNode Title="Values Property " Url="html/P_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_Values.htm" />
         <HelpTOCNode Title="XCoordinates Property " Url="html/P_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_XCoordinates.htm" />
         <HelpTOCNode Title="YCoordinates Property " Url="html/P_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_YCoordinates.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="43fc986b-c39e-43c3-89ef-85ec29168cd7" Title="InverseDistanceWeightingFunction Methods" Url="html/Methods_T_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction.htm">
+      <HelpTOCNode Id="b7991c1c-f3ec-4e8f-bb3f-08fbb7c8fd0e" Title="InverseDistanceWeightingFunction Methods" Url="html/Methods_T_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction.htm">
         <HelpTOCNode Title="DefaultDistanceFunction Method " Url="html/M_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_DefaultDistanceFunction.htm" />
         <HelpTOCNode Title="SetDistanceFunction Method " Url="html/M_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_SetDistanceFunction.htm" />
         <HelpTOCNode Title="SetPower Method " Url="html/M_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_SetPower.htm" />
@@ -612,161 +612,161 @@
         <HelpTOCNode Title="SetXCoordinates Method " Url="html/M_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_SetXCoordinates.htm" />
         <HelpTOCNode Title="SetYCoordinates Method " Url="html/M_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_SetYCoordinates.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="252e220c-c11c-4f9a-bb3c-dca7d3abb37c" Title="InverseDistanceWeightingFunction Type Conversions" Url="html/Operators_T_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction.htm">
+      <HelpTOCNode Id="89e2bee4-fe07-4f19-b04a-8a4971ead158" Title="InverseDistanceWeightingFunction Type Conversions" Url="html/Operators_T_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction.htm">
         <HelpTOCNode Title="Implicit Conversion (InverseDistanceWeightingFunction to IDWFunc)" Url="html/M_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_op_Implicit.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="02c6f8f9-bfe1-4d09-8532-4d4263c704c1" Title="PiecewiseLinearFunction Class" Url="html/T_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction.htm">
+    <HelpTOCNode Id="bd1cf002-db16-4355-af29-e99a80e8cf96" Title="PiecewiseLinearFunction Class" Url="html/T_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction.htm">
       <HelpTOCNode Title="PiecewiseLinearFunction Constructor " Url="html/M_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction__ctor.htm" />
-      <HelpTOCNode Id="3fe3fc36-4c6a-451f-8396-042f7e23bf97" Title="PiecewiseLinearFunction Properties" Url="html/Properties_T_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction.htm">
+      <HelpTOCNode Id="23ab6960-2978-4c6f-8769-ddb45e288c18" Title="PiecewiseLinearFunction Properties" Url="html/Properties_T_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction.htm">
         <HelpTOCNode Title="Domain Property " Url="html/P_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction_Domain.htm" />
         <HelpTOCNode Title="Range Property " Url="html/P_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction_Range.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="d13af3df-353b-43d7-95be-b3f2eeb2ff52" Title="PiecewiseLinearFunction Methods" Url="html/Methods_T_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction.htm">
+      <HelpTOCNode Id="9f11bf74-caa0-46a3-be9f-cb89c7ac1009" Title="PiecewiseLinearFunction Methods" Url="html/Methods_T_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction.htm">
         <HelpTOCNode Title="SetDomain Method " Url="html/M_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction_SetDomain.htm" />
         <HelpTOCNode Title="SetRange Method " Url="html/M_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction_SetRange.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="7e6de221-2da3-4141-b90a-4e7798fcd7fd" Title="PiecewiseLinearFunction Type Conversions" Url="html/Operators_T_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction.htm">
+      <HelpTOCNode Id="20b188db-4dc5-46da-ac87-eecd7fcaf15a" Title="PiecewiseLinearFunction Type Conversions" Url="html/Operators_T_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction.htm">
         <HelpTOCNode Title="Implicit Conversion (PiecewiseLinearFunction to Func(Double, Double))" Url="html/M_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction_op_Implicit.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="aa579d44-efd7-4c0b-afb6-70c3ccf6d668" Title="Gemstone.Numeric.Random" Url="html/N_Gemstone_Numeric_Random.htm">
-    <HelpTOCNode Id="88538edb-2a9f-48b0-a0c7-85ed7d66e192" Title="DiscreteUniformRandomNumber Class" Url="html/T_Gemstone_Numeric_Random_DiscreteUniformRandomNumber.htm">
+  <HelpTOCNode Id="22b2699a-c96b-4136-aaa8-58c1f9392421" Title="Gemstone.Numeric.Random" Url="html/N_Gemstone_Numeric_Random.htm">
+    <HelpTOCNode Id="c165c690-628d-4b23-bb23-b76884c3550b" Title="DiscreteUniformRandomNumber Class" Url="html/T_Gemstone_Numeric_Random_DiscreteUniformRandomNumber.htm">
       <HelpTOCNode Title="DiscreteUniformRandomNumber Constructor " Url="html/M_Gemstone_Numeric_Random_DiscreteUniformRandomNumber__ctor.htm" />
-      <HelpTOCNode Id="5353a674-5862-4449-b282-b94b66a38c72" Title="DiscreteUniformRandomNumber Properties" Url="html/Properties_T_Gemstone_Numeric_Random_DiscreteUniformRandomNumber.htm">
+      <HelpTOCNode Id="fce27e6e-4a6e-4cc3-af84-71084a75c5be" Title="DiscreteUniformRandomNumber Properties" Url="html/Properties_T_Gemstone_Numeric_Random_DiscreteUniformRandomNumber.htm">
         <HelpTOCNode Title="Value Property " Url="html/P_Gemstone_Numeric_Random_DiscreteUniformRandomNumber_Value.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="DiscreteUniformRandomNumber Methods" Url="html/Methods_T_Gemstone_Numeric_Random_DiscreteUniformRandomNumber.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="5120ea79-1374-4754-86db-d3b65d42021c" Title="DiscreteUniformRandomNumberGenerator Class" Url="html/T_Gemstone_Numeric_Random_DiscreteUniformRandomNumberGenerator.htm">
+    <HelpTOCNode Id="bb64ef38-e47a-4068-81dd-a0a69a8ea9c0" Title="DiscreteUniformRandomNumberGenerator Class" Url="html/T_Gemstone_Numeric_Random_DiscreteUniformRandomNumberGenerator.htm">
       <HelpTOCNode Title="DiscreteUniformRandomNumberGenerator Constructor " Url="html/M_Gemstone_Numeric_Random_DiscreteUniformRandomNumberGenerator__ctor.htm" />
-      <HelpTOCNode Id="450ab0ca-9dac-4105-848b-7f061a81b52f" Title="DiscreteUniformRandomNumberGenerator Methods" Url="html/Methods_T_Gemstone_Numeric_Random_DiscreteUniformRandomNumberGenerator.htm">
-        <HelpTOCNode Id="44216a77-5c1c-4d9d-8d46-55fd336223dd" Title="Next Method " Url="html/Overload_Gemstone_Numeric_Random_DiscreteUniformRandomNumberGenerator_Next.htm">
+      <HelpTOCNode Id="739d61b1-1ea0-4b96-be9d-3dee32660ea4" Title="DiscreteUniformRandomNumberGenerator Methods" Url="html/Methods_T_Gemstone_Numeric_Random_DiscreteUniformRandomNumberGenerator.htm">
+        <HelpTOCNode Id="0d4f8ad7-5c40-4e4b-85f9-711f7c9d6629" Title="Next Method " Url="html/Overload_Gemstone_Numeric_Random_DiscreteUniformRandomNumberGenerator_Next.htm">
           <HelpTOCNode Title="Next Method " Url="html/M_Gemstone_Numeric_Random_DiscreteUniformRandomNumberGenerator_Next.htm" />
           <HelpTOCNode Title="Next Method (Int32)" Url="html/M_Gemstone_Numeric_Random_DiscreteUniformRandomNumberGenerator_Next_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="6d6459e7-4269-45f6-a244-ffe5109b650a" Title="LogNormalRandomNumber Class" Url="html/T_Gemstone_Numeric_Random_LogNormalRandomNumber.htm">
+    <HelpTOCNode Id="c9117e4f-3a00-4075-93e1-838cb022bebb" Title="LogNormalRandomNumber Class" Url="html/T_Gemstone_Numeric_Random_LogNormalRandomNumber.htm">
       <HelpTOCNode Title="LogNormalRandomNumber Constructor " Url="html/M_Gemstone_Numeric_Random_LogNormalRandomNumber__ctor.htm" />
-      <HelpTOCNode Id="713271ee-a65e-4444-a8b9-52c22928f8f2" Title="LogNormalRandomNumber Properties" Url="html/Properties_T_Gemstone_Numeric_Random_LogNormalRandomNumber.htm">
+      <HelpTOCNode Id="358e3664-b9be-4500-8320-541efd541459" Title="LogNormalRandomNumber Properties" Url="html/Properties_T_Gemstone_Numeric_Random_LogNormalRandomNumber.htm">
         <HelpTOCNode Title="Value Property " Url="html/P_Gemstone_Numeric_Random_LogNormalRandomNumber_Value.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="LogNormalRandomNumber Methods" Url="html/Methods_T_Gemstone_Numeric_Random_LogNormalRandomNumber.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="0541c04e-33a6-480c-af23-3608b1d292ce" Title="LogNormalRandomNumberGenerator Class" Url="html/T_Gemstone_Numeric_Random_LogNormalRandomNumberGenerator.htm">
+    <HelpTOCNode Id="2502f317-57f2-47cd-a8e4-bd5ac876de75" Title="LogNormalRandomNumberGenerator Class" Url="html/T_Gemstone_Numeric_Random_LogNormalRandomNumberGenerator.htm">
       <HelpTOCNode Title="LogNormalRandomNumberGenerator Constructor " Url="html/M_Gemstone_Numeric_Random_LogNormalRandomNumberGenerator__ctor.htm" />
-      <HelpTOCNode Id="45375b4a-2d8c-44e2-8998-d92859f9be7c" Title="LogNormalRandomNumberGenerator Methods" Url="html/Methods_T_Gemstone_Numeric_Random_LogNormalRandomNumberGenerator.htm">
-        <HelpTOCNode Id="f007949b-a8b1-44a9-91e8-3170247a50a1" Title="Next Method " Url="html/Overload_Gemstone_Numeric_Random_LogNormalRandomNumberGenerator_Next.htm">
+      <HelpTOCNode Id="e00ae396-d4d5-4e0d-80b9-0eebd3742eb3" Title="LogNormalRandomNumberGenerator Methods" Url="html/Methods_T_Gemstone_Numeric_Random_LogNormalRandomNumberGenerator.htm">
+        <HelpTOCNode Id="f20cafca-5e2c-4ffb-825d-050be3c9e1ff" Title="Next Method " Url="html/Overload_Gemstone_Numeric_Random_LogNormalRandomNumberGenerator_Next.htm">
           <HelpTOCNode Title="Next Method " Url="html/M_Gemstone_Numeric_Random_LogNormalRandomNumberGenerator_Next.htm" />
           <HelpTOCNode Title="Next Method (Int32)" Url="html/M_Gemstone_Numeric_Random_LogNormalRandomNumberGenerator_Next_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="e1b1d0f2-a24d-496c-8ee4-944d013c8b4d" Title="NormalRandomNumber Class" Url="html/T_Gemstone_Numeric_Random_NormalRandomNumber.htm">
+    <HelpTOCNode Id="e5e14d24-1dbc-4ff3-8b6d-304d690e101e" Title="NormalRandomNumber Class" Url="html/T_Gemstone_Numeric_Random_NormalRandomNumber.htm">
       <HelpTOCNode Title="NormalRandomNumber Constructor " Url="html/M_Gemstone_Numeric_Random_NormalRandomNumber__ctor.htm" />
-      <HelpTOCNode Id="de88bd93-6a20-44d0-946c-38882218dcaa" Title="NormalRandomNumber Properties" Url="html/Properties_T_Gemstone_Numeric_Random_NormalRandomNumber.htm">
+      <HelpTOCNode Id="f4467a26-ad46-4a64-a74e-64d636576439" Title="NormalRandomNumber Properties" Url="html/Properties_T_Gemstone_Numeric_Random_NormalRandomNumber.htm">
         <HelpTOCNode Title="Value Property " Url="html/P_Gemstone_Numeric_Random_NormalRandomNumber_Value.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="NormalRandomNumber Methods" Url="html/Methods_T_Gemstone_Numeric_Random_NormalRandomNumber.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="c996dfef-8916-403b-95db-e55bb8a99869" Title="NormalRandomNumberGenerator Class" Url="html/T_Gemstone_Numeric_Random_NormalRandomNumberGenerator.htm">
+    <HelpTOCNode Id="50996087-db63-4509-8da6-632ce6b4a39a" Title="NormalRandomNumberGenerator Class" Url="html/T_Gemstone_Numeric_Random_NormalRandomNumberGenerator.htm">
       <HelpTOCNode Title="NormalRandomNumberGenerator Constructor " Url="html/M_Gemstone_Numeric_Random_NormalRandomNumberGenerator__ctor.htm" />
-      <HelpTOCNode Id="0b409ecc-9c50-4551-8a57-72b469c1145f" Title="NormalRandomNumberGenerator Methods" Url="html/Methods_T_Gemstone_Numeric_Random_NormalRandomNumberGenerator.htm">
-        <HelpTOCNode Id="cedc12be-ffc1-483f-ba16-673a3118b8b8" Title="Next Method " Url="html/Overload_Gemstone_Numeric_Random_NormalRandomNumberGenerator_Next.htm">
+      <HelpTOCNode Id="50f32826-2cfe-41d3-9c9e-4096fe52c23d" Title="NormalRandomNumberGenerator Methods" Url="html/Methods_T_Gemstone_Numeric_Random_NormalRandomNumberGenerator.htm">
+        <HelpTOCNode Id="1b48926f-461f-42af-befb-156e22c68b0e" Title="Next Method " Url="html/Overload_Gemstone_Numeric_Random_NormalRandomNumberGenerator_Next.htm">
           <HelpTOCNode Title="Next Method " Url="html/M_Gemstone_Numeric_Random_NormalRandomNumberGenerator_Next.htm" />
           <HelpTOCNode Title="Next Method (Int32)" Url="html/M_Gemstone_Numeric_Random_NormalRandomNumberGenerator_Next_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="9e5f90c7-f9ec-465e-9219-7c7f8348eea8" Title="RandomNumberExtensions Class" Url="html/T_Gemstone_Numeric_Random_RandomNumberExtensions.htm">
-      <HelpTOCNode Id="ba347263-8a76-43b4-b62c-ad7010629021" Title="RandomNumberExtensions Methods" Url="html/Methods_T_Gemstone_Numeric_Random_RandomNumberExtensions.htm">
+    <HelpTOCNode Id="1c8eaeb9-15e2-4f87-b48a-6d757cc9014e" Title="RandomNumberExtensions Class" Url="html/T_Gemstone_Numeric_Random_RandomNumberExtensions.htm">
+      <HelpTOCNode Id="bc9cc200-f58c-4cc9-a56b-9f7e96ce951f" Title="RandomNumberExtensions Methods" Url="html/Methods_T_Gemstone_Numeric_Random_RandomNumberExtensions.htm">
         <HelpTOCNode Title="ToDiscreteUniformDistribution Method " Url="html/M_Gemstone_Numeric_Random_RandomNumberExtensions_ToDiscreteUniformDistribution.htm" />
         <HelpTOCNode Title="ToLogNormalDistribution Method " Url="html/M_Gemstone_Numeric_Random_RandomNumberExtensions_ToLogNormalDistribution.htm" />
         <HelpTOCNode Title="ToNormalDistribution Method " Url="html/M_Gemstone_Numeric_Random_RandomNumberExtensions_ToNormalDistribution.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="f5c5e741-2750-4a4d-a63f-f1680d1692cd" Title="UniformRandomNumber Class" Url="html/T_Gemstone_Numeric_Random_UniformRandomNumber.htm">
+    <HelpTOCNode Id="448029a2-622f-43a7-8071-ee90ce6565be" Title="UniformRandomNumber Class" Url="html/T_Gemstone_Numeric_Random_UniformRandomNumber.htm">
       <HelpTOCNode Title="UniformRandomNumber Constructor " Url="html/M_Gemstone_Numeric_Random_UniformRandomNumber__ctor.htm" />
-      <HelpTOCNode Id="4aab3e32-958c-4c5e-b6d2-c9f3cd65693d" Title="UniformRandomNumber Properties" Url="html/Properties_T_Gemstone_Numeric_Random_UniformRandomNumber.htm">
+      <HelpTOCNode Id="0c535c73-2a18-4b11-8472-979f8f7340b1" Title="UniformRandomNumber Properties" Url="html/Properties_T_Gemstone_Numeric_Random_UniformRandomNumber.htm">
         <HelpTOCNode Title="Value Property " Url="html/P_Gemstone_Numeric_Random_UniformRandomNumber_Value.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="UniformRandomNumber Methods" Url="html/Methods_T_Gemstone_Numeric_Random_UniformRandomNumber.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="a6bf4c1c-259c-4ca2-877f-1fcb0a0f67f2" Title="UniformRandomNumberGenerator Class" Url="html/T_Gemstone_Numeric_Random_UniformRandomNumberGenerator.htm">
+    <HelpTOCNode Id="ffb94134-a030-410e-ba99-f316a25f6417" Title="UniformRandomNumberGenerator Class" Url="html/T_Gemstone_Numeric_Random_UniformRandomNumberGenerator.htm">
       <HelpTOCNode Title="UniformRandomNumberGenerator Constructor " Url="html/M_Gemstone_Numeric_Random_UniformRandomNumberGenerator__ctor.htm" />
-      <HelpTOCNode Id="28318750-d8ca-4a24-928f-c92745f4191b" Title="UniformRandomNumberGenerator Methods" Url="html/Methods_T_Gemstone_Numeric_Random_UniformRandomNumberGenerator.htm">
-        <HelpTOCNode Id="d16ff0a6-8d36-4407-a73c-86c2bdfbd790" Title="Next Method " Url="html/Overload_Gemstone_Numeric_Random_UniformRandomNumberGenerator_Next.htm">
+      <HelpTOCNode Id="14eabba7-d101-4c2c-a691-673e7df2feca" Title="UniformRandomNumberGenerator Methods" Url="html/Methods_T_Gemstone_Numeric_Random_UniformRandomNumberGenerator.htm">
+        <HelpTOCNode Id="f3f144ae-d190-4027-aca6-afbcfb1cea61" Title="Next Method " Url="html/Overload_Gemstone_Numeric_Random_UniformRandomNumberGenerator_Next.htm">
           <HelpTOCNode Title="Next Method " Url="html/M_Gemstone_Numeric_Random_UniformRandomNumberGenerator_Next.htm" />
           <HelpTOCNode Title="Next Method (Int32)" Url="html/M_Gemstone_Numeric_Random_UniformRandomNumberGenerator_Next_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="cae59318-4734-4262-9f46-705857753346" Title="Gemstone.Numeric.UInt24Extensions" Url="html/N_Gemstone_Numeric_UInt24Extensions.htm">
-    <HelpTOCNode Id="dba2f3d0-5ea1-4b1c-afac-8feffe350d96" Title="BigEndian Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_BigEndian.htm">
-      <HelpTOCNode Id="912b4d92-59d6-469e-bef3-53e4c163d012" Title="BigEndian Methods" Url="html/Methods_T_Gemstone_Numeric_UInt24Extensions_BigEndian.htm">
-        <HelpTOCNode Id="d43f899b-d140-40e7-a489-28b08afa6462" Title="CopyBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BigEndian_CopyBytes.htm">
+  <HelpTOCNode Id="17969ee4-03ca-4103-a51c-e714ec422548" Title="Gemstone.Numeric.UInt24Extensions" Url="html/N_Gemstone_Numeric_UInt24Extensions.htm">
+    <HelpTOCNode Id="8cec0094-75fe-45f7-9587-03f8d409c56b" Title="BigEndian Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_BigEndian.htm">
+      <HelpTOCNode Id="092a2da4-07a2-4f9b-a702-4925478642a3" Title="BigEndian Methods" Url="html/Methods_T_Gemstone_Numeric_UInt24Extensions_BigEndian.htm">
+        <HelpTOCNode Id="41c99828-1254-4ee8-b349-d6f265fe7e2c" Title="CopyBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BigEndian_CopyBytes.htm">
           <HelpTOCNode Title="CopyBytes Method (UInt24, Byte*)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BigEndian_CopyBytes.htm" />
           <HelpTOCNode Title="CopyBytes Method (UInt24, Byte[], Int32)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BigEndian_CopyBytes_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="GetBytes Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_BigEndian_GetBytes.htm" />
-        <HelpTOCNode Id="7f420b05-61e3-413e-bc5b-83ed1d2631b7" Title="ToUInt24 Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BigEndian_ToUInt24.htm">
+        <HelpTOCNode Id="3cf52083-98d5-4db3-ab62-d62b88891b40" Title="ToUInt24 Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BigEndian_ToUInt24.htm">
           <HelpTOCNode Title="ToUInt24 Method (Byte*)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BigEndian_ToUInt24.htm" />
           <HelpTOCNode Title="ToUInt24 Method (Byte[], Int32)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BigEndian_ToUInt24_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="206a2144-2ed1-4755-abaa-f13ef807dd4f" Title="BitExtensions Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_BitExtensions.htm">
-      <HelpTOCNode Id="3284b6a6-e628-46be-8589-ea8f121c2123" Title="BitExtensions Methods" Url="html/Methods_T_Gemstone_Numeric_UInt24Extensions_BitExtensions.htm">
+    <HelpTOCNode Id="ab864c9d-e657-467a-9b9c-24f2b523198d" Title="BitExtensions Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_BitExtensions.htm">
+      <HelpTOCNode Id="20f5bbe0-f8b5-423e-bea9-6e31479ebeed" Title="BitExtensions Methods" Url="html/Methods_T_Gemstone_Numeric_UInt24Extensions_BitExtensions.htm">
         <HelpTOCNode Title="BitRotL Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_BitRotL.htm" />
         <HelpTOCNode Title="BitRotR Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_BitRotR.htm" />
-        <HelpTOCNode Id="a7f3e4f9-e528-4cb0-8066-2756fb59d07f" Title="CheckBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_CheckBits.htm">
+        <HelpTOCNode Id="e78027d2-11e7-4e87-ae1c-6f19e47bfbc1" Title="CheckBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_CheckBits.htm">
           <HelpTOCNode Title="CheckBits Method (UInt24, Bits)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_CheckBits.htm" />
           <HelpTOCNode Title="CheckBits Method (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_CheckBits_2.htm" />
           <HelpTOCNode Title="CheckBits Method (UInt24, Bits, Boolean)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_CheckBits_1.htm" />
           <HelpTOCNode Title="CheckBits Method (UInt24, UInt24, Boolean)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_CheckBits_3.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="252055d7-b29a-47f1-ac02-af9fbb14ddaa" Title="ClearBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_ClearBits.htm">
+        <HelpTOCNode Id="38b16a36-2504-42c0-a406-9fa6234d3bb8" Title="ClearBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_ClearBits.htm">
           <HelpTOCNode Title="ClearBits Method (UInt24, Bits)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_ClearBits.htm" />
           <HelpTOCNode Title="ClearBits Method (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_ClearBits_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="0fd82716-1425-483f-9ccd-786f6f37eb32" Title="GetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_GetMaskedValue.htm">
+        <HelpTOCNode Id="adea7795-d0a3-435e-9994-4c9bd18cabc1" Title="GetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_GetMaskedValue.htm">
           <HelpTOCNode Title="GetMaskedValue Method (UInt24, Bits)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_GetMaskedValue.htm" />
           <HelpTOCNode Title="GetMaskedValue Method (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_GetMaskedValue_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="f19121ef-e6d6-40ce-9dd3-0d5d2def1b1e" Title="SetBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_SetBits.htm">
+        <HelpTOCNode Id="02f8839d-6486-42eb-ac91-e76642f41c5b" Title="SetBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_SetBits.htm">
           <HelpTOCNode Title="SetBits Method (UInt24, Bits)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_SetBits.htm" />
           <HelpTOCNode Title="SetBits Method (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_SetBits_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="ed058285-dee8-497a-b574-c51046018a09" Title="SetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_SetMaskedValue.htm">
+        <HelpTOCNode Id="d34eab4b-1e71-427d-9c3a-eb3dd1fb43e2" Title="SetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_SetMaskedValue.htm">
           <HelpTOCNode Title="SetMaskedValue Method (UInt24, Bits, UInt24)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_SetMaskedValue.htm" />
           <HelpTOCNode Title="SetMaskedValue Method (UInt24, UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_SetMaskedValue_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="b721542d-e975-4eb8-8605-a76d3dfaf745" Title="ToggleBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_ToggleBits.htm">
+        <HelpTOCNode Id="78616732-5fad-4ab6-8210-672830409a19" Title="ToggleBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_ToggleBits.htm">
           <HelpTOCNode Title="ToggleBits Method (UInt24, Bits)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_ToggleBits.htm" />
           <HelpTOCNode Title="ToggleBits Method (UInt24, UInt24)" Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_ToggleBits_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="2c31b9ac-910c-4171-b044-79c23ffb5636" Title="LittleEndian Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_LittleEndian.htm">
-      <HelpTOCNode Id="ed46845c-2494-4353-bbe9-6646eb0038a8" Title="LittleEndian Methods" Url="html/Methods_T_Gemstone_Numeric_UInt24Extensions_LittleEndian.htm">
-        <HelpTOCNode Id="525fbca1-f8a6-4ad7-8366-a2854cf6e099" Title="CopyBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_LittleEndian_CopyBytes.htm">
+    <HelpTOCNode Id="76347ecf-5d5f-4104-af5c-c5f096e090b6" Title="LittleEndian Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_LittleEndian.htm">
+      <HelpTOCNode Id="07aeda97-d5ed-4164-8c6f-b86e77531b1f" Title="LittleEndian Methods" Url="html/Methods_T_Gemstone_Numeric_UInt24Extensions_LittleEndian.htm">
+        <HelpTOCNode Id="70d40fdd-fc2c-4e9d-b061-1d556a0be07b" Title="CopyBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_LittleEndian_CopyBytes.htm">
           <HelpTOCNode Title="CopyBytes Method (UInt24, Byte*)" Url="html/M_Gemstone_Numeric_UInt24Extensions_LittleEndian_CopyBytes.htm" />
           <HelpTOCNode Title="CopyBytes Method (UInt24, Byte[], Int32)" Url="html/M_Gemstone_Numeric_UInt24Extensions_LittleEndian_CopyBytes_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="GetBytes Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_LittleEndian_GetBytes.htm" />
-        <HelpTOCNode Id="73b35f2f-b3e3-4705-9637-c72368cc0657" Title="ToUInt24 Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_LittleEndian_ToUInt24.htm">
+        <HelpTOCNode Id="fbb34739-b784-4690-8ddb-9e078cfdb76f" Title="ToUInt24 Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_LittleEndian_ToUInt24.htm">
           <HelpTOCNode Title="ToUInt24 Method (Byte*)" Url="html/M_Gemstone_Numeric_UInt24Extensions_LittleEndian_ToUInt24.htm" />
           <HelpTOCNode Title="ToUInt24 Method (Byte[], Int32)" Url="html/M_Gemstone_Numeric_UInt24Extensions_LittleEndian_ToUInt24_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="000b594a-cef6-4200-a650-f03809f73253" Title="Gemstone.Numeric.UnitExtensions" Url="html/N_Gemstone_Numeric_UnitExtensions.htm">
-    <HelpTOCNode Id="fd8a63bf-6680-4a6b-817e-a772eb9191fe" Title="UnitExtensions Class" Url="html/T_Gemstone_Numeric_UnitExtensions_UnitExtensions.htm">
-      <HelpTOCNode Id="e052b7ad-20b4-4b02-bcfe-f6980181ca67" Title="UnitExtensions Methods" Url="html/Methods_T_Gemstone_Numeric_UnitExtensions_UnitExtensions.htm">
+  <HelpTOCNode Id="76871687-51aa-4c52-8603-9c435d5c7921" Title="Gemstone.Numeric.UnitExtensions" Url="html/N_Gemstone_Numeric_UnitExtensions.htm">
+    <HelpTOCNode Id="0fb7356e-6f70-4bd0-b8f2-99646b7773b0" Title="UnitExtensions Class" Url="html/T_Gemstone_Numeric_UnitExtensions_UnitExtensions.htm">
+      <HelpTOCNode Id="c6b8c13e-4b4f-40a3-b0a1-7e81166216be" Title="UnitExtensions Methods" Url="html/Methods_T_Gemstone_Numeric_UnitExtensions_UnitExtensions.htm">
         <HelpTOCNode Title="Average Method " Url="html/M_Gemstone_Numeric_UnitExtensions_UnitExtensions_Average.htm" />
         <HelpTOCNode Title="ToRange Method " Url="html/M_Gemstone_Numeric_UnitExtensions_UnitExtensions_ToRange.htm" />
         <HelpTOCNode Title="Unwrap Method " Url="html/M_Gemstone_Numeric_UnitExtensions_UnitExtensions_Unwrap.htm" />
