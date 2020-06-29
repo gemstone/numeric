@@ -26,7 +26,7 @@ using System.Numerics;
 using Gemstone.Numeric.ComplexExtensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Gemstone.Common.UnitTests
+namespace Gemstone.Numeric.UnitTests
 {
     [TestClass]
     public class ComplexExtensionsTest
