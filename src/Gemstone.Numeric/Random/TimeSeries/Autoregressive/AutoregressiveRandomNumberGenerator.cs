@@ -1,5 +1,5 @@
 ﻿//******************************************************************************************************
-//  MovingAverageRandomNumberGenerator.cs - Gbtc
+//  AutoregressiveRandomNumberGenerator.cs - Gbtc
 //
 //  Copyright © 2020, Grid Protection Alliance.  All Rights Reserved.
 //
@@ -29,58 +29,67 @@ using System.Text;
 namespace Gemstone.Numeric.Random
 {
     /// <summary>
-    /// Generates specifed order Moving Average time-series distribution, full period cycle length > 2 billion
+    /// Generates specifed order Autoregressive time-series distribution, full period cycle length > 2 billion
     /// </summary>
-    public class MovingAverageRandomNumberGenerator
+    public class AutoregressiveRandomNumberGenerator
     {
         /// <summary>
-        /// Instantiates Moving Average generator.
+        ///  Instantiates Autoregressive time series generator.
         /// </summary>
         /// <param name="seed">Seed value for Uniform generator</param>
         /// <param name="order">Moving Average order</param>
-        /// <param name="lambdas">Array of lambda values, ordered lambda i-1, lamda i-2, etc </param>
+        /// <param name="phis">ordered phis phi i-1, phi i-2, etc </param>
         /// <param name="mean">Mean of the Normal distribution</param>
         /// <param name="variance">Variance of the Normal distribution</param>
-        public MovingAverageRandomNumberGenerator(int seed, int order, double[] lambdas, double mean = 0, double variance = 1)
+        public AutoregressiveRandomNumberGenerator(int seed, int order, double[] phis, double mean = 0, double variance = 1)
         {
-            if (lambdas.Count() != order)
-                throw new Exception("Please provide a lambda value for each order level.");
+            if (phis.Count() != order)
+                throw new Exception("Please provide a phi value for each order level.");
             Order = order;
-            Lambdas = lambdas;
+            Phis = phis;
             NormalGenerator = new NormalRandomNumberGenerator(seed, mean, variance);
             Priors = new List<double>(order);
             for (int i = 0; i < order; i++)
             {
-                Priors.Add(NormalGenerator.Next().Value);
+                Priors.Add(0);
+            }
+            for (int i = 0; i < order; i++)
+            {
+                if (phis[i] <= -1 || phis[i] >= 1)
+                    throw new Exception("Please provide phi values that are -1 < phi < 1.");
+                double ei = NormalGenerator.Next().Value / Math.Sqrt(1 - Math.Pow(phis.Sum(), 2));
+                double priorSum = Priors.Zip(phis, (First, Second) => new { First = First, Second = Second }).Select(x => x.First * x.Second).Sum();
+                Priors.Remove(Priors.Last());
+                Priors.Insert(0, ei);
             }
         }
 
         private List<double> Priors { get; }
         private int Order { get; }
-        private double[] Lambdas { get; }
+        private double[] Phis { get; }
         private NormalRandomNumberGenerator NormalGenerator { get; }
 
         /// <summary>
-        /// Gets next <see cref="MovingAverageRandomNumber"/> in the sequence
+        /// Gets next <see cref="AutoregressiveRandomNumber"/> in the sequence
         /// </summary>
-        /// <returns><see cref="MovingAverageRandomNumber"/></returns>
-        public MovingAverageRandomNumber Next()
+        /// <returns><see cref="AutoregressiveRandomNumber"/></returns>
+        public AutoregressiveRandomNumber Next()
         {
-            double ei = NormalGenerator.Next().Value;
-            double priorSum = Priors.Zip(Lambdas, (First, Second) => new { First = First, Second = Second }).Select(x => x.First * x.Second).Sum();
+            double ei = NormalGenerator.Next().Value / Math.Sqrt(1 - Math.Pow(Phis.Sum(), 2));
+            double priorSum = Priors.Zip(Phis, (First, Second) => new { First = First, Second = Second }).Select(x => x.First * x.Second).Sum();
             Priors.Remove(Priors.Last());
-            Priors.Insert(0, ei);
-            return new MovingAverageRandomNumber(ei + priorSum);
+            Priors.Insert(0, ei + priorSum);
+            return new AutoregressiveRandomNumber(ei + priorSum);
         }
 
         /// <summary>
-        /// Gets the next n number of <see cref="MovingAverageRandomNumber"/>
+        /// Gets the next n number of <see cref="AutoregressiveRandomNumber"/>
         /// </summary>
         /// <param name="number"></param>
-        /// <returns><see cref="IEnumerable{MovingAverageRandomNumber}"/></returns>
-        public IEnumerable<MovingAverageRandomNumber> Next(int number)
+        /// <returns><see cref="IEnumerable{AutoregressiveRandomNumber}"/></returns>
+        public IEnumerable<AutoregressiveRandomNumber> Next(int number)
         {
-            List<MovingAverageRandomNumber> list = new List<MovingAverageRandomNumber>();
+            List<AutoregressiveRandomNumber> list = new List<AutoregressiveRandomNumber>();
             for (int i = 0; i < number; i++)
                 list.Add(this.Next());
 

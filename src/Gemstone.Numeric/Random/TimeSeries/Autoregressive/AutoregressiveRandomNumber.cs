@@ -1,5 +1,5 @@
 ﻿//******************************************************************************************************
-//  MovingAverageRandomNumber.cs - Gbtc
+//  AutoregressiveRandomNumber.cs - Gbtc
 //
 //  Copyright © 2020, Grid Protection Alliance.  All Rights Reserved.
 //
@@ -24,15 +24,15 @@
 namespace Gemstone.Numeric.Random
 {
     /// <summary>
-    /// Pseudo-Random Moving Average generated Random number
+    /// Pseudo-Random Autoregressive generated Random number
     /// </summary>
-    public class MovingAverageRandomNumber
+    public class AutoregressiveRandomNumber
     {
         /// <summary>
         /// Constructor to set Value of random variate. 
         /// </summary>
         /// <param name="value"><see cref="double"/> used to set Value.</param>
-        public MovingAverageRandomNumber(double value)
+        public AutoregressiveRandomNumber(double value)
         {
             Value = value;
         }
@@ -40,6 +40,6 @@ namespace Gemstone.Numeric.Random
         /// Value of random variate
         /// </summary>
         public double Value { get; }
-    }
 
+    }
 }
