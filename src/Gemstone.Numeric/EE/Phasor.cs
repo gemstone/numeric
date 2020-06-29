@@ -96,7 +96,7 @@ namespace Gemstone.Numeric.EE
         /// <summary>
         /// Gets the complex conjugate of this <see cref="Phasor"/>.
         /// </summary>
-        public Complex Conjugate => new Complex(Value.Real, -Value.Imaginary);
+        public Complex Conjugate => Complex.Conjugate(Value);
 
         #endregion
 
