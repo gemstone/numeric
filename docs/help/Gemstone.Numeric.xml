@@ -4,203 +4,6 @@
     <name>Gemstone.Numeric</name>
   </assembly>
   <members>
-    <member name="T:Gemstone.Numeric.ComplexNumber">
-      <summary>
-            Represents a complex number.
-            </summary>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.#ctor(Gemstone.Numeric.ComplexNumber)">
-      <summary>
-            Creates a <see cref="T:Gemstone.Numeric.ComplexNumber" /> from the given <see cref="T:Gemstone.Numeric.ComplexNumber" />.
-            </summary>
-      <param name="z">
-        <see cref="T:Gemstone.Numeric.ComplexNumber" /> to be copied.</param>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.#ctor(Gemstone.Units.Angle,System.Double)">
-      <summary>
-            Creates a <see cref="T:Gemstone.Numeric.ComplexNumber" /> from the given polar values.
-            </summary>
-      <param name="angle">The <see cref="P:Gemstone.Numeric.ComplexNumber.Angle" /> component, in radians, of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
-      <param name="magnitude">The magnitude (or absolute value) component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.#ctor(System.Double,System.Double)">
-      <summary>
-            Creates a <see cref="T:Gemstone.Numeric.ComplexNumber" /> from the given rectangular values. 
-            </summary>
-      <param name="real">The real component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
-      <param name="imaginary">The imaginary component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
-    </member>
-    <member name="P:Gemstone.Numeric.ComplexNumber.AllAssigned">
-      <summary>
-            Gets a boolean value indicating if each composite value of the <see cref="T:Gemstone.Numeric.ComplexNumber" /> (i.e., real and imaginary) has been assigned a value.
-            </summary>
-      <returns>True, if all composite values have been assigned a value; otherwise, false.</returns>
-    </member>
-    <member name="P:Gemstone.Numeric.ComplexNumber.Angle">
-      <summary>
-            Gets or sets the <see cref="P:Gemstone.Numeric.ComplexNumber.Angle" /> (a.k.a. the argument) in radians of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
-            </summary>
-    </member>
-    <member name="P:Gemstone.Numeric.ComplexNumber.Conjugate">
-      <summary>
-            Gets the complex conjugate of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
-            </summary>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.Equals(Gemstone.Numeric.ComplexNumber)">
-      <summary>
-            Returns a value indicating whether this instance is equal to a specified ComplexNumber value.
-            </summary>
-      <param name="obj">A <see cref="T:Gemstone.Numeric.ComplexNumber" /> to compare to this instance.</param>
-      <returns>
-            True if <paramref name="obj" /> has the same value as this instance; otherwise, False.
-            </returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.Equals(System.Object)">
-      <summary>
-            Returns a value indicating whether this instance is equal to a specified object.
-            </summary>
-      <param name="obj">An object to compare, or null.</param>
-      <returns>
-            True if <paramref name="obj" /> is an instance of ComplexNumber and equals the value of this instance;
-            otherwise, False.
-            </returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.GetHashCode">
-      <summary>
-            Returns the hash code for this instance.
-            </summary>
-      <returns>
-            A 32-bit signed integer hash code.
-            </returns>
-    </member>
-    <member name="P:Gemstone.Numeric.ComplexNumber.Imaginary">
-      <summary>
-            Gets or sets the imaginary component of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
-            </summary>
-    </member>
-    <member name="P:Gemstone.Numeric.ComplexNumber.Magnitude">
-      <summary>
-            Gets or sets the magnitude (a.k.a. the modulus or absolute value) of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
-            </summary>
-    </member>
-    <member name="P:Gemstone.Numeric.ComplexNumber.NoneAssigned">
-      <summary>
-            Gets a boolean value indicating if each composite value of the <see cref="T:Gemstone.Numeric.ComplexNumber" /> (i.e., real and imaginary) has not been assigned a value.
-            </summary>
-      <returns>True, if none of the composite values have been assigned a value; otherwise, false.</returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.op_Addition(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
-      <summary>
-            Returns computed sum of values.
-            </summary>
-      <param name="value1">Left hand operand.</param>
-      <param name="value2">Right hand operand.</param>
-      <returns>ComplexNumber representing the result of the addition operation.</returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.op_Division(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
-      <summary>
-            Returns computed division of values.
-            </summary>
-      <param name="value1">Left hand operand.</param>
-      <param name="value2">Right hand operand.</param>
-      <returns>ComplexNumber representing the result of the division operation.</returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.op_Equality(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
-      <summary>
-            Compares the two values for equality.
-            </summary>
-      <param name="value1">Left hand operand.</param>
-      <param name="value2">Right hand operand.</param>
-      <returns>Boolean representing the result of the addition operation.</returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.op_Exponent(Gemstone.Numeric.ComplexNumber,System.Double)">
-      <summary>
-             Returns result of first value raised to power of second value.
-             </summary>
-      <param name="z">Complex number to be raised to power <paramref name="y" />.</param>
-      <param name="y">Power to raise <see cref="T:Gemstone.Numeric.ComplexNumber" /><paramref name="z" />.</param>
-      <returns>ComplexNumber representing the result of the operation.</returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.op_Implicit(Gemstone.Numeric.ComplexNumber)~System.Numerics.Complex">
-      <summary>
-            Implicitly converts a <see cref="T:Gemstone.Numeric.ComplexNumber" /> to a .NET <see cref="T:System.Numerics.Complex" /> value.
-            </summary>
-      <param name="value">Operand.</param>
-      <returns>Complex representing the result of the operation.</returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.op_Implicit(System.Double)~Gemstone.Numeric.ComplexNumber">
-      <summary>
-            Implicitly converts a <see cref="T:System.Double" /> to a <see cref="T:Gemstone.Numeric.ComplexNumber" />.
-            </summary>
-      <param name="value">Operand.</param>
-      <returns>ComplexNumber representing the result of the operation.</returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.op_Implicit(System.Numerics.Complex)~Gemstone.Numeric.ComplexNumber">
-      <summary>
-            Implicitly converts a .NET <see cref="T:System.Numerics.Complex" /> value to a <see cref="T:Gemstone.Numeric.ComplexNumber" />.
-            </summary>
-      <param name="value">Operand.</param>
-      <returns>Complex representing the result of the operation.</returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.op_Inequality(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
-      <summary>
-            Compares the two values for inequality.
-            </summary>
-      <param name="value1">Left hand operand.</param>
-      <param name="value2">Right hand operand.</param>
-      <returns>Boolean representing the result of the inequality operation.</returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.op_Multiply(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
-      <summary>
-            Returns computed product of values.
-            </summary>
-      <param name="value1">Left hand operand.</param>
-      <param name="value2">Right hand operand.</param>
-      <returns>ComplexNumber representing the result of the multiplication operation.</returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.op_Subtraction(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
-      <summary>
-            Returns computed difference of values.
-            </summary>
-      <param name="value1">Left hand operand.</param>
-      <param name="value2">Right hand operand.</param>
-      <returns>ComplexNumber representing the result of the subtraction operation.</returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.op_UnaryNegation(Gemstone.Numeric.ComplexNumber)">
-      <summary>
-            Returns the negated value.
-            </summary>
-      <param name="z">Left hand operand.</param>
-      <returns>ComplexNumber representing the result of the unary negation operation.</returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.Parse(System.String)">
-      <summary>
-            Converts the string representation of a complex number to its complex number equivalent.
-            </summary>
-      <param name="str">A string that contains a number to convert.</param>
-      <returns>A complex number that is equivalent to the numeric value or symbols specified in <paramref name="str" />.</returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.Pow(Gemstone.Numeric.ComplexNumber,System.Double)">
-      <summary>
-             Returns specified <see cref="T:Gemstone.Numeric.ComplexNumber" /> raised to the specified power.
-            </summary>
-      <param name="z">Complex number to be raised to power <paramref name="y" />.</param>
-      <param name="y">Power to raise <see cref="T:Gemstone.Numeric.ComplexNumber" /><paramref name="z" />.</param>
-      <returns>ComplexNumber representing the result of the operation.</returns>
-    </member>
-    <member name="P:Gemstone.Numeric.ComplexNumber.Real">
-      <summary>
-            Gets or sets the real component of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
-            </summary>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.ToString">
-      <summary>
-            Converts the numeric value of this instance to its equivalent string representation.
-            </summary>
-      <returns>
-            The string representation of the value of this <see cref="T:Gemstone.Numeric.ComplexNumber" /> instance.
-            </returns>
-    </member>
     <member name="T:Gemstone.Numeric.Int24">
       <summary>Represents a 3-byte, 24-bit signed integer.</summary>
     </member>
@@ -2586,6 +2389,163 @@
       <exception cref="T:System.ArgumentOutOfRangeException">
         <paramref name="source" /> does not contain enough values to produce a result.</exception>
     </member>
+    <member name="T:Gemstone.Numeric.ComplexExtensions.ComplexExtensions">
+      <summary>
+            Defines extension methods for complex numbers.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexExtensions.ComplexExtensions.FromComplexNotation(System.String,System.Nullable{System.Char})">
+      <summary>
+            Converts the given string to a complex number.
+            </summary>
+      <param name="notation">The string using complex notation</param>
+      <param name="imaginarySymbol">The symbol used for the square root of -1</param>
+      <returns>The complex number</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexExtensions.ComplexExtensions.ToComplexNotation(System.Numerics.Complex)">
+      <summary>
+            Converts the given complex number to a string using complex notation.
+            </summary>
+      <param name="complex">The complex number</param>
+      <returns>A string representation of the complex number.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexExtensions.ComplexExtensions.ToComplexNotation(System.Numerics.Complex,Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions)">
+      <summary>
+            Converts the given complex number to a string using complex notation.
+            </summary>
+      <param name="complex">The complex number</param>
+      <param name="options">The options that define various aspects of the notation</param>
+      <returns>A string representation of the complex number.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexExtensions.ComplexExtensions.ToComplexNotation(System.Numerics.Complex,System.Char)">
+      <summary>
+            Converts the given complex number to a string using complex notation.
+            </summary>
+      <param name="complex">The complex number</param>
+      <param name="imaginarySymbol">The symbol used for the square root of -1</param>
+      <returns>A string representation of the complex number.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexExtensions.ComplexExtensions.ToComplexNotation(System.Numerics.Complex,System.Char,Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions)">
+      <summary>
+            Converts the given complex number to a string using complex notation.
+            </summary>
+      <param name="complex">The complex number</param>
+      <param name="imaginarySymbol">The symbol used for the square root of -1</param>
+      <param name="options">The options that define various aspects of the notation</param>
+      <returns>A string representation of the complex number.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexExtensions.ComplexExtensions.ToComplexNotation(System.Numerics.Complex,System.String)">
+      <summary>
+            Converts the given complex number to a string using complex notation.
+            </summary>
+      <param name="complex">The complex number</param>
+      <param name="numericFormat">The format string to use when converting numbers to their string representation</param>
+      <returns>A string representation of the complex number.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexExtensions.ComplexExtensions.ToComplexNotation(System.Numerics.Complex,System.String,Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions)">
+      <summary>
+            Converts the given complex number to a string using complex notation.
+            </summary>
+      <param name="complex">The complex number</param>
+      <param name="numericFormat">The format string to use when converting numbers to their string representation</param>
+      <param name="options">The options that define various aspects of the notation</param>
+      <returns>A string representation of the complex number.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexExtensions.ComplexExtensions.ToComplexNotation(System.Numerics.Complex,System.String,System.Char)">
+      <summary>
+            Converts the given complex number to a string using complex notation.
+            </summary>
+      <param name="complex">The complex number</param>
+      <param name="numericFormat">The format string to use when converting numbers to their string representation</param>
+      <param name="imaginarySymbol">The symbol used for the square root of -1</param>
+      <returns>A string representation of the complex number.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexExtensions.ComplexExtensions.ToComplexNotation(System.Numerics.Complex,System.String,System.Char,Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions)">
+      <summary>
+            Converts the given complex number to a string using complex notation.
+            </summary>
+      <param name="complex">The complex number</param>
+      <param name="numericFormat">The format string to use when converting numbers to their string representation</param>
+      <param name="imaginarySymbol">The symbol used for the square root of -1</param>
+      <param name="options">The options that define various aspects of the notation</param>
+      <returns>A string representation of the complex number.</returns>
+    </member>
+    <member name="T:Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions">
+      <summary>
+            Provides options for customizing the notation
+            used for representing complex numbers as text.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions.Default">
+      <summary>
+            The default notation if no options are specified.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions.PrefixSymbol">
+      <summary>
+            Specifies that the symbol on the imaginary term should be prefixed.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions.InsertAsterisk">
+      <summary>
+            Inserts an asterisk between the number and the symbol on
+            the imaginary term to explicitly indicate multiplication.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions.ImaginaryFirst">
+      <summary>
+            Specifies that the imaginary term should come first.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions.AllowSubtraction">
+      <summary>
+            Specifies that the subtraction operator should
+            be used if the second term is negative.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions.PreferSubtraction">
+      <summary>
+            Specifies terms should be swapped if doing
+            so would convert addition into subtraction.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions.NoSimplify">
+      <summary>
+            Specifies numbers and terms are always displayed regardless
+            of whether they can be mathematically simplified.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions.OperatorWhitespace">
+      <summary>
+            Inserts whitespace around the plus/minus operator.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions.AsteriskWhitespace">
+      <summary>
+            Inserts whitespace around the asterisk.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions.SymbolWhitespace">
+      <summary>
+            Inserts whitespace between the symbol and the number.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions.UseWhitespace">
+      <summary>
+            Enables all whitespace options.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions.Verbose">
+      <summary>
+            Provides a verbose output with consistent ordering of terms,
+            no subtraction, asterisks, and all whitespace options.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions.None">
+      <summary>
+            No options are enabled.
+            </summary>
+    </member>
     <member name="T:Gemstone.Numeric.EE.LineFrequency">
       <summary>
             Nominal line frequencies enumeration.
@@ -2606,29 +2566,29 @@
             Represents a phasor as a complex number value and a type (i.e., a voltage or a current).
             </summary>
     </member>
-    <member name="M:Gemstone.Numeric.EE.Phasor.#ctor(Gemstone.Numeric.EE.PhasorType,Gemstone.Numeric.ComplexNumber)">
-      <summary>
-            Creates a <see cref="T:Gemstone.Numeric.EE.Phasor" /> of the specified <paramref name="type" /> from the given <see cref="T:Gemstone.Numeric.ComplexNumber" />.
-            </summary>
-      <param name="type">Type of phasor, i.e., current or voltage.</param>
-      <param name="z">
-        <see cref="T:Gemstone.Numeric.ComplexNumber" /> to be copied.</param>
-    </member>
     <member name="M:Gemstone.Numeric.EE.Phasor.#ctor(Gemstone.Numeric.EE.PhasorType,Gemstone.Units.Angle,System.Double)">
       <summary>
             Creates a <see cref="T:Gemstone.Numeric.EE.Phasor" /> of the specified <paramref name="type" /> from the given polar values.
             </summary>
       <param name="type">Type of phasor, i.e., current or voltage.</param>
-      <param name="angle">The <see cref="T:Gemstone.Units.Angle" /> component, in radians, of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
-      <param name="magnitude">The magnitude (or absolute value) component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
+      <param name="angle">The <see cref="T:Gemstone.Units.Angle" /> component, in radians, of the <see cref="T:System.Numerics.Complex" />.</param>
+      <param name="magnitude">The magnitude (or absolute value) component of the <see cref="T:System.Numerics.Complex" />.</param>
     </member>
     <member name="M:Gemstone.Numeric.EE.Phasor.#ctor(Gemstone.Numeric.EE.PhasorType,System.Double,System.Double)">
       <summary>
             Creates a <see cref="T:Gemstone.Numeric.EE.Phasor" /> of the specified <paramref name="type" /> from the given rectangular values. 
             </summary>
       <param name="type">Type of phasor, i.e., current or voltage.</param>
-      <param name="real">The real component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
-      <param name="imaginary">The imaginary component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
+      <param name="real">The real component of the <see cref="T:System.Numerics.Complex" />.</param>
+      <param name="imaginary">The imaginary component of the <see cref="T:System.Numerics.Complex" />.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.Phasor.#ctor(Gemstone.Numeric.EE.PhasorType,System.Numerics.Complex)">
+      <summary>
+            Creates a <see cref="T:Gemstone.Numeric.EE.Phasor" /> of the specified <paramref name="type" /> from the given <see cref="T:System.Numerics.Complex" />.
+            </summary>
+      <param name="type">Type of phasor, i.e., current or voltage.</param>
+      <param name="z">
+        <see cref="T:System.Numerics.Complex" /> to be copied.</param>
     </member>
     <member name="M:Gemstone.Numeric.EE.Phasor.CalculateActivePower(Gemstone.Numeric.EE.Phasor,Gemstone.Numeric.EE.Phasor)">
       <summary>
@@ -2744,16 +2704,9 @@
       <param name="y">Power to raise <see cref="T:Gemstone.Numeric.EE.Phasor" /><paramref name="z" />.</param>
       <returns>Phasor representing the result of the operation.</returns>
     </member>
-    <member name="M:Gemstone.Numeric.EE.Phasor.op_Implicit(Gemstone.Numeric.EE.Phasor)~Gemstone.Numeric.ComplexNumber">
-      <summary>
-            Implicitly converts a <see cref="T:Gemstone.Numeric.EE.Phasor" /> to a <see cref="T:Gemstone.Numeric.ComplexNumber" />.
-            </summary>
-      <param name="phasor">Operand.</param>
-      <returns>ComplexNumber representing the result of the operation.</returns>
-    </member>
     <member name="M:Gemstone.Numeric.EE.Phasor.op_Implicit(Gemstone.Numeric.EE.Phasor)~System.Numerics.Complex">
       <summary>
-            Implicitly converts a <see cref="T:Gemstone.Numeric.EE.Phasor" /> to a .NET <see cref="T:System.Numerics.Complex" /> value.
+            Implicitly converts a <see cref="T:Gemstone.Numeric.EE.Phasor" /> to a <see cref="T:System.Numerics.Complex" />.
             </summary>
       <param name="phasor">Operand.</param>
       <returns>ComplexNumber representing the result of the operation.</returns>
@@ -2802,7 +2755,7 @@
             Converts the numeric value of this instance to its equivalent string representation.
             </summary>
       <returns>
-            The string representation of the value of this <see cref="T:Gemstone.Numeric.ComplexNumber" /> instance.
+            The string representation of the value of this <see cref="T:System.Numerics.Complex" /> instance.
             </returns>
     </member>
     <member name="F:Gemstone.Numeric.EE.Phasor.Type">
@@ -3585,6 +3538,54 @@
       <param name="range">The y-values of the pivot points.</param>
       <returns>A reference to the piecewise linear function.</returns>
     </member>
+    <member name="T:Gemstone.Numeric.Random.AutoregressiveRandomNumber">
+      <summary>
+            Pseudo-Random Autoregressive generated Random number
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.AutoregressiveRandomNumber.#ctor(System.Double)">
+      <summary>
+            Constructor to set Value of random variate. 
+            </summary>
+      <param name="value">
+        <see cref="T:System.Double" /> used to set Value.</param>
+    </member>
+    <member name="P:Gemstone.Numeric.Random.AutoregressiveRandomNumber.Value">
+      <summary>
+            Value of random variate
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.Random.AutoregressiveRandomNumberGenerator">
+      <summary>
+            Generates specifed order Autoregressive time-series distribution, full period cycle length &gt; 2 billion
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.AutoregressiveRandomNumberGenerator.#ctor(System.Int32,System.Int32,System.Double[],System.Double,System.Double)">
+      <summary>
+             Instantiates Autoregressive time series generator.
+            </summary>
+      <param name="seed">Seed value for Uniform generator</param>
+      <param name="order">Moving Average order</param>
+      <param name="phis">ordered phis phi i-1, phi i-2, etc </param>
+      <param name="mean">Mean of the Normal distribution</param>
+      <param name="variance">Variance of the Normal distribution</param>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.AutoregressiveRandomNumberGenerator.Next">
+      <summary>
+            Gets next <see cref="T:Gemstone.Numeric.Random.AutoregressiveRandomNumber" /> in the sequence
+            </summary>
+      <returns>
+        <see cref="T:Gemstone.Numeric.Random.AutoregressiveRandomNumber" />
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.AutoregressiveRandomNumberGenerator.Next(System.Int32)">
+      <summary>
+            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.AutoregressiveRandomNumber" /></summary>
+      <param name="number"></param>
+      <returns>
+        <see cref="T:System.Collections.Generic.IEnumerable`1" />
+      </returns>
+    </member>
     <member name="T:Gemstone.Numeric.Random.DiscreteUniformRandomNumber">
       <summary>
              Discrete Pseudo-Random number distributed across Uniform(lower limit, upper limit)
@@ -3637,6 +3638,52 @@
         <see cref="T:System.Collections.Generic.IEnumerable`1" />
       </returns>
     </member>
+    <member name="T:Gemstone.Numeric.Random.GeometricRandomNumber">
+      <summary>
+            Pseudo-Random number distributed across Geometric(probability)
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.GeometricRandomNumber.#ctor(Gemstone.Numeric.Random.UniformRandomNumber,System.Double)">
+      <summary>
+            Transforms a Uniform(0,1) into a Geometric(probability)
+            </summary>
+      <param name="uniform">
+        <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" />Uniform(0,1)</param>
+      <param name="probability">Probability of bernoulli trial success</param>
+    </member>
+    <member name="P:Gemstone.Numeric.Random.GeometricRandomNumber.Value">
+      <summary>
+            Property holding the actual value of the Geometric(probability) random number.
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.Random.GeometricRandomNumberGenerator">
+      <summary>
+            Generates Geometric(probability) distribution, full period cycle length &gt; 2 billion
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.GeometricRandomNumberGenerator.#ctor(System.Int32,System.Double)">
+      <summary>
+            Instantiates Normal distribution generator to Geometric(probability)
+            </summary>
+      <param name="seed">Seed value for Uniform generator</param>
+      <param name="probability">Probability of bernoulli trial success</param>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.GeometricRandomNumberGenerator.Next">
+      <summary>
+            Gets next <see cref="T:Gemstone.Numeric.Random.GeometricRandomNumber" /> in the sequence
+            </summary>
+      <returns>
+        <see cref="T:Gemstone.Numeric.Random.GeometricRandomNumber" />
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.GeometricRandomNumberGenerator.Next(System.Int32)">
+      <summary>
+            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.GeometricRandomNumber" /></summary>
+      <param name="number"></param>
+      <returns>
+        <see cref="T:System.Collections.Generic.IEnumerable`1" />
+      </returns>
+    </member>
     <member name="T:Gemstone.Numeric.Random.LogNormalRandomNumber">
       <summary>
             Pseudo-Random number distributed across LogNormal(mean,variance)
@@ -3682,6 +3729,54 @@
     <member name="M:Gemstone.Numeric.Random.LogNormalRandomNumberGenerator.Next(System.Int32)">
       <summary>
             Gets the next n number of <see cref="T:Gemstone.Numeric.Random.LogNormalRandomNumber" /></summary>
+      <param name="number"></param>
+      <returns>
+        <see cref="T:System.Collections.Generic.IEnumerable`1" />
+      </returns>
+    </member>
+    <member name="T:Gemstone.Numeric.Random.MovingAverageRandomNumber">
+      <summary>
+            Pseudo-Random Moving Average generated Random number
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.MovingAverageRandomNumber.#ctor(System.Double)">
+      <summary>
+            Constructor to set Value of random variate. 
+            </summary>
+      <param name="value">
+        <see cref="T:System.Double" /> used to set Value.</param>
+    </member>
+    <member name="P:Gemstone.Numeric.Random.MovingAverageRandomNumber.Value">
+      <summary>
+            Value of random variate
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.Random.MovingAverageRandomNumberGenerator">
+      <summary>
+            Generates specifed order Moving Average time-series distribution, full period cycle length &gt; 2 billion
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.MovingAverageRandomNumberGenerator.#ctor(System.Int32,System.Int32,System.Double[],System.Double,System.Double)">
+      <summary>
+            Instantiates Moving Average generator.
+            </summary>
+      <param name="seed">Seed value for Uniform generator</param>
+      <param name="order">Moving Average order</param>
+      <param name="lambdas">Array of lambda values, ordered lambda i-1, lamda i-2, etc </param>
+      <param name="mean">Mean of the Normal distribution</param>
+      <param name="variance">Variance of the Normal distribution</param>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.MovingAverageRandomNumberGenerator.Next">
+      <summary>
+            Gets next <see cref="T:Gemstone.Numeric.Random.MovingAverageRandomNumber" /> in the sequence
+            </summary>
+      <returns>
+        <see cref="T:Gemstone.Numeric.Random.MovingAverageRandomNumber" />
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.MovingAverageRandomNumberGenerator.Next(System.Int32)">
+      <summary>
+            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.MovingAverageRandomNumber" /></summary>
       <param name="number"></param>
       <returns>
         <see cref="T:System.Collections.Generic.IEnumerable`1" />
@@ -3753,6 +3848,15 @@
             <parameter>M:Gemstone.Numeric.Random.RandomNumberExtensions.ToDiscreteUniformDistribution(System.Collections.Generic.IEnumerable{Gemstone.Numeric.Random.UniformRandomNumber},System.Double,System.Double)</parameter>
           </include>
         </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.RandomNumberExtensions.ToGeometricDistribution(System.Collections.Generic.IEnumerable{Gemstone.Numeric.Random.UniformRandomNumber},System.Double)">
+      <summary>
+            Linq extension function used to Transform an enumerable of <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" /> to an enumerable of <see cref="T:Gemstone.Numeric.Random.GeometricRandomNumber" /></summary>
+      <param name="uniforms">enumerable of <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" /></param>
+      <param name="probability">Probability of bernoulli trial success</param>
+      <returns>
+        <see cref="T:System.Collections.Generic.IEnumerable`1" />
       </returns>
     </member>
     <member name="M:Gemstone.Numeric.Random.RandomNumberExtensions.ToLogNormalDistribution(System.Collections.Generic.IEnumerable{Gemstone.Numeric.Random.UniformRandomNumber},System.Double,System.Double,System.Double)">
