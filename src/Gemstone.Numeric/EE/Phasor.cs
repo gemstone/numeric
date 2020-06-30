@@ -48,7 +48,7 @@ namespace Gemstone.Numeric.EE
         /// <summary>
         /// Phasor value.
         /// </summary>
-        public readonly ComplexNumber Value;
+        public readonly Complex Value;
 
         #endregion
 
@@ -58,32 +58,32 @@ namespace Gemstone.Numeric.EE
         /// Creates a <see cref="Phasor"/> of the specified <paramref name="type"/> from the given rectangular values. 
         /// </summary>
         /// <param name="type">Type of phasor, i.e., current or voltage.</param>
-        /// <param name="real">The real component of the <see cref="ComplexNumber"/>.</param>
-        /// <param name="imaginary">The imaginary component of the <see cref="ComplexNumber"/>.</param>
+        /// <param name="real">The real component of the <see cref="Complex"/>.</param>
+        /// <param name="imaginary">The imaginary component of the <see cref="Complex"/>.</param>
         public Phasor(PhasorType type, double real, double imaginary) : this()
         {
             Type = type;
-            Value = new ComplexNumber(real, imaginary);
+            Value = new Complex(real, imaginary);
         }
 
         /// <summary>
         /// Creates a <see cref="Phasor"/> of the specified <paramref name="type"/> from the given polar values.
         /// </summary>
         /// <param name="type">Type of phasor, i.e., current or voltage.</param>
-        /// <param name="angle">The <see cref="Angle"/> component, in radians, of the <see cref="ComplexNumber"/>.</param>
-        /// <param name="magnitude">The magnitude (or absolute value) component of the <see cref="ComplexNumber"/>.</param>
+        /// <param name="angle">The <see cref="Angle"/> component, in radians, of the <see cref="Complex"/>.</param>
+        /// <param name="magnitude">The magnitude (or absolute value) component of the <see cref="Complex"/>.</param>
         public Phasor(PhasorType type, Angle angle, double magnitude) : this()
         {
             Type = type;
-            Value = new ComplexNumber(angle, magnitude);
+            Value = Complex.FromPolarCoordinates(magnitude, angle);
         }
 
         /// <summary>
-        /// Creates a <see cref="Phasor"/> of the specified <paramref name="type"/> from the given <see cref="ComplexNumber"/>.
+        /// Creates a <see cref="Phasor"/> of the specified <paramref name="type"/> from the given <see cref="Complex"/>.
         /// </summary>
         /// <param name="type">Type of phasor, i.e., current or voltage.</param>
-        /// <param name="z"><see cref="ComplexNumber"/> to be copied.</param>
-        public Phasor(PhasorType type, ComplexNumber z) : this()
+        /// <param name="z"><see cref="Complex"/> to be copied.</param>
+        public Phasor(PhasorType type, Complex z) : this()
         {
             Type = type;
             Value = z;
@@ -96,7 +96,7 @@ namespace Gemstone.Numeric.EE
         /// <summary>
         /// Gets the complex conjugate of this <see cref="Phasor"/>.
         /// </summary>
-        public ComplexNumber Conjugate => Value.Conjugate;
+        public Complex Conjugate => Complex.Conjugate(Value);
 
         #endregion
 
@@ -133,7 +133,7 @@ namespace Gemstone.Numeric.EE
         /// Converts the numeric value of this instance to its equivalent string representation.
         /// </summary>
         /// <returns>
-        /// The string representation of the value of this <see cref="ComplexNumber"/> instance.
+        /// The string representation of the value of this <see cref="Complex"/> instance.
         /// </returns>
         public override string ToString() => $"{Type}:{Value}";
 
@@ -142,14 +142,7 @@ namespace Gemstone.Numeric.EE
         #region [ Operators ]
 
         /// <summary>
-        /// Implicitly converts a <see cref="Phasor"/> to a <see cref="ComplexNumber"/>.
-        /// </summary>
-        /// <param name="phasor">Operand.</param>
-        /// <returns>ComplexNumber representing the result of the operation.</returns>
-        public static implicit operator ComplexNumber(Phasor phasor) => phasor.Value;
-
-        /// <summary>
-        /// Implicitly converts a <see cref="Phasor"/> to a .NET <see cref="Complex"/> value.
+        /// Implicitly converts a <see cref="Phasor"/> to a <see cref="Complex"/>.
         /// </summary>
         /// <param name="phasor">Operand.</param>
         /// <returns>ComplexNumber representing the result of the operation.</returns>
@@ -220,7 +213,7 @@ namespace Gemstone.Numeric.EE
         ///<param name="z">Phasor to be raised to power <paramref name="y"/>.</param>
         ///<param name="y">Power to raise <see cref="Phasor"/> <paramref name="z"/>.</param>
         /// <returns>Phasor representing the result of the operation.</returns>
-        public static Phasor Pow(Phasor z, double y) => new Phasor(z.Type, ComplexNumber.Pow(z.Value, y));
+        public static Phasor Pow(Phasor z, double y) => new Phasor(z.Type, Complex.Pow(z.Value, y));
 
         // C# doesn't expose an exponent operator but some other .NET languages do,
         // so we expose the operator via its native special IL function name
@@ -289,7 +282,7 @@ namespace Gemstone.Numeric.EE
         /// <param name="current">Current phasor.</param>
         /// <exception cref="ArgumentException"><paramref name="voltage"/> and <paramref name="current"/> must have proper <see cref="Type"/>.</exception>
         /// <returns>Calculated complex volt-amperes from specified <paramref name="voltage"/> and <paramref name="current"/> phasors.</returns>
-        public static ComplexNumber CalculateComplexPower(Phasor voltage, Phasor current)
+        public static Complex CalculateComplexPower(Phasor voltage, Phasor current)
         {
             if (voltage.Type != PhasorType.Voltage)
                 throw new ArgumentException("Provided voltage phasor is a current", nameof(voltage));
@@ -324,7 +317,7 @@ namespace Gemstone.Numeric.EE
             if (current.Type != PhasorType.Current)
                 throw new ArgumentException("Provided current phasor is a voltage", nameof(current));
 
-            return voltage.Value.Angle - current.Value.Angle;
+            return voltage.Value.Phase - current.Value.Phase;
         }
 
         #endregion
