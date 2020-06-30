@@ -33,6 +33,14 @@ namespace Gemstone.Numeric.Random
     public static class RandomNumberExtensions
     {
         /// <summary>
+        /// Linq extension function used to Transform an enumerable of <see cref="UniformRandomNumber"/> to an enumerable of <see cref="GeometricRandomNumber"/>
+        /// </summary>
+        /// <param name="uniforms">enumerable of <see cref="UniformRandomNumber"/></param>
+        /// <param name="probability">Probability of bernoulli trial success</param>
+        /// <returns><see cref="IEnumerable{GeometricRandomNumber}"/></returns>
+        public static IEnumerable<GeometricRandomNumber> ToGeometricDistribution(this IEnumerable<UniformRandomNumber> uniforms, double probability) => uniforms.Select(x => new GeometricRandomNumber(x, probability));
+
+        /// <summary>
         /// Linq extension function used to Transform an enumerable of <see cref="UniformRandomNumber"/> to an enumerable of <see cref="NormalRandomNumber"/>
         /// </summary>
         /// <param name="uniforms">enumerable of <see cref="UniformRandomNumber"/></param>
