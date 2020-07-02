@@ -28,7 +28,7 @@ namespace Gemstone.Numeric
     /// <summary>
     /// The <see cref="Gemstone.Numeric"/> namespace organizes all Gemstone library functionality
     /// related to numerics. The root numeric namespace also includes common numeric classes,
-    /// e.g., <see cref="Int24"/>, <see cref="UInt24"/> and <see cref="ComplexNumber"/>.
+    /// e.g., <see cref="Int24"/> and <see cref="UInt24"/>.
     /// </summary>
     [CompilerGenerated]
     class NamespaceDoc
