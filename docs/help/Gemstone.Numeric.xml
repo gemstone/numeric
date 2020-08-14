@@ -4,6 +4,189 @@
     <name>Gemstone.Numeric</name>
   </assembly>
   <members>
+    <member name="T:Gemstone.Numeric.ComplexNumber">
+      <summary>
+            Represents a complex number.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.#ctor(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Creates a <see cref="T:Gemstone.Numeric.ComplexNumber" /> from the given <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+      <param name="z">
+        <see cref="T:Gemstone.Numeric.ComplexNumber" /> to be copied.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.#ctor(Gemstone.Units.Angle,System.Double)">
+      <summary>
+            Creates a <see cref="T:Gemstone.Numeric.ComplexNumber" /> from the given polar values.
+            </summary>
+      <param name="angle">The <see cref="P:Gemstone.Numeric.ComplexNumber.Angle" /> component, in radians, of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
+      <param name="magnitude">The magnitude (or absolute value) component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.#ctor(System.Double,System.Double)">
+      <summary>
+            Creates a <see cref="T:Gemstone.Numeric.ComplexNumber" /> from the given rectangular values. 
+            </summary>
+      <param name="real">The real component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
+      <param name="imaginary">The imaginary component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.AllAssigned">
+      <summary>
+            Gets a boolean value indicating if each composite value of the <see cref="T:Gemstone.Numeric.ComplexNumber" /> (i.e., real and imaginary) has been assigned a value.
+            </summary>
+      <returns>True, if all composite values have been assigned a value; otherwise, false.</returns>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.Angle">
+      <summary>
+            Gets or sets the <see cref="P:Gemstone.Numeric.ComplexNumber.Angle" /> (a.k.a. the argument) in radians of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.Conjugate">
+      <summary>
+            Gets the complex conjugate of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.Equals(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Returns a value indicating whether this instance is equal to a specified ComplexNumber value.
+            </summary>
+      <param name="obj">A <see cref="T:Gemstone.Numeric.ComplexNumber" /> to compare to this instance.</param>
+      <returns>
+            True if <paramref name="obj" /> has the same value as this instance; otherwise, False.
+            </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.Equals(System.Object)">
+      <summary>
+            Returns a value indicating whether this instance is equal to a specified object.
+            </summary>
+      <param name="obj">An object to compare, or null.</param>
+      <returns>
+            True if <paramref name="obj" /> is an instance of ComplexNumber and equals the value of this instance;
+            otherwise, False.
+            </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.GetHashCode">
+      <summary>
+            Returns the hash code for this instance.
+            </summary>
+      <returns>
+            A 32-bit signed integer hash code.
+            </returns>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.Imaginary">
+      <summary>
+            Gets or sets the imaginary component of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.Magnitude">
+      <summary>
+            Gets or sets the magnitude (a.k.a. the modulus or absolute value) of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.NoneAssigned">
+      <summary>
+            Gets a boolean value indicating if each composite value of the <see cref="T:Gemstone.Numeric.ComplexNumber" /> (i.e., real and imaginary) has not been assigned a value.
+            </summary>
+      <returns>True, if none of the composite values have been assigned a value; otherwise, false.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Addition(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Returns computed sum of values.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>ComplexNumber representing the result of the addition operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Division(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Returns computed division of values.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>ComplexNumber representing the result of the division operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Equality(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Compares the two values for equality.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>Boolean representing the result of the addition operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Exponent(Gemstone.Numeric.ComplexNumber,System.Double)">
+      <summary>
+             Returns result of first value raised to power of second value.
+             </summary>
+      <param name="z">Complex number to be raised to power <paramref name="y" />.</param>
+      <param name="y">Power to raise <see cref="T:Gemstone.Numeric.ComplexNumber" /><paramref name="z" />.</param>
+      <returns>ComplexNumber representing the result of the operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Implicit(System.Double)~Gemstone.Numeric.ComplexNumber">
+      <summary>
+            Implicitly converts a <see cref="T:System.Double" /> to a <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+      <param name="value">Operand.</param>
+      <returns>ComplexNumber representing the result of the operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Inequality(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Compares the two values for inequality.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>Boolean representing the result of the inequality operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Multiply(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Returns computed product of values.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>ComplexNumber representing the result of the multiplication operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Subtraction(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Returns computed difference of values.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>ComplexNumber representing the result of the subtraction operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_UnaryNegation(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Returns the negated value.
+            </summary>
+      <param name="z">Left hand operand.</param>
+      <returns>ComplexNumber representing the result of the unary negation operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.Parse(System.String)">
+      <summary>
+            Converts the string representation of a complex number to its complex number equivalent.
+            </summary>
+      <param name="str">A string that contains a number to convert.</param>
+      <returns>A complex number that is equivalent to the numeric value or symbols specified in <paramref name="str" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.Pow(Gemstone.Numeric.ComplexNumber,System.Double)">
+      <summary>
+             Returns specified <see cref="T:Gemstone.Numeric.ComplexNumber" /> raised to the specified power.
+            </summary>
+      <param name="z">Complex number to be raised to power <paramref name="y" />.</param>
+      <param name="y">Power to raise <see cref="T:Gemstone.Numeric.ComplexNumber" /><paramref name="z" />.</param>
+      <returns>ComplexNumber representing the result of the operation.</returns>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.Real">
+      <summary>
+            Gets or sets the real component of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.ToString">
+      <summary>
+            Converts the numeric value of this instance to its equivalent string representation.
+            </summary>
+      <returns>
+            The string representation of the value of this <see cref="T:Gemstone.Numeric.ComplexNumber" /> instance.
+            </returns>
+    </member>
     <member name="T:Gemstone.Numeric.Int24">
       <summary>Represents a 3-byte, 24-bit signed integer.</summary>
     </member>
@@ -2161,6 +2344,40 @@
             System.Globalization.NumberStyles.AllowHexSpecifier and System.Globalization.NumberStyles.HexNumber values.
             </exception>
     </member>
+    <member name="T:Gemstone.Numeric.Analysis.CurveFit">
+      <summary>
+            Linear regression algorithm.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.CurveFit.Compute(System.Int32,System.Collections.Generic.IEnumerable{Gemstone.Numeric.Analysis.Point})">
+      <summary>
+            Computes linear regression over given values.
+            </summary>
+      <param name="polynomialOrder">An <see cref="T:System.Int32" /> for the polynomial order.</param>
+      <param name="values">A list of values.</param>
+      <returns>An array of <see cref="T:System.Double" /> values.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.CurveFit.Compute(System.Int32,System.Collections.Generic.IList{System.Double},System.Collections.Generic.IList{System.Double})">
+      <summary>
+            Computes linear regression over given values.
+            </summary>
+      <param name="polynomialOrder">An <see cref="T:System.Int32" /> for the polynomial order.</param>
+      <param name="xValues">A list of <see cref="T:System.Double" /> x-values.</param>
+      <param name="yValues">A list of <see cref="T:System.Double" /> y-values.</param>
+      <returns>An array of <see cref="T:System.Double" /> values.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.CurveFit.LeastSquares(System.Double[],System.Double[],System.Double[],System.Double@,System.Double@,System.Double@)">
+      <summary>
+            Uses least squares linear regression to estimate the coefficients a, b, and c
+            from the given (x,y,z) data points for the equation z = a + bx + cy.
+            </summary>
+      <param name="zValues">z-value array</param>
+      <param name="xValues">x-value array</param>
+      <param name="yValues">y-value array</param>
+      <param name="a">the out a coefficient</param>
+      <param name="b">the out b coefficient</param>
+      <param name="c">the out c coefficient</param>
+    </member>
     <member name="T:Gemstone.Numeric.Analysis.Euclidean">
       <summary>
             Contains an implementation of greatest common denominator
@@ -2388,6 +2605,83 @@
         <paramref name="source" /> is <c>null</c>.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
         <paramref name="source" /> does not contain enough values to produce a result.</exception>
+    </member>
+    <member name="T:Gemstone.Numeric.Analysis.Point">
+      <summary>
+            Used to hold x-y coordinates
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.Point.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Gemstone.Numeric.Analysis.Point</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="P:Gemstone.Numeric.Analysis.Point.X">
+      <summary>
+            x coordinate
+            </summary>
+    </member>
+    <member name="P:Gemstone.Numeric.Analysis.Point.Y">
+      <summary>
+            y coordinate
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.Analysis.SineWave">
+      <summary>
+            Represents a sine wave of the form <c>y=A*sin(ω*t+Φ)+δ</c>.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.Analysis.SineWave.Amplitude">
+      <summary>
+            Amplitude (A) of the sine wave.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.Analysis.SineWave.Bias">
+      <summary>
+            Vertical offset (δ) of the sine wave.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.SineWave.CalculateY(System.Double)">
+      <summary>
+            Calculates the y-value for the given time.
+            </summary>
+      <param name="t">The time, in seconds.</param>
+      <returns>
+        <c>A*sin(ω*t+Φ)+δ</c>
+      </returns>
+    </member>
+    <member name="F:Gemstone.Numeric.Analysis.SineWave.Frequency">
+      <summary>
+            Frequency (ω) of the sine wave, in Hz.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.Analysis.SineWave.Phase">
+      <summary>
+            Phase (Φ) shift of the sine wave.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.Analysis.SineWave.TwoPi">
+      <summary>
+            2 * pi
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.Analysis.WaveFit">
+      <summary>
+            Linear regression algorithm for sine waves.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.WaveFit.SineFit(System.Double[],System.Double[],System.Double)">
+      <summary>
+            Uses least squares linear regression to calculate the best fit sine wave for the given data.
+            </summary>
+      <param name="yValues">The y values of the data points.</param>
+      <param name="tValues">The time values of the data points, in seconds.</param>
+      <param name="frequency">The frequency of the sine wave, in Hz.</param>
+      <returns>A <see cref="T:Gemstone.Numeric.Analysis.SineWave" /> approximated from the given data points.</returns>
     </member>
     <member name="T:Gemstone.Numeric.ComplexExtensions.ComplexExtensions">
       <summary>
