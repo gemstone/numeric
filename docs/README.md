@@ -7,6 +7,7 @@ The Gemstone Numeric Library organizes all Gemstone functionality related to num
 
 [![GitHub license](https://img.shields.io/github/license/gemstone/numeric?color=4CC61E)](https://github.com/gemstone/numeric/blob/master/LICENSE)
 [![Build status](https://ci.appveyor.com/api/projects/status/fygi0m2dt974qkon?svg=true)](https://ci.appveyor.com/project/ritchiecarroll/numeric)
+![CodeQL](https://github.com/gemstone/numeric/workflows/CodeQL/badge.svg)
 
 This library includes helpful numeric classes like the following:
 
