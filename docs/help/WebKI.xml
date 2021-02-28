@@ -32,8 +32,8 @@
   <HelpKINode Title="Average method" Url="html/M_Gemstone_Numeric_UnitExtensions_UnitExtensions_Average.htm" />
   <HelpKINode Title="Bias field" Url="html/F_Gemstone_Numeric_Analysis_SineWave_Bias.htm" />
   <HelpKINode Title="BigEndian class">
-    <HelpKINode Title="BigEndian Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_BigEndian.htm" />
     <HelpKINode Title="BigEndian Class" Url="html/T_Gemstone_Numeric_Int24Extensions_BigEndian.htm" />
+    <HelpKINode Title="BigEndian Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_BigEndian.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_UInt24Extensions_BigEndian.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_Int24Extensions_BigEndian.htm" />
   </HelpKINode>
@@ -48,8 +48,8 @@
   <HelpKINode Title="BigEndian.ToInt24 method" Url="html/Overload_Gemstone_Numeric_Int24Extensions_BigEndian_ToInt24.htm" />
   <HelpKINode Title="BigEndian.ToUInt24 method" Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BigEndian_ToUInt24.htm" />
   <HelpKINode Title="BitExtensions class">
-    <HelpKINode Title="BitExtensions Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_BitExtensions.htm" />
     <HelpKINode Title="BitExtensions Class" Url="html/T_Gemstone_Numeric_Int24Extensions_BitExtensions.htm" />
+    <HelpKINode Title="BitExtensions Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_BitExtensions.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_UInt24Extensions_BitExtensions.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_Int24Extensions_BitExtensions.htm" />
   </HelpKINode>
@@ -62,36 +62,36 @@
     <HelpKINode Title="BitExtensions.BitRotR Method " Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_BitRotR.htm" />
   </HelpKINode>
   <HelpKINode Title="BitExtensions.CheckBits method">
-    <HelpKINode Title="BitExtensions.CheckBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_CheckBits.htm" />
     <HelpKINode Title="BitExtensions.CheckBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_CheckBits.htm" />
+    <HelpKINode Title="BitExtensions.CheckBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_CheckBits.htm" />
   </HelpKINode>
   <HelpKINode Title="BitExtensions.ClearBits method">
-    <HelpKINode Title="BitExtensions.ClearBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_ClearBits.htm" />
     <HelpKINode Title="BitExtensions.ClearBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_ClearBits.htm" />
+    <HelpKINode Title="BitExtensions.ClearBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_ClearBits.htm" />
   </HelpKINode>
   <HelpKINode Title="BitExtensions.GetMaskedValue method">
-    <HelpKINode Title="BitExtensions.GetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_GetMaskedValue.htm" />
     <HelpKINode Title="BitExtensions.GetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_GetMaskedValue.htm" />
+    <HelpKINode Title="BitExtensions.GetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_GetMaskedValue.htm" />
   </HelpKINode>
   <HelpKINode Title="BitExtensions.SetBits method">
     <HelpKINode Title="BitExtensions.SetBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_SetBits.htm" />
     <HelpKINode Title="BitExtensions.SetBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_SetBits.htm" />
   </HelpKINode>
   <HelpKINode Title="BitExtensions.SetMaskedValue method">
-    <HelpKINode Title="BitExtensions.SetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_SetMaskedValue.htm" />
     <HelpKINode Title="BitExtensions.SetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_SetMaskedValue.htm" />
+    <HelpKINode Title="BitExtensions.SetMaskedValue Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_SetMaskedValue.htm" />
   </HelpKINode>
   <HelpKINode Title="BitExtensions.ToggleBits method">
-    <HelpKINode Title="BitExtensions.ToggleBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_ToggleBits.htm" />
     <HelpKINode Title="BitExtensions.ToggleBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_ToggleBits.htm" />
+    <HelpKINode Title="BitExtensions.ToggleBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_ToggleBits.htm" />
   </HelpKINode>
   <HelpKINode Title="BitMask field">
     <HelpKINode Title="Int24.BitMask Field" Url="html/F_Gemstone_Numeric_Int24_BitMask.htm" />
     <HelpKINode Title="UInt24.BitMask Field" Url="html/F_Gemstone_Numeric_UInt24_BitMask.htm" />
   </HelpKINode>
   <HelpKINode Title="BitRotL method">
-    <HelpKINode Title="BitExtensions.BitRotL Method " Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_BitRotL.htm" />
     <HelpKINode Title="BitExtensions.BitRotL Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_BitExtensions_BitRotL.htm" />
+    <HelpKINode Title="BitExtensions.BitRotL Method " Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_BitRotL.htm" />
   </HelpKINode>
   <HelpKINode Title="BitRotR method">
     <HelpKINode Title="BitExtensions.BitRotR Method " Url="html/M_Gemstone_Numeric_Int24Extensions_BitExtensions_BitRotR.htm" />
@@ -141,8 +141,8 @@
   <HelpKINode Title="Compute method" Url="html/Overload_Gemstone_Numeric_Analysis_CurveFit_Compute.htm" />
   <HelpKINode Title="Conjugate property" Url="html/P_Gemstone_Numeric_EE_Phasor_Conjugate.htm" />
   <HelpKINode Title="CopyBytes method">
-    <HelpKINode Title="BigEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BigEndian_CopyBytes.htm" />
     <HelpKINode Title="BigEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BigEndian_CopyBytes.htm" />
+    <HelpKINode Title="BigEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BigEndian_CopyBytes.htm" />
     <HelpKINode Title="LittleEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_LittleEndian_CopyBytes.htm" />
     <HelpKINode Title="LittleEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_LittleEndian_CopyBytes.htm" />
   </HelpKINode>
@@ -162,8 +162,8 @@
   </HelpKINode>
   <HelpKINode Title="Default enumeration member" Url="html/T_Gemstone_Numeric_ComplexExtensions_ComplexNotationOptions.htm" />
   <HelpKINode Title="DefaultDistanceFunction method" Url="html/M_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_DefaultDistanceFunction.htm" />
-  <HelpKINode Title="DfDt enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
   <HelpKINode Title="DFDT enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
+  <HelpKINode Title="DfDt enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
   <HelpKINode Title="DIGI enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
   <HelpKINode Title="Digital enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalKind.htm" />
   <HelpKINode Title="Digits field" Url="html/F_Gemstone_Numeric_RadixCodec_Digits.htm" />
@@ -312,11 +312,11 @@
   <HelpKINode Title="GeometricRandomNumberGenerator.Next method" Url="html/Overload_Gemstone_Numeric_Random_GeometricRandomNumberGenerator_Next.htm" />
   <HelpKINode Title="GetAcronym method" Url="html/M_Gemstone_Numeric_EE_SignalKindExtensions_GetAcronym.htm" />
   <HelpKINode Title="GetBytes method">
-    <HelpKINode Title="BigEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_BigEndian_GetBytes.htm" />
     <HelpKINode Title="BigEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_Int24Extensions_BigEndian_GetBytes.htm" />
+    <HelpKINode Title="BigEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_BigEndian_GetBytes.htm" />
     <HelpKINode Title="Int24.GetBytes Method " Url="html/Overload_Gemstone_Numeric_Int24_GetBytes.htm" />
-    <HelpKINode Title="LittleEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_LittleEndian_GetBytes.htm" />
     <HelpKINode Title="LittleEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_Int24Extensions_LittleEndian_GetBytes.htm" />
+    <HelpKINode Title="LittleEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_LittleEndian_GetBytes.htm" />
     <HelpKINode Title="UInt24.GetBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24_GetBytes.htm" />
   </HelpKINode>
   <HelpKINode Title="GetFormattedName method" Url="html/M_Gemstone_Numeric_EE_SignalTypeExtensions_GetFormattedName.htm" />
@@ -463,18 +463,18 @@
   </HelpKINode>
   <HelpKINode Title="LineFrequency enumeration" Url="html/T_Gemstone_Numeric_EE_LineFrequency.htm" />
   <HelpKINode Title="LittleEndian class">
-    <HelpKINode Title="LittleEndian Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_LittleEndian.htm" />
     <HelpKINode Title="LittleEndian Class" Url="html/T_Gemstone_Numeric_Int24Extensions_LittleEndian.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_Int24Extensions_LittleEndian.htm" />
+    <HelpKINode Title="LittleEndian Class" Url="html/T_Gemstone_Numeric_UInt24Extensions_LittleEndian.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_UInt24Extensions_LittleEndian.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_Gemstone_Numeric_Int24Extensions_LittleEndian.htm" />
   </HelpKINode>
   <HelpKINode Title="LittleEndian.CopyBytes method">
     <HelpKINode Title="LittleEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_LittleEndian_CopyBytes.htm" />
     <HelpKINode Title="LittleEndian.CopyBytes Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_LittleEndian_CopyBytes.htm" />
   </HelpKINode>
   <HelpKINode Title="LittleEndian.GetBytes method">
-    <HelpKINode Title="LittleEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_LittleEndian_GetBytes.htm" />
     <HelpKINode Title="LittleEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_Int24Extensions_LittleEndian_GetBytes.htm" />
+    <HelpKINode Title="LittleEndian.GetBytes Method " Url="html/M_Gemstone_Numeric_UInt24Extensions_LittleEndian_GetBytes.htm" />
   </HelpKINode>
   <HelpKINode Title="LittleEndian.ToInt24 method" Url="html/Overload_Gemstone_Numeric_Int24Extensions_LittleEndian_ToInt24.htm" />
   <HelpKINode Title="LittleEndian.ToUInt24 method" Url="html/Overload_Gemstone_Numeric_UInt24Extensions_LittleEndian_ToUInt24.htm" />
@@ -537,8 +537,8 @@
     <HelpKINode Title="NormalRandomNumberGenerator.Next Method " Url="html/Overload_Gemstone_Numeric_Random_NormalRandomNumberGenerator_Next.htm" />
     <HelpKINode Title="UniformRandomNumberGenerator.Next Method " Url="html/Overload_Gemstone_Numeric_Random_UniformRandomNumberGenerator_Next.htm" />
   </HelpKINode>
-  <HelpKINode Title="NONE enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
   <HelpKINode Title="None enumeration member" Url="html/T_Gemstone_Numeric_ComplexExtensions_ComplexNotationOptions.htm" />
+  <HelpKINode Title="NONE enumeration member" Url="html/T_Gemstone_Numeric_EE_SignalType.htm" />
   <HelpKINode Title="NormalRandomNumber class">
     <HelpKINode Title="NormalRandomNumber Class" Url="html/T_Gemstone_Numeric_Random_NormalRandomNumber.htm" />
     <HelpKINode Title="constructor" Url="html/M_Gemstone_Numeric_Random_NormalRandomNumber__ctor.htm" />
@@ -670,8 +670,8 @@
     <HelpKINode Title="UInt24.RightShift Operator " Url="html/M_Gemstone_Numeric_UInt24_op_RightShift.htm" />
   </HelpKINode>
   <HelpKINode Title="SetBits method">
-    <HelpKINode Title="BitExtensions.SetBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_SetBits.htm" />
     <HelpKINode Title="BitExtensions.SetBits Method " Url="html/Overload_Gemstone_Numeric_UInt24Extensions_BitExtensions_SetBits.htm" />
+    <HelpKINode Title="BitExtensions.SetBits Method " Url="html/Overload_Gemstone_Numeric_Int24Extensions_BitExtensions_SetBits.htm" />
   </HelpKINode>
   <HelpKINode Title="SetDistanceFunction method" Url="html/M_Gemstone_Numeric_Interpolation_InverseDistanceWeightingFunction_SetDistanceFunction.htm" />
   <HelpKINode Title="SetDomain method" Url="html/M_Gemstone_Numeric_Interpolation_PiecewiseLinearFunction_SetDomain.htm" />
