@@ -3210,6 +3210,89 @@
         <see cref="T:Gemstone.Numeric.EE.SignalType" /> to return display name for.</param>
       <returns>Friendly protocol display name for specified <paramref name="signalType" />.</returns>
     </member>
+    <member name="T:Gemstone.Numeric.EE.VoltageLevel">
+      <summary>
+            Common transmission voltage levels enumeration.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.VoltageLevel.kV44">
+      <summary>
+            44 kV.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.VoltageLevel.kV69">
+      <summary>
+            69 kV.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.VoltageLevel.kV115">
+      <summary>
+            115 kV.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.VoltageLevel.kV138">
+      <summary>
+            138 kV.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.VoltageLevel.kV161">
+      <summary>
+            161 kV.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.VoltageLevel.kV169">
+      <summary>
+            169 kV.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.VoltageLevel.kV230">
+      <summary>
+            230 kV.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.VoltageLevel.kV345">
+      <summary>
+            345 kV.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.VoltageLevel.kV500">
+      <summary>
+            500 kV.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.VoltageLevel.kV765">
+      <summary>
+            765 kV.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.VoltageLevel.kV1100">
+      <summary>
+            1100 kV.
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.EE.VoltageLevelExtensions">
+      <summary>
+            Defines extension functions related to <see cref="T:Gemstone.Numeric.EE.VoltageLevel" /> enumeration.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.VoltageLevelExtensions.TryGetVoltageLevel(System.Int32,Gemstone.Numeric.EE.VoltageLevel@)">
+      <summary>
+            Attempts to get the <see cref="T:Gemstone.Numeric.EE.VoltageLevel" /> enum value for the source kV <paramref name="value" />.
+            </summary>
+      <param name="value">kV value to attempt to find.</param>
+      <param name="level">Mapped <see cref="T:Gemstone.Numeric.EE.VoltageLevel" /> enum value, if found.</param>
+      <returns>
+        <c>true</c> if matching <see cref="T:Gemstone.Numeric.EE.VoltageLevel" /> enum value is found for specified kV
+            <paramref name="value" />; otherwise, <c>false</c>.
+            </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.VoltageLevelExtensions.Value(Gemstone.Numeric.EE.VoltageLevel)">
+      <summary>
+            Gets the voltage level for the specified <see cref="T:Gemstone.Numeric.EE.VoltageLevel" /> enum value.
+            </summary>
+      <param name="level">Target <see cref="T:Gemstone.Numeric.EE.VoltageLevel" /> enum value.</param>
+      <returns>Voltage level for the specified <paramref name="level" />.</returns>
+    </member>
     <member name="T:Gemstone.Numeric.Int24Extensions.BigEndian">
       <summary>
             Defines methods related to <see cref="T:Gemstone.Numeric.Int24" /> big endian operations.
