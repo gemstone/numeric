@@ -177,7 +177,7 @@ namespace Gemstone.Numeric
             if (value == null)
                 return 1;
 
-            if (!(value is int) && !(value is Int24))
+            if (value is not int && value is not Int24)
                 throw new ArgumentException("Argument must be an Int32 or an Int24");
 
             int num = (int)value;

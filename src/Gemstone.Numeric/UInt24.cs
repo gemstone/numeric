@@ -175,7 +175,7 @@ namespace Gemstone.Numeric
             if (value == null)
                 return 1;
 
-            if (!(value is uint) && !(value is UInt24))
+            if (value is not uint && value is not UInt24)
                 throw new ArgumentException("Argument must be an UInt32 or an UInt24");
 
             uint num = (uint)value;
