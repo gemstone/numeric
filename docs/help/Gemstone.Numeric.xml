@@ -3732,6 +3732,67 @@
       <param name="range">The y-values of the pivot points.</param>
       <returns>A reference to the piecewise linear function.</returns>
     </member>
+    <member name="T:Gemstone.Numeric.Interpolation.Spline">
+      <summary>
+            One piece of a piecewise polynomial function.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Interpolation.Spline.#ctor(System.Double,System.Double[])">
+      <summary>
+            Creates a new instance of the <see cref="T:Gemstone.Numeric.Interpolation.Spline" /> class.
+            </summary>
+      <param name="xValue">The starting value for the dependent variable at which the spline was computed.</param>
+      <param name="coefficients">The coefficients of each term in the polynomial.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.Interpolation.Spline.CalculateY(System.Double)">
+      <summary>
+            Calculates the y-value of the polynomial at the given x-value.
+            </summary>
+      <param name="x">The x-value at which the polynomial should be used to calculate a y-value.</param>
+      <returns>The y-value of the polynomial at the given x-value.</returns>
+    </member>
+    <member name="P:Gemstone.Numeric.Interpolation.Spline.Coefficients">
+      <summary>
+            The coefficients of each term in the polynomial.
+            </summary>
+    </member>
+    <member name="P:Gemstone.Numeric.Interpolation.Spline.XValue">
+      <summary>
+            The starting value for the dependent
+            variable at which the spline was computed.
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.Interpolation.SplineFit">
+      <summary>
+            A collection of splines computed through spline interpolation.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Interpolation.SplineFit.#ctor(Gemstone.Numeric.Interpolation.Spline[])">
+      <summary>
+            Creates a new instance of the <see cref="T:Gemstone.Numeric.Interpolation.SplineFit" /> class.
+            </summary>
+      <param name="splines">The collection of splines.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.Interpolation.SplineFit.CalculateY(System.Double)">
+      <summary>
+            Calculates the interpolated y-value at the given x-value using the appropriate spline.
+            </summary>
+      <param name="x">The x-value from which to calculate the interpolated y-value.</param>
+      <returns>The interpolated y-value at the given x-value.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Interpolation.SplineFit.ComputeCubicSplines(System.Collections.Generic.IList{System.Double},System.Collections.Generic.IList{System.Double})">
+      <summary>
+            Computes a cubic spline for interpolating values from the given data set.
+            </summary>
+      <param name="xValues">The x-values of each sampled data point.</param>
+      <param name="yValues">The y-values of each sampled data point.</param>
+      <returns>A <see cref="T:Gemstone.Numeric.Interpolation.SplineFit" /> representing the collection of splines to be used for interpolation.</returns>
+    </member>
+    <member name="P:Gemstone.Numeric.Interpolation.SplineFit.Splines">
+      <summary>
+            The collection of splines used to interpolate a curve.
+            </summary>
+    </member>
     <member name="T:Gemstone.Numeric.Random.AutoregressiveRandomNumber">
       <summary>
             Pseudo-Random Autoregressive generated Random number
