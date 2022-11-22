@@ -68,7 +68,7 @@ namespace Gemstone.Numeric.Random
         /// <returns><see cref="IEnumerable{UniformRandomNumber}"/></returns>
         public IEnumerable<UniformRandomNumber> Next(int number)
         {
-            List<UniformRandomNumber> list = new List<UniformRandomNumber>();
+            List<UniformRandomNumber> list = new();
             for (int i = 0; i < number; i++)
                 list.Add(this.Next());
 

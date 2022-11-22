@@ -34,8 +34,8 @@ namespace Gemstone.Numeric.UnitTests.Analysis
         [TestMethod]
         public void GenerateValues()
         {
-            GaussianDistribution r = new GaussianDistribution(0, 1, -1, 1);
-            StringBuilder sb = new StringBuilder();
+            GaussianDistribution r = new(0, 1, -1, 1);
+            StringBuilder sb = new();
 
             for (int x = 0; x < 10000; x++)
                 sb.AppendLine(r.Next().ToString());

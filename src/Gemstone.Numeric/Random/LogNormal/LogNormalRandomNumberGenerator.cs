@@ -68,7 +68,7 @@ namespace Gemstone.Numeric.Random
         /// <returns><see cref="IEnumerable{LogNormalRandomNumber}"/></returns>
         public IEnumerable<LogNormalRandomNumber> Next(int number)
         {
-            List<LogNormalRandomNumber> list = new List<LogNormalRandomNumber>();
+            List<LogNormalRandomNumber> list = new();
             for (int i = 0; i < number; i++)
                 list.Add(this.Next());
 

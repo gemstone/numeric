@@ -89,7 +89,7 @@ namespace Gemstone.Numeric.Random
         /// <returns><see cref="IEnumerable{AutoregressiveRandomNumber}"/></returns>
         public IEnumerable<AutoregressiveRandomNumber> Next(int number)
         {
-            List<AutoregressiveRandomNumber> list = new List<AutoregressiveRandomNumber>();
+            List<AutoregressiveRandomNumber> list = new();
             for (int i = 0; i < number; i++)
                 list.Add(this.Next());
 

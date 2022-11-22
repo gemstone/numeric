@@ -123,7 +123,7 @@ namespace Gemstone.Numeric.EE
         /// <param name="obj">An object to compare with this object.</param>
         /// <returns><c>true</c> if the current object is equal to the other parameter; otherwise, <c>false</c>.</returns>
         /// <exception cref="ArgumentException">Object is not a <see cref="SignalReference"/>.</exception>
-        public override bool Equals(object obj) => obj is SignalReference reference && Equals(reference);
+        public override bool Equals(object? obj) => obj is SignalReference reference && Equals(reference);
 
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
@@ -160,7 +160,7 @@ namespace Gemstone.Numeric.EE
         /// <param name="obj">An object to compare with this <see cref="SignalReference"/>.</param>
         /// <returns>A 32-bit signed integer that indicates the relative order of the objects being compared.</returns>
         /// <exception cref="ArgumentException">Object is not a <see cref="SignalReference"/>.</exception>
-        public int CompareTo(object obj) => obj is SignalReference reference ? CompareTo(reference) : throw new ArgumentException("Object is not a SignalReference");
+        public int CompareTo(object? obj) => obj is SignalReference reference ? CompareTo(reference) : throw new ArgumentException("Object is not a SignalReference");
 
         #endregion
 

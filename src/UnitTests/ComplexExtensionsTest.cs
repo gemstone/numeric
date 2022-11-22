@@ -33,39 +33,39 @@ namespace Gemstone.Numeric.UnitTests
     {
         private Complex[] RealImaginary { get; } =
         {
-            new Complex(1.234D, 5.678),
-            new Complex(-1.234D, 5.678),
-            new Complex(1.234D, -5.678),
-            new Complex(-1.234D, -5.678)
+            new(1.234D, 5.678),
+            new(-1.234D, 5.678),
+            new(1.234D, -5.678),
+            new(-1.234D, -5.678)
         };
 
         private Complex[] Real { get; } =
         {
-            new Complex(1.234D, 0.0D),
-            new Complex(-1.234D, 0.0D),
-            new Complex(5.678D, 0.0D),
-            new Complex(-5.678D, 0.0D)
+            new(1.234D, 0.0D),
+            new(-1.234D, 0.0D),
+            new(5.678D, 0.0D),
+            new(-5.678D, 0.0D)
         };
 
         private Complex[] Imaginary { get; } =
         {
-            new Complex(0.0D, 1.234D),
-            new Complex(0.0D, -1.234D),
-            new Complex(0.0D, 5.678D),
-            new Complex(0.0D, -5.678D)
+            new(0.0D, 1.234D),
+            new(0.0D, -1.234D),
+            new(0.0D, 5.678D),
+            new(0.0D, -5.678D)
         };
 
         private Complex[] ImaginaryOne { get; } =
         {
-            new Complex(1.234D, 1.0D),
-            new Complex(1.234D, -1.0D),
-            new Complex(5.678D, 1.0D),
-            new Complex(5.678D, -1.0D)
+            new(1.234D, 1.0D),
+            new(1.234D, -1.0D),
+            new(5.678D, 1.0D),
+            new(5.678D, -1.0D)
         };
 
         private Complex[] Zero { get; } =
         {
-            new Complex(0.0D, 0.0D)
+            new(0.0D, 0.0D)
         };
 
         [TestMethod]
@@ -1095,7 +1095,7 @@ namespace Gemstone.Numeric.UnitTests
             {
                 string notation = "";
                 Complex complex = notation.FromComplexNotation();
-                Complex expected = new Complex();
+                Complex expected = new();
                 Assert.AreEqual(expected, complex);
             });
 
@@ -1103,7 +1103,7 @@ namespace Gemstone.Numeric.UnitTests
             {
                 string notation = "-1 - 0.234 + 5.678i";
                 Complex complex = notation.FromComplexNotation();
-                Complex expected = new Complex(-1.234, 5.678);
+                Complex expected = new(-1.234, 5.678);
                 Assert.AreEqual(expected, complex);
             });
 
@@ -1111,7 +1111,7 @@ namespace Gemstone.Numeric.UnitTests
             {
                 string notation = "+-1.234 + 5.678i";
                 Complex complex = notation.FromComplexNotation();
-                Complex expected = new Complex(-1.234, 5.678);
+                Complex expected = new(-1.234, 5.678);
                 Assert.AreEqual(expected, complex);
             });
 
@@ -1119,7 +1119,7 @@ namespace Gemstone.Numeric.UnitTests
             {
                 string notation = "-1.234 + 5.678";
                 Complex complex = notation.FromComplexNotation();
-                Complex expected = new Complex(-1.234 + 5.678, 0.0D);
+                Complex expected = new(-1.234 + 5.678, 0.0D);
                 Assert.AreEqual(expected, complex);
             });
 
@@ -1127,7 +1127,7 @@ namespace Gemstone.Numeric.UnitTests
             {
                 string notation = "-1.234i + 5.678i";
                 Complex complex = notation.FromComplexNotation();
-                Complex expected = new Complex(0.0D, -1.234 + 5.678);
+                Complex expected = new(0.0D, -1.234 + 5.678);
                 Assert.AreEqual(expected, complex);
             });
 
@@ -1135,7 +1135,7 @@ namespace Gemstone.Numeric.UnitTests
             {
                 string notation = "5.678i + - 1.234";
                 Complex complex = notation.FromComplexNotation();
-                Complex expected = new Complex(-1.234, 5.678);
+                Complex expected = new(-1.234, 5.678);
                 Assert.AreEqual(expected, complex);
             });
 
@@ -1143,7 +1143,7 @@ namespace Gemstone.Numeric.UnitTests
             {
                 string notation = "-1.234 + 5.678i*";
                 Complex complex = notation.FromComplexNotation();
-                Complex expected = new Complex(-1.234, 5.678);
+                Complex expected = new(-1.234, 5.678);
                 Assert.AreEqual(expected, complex);
             });
 
@@ -1151,7 +1151,7 @@ namespace Gemstone.Numeric.UnitTests
             {
                 string notation = "-1.234 + 5.678**i";
                 Complex complex = notation.FromComplexNotation();
-                Complex expected = new Complex(-1.234, 5.678);
+                Complex expected = new(-1.234, 5.678);
                 Assert.AreEqual(expected, complex);
             });
         }

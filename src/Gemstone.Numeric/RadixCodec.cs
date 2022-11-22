@@ -132,7 +132,7 @@ namespace Gemstone.Numeric
                     buffer[index--] = m_parent.Digits[m_mod(value, radix)];
                 while ((value = m_divide(value, radix)).CompareTo(m_zeroValue) != 0);
 
-                string result = new string(buffer, index + 1, m_bitSize - index - 1);
+                string result = new(buffer, index + 1, m_bitSize - index - 1);
 
                 if (isNegative)
                     result = $"-{result}";
@@ -180,7 +180,7 @@ namespace Gemstone.Numeric
             Digits = digits;
 
             // ReSharper disable once PossibleLossOfFraction
-            RadixIntegerCodec<decimal> int96 = new RadixIntegerCodec<decimal>(this, caseSensitive, 64, decimal.MinValue, 0, Math.Abs, (i, d) => (int)(i % d), (i, d) => (ulong)i / (ulong)d, (v, n) => n ? -v : v);
+            RadixIntegerCodec<decimal> int96 = new(this, caseSensitive, 64, decimal.MinValue, 0, Math.Abs, (i, d) => (int)(i % d), (i, d) => (ulong)i / (ulong)d, (v, n) => n ? -v : v);
             m_int64 = new RadixIntegerCodec<long>(this, caseSensitive, 64, long.MinValue, 0L, Math.Abs, (i, d) => (int)(i % d), (i, d) => i / d, (v, n) => n ? -v : v, int96.Encode(long.MinValue));
             m_uint64 = new RadixIntegerCodec<ulong>(this, caseSensitive, 64, ulong.MinValue, 0UL, i => i, (i, d) => (int)(i % (ulong)d), (i, d) => i / (ulong)d, (v, n) => (ulong)(n ? -v : v));
             m_int32 = new RadixIntegerCodec<int>(this, caseSensitive, 32, int.MinValue, 0, Math.Abs, (i, d) => i % d, (i, d) => i / d, (v, n) => (int)(n ? -v : v), m_int64.Encode(int.MinValue));

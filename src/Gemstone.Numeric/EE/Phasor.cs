@@ -110,7 +110,7 @@ namespace Gemstone.Numeric.EE
         /// True if <paramref name="obj"/> is an instance of Phasor and equals the value of this instance;
         /// otherwise, False.
         /// </returns>
-        public override bool Equals(object obj) => obj is Phasor phasor && Equals(phasor);
+        public override bool Equals(object? obj) => obj is Phasor phasor && Equals(phasor);
 
         /// <summary>
         /// Returns a value indicating whether this instance is equal to a specified Phasor value.
@@ -169,7 +169,7 @@ namespace Gemstone.Numeric.EE
         /// </summary>
         /// <param name="z">Left hand operand.</param>
         /// <returns>Phasor representing the result of the unary negation operation.</returns>
-        public static Phasor operator -(Phasor z) => new Phasor(z.Type, -z.Value);
+        public static Phasor operator -(Phasor z) => new(z.Type, -z.Value);
 
         /// <summary>
         /// Returns computed sum of values.
@@ -178,7 +178,7 @@ namespace Gemstone.Numeric.EE
         /// <param name="phasor2">Right hand operand.</param>
         /// <returns>ComplexNumber representing the result of the addition operation.</returns>
         /// <remarks>Resultant phasor will have <see cref="Type"/> of left hand operand, <paramref name="phasor1"/>.</remarks>
-        public static Phasor operator +(Phasor phasor1, Phasor phasor2) => new Phasor(phasor1.Type, phasor1.Value + phasor2.Value);
+        public static Phasor operator +(Phasor phasor1, Phasor phasor2) => new(phasor1.Type, phasor1.Value + phasor2.Value);
 
         /// <summary>
         /// Returns computed difference of values.
@@ -187,7 +187,7 @@ namespace Gemstone.Numeric.EE
         /// <param name="phasor2">Right hand operand.</param>
         /// <returns>ComplexNumber representing the result of the subtraction operation.</returns>
         /// <remarks>Resultant phasor will have <see cref="Type"/> of left hand operand, <paramref name="phasor1"/>.</remarks>
-        public static Phasor operator -(Phasor phasor1, Phasor phasor2) => new Phasor(phasor1.Type, phasor1.Value - phasor2.Value);
+        public static Phasor operator -(Phasor phasor1, Phasor phasor2) => new(phasor1.Type, phasor1.Value - phasor2.Value);
 
         /// <summary>
         /// Returns computed product of values.
@@ -196,7 +196,7 @@ namespace Gemstone.Numeric.EE
         /// <param name="phasor2">Right hand operand.</param>
         /// <returns>ComplexNumber representing the result of the multiplication operation.</returns>
         /// <remarks>Resultant phasor will have <see cref="Type"/> of left hand operand, <paramref name="phasor1"/>.</remarks>
-        public static Phasor operator *(Phasor phasor1, Phasor phasor2) => new Phasor(phasor1.Type, phasor1.Value * phasor2.Value);
+        public static Phasor operator *(Phasor phasor1, Phasor phasor2) => new(phasor1.Type, phasor1.Value * phasor2.Value);
 
         /// <summary>
         /// Returns computed division of values.
@@ -205,7 +205,7 @@ namespace Gemstone.Numeric.EE
         /// <param name="phasor2">Right hand operand.</param>
         /// <returns>ComplexNumber representing the result of the division operation.</returns>
         /// <remarks>Resultant phasor will have <see cref="Type"/> of left hand operand, <paramref name="phasor1"/>.</remarks>
-        public static Phasor operator /(Phasor phasor1, Phasor phasor2) => new Phasor(phasor1.Type, phasor1.Value / phasor2.Value);
+        public static Phasor operator /(Phasor phasor1, Phasor phasor2) => new(phasor1.Type, phasor1.Value / phasor2.Value);
 
         ///<summary>
         /// Returns specified <see cref="Phasor"/> raised to the specified power.
@@ -213,7 +213,7 @@ namespace Gemstone.Numeric.EE
         ///<param name="z">Phasor to be raised to power <paramref name="y"/>.</param>
         ///<param name="y">Power to raise <see cref="Phasor"/> <paramref name="z"/>.</param>
         /// <returns>Phasor representing the result of the operation.</returns>
-        public static Phasor Pow(Phasor z, double y) => new Phasor(z.Type, Complex.Pow(z.Value, y));
+        public static Phasor Pow(Phasor z, double y) => new(z.Type, Complex.Pow(z.Value, y));
 
         // C# doesn't expose an exponent operator but some other .NET languages do,
         // so we expose the operator via its native special IL function name

@@ -172,7 +172,7 @@ namespace Gemstone.Numeric
         /// if this instance is greater than value.
         /// </returns>
         /// <exception cref="ArgumentException">value is not an Int32 or Int24.</exception>
-        public int CompareTo(object value)
+        public int CompareTo(object? value)
         {
             if (value == null)
                 return 1;
@@ -223,7 +223,7 @@ namespace Gemstone.Numeric
         /// True if obj is an instance of Int32 or Int24 and equals the value of this instance;
         /// otherwise, False.
         /// </returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj is int || obj is Int24)
                 return Equals((int)obj);
@@ -286,7 +286,7 @@ namespace Gemstone.Numeric
         /// <returns>
         /// The string representation of the value of this instance as specified by format.
         /// </returns>
-        public string ToString(string format)
+        public string ToString(string? format)
         {
             return m_value.ToString(format);
         }
@@ -301,7 +301,7 @@ namespace Gemstone.Numeric
         /// <returns>
         /// The string representation of the value of this instance as specified by provider.
         /// </returns>
-        public string ToString(IFormatProvider provider)
+        public string ToString(IFormatProvider? provider)
         {
             return m_value.ToString(provider);
         }
@@ -317,7 +317,7 @@ namespace Gemstone.Numeric
         /// <returns>
         /// The string representation of the value of this instance as specified by format and provider.
         /// </returns>
-        public string ToString(string format, IFormatProvider provider)
+        public string ToString(string? format, IFormatProvider? provider)
         {
             return m_value.ToString(format, provider);
         }
@@ -380,7 +380,7 @@ namespace Gemstone.Numeric
         /// s represents a number less than Int24.MinValue or greater than Int24.MaxValue.
         /// </exception>
         /// <exception cref="FormatException">s is not in the correct format.</exception>
-        public static Int24 Parse(string s, IFormatProvider provider)
+        public static Int24 Parse(string s, IFormatProvider? provider)
         {
             return (Int24)int.Parse(s, provider);
         }
@@ -409,7 +409,7 @@ namespace Gemstone.Numeric
         /// s represents a number less than Int24.MinValue or greater than Int24.MaxValue.
         /// </exception>
         /// <exception cref="FormatException">s is not in a format compliant with style.</exception>
-        public static Int24 Parse(string s, NumberStyles style, IFormatProvider provider)
+        public static Int24 Parse(string s, NumberStyles style, IFormatProvider? provider)
         {
             return (Int24)int.Parse(s, style, provider);
         }
@@ -507,77 +507,77 @@ namespace Gemstone.Numeric
 
         // These are explicitly implemented on the native integer implementations, so we do the same...
 
-        bool IConvertible.ToBoolean(IFormatProvider provider)
+        bool IConvertible.ToBoolean(IFormatProvider? provider)
         {
             return Convert.ToBoolean(m_value, provider);
         }
 
-        char IConvertible.ToChar(IFormatProvider provider)
+        char IConvertible.ToChar(IFormatProvider? provider)
         {
             return Convert.ToChar(m_value, provider);
         }
 
-        sbyte IConvertible.ToSByte(IFormatProvider provider)
+        sbyte IConvertible.ToSByte(IFormatProvider? provider)
         {
             return Convert.ToSByte(m_value, provider);
         }
 
-        byte IConvertible.ToByte(IFormatProvider provider)
+        byte IConvertible.ToByte(IFormatProvider? provider)
         {
             return Convert.ToByte(m_value, provider);
         }
 
-        short IConvertible.ToInt16(IFormatProvider provider)
+        short IConvertible.ToInt16(IFormatProvider? provider)
         {
             return Convert.ToInt16(m_value, provider);
         }
 
-        ushort IConvertible.ToUInt16(IFormatProvider provider)
+        ushort IConvertible.ToUInt16(IFormatProvider? provider)
         {
             return Convert.ToUInt16(m_value, provider);
         }
 
-        int IConvertible.ToInt32(IFormatProvider provider)
+        int IConvertible.ToInt32(IFormatProvider? provider)
         {
             return m_value;
         }
 
-        uint IConvertible.ToUInt32(IFormatProvider provider)
+        uint IConvertible.ToUInt32(IFormatProvider? provider)
         {
             return Convert.ToUInt32(m_value, provider);
         }
 
-        long IConvertible.ToInt64(IFormatProvider provider)
+        long IConvertible.ToInt64(IFormatProvider? provider)
         {
             return Convert.ToInt64(m_value, provider);
         }
 
-        ulong IConvertible.ToUInt64(IFormatProvider provider)
+        ulong IConvertible.ToUInt64(IFormatProvider? provider)
         {
             return Convert.ToUInt64(m_value, provider);
         }
 
-        float IConvertible.ToSingle(IFormatProvider provider)
+        float IConvertible.ToSingle(IFormatProvider? provider)
         {
             return Convert.ToSingle(m_value, provider);
         }
 
-        double IConvertible.ToDouble(IFormatProvider provider)
+        double IConvertible.ToDouble(IFormatProvider? provider)
         {
             return Convert.ToDouble(m_value, provider);
         }
 
-        decimal IConvertible.ToDecimal(IFormatProvider provider)
+        decimal IConvertible.ToDecimal(IFormatProvider? provider)
         {
             return Convert.ToDecimal(m_value, provider);
         }
 
-        DateTime IConvertible.ToDateTime(IFormatProvider provider)
+        DateTime IConvertible.ToDateTime(IFormatProvider? provider)
         {
             return Convert.ToDateTime(m_value, provider);
         }
 
-        object IConvertible.ToType(Type type, IFormatProvider provider)
+        object IConvertible.ToType(Type type, IFormatProvider? provider)
         {
             return Convert.ChangeType(m_value, type, provider);
         }
