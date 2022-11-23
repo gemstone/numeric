@@ -6,6 +6,27 @@
   <members>
     <member name="T:Gemstone.Numeric.Int24">
       <summary>Represents a 3-byte, 24-bit signed integer.</summary>
+      <remarks>
+        <para>
+            This class behaves like most other intrinsic signed integers but allows a 3-byte, 24-bit integer implementation
+            that is often found in many digital-signal processing arenas and different kinds of protocol parsing.  A signed
+            24-bit integer is typically used to save storage space on disk where its value range of -8388608 to 8388607 is
+            sufficient, but the signed Int16 value range of -32768 to 32767 is too small.
+            </para>
+        <para>
+            This structure uses an Int32 internally for storage and most other common expected integer functionality, so using
+            a 24-bit integer will not save memory.  However, if the 24-bit signed integer range (-8388608 to 8388607) suits your
+            data needs you can save disk space by only storing the three bytes that this integer actually consumes.  You can do
+            this by calling the Int24.GetBytes function to return a three byte binary array that can be serialized to the desired
+            destination and then calling the Int24.GetValue function to restore the Int24 value from those three bytes.
+            </para>
+        <para>
+            All the standard operators for the Int24 have been fully defined for use with both Int24 and Int32 signed integers;
+            you should find that without the exception Int24 can be compared and numerically calculated with an Int24 or Int32.
+            Necessary casting should be minimal and typical use should be very simple - just as if you are using any other native
+            signed integer.
+            </para>
+      </remarks>
     </member>
     <member name="M:Gemstone.Numeric.Int24.#ctor(Gemstone.Numeric.Int24)">
       <summary>Creates 24-bit signed integer from an existing 24-bit signed integer.</summary>
@@ -15,6 +36,10 @@
       <summary>Creates 24-bit signed integer from three bytes at a specified position in a byte array.</summary>
       <param name="value">An array of bytes.</param>
       <param name="startIndex">The starting position within <paramref name="value" />.</param>
+      <remarks>
+        <para>You can use this constructor in-lieu of a System.BitConverter.ToInt24 function.</para>
+        <para>Bytes endian order assumed to match that of currently executing process architecture (little-endian on Intel platforms).</para>
+      </remarks>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="value" /> cannot be null.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
@@ -97,11 +122,19 @@
     <member name="M:Gemstone.Numeric.Int24.GetBytes">
       <summary>Returns the Int24 value as an array of three bytes.</summary>
       <returns>An array of bytes with length 3.</returns>
+      <remarks>
+        <para>You can use this function in-lieu of a System.BitConverter.GetBytes function.</para>
+        <para>Bytes will be returned in endian order of currently executing process architecture (little-endian on Intel platforms).</para>
+      </remarks>
     </member>
     <member name="M:Gemstone.Numeric.Int24.GetBytes(Gemstone.Numeric.Int24)">
       <summary>Returns the specified Int24 value as an array of three bytes.</summary>
       <param name="value">Int24 value to convert to bytes.</param>
       <returns>An array of bytes with length 3.</returns>
+      <remarks>
+        <para>You can use this function in-lieu of a System.BitConverter.GetBytes(Int24) function.</para>
+        <para>Bytes will be returned in endian order of currently executing process architecture (little-endian on Intel platforms).</para>
+      </remarks>
     </member>
     <member name="M:Gemstone.Numeric.Int24.GetHashCode">
       <summary>
@@ -116,12 +149,20 @@
             Returns the System.TypeCode for value type System.Int32 (there is no defined type code for an Int24).
             </summary>
       <returns>The enumerated constant, System.TypeCode.Int32.</returns>
+      <remarks>
+            There is no defined Int24 type code and since an Int24 will easily fit inside an Int32, the
+            Int32 type code is returned.
+            </remarks>
     </member>
     <member name="M:Gemstone.Numeric.Int24.GetValue(System.Byte[],System.Int32)">
       <summary>Returns a 24-bit signed integer from three bytes at a specified position in a byte array.</summary>
       <param name="value">An array of bytes.</param>
       <param name="startIndex">The starting position within value.</param>
       <returns>A 24-bit signed integer formed by three bytes beginning at startIndex.</returns>
+      <remarks>
+        <para>You can use this function in-lieu of a System.BitConverter.ToInt24 function.</para>
+        <para>Bytes endian order assumed to match that of currently executing process architecture (little-endian on Intel platforms).</para>
+      </remarks>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="value" /> cannot be null.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
@@ -896,6 +937,11 @@
       <summary>
             Represents a radix value codec for conversion of base-10 integer values to and from other base values.
             </summary>
+      <remarks>
+            The primary use case of this class is to provide compact string encodings of integer values.
+            The encodings produced by this class do not manage arbitrary sized bytes arrays, nor do they
+            include padding - as a result, encodings are not intended to comply with RFC 3548.
+            </remarks>
     </member>
     <member name="M:Gemstone.Numeric.RadixCodec.#ctor(System.String,System.Boolean)">
       <summary>
@@ -993,36 +1039,92 @@
       <summary>
             Gets a radix-16 value (hex) encoding.
             </summary>
+      <remarks>
+            int.MaxValue encodes to "7FFFFFFF", 8 characters
+            int.MinValue encodes to "-80000000", 9 characters
+            uint.MaxValue encodes to "FFFFFFFF", 8 characters
+            long.MaxValue encodes to "7FFFFFFFFFFFFFFF", 16 characters
+            long.MinValue encodes to "-8000000000000000", 17 characters
+            ulong.MaxValue encodes to "FFFFFFFFFFFFFFFF", 16 characters
+            </remarks>
     </member>
     <member name="F:Gemstone.Numeric.RadixCodec.Radix2">
       <summary>
             Gets a radix-2 value (binary) encoding.
             </summary>
+      <remarks>
+            int.MaxValue encodes to "1111111111111111111111111111111", 31 characters
+            int.MinValue encodes to "-10000000000000000000000000000000", 33 characters
+            uint.MaxValue encodes to "11111111111111111111111111111111", 32 characters
+            long.MaxValue encodes to "111111111111111111111111111111111111111111111111111111111111111", 63 characters
+            long.MinValue encodes to "-1000000000000000000000000000000000000000000000000000000000000000", 65 characters
+            ulong.MaxValue encodes to "1111111111111111111111111111111111111111111111111111111111111111", 64 characters
+            </remarks>
     </member>
     <member name="F:Gemstone.Numeric.RadixCodec.Radix32">
       <summary>
             Gets a radix-32 value encoding.
             </summary>
+      <remarks>
+            int.MaxValue encodes to "1VVVVVV", 7 characters
+            int.MinValue encodes to "-2000000", 8 characters
+            uint.MaxValue encodes to "3VVVVVV", 7 characters
+            long.MaxValue encodes to "7VVVVVVVVVVVV", 13 characters
+            long.MinValue encodes to "-8000000000000", 14 characters
+            ulong.MaxValue encodes to "FVVVVVVVVVVVV", 13 characters
+            </remarks>
     </member>
     <member name="F:Gemstone.Numeric.RadixCodec.Radix36">
       <summary>
             Gets a radix-36 value encoding.
             </summary>
+      <remarks>
+            int.MaxValue encodes to "ZIK0ZJ", 6 characters -- ideal int size with reduced digit set
+            int.MinValue encodes to "-ZIK0ZK", 7 characters
+            uint.MaxValue encodes to "1Z141Z3", 7 characters
+            long.MaxValue encodes to "1Y2P0IJ32E8E7", 13 characters
+            long.MinValue encodes to "-1Y2P0IJ32E8E8", 14 characters
+            ulong.MaxValue encodes to "3W5E11264SGSF", 13 characters
+            </remarks>
     </member>
     <member name="F:Gemstone.Numeric.RadixCodec.Radix64">
       <summary>
             Gets a radix-64 value encoding.
             </summary>
+      <remarks>
+            int.MaxValue encodes to "1/////", 6 characters
+            int.MinValue encodes to "-200000", 7 characters
+            uint.MaxValue encodes to "3/////", 6 characters
+            long.MaxValue encodes to "7//////////", 11 characters
+            long.MinValue encodes to "-80000000000", 12 characters
+            ulong.MaxValue encodes to "F//////////", 11 characters
+            </remarks>
     </member>
     <member name="F:Gemstone.Numeric.RadixCodec.Radix8">
       <summary>
             Gets a radix-8 value (octal) encoding.
             </summary>
+      <remarks>
+            int.MaxValue encodes to "17777777777", 11 characters
+            int.MinValue encodes to "-20000000000", 12 characters
+            uint.MaxValue encodes to "37777777777", 11 characters
+            long.MaxValue encodes to "777777777777777777777", 21 characters
+            long.MinValue encodes to "-1000000000000000000000", 23 characters
+            ulong.MaxValue encodes to "1777777777777777777777", 22 characters
+            </remarks>
     </member>
     <member name="F:Gemstone.Numeric.RadixCodec.Radix86">
       <summary>
             Gets a radix-86 value encoding.
             </summary>
+      <remarks>
+            int.MaxValue encodes to "$S2Jx", 5 characters -- base 86 reduces int size to 5
+            int.MinValue encodes to "-$S2Jy", 6 characters
+            uint.MaxValue encodes to "1qu4dh", 6 characters
+            long.MaxValue encodes to "1X2qL^UmlIt", 11 characters
+            long.MinValue encodes to "-1X2qL^UmlIu", 12 characters
+            ulong.MaxValue encodes to "2&amp;5Sh]zLIbZ", 11 characters
+            </remarks>
     </member>
     <member name="M:Gemstone.Numeric.RadixCodec.TryDecode(System.String,Gemstone.Numeric.Int24@)">
       <summary>
@@ -1098,6 +1200,27 @@
     </member>
     <member name="T:Gemstone.Numeric.UInt24">
       <summary>Represents a 3-byte, 24-bit unsigned integer.</summary>
+      <remarks>
+        <para>
+            This class behaves like most other intrinsic unsigned integers but allows a 3-byte, 24-bit integer implementation
+            that is often found in many digital-signal processing arenas and different kinds of protocol parsing.  An unsigned
+            24-bit integer is typically used to save storage space on disk where its value range of 0 to 16777215 is sufficient,
+            but the unsigned Int16 value range of 0 to 65535 is too small.
+            </para>
+        <para>
+            This structure uses an UInt32 internally for storage and most other common expected integer functionality, so using
+            a 24-bit integer will not save memory.  However, if the 24-bit unsigned integer range (0 to 16777215) suits your
+            data needs you can save disk space by only storing the three bytes that this integer actually consumes.  You can do
+            this by calling the UInt24.GetBytes function to return a three byte binary array that can be serialized to the desired
+            destination and then calling the UInt24.GetValue function to restore the UInt24 value from those three bytes.
+            </para>
+        <para>
+            All the standard operators for the UInt24 have been fully defined for use with both UInt24 and UInt32 unsigned integers;
+            you should find that without the exception UInt24 can be compared and numerically calculated with an UInt24 or UInt32.
+            Necessary casting should be minimal and typical use should be very simple - just as if you are using any other native
+            unsigned integer.
+            </para>
+      </remarks>
     </member>
     <member name="M:Gemstone.Numeric.UInt24.#ctor(Gemstone.Numeric.UInt24)">
       <summary>Creates 24-bit unsigned integer from an existing 24-bit unsigned integer.</summary>
@@ -1107,6 +1230,10 @@
       <summary>Creates 24-bit unsigned integer from three bytes at a specified position in a byte array.</summary>
       <param name="value">An array of bytes.</param>
       <param name="startIndex">The starting position within <paramref name="value" />.</param>
+      <remarks>
+        <para>You can use this constructor in-lieu of a System.BitConverter.ToUInt24 function.</para>
+        <para>Bytes endian order assumed to match that of currently executing process architecture (little-endian on Intel platforms).</para>
+      </remarks>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="value" /> cannot be null.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
@@ -1189,11 +1316,19 @@
     <member name="M:Gemstone.Numeric.UInt24.GetBytes">
       <summary>Returns the UInt24 value as an array of three bytes.</summary>
       <returns>An array of bytes with length 3.</returns>
+      <remarks>
+        <para>You can use this function in-lieu of a System.BitConverter.GetBytes function.</para>
+        <para>Bytes will be returned in endian order of currently executing process architecture (little-endian on Intel platforms).</para>
+      </remarks>
     </member>
     <member name="M:Gemstone.Numeric.UInt24.GetBytes(Gemstone.Numeric.UInt24)">
       <summary>Returns the specified UInt24 value as an array of three bytes.</summary>
       <param name="value">UInt24 value to convert to bytes.</param>
       <returns>An array of bytes with length 3.</returns>
+      <remarks>
+        <para>You can use this function in-lieu of a System.BitConverter.GetBytes(UInt24) function.</para>
+        <para>Bytes will be returned in endian order of currently executing process architecture (little-endian on Intel platforms).</para>
+      </remarks>
     </member>
     <member name="M:Gemstone.Numeric.UInt24.GetHashCode">
       <summary>
@@ -1208,12 +1343,20 @@
             Returns the System.TypeCode for value type System.UInt32 (there is no defined type code for an UInt24).
             </summary>
       <returns>The enumerated constant, System.TypeCode.UInt32.</returns>
+      <remarks>
+            There is no defined UInt24 type code and since an UInt24 will easily fit inside an UInt32, the
+            UInt32 type code is returned.
+            </remarks>
     </member>
     <member name="M:Gemstone.Numeric.UInt24.GetValue(System.Byte[],System.Int32)">
       <summary>Returns a 24-bit unsigned integer from three bytes at a specified position in a byte array.</summary>
       <param name="value">An array of bytes.</param>
       <param name="startIndex">The starting position within value.</param>
       <returns>A 24-bit unsigned integer formed by three bytes beginning at startIndex.</returns>
+      <remarks>
+        <para>You can use this function in-lieu of a System.BitConverter.ToUInt24 function.</para>
+        <para>Bytes endian order assumed to match that of currently executing process architecture (little-endian on Intel platforms).</para>
+      </remarks>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="value" /> cannot be null.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
@@ -2313,6 +2456,14 @@
       <param name="minimum">The minimum value of the range.</param>
       <param name="range">The size of the range.</param>
       <returns>The given value wrapped to the given range.</returns>
+      <remarks>
+            This method wraps the given value based on the assumption that
+            for every pair of values x and y where x-y=range, the values are
+            equivalent. This is probably most widely understood in terms of
+            angles, where 0, 360, 720, etc. are all equivalent angles. If
+            you wanted to wrap an angle such that it is between 120 and 480,
+            for instance, you could call Euclidean.Wrap(angle, 120, 360).
+            </remarks>
     </member>
     <member name="T:Gemstone.Numeric.Analysis.GaussianDistribution">
       <summary>
@@ -2790,6 +2941,7 @@
       <param name="phasor1">Left hand operand.</param>
       <param name="phasor2">Right hand operand.</param>
       <returns>ComplexNumber representing the result of the addition operation.</returns>
+      <remarks>Resultant phasor will have <see cref="F:Gemstone.Numeric.EE.Phasor.Type" /> of left hand operand, <paramref name="phasor1" />.</remarks>
     </member>
     <member name="M:Gemstone.Numeric.EE.Phasor.op_Division(Gemstone.Numeric.EE.Phasor,Gemstone.Numeric.EE.Phasor)">
       <summary>
@@ -2798,6 +2950,7 @@
       <param name="phasor1">Left hand operand.</param>
       <param name="phasor2">Right hand operand.</param>
       <returns>ComplexNumber representing the result of the division operation.</returns>
+      <remarks>Resultant phasor will have <see cref="F:Gemstone.Numeric.EE.Phasor.Type" /> of left hand operand, <paramref name="phasor1" />.</remarks>
     </member>
     <member name="M:Gemstone.Numeric.EE.Phasor.op_Equality(Gemstone.Numeric.EE.Phasor,Gemstone.Numeric.EE.Phasor)">
       <summary>
@@ -2837,6 +2990,7 @@
       <param name="phasor1">Left hand operand.</param>
       <param name="phasor2">Right hand operand.</param>
       <returns>ComplexNumber representing the result of the multiplication operation.</returns>
+      <remarks>Resultant phasor will have <see cref="F:Gemstone.Numeric.EE.Phasor.Type" /> of left hand operand, <paramref name="phasor1" />.</remarks>
     </member>
     <member name="M:Gemstone.Numeric.EE.Phasor.op_Subtraction(Gemstone.Numeric.EE.Phasor,Gemstone.Numeric.EE.Phasor)">
       <summary>
@@ -2845,6 +2999,7 @@
       <param name="phasor1">Left hand operand.</param>
       <param name="phasor2">Right hand operand.</param>
       <returns>ComplexNumber representing the result of the subtraction operation.</returns>
+      <remarks>Resultant phasor will have <see cref="F:Gemstone.Numeric.EE.Phasor.Type" /> of left hand operand, <paramref name="phasor1" />.</remarks>
     </member>
     <member name="M:Gemstone.Numeric.EE.Phasor.op_UnaryNegation(Gemstone.Numeric.EE.Phasor)">
       <summary>
@@ -2898,6 +3053,17 @@
       <summary>
             Fundamental signal type enumeration for common EE measurements that represents a kind of signal, not an explicit type.
             </summary>
+      <remarks>
+        <para>
+            This enumeration represents the basic type of a signal used to suffix a formatted signal
+            reference. When used in context along with an optional index the fundamental signal type
+            will identify a signal's location within a frame of data (see <see cref="T:Gemstone.Numeric.EE.SignalReference" />).
+            </para>
+        <para>
+            Contrast this to the <see cref="T:Gemstone.Numeric.EE.SignalType" /> enumeration which further defines an explicit
+            type for a signal (e.g., a voltage or current type for an angle).
+            </para>
+      </remarks>
     </member>
     <member name="F:Gemstone.Numeric.EE.SignalKind.Angle">
       <summary>
@@ -3126,6 +3292,15 @@
       <summary>
             Fundamental signal type enumeration for common EE measurements that represents an explicit type of signal.
             </summary>
+      <remarks>
+        <para>
+            This enumeration represents the explicit type of a signal that a value represents.
+            </para>
+        <para>
+            Contrast this to the <see cref="T:Gemstone.Numeric.EE.SignalKind" /> enumeration which only defines an
+            abstract type for a signal (e.g., simply a phase or an angle).
+            </para>
+      </remarks>
     </member>
     <member name="F:Gemstone.Numeric.EE.SignalType.IPHM">
       <summary>
@@ -3353,6 +3528,11 @@
       <param name="value">Value used for bit-rotation.</param>
       <param name="rotations">Number of rotations to perform.</param>
       <returns>Value that has its bits rotated to the right the specified number of times.</returns>
+      <remarks>
+            Actual rotation direction is from a big-endian perspective - this is an artifact of the native
+            .NET bit shift operators. As a result bits may actually appear to rotate right on little-endian
+            architectures.
+            </remarks>
     </member>
     <member name="M:Gemstone.Numeric.Int24Extensions.BitExtensions.BitRotR(Gemstone.Numeric.Int24,System.Int32)">
       <summary>
@@ -3361,6 +3541,11 @@
       <param name="value">Value used for bit-rotation.</param>
       <param name="rotations">Number of rotations to perform.</param>
       <returns>Value that has its bits rotated to the right the specified number of times.</returns>
+      <remarks>
+            Actual rotation direction is from a big-endian perspective - this is an artifact of the native
+            .NET bit shift operators. As a result bits may actually appear to rotate left on little-endian
+            architectures.
+            </remarks>
     </member>
     <member name="M:Gemstone.Numeric.Int24Extensions.BitExtensions.CheckBits(Gemstone.Numeric.Int24,Gemstone.Bits)">
       <summary>
@@ -3566,6 +3751,9 @@
             Represents a function for calculating values
             at given coordinates based on sparse data sets.
             </summary>
+      <remarks>
+            Usage is similar to the <see cref="T:Gemstone.Numeric.Interpolation.PiecewiseLinearFunction" /> class.
+            </remarks>
     </member>
     <member name="M:Gemstone.Numeric.Interpolation.InverseDistanceWeightingFunction.#ctor">
       <summary>
@@ -3636,6 +3824,7 @@
             </summary>
       <param name="power">The power applied to the inverse of the distance.</param>
       <returns>A reference to the inverse distance weighting function.</returns>
+      <remarks>Larger values increase the speed of decay such that a known value affects a smaller area.</remarks>
     </member>
     <member name="M:Gemstone.Numeric.Interpolation.InverseDistanceWeightingFunction.SetValues(System.Double[])">
       <summary>
@@ -3678,6 +3867,30 @@
             Represents a piecewise linear function for
             calculating values between pivot points.
             </summary>
+      <remarks>
+        <para>
+            The conversion function returned by this class uses a
+            binary search algorithm to find the appropriate line segment
+            to use for the calculation. Therefore, the domain must
+            be specified either in increasing or decreasing order.
+            </para>
+        <para>
+            Here is an example of how to use this class.
+            </para>
+        <code language="cs">
+            Func&lt;double, double&gt; piecewiseLinearFunc = new PiecewiseLinearFunction()
+                .SetDomain(-1, 0, 1)
+                .SetRange(0, 1, 0);
+                
+            Console.WriteLine(piecewiseLinearFunc(-10));   // -9
+            Console.WriteLine(piecewiseLinearFunc(-1));    // 0 
+            Console.WriteLine(piecewiseLinearFunc(-0.5));  // 0.5
+            Console.WriteLine(piecewiseLinearFunc(0));     // 1
+            Console.WriteLine(piecewiseLinearFunc(0.5));   // 0.5
+            Console.WriteLine(piecewiseLinearFunc(1));     // 0
+            Console.WriteLine(piecewiseLinearFunc(10));    // -9
+            </code>
+      </remarks>
     </member>
     <member name="M:Gemstone.Numeric.Interpolation.PiecewiseLinearFunction.#ctor">
       <summary>
@@ -3755,6 +3968,10 @@
       <summary>
             The coefficients of each term in the polynomial.
             </summary>
+      <remarks>
+        <para>The array index matches the exponent to which the x-value is raised.</para>
+        <code language="cs">term[i] = Coefficients[i] * Math.Pow(x - XValue, i);</code>
+      </remarks>
     </member>
     <member name="P:Gemstone.Numeric.Interpolation.Spline.XValue">
       <summary>
@@ -4240,6 +4457,11 @@
       <param name="value">Value used for bit-rotation.</param>
       <param name="rotations">Number of rotations to perform.</param>
       <returns>Value that has its bits rotated to the right the specified number of times.</returns>
+      <remarks>
+            Actual rotation direction is from a big-endian perspective - this is an artifact of the native
+            .NET bit shift operators. As a result bits may actually appear to rotate right on little-endian
+            architectures.
+            </remarks>
     </member>
     <member name="M:Gemstone.Numeric.UInt24Extensions.BitExtensions.BitRotR(Gemstone.Numeric.UInt24,System.Int32)">
       <summary>
@@ -4248,6 +4470,11 @@
       <param name="value">Value used for bit-rotation.</param>
       <param name="rotations">Number of rotations to perform.</param>
       <returns>Value that has its bits rotated to the right the specified number of times.</returns>
+      <remarks>
+            Actual rotation direction is from a big-endian perspective - this is an artifact of the native
+            .NET bit shift operators. As a result bits may actually appear to rotate left on little-endian
+            architectures.
+            </remarks>
     </member>
     <member name="M:Gemstone.Numeric.UInt24Extensions.BitExtensions.CheckBits(Gemstone.Numeric.UInt24,Gemstone.Bits)">
       <summary>
@@ -4441,6 +4668,9 @@
             </summary>
       <param name="source">Sequence of <see cref="T:Gemstone.Units.Angle" /> values over which to calculate average.</param>
       <returns>Average of the specified sequence of <see cref="T:Gemstone.Units.Angle" /> values.</returns>
+      <remarks>
+            For Angles that wrap, e.g., between -180 and +180, this algorithm takes the wrapping into account when calculating the average.
+            </remarks>
     </member>
     <member name="M:Gemstone.Numeric.UnitExtensions.UnitExtensions.ToRange(Gemstone.Units.Angle,Gemstone.Units.Angle,System.Boolean)">
       <summary>
@@ -4458,6 +4688,9 @@
             </summary>
       <param name="source">Sequence of <see cref="T:Gemstone.Units.Angle" /> values to unwrap.</param>
       <returns>Unwrapped set of <see cref="T:Gemstone.Units.Angle" /> values.</returns>
+      <remarks>
+            For Angles that wrap, e.g., between -180 and +180, this algorithm unwraps the values to make the values mathematically comparable.
+            </remarks>
     </member>
   </members>
 </doc>
