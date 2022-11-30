@@ -1,7 +1,7 @@
 //******************************************************************************************************
 //  Int24.cs - Gbtc
 //
-//  Copyright © 2012, Grid Protection Alliance.  All Rights Reserved.
+//  Copyright Â© 2012, Grid Protection Alliance.  All Rights Reserved.
 //
 //  Licensed to the Grid Protection Alliance (GPA) under one or more contributor license agreements. See
 //  the NOTICE file distributed with this work for additional information regarding copyright ownership.
@@ -32,7 +32,7 @@
 #region [ Contributor License Agreements ]
 
 /**************************************************************************\
-   Copyright © 2009 - J. Ritchie Carroll
+   Copyright Â© 2009 - J. Ritchie Carroll
    All rights reserved.
   
    Redistribution and use in source and binary forms, with or without
@@ -1477,15 +1477,15 @@ namespace Gemstone.Numeric
 
             if (BitConverter.IsLittleEndian)
             {
-                valueInt = value[0] |
-                           value[1] << 8 |
-                           value[2] << 16;
+                valueInt = value[startIndex] |
+                           value[startIndex + 1] << 8 |
+                           value[startIndex + 2] << 16;
             }
             else
             {
-                valueInt = value[0] << 16 |
-                           value[1] << 8 |
-                           value[2];
+                valueInt = value[startIndex] << 16 |
+                           value[startIndex + 1] << 8 |
+                           value[startIndex + 2];
             }
 
             // Deserialize value
