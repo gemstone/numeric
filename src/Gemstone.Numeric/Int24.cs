@@ -174,7 +174,7 @@ namespace Gemstone.Numeric
         /// <exception cref="ArgumentException">value is not an Int32 or Int24.</exception>
         public int CompareTo(object? value)
         {
-            if (value == null)
+            if (value is null)
                 return 1;
 
             if (value is not int && value is not Int24)

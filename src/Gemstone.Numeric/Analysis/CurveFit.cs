@@ -48,10 +48,10 @@ namespace Gemstone.Numeric.Analysis
         [SuppressMessage("Microsoft.Performance", "CA1814:PreferJaggedArraysOverMultidimensional")]
         public static double[] Compute(int polynomialOrder, IList<double> xValues, IList<double> yValues)
         {
-            if ((object)xValues == null)
+            if ((object)xValues is null)
                 throw new ArgumentNullException(nameof(xValues));
 
-            if ((object)yValues == null)
+            if ((object)yValues is null)
                 throw new ArgumentNullException(nameof(yValues));
 
             if (xValues.Count != yValues.Count)

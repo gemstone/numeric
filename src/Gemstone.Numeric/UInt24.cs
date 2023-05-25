@@ -172,7 +172,7 @@ namespace Gemstone.Numeric
         /// <exception cref="ArgumentException">value is not an UInt32 or UInt24.</exception>
         public int CompareTo(object? value)
         {
-            if (value == null)
+            if (value is null)
                 return 1;
 
             if (value is not uint && value is not UInt24)

@@ -75,7 +75,7 @@ namespace Gemstone.Numeric.Analysis
         /// <returns>The greatest common denominator.</returns>
         public static int GreatestCommonDenominator(this IEnumerable<int> source)
         {
-            if (source == null)
+            if (source is null)
                 throw new ArgumentNullException(nameof(source), "source is null");
 
             return source.Aggregate(GreatestCommonDenominator);
@@ -88,7 +88,7 @@ namespace Gemstone.Numeric.Analysis
         /// <returns>The greatest common denominator.</returns>
         public static int GreatestCommonDenominator(params int[] source)
         {
-            if (source == null)
+            if (source is null)
                 throw new ArgumentNullException(nameof(source), "source is null");
 
             return source.Aggregate(GreatestCommonDenominator);
@@ -112,7 +112,7 @@ namespace Gemstone.Numeric.Analysis
         /// <returns>The greatest common denominator.</returns>
         public static long GreatestCommonDenominator(this IEnumerable<long> source)
         {
-            if (source == null)
+            if (source is null)
                 throw new ArgumentNullException(nameof(source), "source is null");
 
             return source.Aggregate(GreatestCommonDenominator);
@@ -125,7 +125,7 @@ namespace Gemstone.Numeric.Analysis
         /// <returns>The greatest common denominator.</returns>
         public static long GreatestCommonDenominator(params long[] source)
         {
-            if (source == null)
+            if (source is null)
                 throw new ArgumentNullException(nameof(source), "source is null");
 
             return source.Aggregate(GreatestCommonDenominator);
@@ -149,7 +149,7 @@ namespace Gemstone.Numeric.Analysis
         /// <returns>The least common multiple.</returns>
         public static int LeastCommonMultiple(this IEnumerable<int> source)
         {
-            if (source == null)
+            if (source is null)
                 throw new ArgumentNullException(nameof(source), "source is null");
 
             return source.Aggregate(LeastCommonMultiple);
@@ -162,7 +162,7 @@ namespace Gemstone.Numeric.Analysis
         /// <returns>The least common multiple.</returns>
         public static int LeastCommonMultiple(params int[] source)
         {
-            if (source == null)
+            if (source is null)
                 throw new ArgumentNullException(nameof(source), "source is null");
 
             return source.Aggregate(LeastCommonMultiple);
@@ -186,7 +186,7 @@ namespace Gemstone.Numeric.Analysis
         /// <returns>The least common multiple.</returns>
         public static long LeastCommonMultiple(this IEnumerable<long> source)
         {
-            if (source == null)
+            if (source is null)
                 throw new ArgumentNullException(nameof(source), "source is null");
 
             return source.Aggregate(LeastCommonMultiple);
@@ -199,7 +199,7 @@ namespace Gemstone.Numeric.Analysis
         /// <returns>The least common multiple.</returns>
         public static long LeastCommonMultiple(params long[] source)
         {
-            if (source == null)
+            if (source is null)
                 throw new ArgumentNullException(nameof(source), "source is null");
 
             return source.Aggregate(LeastCommonMultiple);
