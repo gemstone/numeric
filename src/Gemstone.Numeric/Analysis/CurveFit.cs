@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Windows;
 using System.Linq;
-using System.Text;
 
 namespace Gemstone.Numeric.Analysis
 {
@@ -45,7 +42,6 @@ namespace Gemstone.Numeric.Analysis
         /// <param name="xValues">A list of <see cref="double"/> x-values.</param>
         /// <param name="yValues">A list of <see cref="double"/> y-values.</param>
         /// <returns>An array of <see cref="double"/> values.</returns>
-        [SuppressMessage("Microsoft.Performance", "CA1814:PreferJaggedArraysOverMultidimensional")]
         public static double[] Compute(int polynomialOrder, IList<double> xValues, IList<double> yValues)
         {
             if ((object)xValues is null)
@@ -69,12 +65,12 @@ namespace Gemstone.Numeric.Analysis
             double[] v = new double[12];
             double[,] b = new double[12, 13];
             double p, divB, fMultB, sigma;
-            int ls, lb, lv, i1, i, j, k, l;
+            int i1, i, j, k, l;
             int pointCount = xValues.Count;
 
-            ls = polynomialOrder * 2;
-            lb = polynomialOrder + 1;
-            lv = polynomialOrder;
+            int ls = polynomialOrder * 2;
+            int lb = polynomialOrder + 1;
+            int lv = polynomialOrder;
             sum[0] = pointCount;
 
             for (i = 0; i < pointCount; i++)
@@ -208,18 +204,6 @@ namespace Gemstone.Numeric.Analysis
             double xxSum = 0;
             double yySum = 0;
 
-            double coeff00;
-            double coeff01;
-            double coeff02;
-            double coeff03;
-
-            double coeff10;
-            double coeff12;
-            double coeff13;
-
-            double coeff20;
-            double coeff23;
-
             for (int i = 0; i < n; i++)
             {
                 double x = xValues[i];
@@ -238,17 +222,17 @@ namespace Gemstone.Numeric.Analysis
                 yySum += y * y;
             }
 
-            coeff00 = zSum;
-            coeff01 = n;
-            coeff02 = xSum;
-            coeff03 = ySum;
+            double coeff00 = zSum;
+            double coeff01 = n;
+            double coeff02 = xSum;
+            double coeff03 = ySum;
 
-            coeff10 = xzSum - (xSum * zSum) / n;
-            coeff12 = xxSum - (xSum * xSum) / n;
-            coeff13 = xySum - (xSum * ySum) / n;
+            double coeff10 = xzSum - (xSum * zSum) / n;
+            double coeff12 = xxSum - (xSum * xSum) / n;
+            double coeff13 = xySum - (xSum * ySum) / n;
 
-            coeff20 = yzSum - (ySum * zSum) / n - (coeff10 * coeff13) / coeff12;
-            coeff23 = yySum - (ySum * ySum) / n - (coeff13 * coeff13) / coeff12;
+            double coeff20 = yzSum - (ySum * zSum) / n - (coeff10 * coeff13) / coeff12;
+            double coeff23 = yySum - (ySum * ySum) / n - (coeff13 * coeff13) / coeff12;
 
             c = coeff20 / coeff23;
             b = (coeff10 - c * coeff13) / coeff12;

@@ -63,12 +63,9 @@
 
 using System;
 using System.ComponentModel;
-using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Runtime.CompilerServices;
 using Gemstone.ArrayExtensions;
-
-#pragma warning disable IDE1006 // Naming Styles
 
 namespace Gemstone.Numeric
 {
@@ -427,12 +424,9 @@ namespace Gemstone.Numeric
         /// This parameter is passed uninitialized.
         /// </param>
         /// <returns>true if s was converted successfully; otherwise, false.</returns>
-        [SuppressMessage("Design", "CA1031:Do not catch general exception types")]
         public static bool TryParse(string s, out UInt24 result)
         {
-            bool parseResponse;
-
-            parseResponse = uint.TryParse(s, out uint parseResult);
+            bool parseResponse = uint.TryParse(s, out uint parseResult);
 
             try
             {
@@ -470,12 +464,9 @@ namespace Gemstone.Numeric
         /// style is not a System.Globalization.NumberStyles value. -or- style is not a combination of
         /// System.Globalization.NumberStyles.AllowHexSpecifier and System.Globalization.NumberStyles.HexNumber values.
         /// </exception>
-        [SuppressMessage("Design", "CA1031:Do not catch general exception types")]
         public static bool TryParse(string s, NumberStyles style, IFormatProvider provider, out UInt24 result)
         {
-            bool parseResponse;
-
-            parseResponse = uint.TryParse(s, style, provider, out uint parseResult);
+            bool parseResponse = uint.TryParse(s, style, provider, out uint parseResult);
 
             try
             {

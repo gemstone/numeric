@@ -24,7 +24,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Gemstone.Numeric.Random
 {
@@ -58,7 +57,7 @@ namespace Gemstone.Numeric.Random
                 if (phis[i] <= -1 || phis[i] >= 1)
                     throw new Exception("Please provide phi values that are -1 < phi < 1.");
                 double ei = NormalGenerator.Next().Value / Math.Sqrt(1 - Math.Pow(phis.Sum(), 2));
-                double priorSum = Priors.Zip(phis, (First, Second) => new { First = First, Second = Second }).Select(x => x.First * x.Second).Sum();
+                double priorSum = Priors.Zip(phis, (First, Second) => new { First, Second }).Select(x => x.First * x.Second).Sum();
                 Priors.Remove(Priors.Last());
                 Priors.Insert(0, ei);
             }
@@ -76,7 +75,7 @@ namespace Gemstone.Numeric.Random
         public AutoregressiveRandomNumber Next()
         {
             double ei = NormalGenerator.Next().Value / Math.Sqrt(1 - Math.Pow(Phis.Sum(), 2));
-            double priorSum = Priors.Zip(Phis, (First, Second) => new { First = First, Second = Second }).Select(x => x.First * x.Second).Sum();
+            double priorSum = Priors.Zip(Phis, (First, Second) => new { First, Second }).Select(x => x.First * x.Second).Sum();
             Priors.Remove(Priors.Last());
             Priors.Insert(0, ei + priorSum);
             return new AutoregressiveRandomNumber(ei + priorSum);
@@ -91,7 +90,7 @@ namespace Gemstone.Numeric.Random
         {
             List<AutoregressiveRandomNumber> list = new();
             for (int i = 0; i < number; i++)
-                list.Add(this.Next());
+                list.Add(Next());
 
             return list;
         }

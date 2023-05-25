@@ -24,7 +24,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Gemstone.Numeric.Random
 {
@@ -67,7 +66,7 @@ namespace Gemstone.Numeric.Random
         public MovingAverageRandomNumber Next()
         {
             double ei = NormalGenerator.Next().Value;
-            double priorSum = Priors.Zip(Lambdas, (First, Second) => new { First = First, Second = Second }).Select(x => x.First * x.Second).Sum();
+            double priorSum = Priors.Zip(Lambdas, (First, Second) => new { First, Second }).Select(x => x.First * x.Second).Sum();
             Priors.Remove(Priors.Last());
             Priors.Insert(0, ei);
             return new MovingAverageRandomNumber(ei + priorSum);
@@ -82,7 +81,7 @@ namespace Gemstone.Numeric.Random
         {
             List<MovingAverageRandomNumber> list = new();
             for (int i = 0; i < number; i++)
-                list.Add(this.Next());
+                list.Add(Next());
 
             return list;
         }

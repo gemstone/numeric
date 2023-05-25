@@ -70,7 +70,7 @@ namespace Gemstone.Numeric.Random
         {
             List<UniformRandomNumber> list = new();
             for (int i = 0; i < number; i++)
-                list.Add(this.Next());
+                list.Add(Next());
 
             return list;
         }

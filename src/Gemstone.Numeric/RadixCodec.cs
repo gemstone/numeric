@@ -22,10 +22,6 @@
 //******************************************************************************************************
 
 using System;
-using System.Diagnostics.CodeAnalysis;
-
-#pragma warning disable IDE1006 // Naming Styles
-#pragma warning disable CA1031 // Do not catch general exception types
 
 namespace Gemstone.Numeric
 {
@@ -168,7 +164,6 @@ namespace Gemstone.Numeric
         /// </summary>
         /// <param name="digits">Digits to use for radix values.</param>
         /// <param name="caseSensitive">Determines if alphabetic radix characters are case sensitive.</param>
-        [SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
         public RadixCodec(string digits, bool caseSensitive)
         {
             if (string.IsNullOrWhiteSpace(digits))

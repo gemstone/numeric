@@ -66,10 +66,9 @@ namespace Gemstone.Numeric.Random
         {
             if (uniform == 0)
                 return 0;
-            else if (uniform > 0)
+            if (uniform > 0)
                 return 1;
-            else
-                return -1;
+            return -1;
         }
 
         private double T(double uniform)

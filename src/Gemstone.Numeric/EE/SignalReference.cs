@@ -24,7 +24,6 @@
 //******************************************************************************************************
 
 using System;
-using System.Diagnostics.CodeAnalysis;
 
 // ReSharper disable NonReadonlyMemberInGetHashCode
 namespace Gemstone.Numeric.EE
@@ -66,7 +65,6 @@ namespace Gemstone.Numeric.EE
         /// Creates a new <see cref="SignalReference"/>.
         /// </summary>
         /// <param name="signal"><see cref="string"/> representation of this <see cref="SignalReference"/>.</param>
-        [SuppressMessage("Microsoft.Usage", "CA1806:DoNotIgnoreMethodResults", Justification = "Failed int.TryParse out value of zero is desirable, bool result is not needed.")]
         public SignalReference(string signal)
         {
             // Signal reference may contain multiple dashes, we're interested in the last one

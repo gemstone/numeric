@@ -172,7 +172,7 @@ namespace Gemstone.Numeric.Interpolation
                 throw new InvalidOperationException($"The number of coordinates must match the number of values. ({xCoordinates.Length} != {values.Length})");
 
             if (xCoordinates.Length == 0)
-                return (x, y) => 0.0D;
+                return (_, _) => 0.0D;
 
             return m_converter ??= (x, y) =>
             {

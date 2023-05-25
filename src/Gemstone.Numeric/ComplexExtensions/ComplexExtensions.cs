@@ -58,7 +58,6 @@ namespace Gemstone.Numeric.ComplexExtensions
             });
 
             var operatorInfo = tokens
-                .Cast<Match>()
                 .Select(token => token.Groups["Operators"].Value)
                 .Select(getOperatorInfo)
                 .ToList();
@@ -111,7 +110,6 @@ namespace Gemstone.Numeric.ComplexExtensions
             });
 
             var numberInfo = tokens
-                .Cast<Match>()
                 .Select(token => token.Groups["Number"].Value)
                 .Select(getNumberInfo)
                 .ToList();

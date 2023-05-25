@@ -577,11 +577,11 @@ namespace Gemstone.Numeric.UnitTests
             {
                 string left = !(complex is { Real: < 0.0D, Imaginary: >= 0.0D })
                     ? $"{complex.Real}"
-                    : $"i";
+                    : "i";
 
                 string right = complex is { Real: < 0.0D, Imaginary: >= 0.0D }
                     ? $"{Math.Abs(complex.Real)}"
-                    : $"i";
+                    : "i";
 
                 string op = complex is { Real: >= 0.0D, Imaginary: >= 0.0D } ? "+" : "-";
                 string expected = $"{left} {op} {right}";
@@ -662,7 +662,7 @@ namespace Gemstone.Numeric.UnitTests
 
                 string right = !(complex is { Real: >= 0.0D, Imaginary: < 0.0D })
                     ? $"{Math.Abs(complex.Real)}"
-                    : $"i";
+                    : "i";
 
                 string op = complex is { Real: >= 0.0D, Imaginary: >= 0.0D } ? "+" : "-";
                 string expected = $"{left} {op} {right}";
