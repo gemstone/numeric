@@ -262,8 +262,8 @@ namespace Gemstone.Numeric.ComplexExtensions
             bool preferSubtraction = flags.AllowSubtraction && flags.PreferSubtraction;
 
             bool realFirst =
-                (!flags.ImaginaryFirst && !(preferSubtraction && complex.Imaginary >= 0.0D && complex.Real < 0.0D)) ||
-                (flags.ImaginaryFirst && preferSubtraction && complex.Real >= 0.0D && complex.Imaginary < 0.0D);
+                (!flags.ImaginaryFirst && !(preferSubtraction && complex is { Imaginary: >= 0.0D, Real: < 0.0D })) ||
+                (flags.ImaginaryFirst && preferSubtraction && complex is { Real: >= 0.0D, Imaginary: < 0.0D });
 
             string GetImaginaryTerm()
             {

@@ -35,7 +35,7 @@ namespace Gemstone.Numeric.Random
         /// </summary>
         /// <param name="value"> <see cref="double"/> used to set Value.</param>
         public UniformRandomNumber(double value) {
-            if (value >= 0 && value <= 1)
+            if (value is >= 0 and <= 1)
                 Value = value;
             else
                 throw new Exception("Unable to create Uniform random number because the value lies outside the distribution");

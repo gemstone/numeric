@@ -534,15 +534,15 @@ namespace Gemstone.Numeric.UnitTests
 
             foreach (Complex complex in RealImaginary)
             {
-                string left = !(complex.Real < 0.0D && complex.Imaginary >= 0.0D)
+                string left = !(complex is { Real: < 0.0D, Imaginary: >= 0.0D })
                     ? $"{complex.Real}"
                     : $"{complex.Imaginary}i";
 
-                string right = (complex.Real < 0.0D && complex.Imaginary >= 0.0D)
+                string right = complex is { Real: < 0.0D, Imaginary: >= 0.0D }
                     ? $"{Math.Abs(complex.Real)}"
                     : $"{Math.Abs(complex.Imaginary)}i";
 
-                string op = (complex.Real >= 0.0D && complex.Imaginary >= 0.0D) ? "+" : "-";
+                string op = complex is { Real: >= 0.0D, Imaginary: >= 0.0D } ? "+" : "-";
                 string expected = $"{left} {op} {right}";
                 string notation = complex.ToComplexNotation("", 'i', options);
                 Assert.AreEqual(expected, notation);
@@ -575,15 +575,15 @@ namespace Gemstone.Numeric.UnitTests
 
             foreach (Complex complex in ImaginaryOne)
             {
-                string left = !(complex.Real < 0.0D && complex.Imaginary >= 0.0D)
+                string left = !(complex is { Real: < 0.0D, Imaginary: >= 0.0D })
                     ? $"{complex.Real}"
                     : $"i";
 
-                string right = (complex.Real < 0.0D && complex.Imaginary >= 0.0D)
+                string right = complex is { Real: < 0.0D, Imaginary: >= 0.0D }
                     ? $"{Math.Abs(complex.Real)}"
                     : $"i";
 
-                string op = (complex.Real >= 0.0D && complex.Imaginary >= 0.0D) ? "+" : "-";
+                string op = complex is { Real: >= 0.0D, Imaginary: >= 0.0D } ? "+" : "-";
                 string expected = $"{left} {op} {right}";
                 string notation = complex.ToComplexNotation("", 'i', options);
                 Assert.AreEqual(expected, notation);
@@ -613,15 +613,15 @@ namespace Gemstone.Numeric.UnitTests
 
             foreach (Complex complex in RealImaginary)
             {
-                string left = (complex.Real >= 0.0D && complex.Imaginary < 0.0D)
+                string left = complex is { Real: >= 0.0D, Imaginary: < 0.0D }
                     ? $"{complex.Real}"
                     : $"{complex.Imaginary}i";
 
-                string right = !(complex.Real >= 0.0D && complex.Imaginary < 0.0D)
+                string right = !(complex is { Real: >= 0.0D, Imaginary: < 0.0D })
                     ? $"{Math.Abs(complex.Real)}"
                     : $"{Math.Abs(complex.Imaginary)}i";
 
-                string op = (complex.Real >= 0.0D && complex.Imaginary >= 0.0D) ? "+" : "-";
+                string op = complex is { Real: >= 0.0D, Imaginary: >= 0.0D } ? "+" : "-";
                 string expected = $"{left} {op} {right}";
                 string notation = complex.ToComplexNotation("", 'i', options);
                 Assert.AreEqual(expected, notation);
@@ -656,15 +656,15 @@ namespace Gemstone.Numeric.UnitTests
             {
                 string sign = complex.Imaginary >= 0.0D ? "" : "-";
 
-                string left = (complex.Real >= 0.0D && complex.Imaginary < 0.0D)
+                string left = complex is { Real: >= 0.0D, Imaginary: < 0.0D }
                     ? $"{complex.Real}"
                     : $"{sign}i";
 
-                string right = !(complex.Real >= 0.0D && complex.Imaginary < 0.0D)
+                string right = !(complex is { Real: >= 0.0D, Imaginary: < 0.0D })
                     ? $"{Math.Abs(complex.Real)}"
                     : $"i";
 
-                string op = (complex.Real >= 0.0D && complex.Imaginary >= 0.0D) ? "+" : "-";
+                string op = complex is { Real: >= 0.0D, Imaginary: >= 0.0D } ? "+" : "-";
                 string expected = $"{left} {op} {right}";
                 string notation = complex.ToComplexNotation("", 'i', options);
                 Assert.AreEqual(expected, notation);
