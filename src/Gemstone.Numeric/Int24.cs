@@ -222,7 +222,7 @@ namespace Gemstone.Numeric
         /// </returns>
         public override bool Equals(object? obj)
         {
-            if (obj is int || obj is Int24)
+            if (obj is int or Int24)
                 return Equals((int)obj);
 
             return false;
@@ -1485,7 +1485,7 @@ namespace Gemstone.Numeric
 
         private static void ValidateNumericRange(int value)
         {
-            if (value > MaxValue32 + 1 || value < MinValue32)
+            if (value is > MaxValue32 + 1 or < MinValue32)
                 throw new OverflowException($"Value of {value} will not fit in a 24-bit signed integer");
         }
 

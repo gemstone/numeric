@@ -220,7 +220,7 @@ namespace Gemstone.Numeric
         /// </returns>
         public override bool Equals(object? obj)
         {
-            if (obj is uint || obj is UInt24)
+            if (obj is uint or UInt24)
                 return Equals((uint)obj);
 
             return false;
