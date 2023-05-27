@@ -31,8 +31,8 @@ namespace Gemstone.Numeric.Analysis
         /// <returns>An array of <see cref="double"/> values.</returns>
         public static double[] Compute(int polynomialOrder, IEnumerable<Point> values)
         {
-           
-            return Compute(polynomialOrder, values.Select(point => point.X).ToList(), values.Select(point => point.Y).ToList());
+            Point[] source = values.ToArray();
+            return Compute(polynomialOrder, source.Select(point => point.X).ToList(), source.Select(point => point.Y).ToList());
         }
 
         /// <summary>
@@ -44,10 +44,10 @@ namespace Gemstone.Numeric.Analysis
         /// <returns>An array of <see cref="double"/> values.</returns>
         public static double[] Compute(int polynomialOrder, IList<double> xValues, IList<double> yValues)
         {
-            if ((object)xValues is null)
+            if (xValues is null)
                 throw new ArgumentNullException(nameof(xValues));
 
-            if ((object)yValues is null)
+            if (yValues is null)
                 throw new ArgumentNullException(nameof(yValues));
 
             if (xValues.Count != yValues.Count)
@@ -56,7 +56,7 @@ namespace Gemstone.Numeric.Analysis
             if (!(xValues.Count >= polynomialOrder + 1))
                 throw new ArgumentException("Point count must be greater than requested polynomial order");
 
-            if (!(polynomialOrder >= 1) && (polynomialOrder <= 7))
+            if (polynomialOrder is < 1 or > 7)
                 throw new ArgumentOutOfRangeException(nameof(polynomialOrder), "Polynomial order must be between 1 and 7");
 
             // Curve fit function (courtesy of Brian Fox from DatAWare client code)
