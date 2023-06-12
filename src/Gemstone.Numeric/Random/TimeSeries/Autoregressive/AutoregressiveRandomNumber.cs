@@ -21,25 +21,24 @@
 //
 //******************************************************************************************************
 
-namespace Gemstone.Numeric.Random
+namespace Gemstone.Numeric.Random.TimeSeries.Autoregressive;
+
+/// <summary>
+/// Pseudo-Random Autoregressive generated Random number
+/// </summary>
+public class AutoregressiveRandomNumber
 {
     /// <summary>
-    /// Pseudo-Random Autoregressive generated Random number
+    /// Constructor to set Value of random variate. 
     /// </summary>
-    public class AutoregressiveRandomNumber
+    /// <param name="value"><see cref="double"/> used to set Value.</param>
+    public AutoregressiveRandomNumber(double value)
     {
-        /// <summary>
-        /// Constructor to set Value of random variate. 
-        /// </summary>
-        /// <param name="value"><see cref="double"/> used to set Value.</param>
-        public AutoregressiveRandomNumber(double value)
-        {
-            Value = value;
-        }
-        /// <summary>
-        /// Value of random variate
-        /// </summary>
-        public double Value { get; }
-
+        Value = value;
     }
+    /// <summary>
+    /// Value of random variate
+    /// </summary>
+    public double Value { get; }
+
 }

@@ -27,98 +27,97 @@
 
 using System;
 
-namespace Gemstone.Numeric.Analysis
+namespace Gemstone.Numeric.Analysis;
+
+/// <summary>
+/// Implements a BoxMuller method for generating statistically normal random numbers.
+/// </summary>
+public class GaussianDistribution
 {
+    #region [ Members ]
+
+    // Fields
+    private readonly System.Random m_random;
+    private readonly double m_mean;
+    private readonly double m_standardDeviation;
+    private readonly double m_min;
+    private readonly double m_max;
+    private bool m_z1IsValid;
+    private double m_z1;
+
+    #endregion
+
+    #region [ Constructors ]
+
     /// <summary>
-    /// Implements a BoxMuller method for generating statistically normal random numbers.
+    /// Creates a <see cref="GaussianDistribution"/>
     /// </summary>
-    public class GaussianDistribution
+    /// <param name="mean">the mean of the distribution</param>
+    /// <param name="standardDeviation">the standard deviation</param>
+    /// <param name="min">a clipping boundary</param>
+    /// <param name="max">a clipping boundary</param>
+    public GaussianDistribution(double mean, double standardDeviation, double min, double max)
     {
-        #region [ Members ]
+        standardDeviation = Math.Abs(standardDeviation);
 
-        // Fields
-        private readonly System.Random m_random;
-        private readonly double m_mean;
-        private readonly double m_standardDeviation;
-        private readonly double m_min;
-        private readonly double m_max;
-        private bool m_z1IsValid;
-        private double m_z1;
+        //These limits are set to prevent excessive looping when a value is calculated outside this range.
+        if (min > mean - 0.25 * standardDeviation)
+            throw new ArgumentOutOfRangeException(nameof(min), "must be less than 1/4 standard deviations away from the mean");
 
-        #endregion
+        if (max < mean + 0.25 * standardDeviation)
+            throw new ArgumentOutOfRangeException(nameof(max), "must be greater than 1/4 standard deviations away from the mean");
 
-        #region [ Constructors ]
+        m_random = new System.Random(Guid.NewGuid().GetHashCode());
+        m_mean = mean;
+        m_standardDeviation = standardDeviation;
+        m_min = min;
+        m_max = max;
+    }
 
-        /// <summary>
-        /// Creates a <see cref="GaussianDistribution"/>
-        /// </summary>
-        /// <param name="mean">the mean of the distribution</param>
-        /// <param name="standardDeviation">the standard deviation</param>
-        /// <param name="min">a clipping boundary</param>
-        /// <param name="max">a clipping boundary</param>
-        public GaussianDistribution(double mean, double standardDeviation, double min, double max)
-        {
-            standardDeviation = Math.Abs(standardDeviation);
+    #endregion
 
-            //These limits are set to prevent excessive looping when a value is calculated outside this range.
-            if (min > mean - 0.25 * standardDeviation)
-                throw new ArgumentOutOfRangeException(nameof(min), "must be less than 1/4 standard deviations away from the mean");
+    #region [ Methods ]
 
-            if (max < mean + 0.25 * standardDeviation)
-                throw new ArgumentOutOfRangeException(nameof(max), "must be greater than 1/4 standard deviations away from the mean");
-
-            m_random = new System.Random(Guid.NewGuid().GetHashCode());
-            m_mean = mean;
-            m_standardDeviation = standardDeviation;
-            m_min = min;
-            m_max = max;
-        }
-
-        #endregion
-
-        #region [ Methods ]
-
-        /// <summary>
-        /// Gets the next random value.
-        /// </summary>
-        /// <returns></returns>
-        public double Next()
-        {
-            double value;
+    /// <summary>
+    /// Gets the next random value.
+    /// </summary>
+    /// <returns></returns>
+    public double Next()
+    {
+        double value;
 
         TryAgain:
 
-            if (m_z1IsValid)
-            {
-                m_z1IsValid = false;
-                value = m_mean + m_standardDeviation * m_z1;
-            }
-            else
-            {
-                double u1 = m_random.NextDouble();
-                double u2 = m_random.NextDouble();
+        if (m_z1IsValid)
+        {
+            m_z1IsValid = false;
+            value = m_mean + m_standardDeviation * m_z1;
+        }
+        else
+        {
+            double u1 = m_random.NextDouble();
+            double u2 = m_random.NextDouble();
 
-                if (u1 < 1e-100)
-                    u1 = 1e-100;
+            if (u1 < 1e-100)
+                u1 = 1e-100;
 
-                if (u2 < 1e-100)
-                    u1 = 1e-100;
+            if (u2 < 1e-100)
+                u1 = 1e-100;
 
-                double sqrt = Math.Sqrt(-2 * Math.Log(u1));
-                double z0 = sqrt * Math.Sin(2 * Math.PI * u2);
+            double sqrt = Math.Sqrt(-2 * Math.Log(u1));
+            double z0 = sqrt * Math.Sin(2 * Math.PI * u2);
 
-                m_z1 = sqrt * Math.Cos(2 * Math.PI * u2);
-                m_z1IsValid = true;
+            m_z1 = sqrt * Math.Cos(2 * Math.PI * u2);
+            m_z1IsValid = true;
 
-                value = m_mean + m_standardDeviation * z0;
-            }
-
-            if (value < m_min || value > m_max)
-                goto TryAgain;
-
-            return value;
+            value = m_mean + m_standardDeviation * z0;
         }
 
-        #endregion
+        if (value < m_min || value > m_max)
+            goto TryAgain;
+
+        return value;
     }
+
+    #endregion
 }

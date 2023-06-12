@@ -59,220 +59,219 @@
 
 #endregion
 
-namespace Gemstone.Numeric.UInt24Extensions
+namespace Gemstone.Numeric.UInt24Extensions;
+
+/// <summary>
+/// Defines extension methods related to <see cref="UInt24"/> bit operations.
+/// </summary>
+public static class BitExtensions
 {
     /// <summary>
-    /// Defines extension methods related to <see cref="UInt24"/> bit operations.
+    /// Returns value with specified <paramref name="bits"/> set.
     /// </summary>
-    public static class BitExtensions
+    /// <param name="source">Value source.</param>
+    /// <param name="bits"><see cref="Bits"/> to set.</param>
+    /// <returns><see cref="UInt24"/> value with specified <paramref name="bits"/> set.</returns>
+    public static UInt24 SetBits(this UInt24 source, Bits bits)
     {
-        /// <summary>
-        /// Returns value with specified <paramref name="bits"/> set.
-        /// </summary>
-        /// <param name="source">Value source.</param>
-        /// <param name="bits"><see cref="Bits"/> to set.</param>
-        /// <returns><see cref="UInt24"/> value with specified <paramref name="bits"/> set.</returns>
-        public static UInt24 SetBits(this UInt24 source, Bits bits)
+        return SetBits(source, (UInt24)bits);
+    }
+
+    /// <summary>
+    /// Returns value with specified <paramref name="bits"/> set.
+    /// </summary>
+    /// <param name="source">Value source.</param>
+    /// <param name="bits">Bit-mask of the bits to set.</param>
+    /// <returns><see cref="UInt24"/> value with specified <paramref name="bits"/> set.</returns>
+    public static UInt24 SetBits(this UInt24 source, UInt24 bits)
+    {
+        return source | bits;
+    }
+
+    /// <summary>
+    /// Returns value with specified <paramref name="bits"/> cleared.
+    /// </summary>
+    /// <param name="source">Value source.</param>
+    /// <param name="bits"><see cref="Bits"/> to clear.</param>
+    /// <returns><see cref="UInt24"/> value with specified <paramref name="bits"/> cleared.</returns>
+    public static UInt24 ClearBits(this UInt24 source, Bits bits)
+    {
+        return ClearBits(source, (UInt24)bits);
+    }
+
+    /// <summary>
+    /// Returns value with specified <paramref name="bits"/> cleared.
+    /// </summary>
+    /// <param name="source">Value source.</param>
+    /// <param name="bits">Bit-mask of the bits to clear.</param>
+    /// <returns><see cref="UInt24"/> value with specified <paramref name="bits"/> cleared.</returns>
+    public static UInt24 ClearBits(this UInt24 source, UInt24 bits)
+    {
+        return source & ~bits;
+    }
+
+    /// <summary>
+    /// Determines if specified <paramref name="bits"/> are set.
+    /// </summary>
+    /// <param name="source">Value source.</param>
+    /// <param name="bits"><see cref="Bits"/> to check.</param>
+    /// <returns>true if specified <paramref name="bits"/> are set in <paramref name="source"/> value; otherwise false.</returns>
+    public static bool CheckBits(this UInt24 source, Bits bits)
+    {
+        return CheckBits(source, (UInt24)bits);
+    }
+
+    /// <summary>
+    /// Determines if specified <paramref name="bits"/> are set.
+    /// </summary>
+    /// <param name="source">Value source.</param>
+    /// <param name="bits">Bit-mask of the bits to check.</param>
+    /// <returns>true if specified <paramref name="bits"/> are set in <paramref name="source"/> value; otherwise false.</returns>
+    public static bool CheckBits(this UInt24 source, UInt24 bits)
+    {
+        return CheckBits(source, bits, true);
+    }
+
+    /// <summary>
+    /// Determines if specified <paramref name="bits"/> are set.
+    /// </summary>
+    /// <param name="source">Value source.</param>
+    /// <param name="bits"><see cref="Bits"/> to check.</param>
+    /// <param name="allBits">true to check if all <paramref name="bits"/> are set; otherwise false.</param>
+    /// <returns>true if specified <paramref name="bits"/> are set in <paramref name="source"/> value; otherwise false.</returns>
+    public static bool CheckBits(this UInt24 source, Bits bits, bool allBits)
+    {
+        return CheckBits(source, (UInt24)bits, allBits);
+    }
+
+    /// <summary>
+    /// Determines if specified <paramref name="bits"/> are set.
+    /// </summary>
+    /// <param name="source">Value source.</param>
+    /// <param name="bits">Bit-mask of the bits to check.</param>
+    /// <param name="allBits">true to check if all <paramref name="bits"/> are set; otherwise false.</param>
+    /// <returns>true if specified <paramref name="bits"/> are set in <paramref name="source"/> value; otherwise false.</returns>
+    public static bool CheckBits(this UInt24 source, UInt24 bits, bool allBits)
+    {
+        return allBits ? (source & bits) == bits : (source & bits) != 0;
+    }
+
+    /// <summary>
+    /// Returns value with specified <paramref name="bits"/> toggled.
+    /// </summary>
+    /// <param name="source">Value source.</param>
+    /// <param name="bits"><see cref="Bits"/> to toggle.</param>
+    /// <returns><see cref="UInt24"/> value with specified <paramref name="bits"/> toggled.</returns>
+    public static UInt24 ToggleBits(this UInt24 source, Bits bits)
+    {
+        return ToggleBits(source, (UInt24)bits);
+    }
+
+    /// <summary>
+    /// Returns value with specified <paramref name="bits"/> toggled.
+    /// </summary>
+    /// <param name="source">Value source.</param>
+    /// <param name="bits">Bit-mask of the bits to toggle.</param>
+    /// <returns><see cref="UInt24"/> value with specified <paramref name="bits"/> toggled.</returns>
+    public static UInt24 ToggleBits(this UInt24 source, UInt24 bits)
+    {
+        return source ^ bits;
+    }
+
+    /// <summary>
+    /// Returns value stored in the bits represented by the specified <paramref name="bitmask"/>.
+    /// </summary>
+    /// <param name="source">Value source.</param>
+    /// <param name="bitmask"><see cref="Bits"/> that make-up the bit-mask.</param>
+    /// <returns><see cref="UInt24"/> value.</returns>
+    public static UInt24 GetMaskedValue(this UInt24 source, Bits bitmask)
+    {
+        return GetMaskedValue(source, (UInt24)bitmask);
+    }
+
+    /// <summary>
+    /// Returns value stored in the bits represented by the specified <paramref name="bitmask"/>.
+    /// </summary>
+    /// <param name="source">Value source.</param>
+    /// <param name="bitmask">Bit-mask of the bits involved.</param>
+    /// <returns><see cref="UInt24"/> value.</returns>
+    public static UInt24 GetMaskedValue(this UInt24 source, UInt24 bitmask)
+    {
+        return source & bitmask;
+    }
+
+    /// <summary>
+    /// Returns value after setting a new <paramref name="value"/> for the bits specified by the <paramref name="bitmask"/>.
+    /// </summary>
+    /// <param name="source">Value source.</param>
+    /// <param name="bitmask"><see cref="Bits"/> that make-up the bit-mask.</param>
+    /// <param name="value">New value.</param>
+    /// <returns><see cref="UInt24"/> value.</returns>
+    public static UInt24 SetMaskedValue(this UInt24 source, Bits bitmask, UInt24 value)
+    {
+        return SetMaskedValue(source, (UInt24)bitmask, value);
+    }
+
+    /// <summary>
+    /// Returns value after setting a new <paramref name="value"/> for the bits specified by the <paramref name="bitmask"/>.
+    /// </summary>
+    /// <param name="source">Value source.</param>
+    /// <param name="bitmask">Bit-mask of the bits involved.</param>
+    /// <param name="value">New value.</param>
+    /// <returns><see cref="UInt24"/> value.</returns>
+    public static UInt24 SetMaskedValue(this UInt24 source, UInt24 bitmask, UInt24 value)
+    {
+        return (source & ~bitmask) | value;
+    }
+
+    /// <summary>
+    /// Performs rightwise bit-rotation for the specified number of rotations.
+    /// </summary>
+    /// <param name="value">Value used for bit-rotation.</param>
+    /// <param name="rotations">Number of rotations to perform.</param>
+    /// <returns>Value that has its bits rotated to the right the specified number of times.</returns>
+    /// <remarks>
+    /// Actual rotation direction is from a big-endian perspective - this is an artifact of the native
+    /// .NET bit shift operators. As a result bits may actually appear to rotate right on little-endian
+    /// architectures.
+    /// </remarks>
+    public static UInt24 BitRotL(this UInt24 value, int rotations)
+    {
+        for (int x = 1; x <= rotations % 24; x++)
         {
-            return SetBits(source, (UInt24)bits);
+            bool hiBitSet = value.CheckBits(Bits.Bit23);
+
+            value <<= 1;
+
+            if (hiBitSet)
+                value = value.SetBits(Bits.Bit00);
         }
 
-        /// <summary>
-        /// Returns value with specified <paramref name="bits"/> set.
-        /// </summary>
-        /// <param name="source">Value source.</param>
-        /// <param name="bits">Bit-mask of the bits to set.</param>
-        /// <returns><see cref="UInt24"/> value with specified <paramref name="bits"/> set.</returns>
-        public static UInt24 SetBits(this UInt24 source, UInt24 bits)
+        return value;
+    }
+
+    /// <summary>
+    /// Performs rightwise bit-rotation for the specified number of rotations.
+    /// </summary>
+    /// <param name="value">Value used for bit-rotation.</param>
+    /// <param name="rotations">Number of rotations to perform.</param>
+    /// <returns>Value that has its bits rotated to the right the specified number of times.</returns>
+    /// <remarks>
+    /// Actual rotation direction is from a big-endian perspective - this is an artifact of the native
+    /// .NET bit shift operators. As a result bits may actually appear to rotate left on little-endian
+    /// architectures.
+    /// </remarks>
+    public static UInt24 BitRotR(this UInt24 value, int rotations)
+    {
+        for (int x = 1; x <= rotations % 24; x++)
         {
-            return source | bits;
+            bool loBitSet = value.CheckBits(Bits.Bit00);
+
+            value >>= 1;
+
+            value = loBitSet ? value.SetBits(Bits.Bit23) : value.ClearBits(Bits.Bit23);
         }
 
-        /// <summary>
-        /// Returns value with specified <paramref name="bits"/> cleared.
-        /// </summary>
-        /// <param name="source">Value source.</param>
-        /// <param name="bits"><see cref="Bits"/> to clear.</param>
-        /// <returns><see cref="UInt24"/> value with specified <paramref name="bits"/> cleared.</returns>
-        public static UInt24 ClearBits(this UInt24 source, Bits bits)
-        {
-            return ClearBits(source, (UInt24)bits);
-        }
-
-        /// <summary>
-        /// Returns value with specified <paramref name="bits"/> cleared.
-        /// </summary>
-        /// <param name="source">Value source.</param>
-        /// <param name="bits">Bit-mask of the bits to clear.</param>
-        /// <returns><see cref="UInt24"/> value with specified <paramref name="bits"/> cleared.</returns>
-        public static UInt24 ClearBits(this UInt24 source, UInt24 bits)
-        {
-            return source & ~bits;
-        }
-
-        /// <summary>
-        /// Determines if specified <paramref name="bits"/> are set.
-        /// </summary>
-        /// <param name="source">Value source.</param>
-        /// <param name="bits"><see cref="Bits"/> to check.</param>
-        /// <returns>true if specified <paramref name="bits"/> are set in <paramref name="source"/> value; otherwise false.</returns>
-        public static bool CheckBits(this UInt24 source, Bits bits)
-        {
-            return CheckBits(source, (UInt24)bits);
-        }
-
-        /// <summary>
-        /// Determines if specified <paramref name="bits"/> are set.
-        /// </summary>
-        /// <param name="source">Value source.</param>
-        /// <param name="bits">Bit-mask of the bits to check.</param>
-        /// <returns>true if specified <paramref name="bits"/> are set in <paramref name="source"/> value; otherwise false.</returns>
-        public static bool CheckBits(this UInt24 source, UInt24 bits)
-        {
-            return CheckBits(source, bits, true);
-        }
-
-        /// <summary>
-        /// Determines if specified <paramref name="bits"/> are set.
-        /// </summary>
-        /// <param name="source">Value source.</param>
-        /// <param name="bits"><see cref="Bits"/> to check.</param>
-        /// <param name="allBits">true to check if all <paramref name="bits"/> are set; otherwise false.</param>
-        /// <returns>true if specified <paramref name="bits"/> are set in <paramref name="source"/> value; otherwise false.</returns>
-        public static bool CheckBits(this UInt24 source, Bits bits, bool allBits)
-        {
-            return CheckBits(source, (UInt24)bits, allBits);
-        }
-
-        /// <summary>
-        /// Determines if specified <paramref name="bits"/> are set.
-        /// </summary>
-        /// <param name="source">Value source.</param>
-        /// <param name="bits">Bit-mask of the bits to check.</param>
-        /// <param name="allBits">true to check if all <paramref name="bits"/> are set; otherwise false.</param>
-        /// <returns>true if specified <paramref name="bits"/> are set in <paramref name="source"/> value; otherwise false.</returns>
-        public static bool CheckBits(this UInt24 source, UInt24 bits, bool allBits)
-        {
-            return allBits ? (source & bits) == bits : (source & bits) != 0;
-        }
-
-        /// <summary>
-        /// Returns value with specified <paramref name="bits"/> toggled.
-        /// </summary>
-        /// <param name="source">Value source.</param>
-        /// <param name="bits"><see cref="Bits"/> to toggle.</param>
-        /// <returns><see cref="UInt24"/> value with specified <paramref name="bits"/> toggled.</returns>
-        public static UInt24 ToggleBits(this UInt24 source, Bits bits)
-        {
-            return ToggleBits(source, (UInt24)bits);
-        }
-
-        /// <summary>
-        /// Returns value with specified <paramref name="bits"/> toggled.
-        /// </summary>
-        /// <param name="source">Value source.</param>
-        /// <param name="bits">Bit-mask of the bits to toggle.</param>
-        /// <returns><see cref="UInt24"/> value with specified <paramref name="bits"/> toggled.</returns>
-        public static UInt24 ToggleBits(this UInt24 source, UInt24 bits)
-        {
-            return source ^ bits;
-        }
-
-        /// <summary>
-        /// Returns value stored in the bits represented by the specified <paramref name="bitmask"/>.
-        /// </summary>
-        /// <param name="source">Value source.</param>
-        /// <param name="bitmask"><see cref="Bits"/> that make-up the bit-mask.</param>
-        /// <returns><see cref="UInt24"/> value.</returns>
-        public static UInt24 GetMaskedValue(this UInt24 source, Bits bitmask)
-        {
-            return GetMaskedValue(source, (UInt24)bitmask);
-        }
-
-        /// <summary>
-        /// Returns value stored in the bits represented by the specified <paramref name="bitmask"/>.
-        /// </summary>
-        /// <param name="source">Value source.</param>
-        /// <param name="bitmask">Bit-mask of the bits involved.</param>
-        /// <returns><see cref="UInt24"/> value.</returns>
-        public static UInt24 GetMaskedValue(this UInt24 source, UInt24 bitmask)
-        {
-            return source & bitmask;
-        }
-
-        /// <summary>
-        /// Returns value after setting a new <paramref name="value"/> for the bits specified by the <paramref name="bitmask"/>.
-        /// </summary>
-        /// <param name="source">Value source.</param>
-        /// <param name="bitmask"><see cref="Bits"/> that make-up the bit-mask.</param>
-        /// <param name="value">New value.</param>
-        /// <returns><see cref="UInt24"/> value.</returns>
-        public static UInt24 SetMaskedValue(this UInt24 source, Bits bitmask, UInt24 value)
-        {
-            return SetMaskedValue(source, (UInt24)bitmask, value);
-        }
-
-        /// <summary>
-        /// Returns value after setting a new <paramref name="value"/> for the bits specified by the <paramref name="bitmask"/>.
-        /// </summary>
-        /// <param name="source">Value source.</param>
-        /// <param name="bitmask">Bit-mask of the bits involved.</param>
-        /// <param name="value">New value.</param>
-        /// <returns><see cref="UInt24"/> value.</returns>
-        public static UInt24 SetMaskedValue(this UInt24 source, UInt24 bitmask, UInt24 value)
-        {
-            return (source & ~bitmask) | value;
-        }
-
-        /// <summary>
-        /// Performs rightwise bit-rotation for the specified number of rotations.
-        /// </summary>
-        /// <param name="value">Value used for bit-rotation.</param>
-        /// <param name="rotations">Number of rotations to perform.</param>
-        /// <returns>Value that has its bits rotated to the right the specified number of times.</returns>
-        /// <remarks>
-        /// Actual rotation direction is from a big-endian perspective - this is an artifact of the native
-        /// .NET bit shift operators. As a result bits may actually appear to rotate right on little-endian
-        /// architectures.
-        /// </remarks>
-        public static UInt24 BitRotL(this UInt24 value, int rotations)
-        {
-            for (int x = 1; x <= rotations % 24; x++)
-            {
-                bool hiBitSet = value.CheckBits(Bits.Bit23);
-
-                value <<= 1;
-
-                if (hiBitSet)
-                    value = value.SetBits(Bits.Bit00);
-            }
-
-            return value;
-        }
-
-        /// <summary>
-        /// Performs rightwise bit-rotation for the specified number of rotations.
-        /// </summary>
-        /// <param name="value">Value used for bit-rotation.</param>
-        /// <param name="rotations">Number of rotations to perform.</param>
-        /// <returns>Value that has its bits rotated to the right the specified number of times.</returns>
-        /// <remarks>
-        /// Actual rotation direction is from a big-endian perspective - this is an artifact of the native
-        /// .NET bit shift operators. As a result bits may actually appear to rotate left on little-endian
-        /// architectures.
-        /// </remarks>
-        public static UInt24 BitRotR(this UInt24 value, int rotations)
-        {
-            for (int x = 1; x <= rotations % 24; x++)
-            {
-                bool loBitSet = value.CheckBits(Bits.Bit00);
-
-                value >>= 1;
-
-                value = loBitSet ? value.SetBits(Bits.Bit23) : value.ClearBits(Bits.Bit23);
-            }
-
-            return value;
-        }
+        return value;
     }
 }

@@ -22,55 +22,55 @@
 //******************************************************************************************************
 
 using System.Collections.Generic;
+using Gemstone.Numeric.Random.Uniform;
 
-namespace Gemstone.Numeric.Random
+namespace Gemstone.Numeric.Random.DiscreteUniform;
+
+/// <summary>
+/// Generates Normal(mean,variance) distribution, full period cycle length > 2 billion
+/// </summary>
+public class DiscreteUniformRandomNumberGenerator
 {
+    private double UpperLimit { get; set; }
+    private double LowerLimit { get; set; }
+    private UniformRandomNumberGenerator UniformGenerator { get; }
+
     /// <summary>
-    /// Generates Normal(mean,variance) distribution, full period cycle length > 2 billion
+    /// Instantiates Normal distribution generator to Normal(mean,variance)
     /// </summary>
-    public class DiscreteUniformRandomNumberGenerator
+    /// <param name="seed">Seed value for Uniform generator</param>
+    /// <param name="upperLimit">Upper limit of distribution</param>
+    /// <param name="lowerLimit">Lower limit of distribution</param>
+    public DiscreteUniformRandomNumberGenerator(int seed, double upperLimit, double lowerLimit = 0)
     {
-        private double UpperLimit { get; set; }
-        private double LowerLimit { get; set; }
-        private UniformRandomNumberGenerator UniformGenerator { get; }
-
-        /// <summary>
-        /// Instantiates Normal distribution generator to Normal(mean,variance)
-        /// </summary>
-        /// <param name="seed">Seed value for Uniform generator</param>
-        /// <param name="upperLimit">Upper limit of distribution</param>
-        /// <param name="lowerLimit">Lower limit of distribution</param>
-        public DiscreteUniformRandomNumberGenerator(int seed, double upperLimit, double lowerLimit = 0)
-        {
-            UpperLimit = upperLimit;
-            LowerLimit = lowerLimit;
-            UniformGenerator = new UniformRandomNumberGenerator(seed);
-        }
-
-        /// <summary>
-        /// Gets next <see cref="DiscreteUniformRandomNumber"/> in the sequence
-        /// </summary>
-        /// <returns><see cref="DiscreteUniformRandomNumber"/></returns>
-        public DiscreteUniformRandomNumber Next()
-        {
-            UniformRandomNumber rv = UniformGenerator.Next();
-            return new DiscreteUniformRandomNumber(rv, UpperLimit, LowerLimit);
-        }
-
-        /// <summary>
-        /// Gets the next n number of <see cref="DiscreteUniformRandomNumber"/>
-        /// </summary>
-        /// <param name="number"></param>
-        /// <returns><see cref="IEnumerable{DiscreteUniformRandomNumber}"/></returns>
-        public IEnumerable<DiscreteUniformRandomNumber> Next(int number)
-        {
-            List<DiscreteUniformRandomNumber> list = new();
-            for (int i = 0; i < number; i++)
-                list.Add(Next());
-
-            return list;
-        }
-
-
+        UpperLimit = upperLimit;
+        LowerLimit = lowerLimit;
+        UniformGenerator = new UniformRandomNumberGenerator(seed);
     }
+
+    /// <summary>
+    /// Gets next <see cref="DiscreteUniformRandomNumber"/> in the sequence
+    /// </summary>
+    /// <returns><see cref="DiscreteUniformRandomNumber"/></returns>
+    public DiscreteUniformRandomNumber Next()
+    {
+        UniformRandomNumber rv = UniformGenerator.Next();
+        return new DiscreteUniformRandomNumber(rv, UpperLimit, LowerLimit);
+    }
+
+    /// <summary>
+    /// Gets the next n number of <see cref="DiscreteUniformRandomNumber"/>
+    /// </summary>
+    /// <param name="number"></param>
+    /// <returns><see cref="IEnumerable{DiscreteUniformRandomNumber}"/></returns>
+    public IEnumerable<DiscreteUniformRandomNumber> Next(int number)
+    {
+        List<DiscreteUniformRandomNumber> list = new();
+        for (int i = 0; i < number; i++)
+            list.Add(Next());
+
+        return list;
+    }
+
+
 }

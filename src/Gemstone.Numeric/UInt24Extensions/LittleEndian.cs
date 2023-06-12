@@ -60,97 +60,96 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace Gemstone.Numeric.UInt24Extensions
+namespace Gemstone.Numeric.UInt24Extensions;
+
+/// <summary>
+/// Defines methods related to <see cref="UInt24"/> little endian operations.
+/// </summary>
+public static class LittleEndian
 {
     /// <summary>
-    /// Defines methods related to <see cref="UInt24"/> little endian operations.
+    /// Returns a 24-bit unsigned integer converted from three bytes, accounting for target endian-order, at a specified position in a byte array.
     /// </summary>
-    public static class LittleEndian
+    /// <param name="buffer">An array of bytes (i.e., buffer containing binary image of value).</param>
+    /// <returns>A 24-bit unsigned integer formed by three bytes beginning at startIndex.</returns>
+    /// <exception cref="ArgumentNullException">value is null.</exception>
+    /// <exception cref="ArgumentOutOfRangeException">startIndex is less than zero or greater than the length of value minus 1.</exception>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static unsafe UInt24 ToUInt24(byte* buffer)
     {
-        /// <summary>
-        /// Returns a 24-bit unsigned integer converted from three bytes, accounting for target endian-order, at a specified position in a byte array.
-        /// </summary>
-        /// <param name="buffer">An array of bytes (i.e., buffer containing binary image of value).</param>
-        /// <returns>A 24-bit unsigned integer formed by three bytes beginning at startIndex.</returns>
-        /// <exception cref="ArgumentNullException">value is null.</exception>
-        /// <exception cref="ArgumentOutOfRangeException">startIndex is less than zero or greater than the length of value minus 1.</exception>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static unsafe UInt24 ToUInt24(byte* buffer)
-        {
-            return (UInt24)(buffer[0] |
-                            (uint)buffer[1] << 8 |
-                            (uint)buffer[2] << 16);
-        }
+        return (UInt24)(buffer[0] |
+                        (uint)buffer[1] << 8 |
+                        (uint)buffer[2] << 16);
+    }
         
-        /// <summary>
-        /// Returns a 24-bit unsigned integer converted from three bytes, accounting for target endian-order, at a specified position in a byte array.
-        /// </summary>
-        /// <param name="buffer">An array of bytes (i.e., buffer containing binary image of value).</param>
-        /// <param name="startIndex">The starting position within value.</param>
-        /// <returns>A 24-bit unsigned integer formed by three bytes beginning at startIndex.</returns>
-        /// <exception cref="ArgumentNullException">value is null.</exception>
-        /// <exception cref="ArgumentOutOfRangeException">startIndex is less than zero or greater than the length of value minus 1.</exception>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static UInt24 ToUInt24(byte[] buffer, int startIndex)
-        {
-            return (UInt24)(buffer[startIndex + 0] |
-                            (uint)buffer[startIndex + 1] << 8 |
-                            (uint)buffer[startIndex + 2] << 16);
-        }
+    /// <summary>
+    /// Returns a 24-bit unsigned integer converted from three bytes, accounting for target endian-order, at a specified position in a byte array.
+    /// </summary>
+    /// <param name="buffer">An array of bytes (i.e., buffer containing binary image of value).</param>
+    /// <param name="startIndex">The starting position within value.</param>
+    /// <returns>A 24-bit unsigned integer formed by three bytes beginning at startIndex.</returns>
+    /// <exception cref="ArgumentNullException">value is null.</exception>
+    /// <exception cref="ArgumentOutOfRangeException">startIndex is less than zero or greater than the length of value minus 1.</exception>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static UInt24 ToUInt24(byte[] buffer, int startIndex)
+    {
+        return (UInt24)(buffer[startIndex + 0] |
+                        (uint)buffer[startIndex + 1] << 8 |
+                        (uint)buffer[startIndex + 2] << 16);
+    }
         
-        /// <summary>
-        /// Returns the specified 24-bit unsigned integer value as an array of bytes.
-        /// </summary>
-        /// <param name="value">The number to convert.</param>
-        /// <returns>An array of bytes with length 3.</returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static byte[] GetBytes(UInt24 value)
-        {
-            uint uint32 = value;
+    /// <summary>
+    /// Returns the specified 24-bit unsigned integer value as an array of bytes.
+    /// </summary>
+    /// <param name="value">The number to convert.</param>
+    /// <returns>An array of bytes with length 3.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static byte[] GetBytes(UInt24 value)
+    {
+        uint uint32 = value;
 
-            return new[]
-            {
-                (byte)uint32,
-                (byte)(uint32 >> 8),
-                (byte)(uint32 >> 16)
-            };
-        }
+        return new[]
+        {
+            (byte)uint32,
+            (byte)(uint32 >> 8),
+            (byte)(uint32 >> 16)
+        };
+    }
         
-        /// <summary>
-        /// Copies the specified 24-bit unsigned integer value as an array of 3 bytes in the target endian-order to the destination array.
-        /// </summary>
-        /// <param name="value">The number to convert and copy.</param>
-        /// <param name="destinationArray">The destination buffer.</param>
-        /// <param name="destinationIndex">The byte offset into <paramref name="destinationArray"/>.</param>
-        /// <returns>Length of bytes copied into array based on size of <paramref name="value"/>.</returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static int CopyBytes(UInt24 value, byte[] destinationArray, int destinationIndex)
-        {
-            uint uint32 = value;
+    /// <summary>
+    /// Copies the specified 24-bit unsigned integer value as an array of 3 bytes in the target endian-order to the destination array.
+    /// </summary>
+    /// <param name="value">The number to convert and copy.</param>
+    /// <param name="destinationArray">The destination buffer.</param>
+    /// <param name="destinationIndex">The byte offset into <paramref name="destinationArray"/>.</param>
+    /// <returns>Length of bytes copied into array based on size of <paramref name="value"/>.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static int CopyBytes(UInt24 value, byte[] destinationArray, int destinationIndex)
+    {
+        uint uint32 = value;
 
-            destinationArray[destinationIndex + 0] = (byte)uint32;
-            destinationArray[destinationIndex + 1] = (byte)(uint32 >> 8);
-            destinationArray[destinationIndex + 2] = (byte)(uint32 >> 16);
+        destinationArray[destinationIndex + 0] = (byte)uint32;
+        destinationArray[destinationIndex + 1] = (byte)(uint32 >> 8);
+        destinationArray[destinationIndex + 2] = (byte)(uint32 >> 16);
 
-            return 3;
-        }
+        return 3;
+    }
         
-        /// <summary>
-        /// Copies the specified 24-bit unsigned integer value as an array of 3 bytes in the target endian-order to the destination array.
-        /// </summary>
-        /// <param name="value">The number to convert and copy.</param>
-        /// <param name="destination">The destination buffer.</param>
-        /// <returns>Length of bytes copied into array based on size of <paramref name="value"/>.</returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static unsafe int CopyBytes(UInt24 value, byte* destination)
-        {
-            uint uint32 = value;
+    /// <summary>
+    /// Copies the specified 24-bit unsigned integer value as an array of 3 bytes in the target endian-order to the destination array.
+    /// </summary>
+    /// <param name="value">The number to convert and copy.</param>
+    /// <param name="destination">The destination buffer.</param>
+    /// <returns>Length of bytes copied into array based on size of <paramref name="value"/>.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static unsafe int CopyBytes(UInt24 value, byte* destination)
+    {
+        uint uint32 = value;
 
-            destination[0] = (byte)uint32;
-            destination[1] = (byte)(uint32 >> 8);
-            destination[2] = (byte)(uint32 >> 16);
+        destination[0] = (byte)uint32;
+        destination[1] = (byte)(uint32 >> 8);
+        destination[2] = (byte)(uint32 >> 16);
 
-            return 3;
-        }
+        return 3;
     }
 }

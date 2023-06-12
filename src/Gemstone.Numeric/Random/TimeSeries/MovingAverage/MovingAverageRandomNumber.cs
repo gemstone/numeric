@@ -21,25 +21,23 @@
 //
 //******************************************************************************************************
 
-namespace Gemstone.Numeric.Random
+namespace Gemstone.Numeric.Random.TimeSeries.MovingAverage;
+
+/// <summary>
+/// Pseudo-Random Moving Average generated Random number
+/// </summary>
+public class MovingAverageRandomNumber
 {
     /// <summary>
-    /// Pseudo-Random Moving Average generated Random number
+    /// Constructor to set Value of random variate. 
     /// </summary>
-    public class MovingAverageRandomNumber
+    /// <param name="value"><see cref="double"/> used to set Value.</param>
+    public MovingAverageRandomNumber(double value)
     {
-        /// <summary>
-        /// Constructor to set Value of random variate. 
-        /// </summary>
-        /// <param name="value"><see cref="double"/> used to set Value.</param>
-        public MovingAverageRandomNumber(double value)
-        {
-            Value = value;
-        }
-        /// <summary>
-        /// Value of random variate
-        /// </summary>
-        public double Value { get; }
+        Value = value;
     }
-
+    /// <summary>
+    /// Value of random variate
+    /// </summary>
+    public double Value { get; }
 }

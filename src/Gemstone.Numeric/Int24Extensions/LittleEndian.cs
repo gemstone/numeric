@@ -60,125 +60,124 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace Gemstone.Numeric.Int24Extensions
+namespace Gemstone.Numeric.Int24Extensions;
+
+/// <summary>
+/// Defines methods related to <see cref="Int24"/> little endian operations.
+/// </summary>
+public static class LittleEndian
 {
     /// <summary>
-    /// Defines methods related to <see cref="Int24"/> little endian operations.
+    /// Returns a 24-bit signed integer converted from three bytes, accounting for target endian-order, at a specified position in a byte array.
     /// </summary>
-    public static class LittleEndian
+    /// <param name="buffer">An array of bytes (i.e., buffer containing binary image of value).</param>
+    /// <returns>A 24-bit signed integer formed by three bytes beginning at startIndex.</returns>
+    /// <exception cref="ArgumentNullException">value is null.</exception>
+    /// <exception cref="ArgumentOutOfRangeException">startIndex is less than zero or greater than the length of value minus 1.</exception>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static unsafe Int24 ToInt24(byte* buffer)
     {
-        /// <summary>
-        /// Returns a 24-bit signed integer converted from three bytes, accounting for target endian-order, at a specified position in a byte array.
-        /// </summary>
-        /// <param name="buffer">An array of bytes (i.e., buffer containing binary image of value).</param>
-        /// <returns>A 24-bit signed integer formed by three bytes beginning at startIndex.</returns>
-        /// <exception cref="ArgumentNullException">value is null.</exception>
-        /// <exception cref="ArgumentOutOfRangeException">startIndex is less than zero or greater than the length of value minus 1.</exception>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static unsafe Int24 ToInt24(byte* buffer)
+        int int32 = buffer[0] |
+                    buffer[1] << 8 |
+                    buffer[2] << 16;
+
+        // Check bit 23, the sign bit in a signed 24-bit integer
+        if ((int32 & 0x00800000) > 0)
         {
-            int int32 = buffer[0] |
-                        buffer[1] << 8 |
-                        buffer[2] << 16;
-
-            // Check bit 23, the sign bit in a signed 24-bit integer
-            if ((int32 & 0x00800000) > 0)
-            {
-                // If the sign-bit is set, this number will be negative - set all high-byte bits (keeps 32-bit number in 24-bit range)
-                int32 |= Int24.BitMask;
-            }
-            else
-            {
-                // If the sign-bit is not set, this number will be positive - clear all high-byte bits (keeps 32-bit number in 24-bit range)
-                int32 &= ~Int24.BitMask;
-            }
-
-            return (Int24)int32;
+            // If the sign-bit is set, this number will be negative - set all high-byte bits (keeps 32-bit number in 24-bit range)
+            int32 |= Int24.BitMask;
+        }
+        else
+        {
+            // If the sign-bit is not set, this number will be positive - clear all high-byte bits (keeps 32-bit number in 24-bit range)
+            int32 &= ~Int24.BitMask;
         }
 
-        /// <summary>
-        /// Returns a 24-bit signed integer converted from three bytes, accounting for target endian-order, at a specified position in a byte array.
-        /// </summary>
-        /// <param name="buffer">An array of bytes (i.e., buffer containing binary image of value).</param>
-        /// <param name="startIndex">The starting position within value.</param>
-        /// <returns>A 24-bit signed integer formed by three bytes beginning at startIndex.</returns>
-        /// <exception cref="ArgumentNullException">value is null.</exception>
-        /// <exception cref="ArgumentOutOfRangeException">startIndex is less than zero or greater than the length of value minus 1.</exception>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Int24 ToInt24(byte[] buffer, int startIndex)
+        return (Int24)int32;
+    }
+
+    /// <summary>
+    /// Returns a 24-bit signed integer converted from three bytes, accounting for target endian-order, at a specified position in a byte array.
+    /// </summary>
+    /// <param name="buffer">An array of bytes (i.e., buffer containing binary image of value).</param>
+    /// <param name="startIndex">The starting position within value.</param>
+    /// <returns>A 24-bit signed integer formed by three bytes beginning at startIndex.</returns>
+    /// <exception cref="ArgumentNullException">value is null.</exception>
+    /// <exception cref="ArgumentOutOfRangeException">startIndex is less than zero or greater than the length of value minus 1.</exception>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static Int24 ToInt24(byte[] buffer, int startIndex)
+    {
+        int int32 = buffer[startIndex + 0] |
+                    buffer[startIndex + 1] << 8 |
+                    buffer[startIndex + 2] << 16;
+
+        // Check bit 23, the sign bit in a signed 24-bit integer
+        if ((int32 & 0x00800000) > 0)
         {
-            int int32 = buffer[startIndex + 0] |
-                        buffer[startIndex + 1] << 8 |
-                        buffer[startIndex + 2] << 16;
-
-            // Check bit 23, the sign bit in a signed 24-bit integer
-            if ((int32 & 0x00800000) > 0)
-            {
-                // If the sign-bit is set, this number will be negative - set all high-byte bits (keeps 32-bit number in 24-bit range)
-                int32 |= Int24.BitMask;
-            }
-            else
-            {
-                // If the sign-bit is not set, this number will be positive - clear all high-byte bits (keeps 32-bit number in 24-bit range)
-                int32 &= ~Int24.BitMask;
-            }
-
-            return (Int24)int32;
+            // If the sign-bit is set, this number will be negative - set all high-byte bits (keeps 32-bit number in 24-bit range)
+            int32 |= Int24.BitMask;
         }
+        else
+        {
+            // If the sign-bit is not set, this number will be positive - clear all high-byte bits (keeps 32-bit number in 24-bit range)
+            int32 &= ~Int24.BitMask;
+        }
+
+        return (Int24)int32;
+    }
         
-        /// <summary>
-        /// Returns the specified 24-bit signed integer value as an array of bytes.
-        /// </summary>
-        /// <param name="value">The number to convert.</param>
-        /// <returns>An array of bytes with length 3.</returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static byte[] GetBytes(Int24 value)
-        {
-            int int32 = value;
+    /// <summary>
+    /// Returns the specified 24-bit signed integer value as an array of bytes.
+    /// </summary>
+    /// <param name="value">The number to convert.</param>
+    /// <returns>An array of bytes with length 3.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static byte[] GetBytes(Int24 value)
+    {
+        int int32 = value;
 
-            return new[]
-            {
-                (byte)int32,
-                (byte)(int32 >> 8),
-                (byte)(int32 >> 16)
-            };
-        }
+        return new[]
+        {
+            (byte)int32,
+            (byte)(int32 >> 8),
+            (byte)(int32 >> 16)
+        };
+    }
         
-        /// <summary>
-        /// Copies the specified 24-bit signed integer value as an array of 3 bytes in the target endian-order to the destination array.
-        /// </summary>
-        /// <param name="value">The number to convert and copy.</param>
-        /// <param name="destinationArray">The destination buffer.</param>
-        /// <param name="destinationIndex">The byte offset into <paramref name="destinationArray"/>.</param>
-        /// <returns>Length of bytes copied into array based on size of <paramref name="value"/>.</returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static int CopyBytes(Int24 value, byte[] destinationArray, int destinationIndex)
-        {
-            int int32 = value;
+    /// <summary>
+    /// Copies the specified 24-bit signed integer value as an array of 3 bytes in the target endian-order to the destination array.
+    /// </summary>
+    /// <param name="value">The number to convert and copy.</param>
+    /// <param name="destinationArray">The destination buffer.</param>
+    /// <param name="destinationIndex">The byte offset into <paramref name="destinationArray"/>.</param>
+    /// <returns>Length of bytes copied into array based on size of <paramref name="value"/>.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static int CopyBytes(Int24 value, byte[] destinationArray, int destinationIndex)
+    {
+        int int32 = value;
 
-            destinationArray[destinationIndex + 0] = (byte)int32;
-            destinationArray[destinationIndex + 1] = (byte)(int32 >> 8);
-            destinationArray[destinationIndex + 2] = (byte)(int32 >> 16);
+        destinationArray[destinationIndex + 0] = (byte)int32;
+        destinationArray[destinationIndex + 1] = (byte)(int32 >> 8);
+        destinationArray[destinationIndex + 2] = (byte)(int32 >> 16);
 
-            return 3;
-        }
+        return 3;
+    }
         
-        /// <summary>
-        /// Copies the specified 24-bit signed integer value as an array of 3 bytes in the target endian-order to the destination array.
-        /// </summary>
-        /// <param name="value">The number to convert and copy.</param>
-        /// <param name="destination">The destination buffer.</param>
-        /// <returns>Length of bytes copied into array based on size of <paramref name="value"/>.</returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static unsafe int CopyBytes(Int24 value, byte* destination)
-        {
-            int int32 = value;
+    /// <summary>
+    /// Copies the specified 24-bit signed integer value as an array of 3 bytes in the target endian-order to the destination array.
+    /// </summary>
+    /// <param name="value">The number to convert and copy.</param>
+    /// <param name="destination">The destination buffer.</param>
+    /// <returns>Length of bytes copied into array based on size of <paramref name="value"/>.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static unsafe int CopyBytes(Int24 value, byte* destination)
+    {
+        int int32 = value;
 
-            destination[0] = (byte)int32;
-            destination[1] = (byte)(int32 >> 8);
-            destination[2] = (byte)(int32 >> 16);
+        destination[0] = (byte)int32;
+        destination[1] = (byte)(int32 >> 8);
+        destination[2] = (byte)(int32 >> 16);
 
-            return 3;
-        }
+        return 3;
     }
 }

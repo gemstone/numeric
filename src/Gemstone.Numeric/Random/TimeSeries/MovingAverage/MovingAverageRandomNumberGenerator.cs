@@ -24,67 +24,67 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Gemstone.Numeric.Random.Normal;
 
-namespace Gemstone.Numeric.Random
+namespace Gemstone.Numeric.Random.TimeSeries.MovingAverage;
+
+/// <summary>
+/// Generates specifed order Moving Average time-series distribution, full period cycle length > 2 billion
+/// </summary>
+public class MovingAverageRandomNumberGenerator
 {
     /// <summary>
-    /// Generates specifed order Moving Average time-series distribution, full period cycle length > 2 billion
+    /// Instantiates Moving Average generator.
     /// </summary>
-    public class MovingAverageRandomNumberGenerator
+    /// <param name="seed">Seed value for Uniform generator</param>
+    /// <param name="order">Moving Average order</param>
+    /// <param name="lambdas">Array of lambda values, ordered lambda i-1, lamda i-2, etc </param>
+    /// <param name="mean">Mean of the Normal distribution</param>
+    /// <param name="variance">Variance of the Normal distribution</param>
+    public MovingAverageRandomNumberGenerator(int seed, int order, double[] lambdas, double mean = 0, double variance = 1)
     {
-        /// <summary>
-        /// Instantiates Moving Average generator.
-        /// </summary>
-        /// <param name="seed">Seed value for Uniform generator</param>
-        /// <param name="order">Moving Average order</param>
-        /// <param name="lambdas">Array of lambda values, ordered lambda i-1, lamda i-2, etc </param>
-        /// <param name="mean">Mean of the Normal distribution</param>
-        /// <param name="variance">Variance of the Normal distribution</param>
-        public MovingAverageRandomNumberGenerator(int seed, int order, double[] lambdas, double mean = 0, double variance = 1)
+        if (lambdas.Count() != order)
+            throw new Exception("Please provide a lambda value for each order level.");
+        Order = order;
+        Lambdas = lambdas;
+        NormalGenerator = new NormalRandomNumberGenerator(seed, mean, variance);
+        Priors = new List<double>(order);
+        for (int i = 0; i < order; i++)
         {
-            if (lambdas.Count() != order)
-                throw new Exception("Please provide a lambda value for each order level.");
-            Order = order;
-            Lambdas = lambdas;
-            NormalGenerator = new NormalRandomNumberGenerator(seed, mean, variance);
-            Priors = new List<double>(order);
-            for (int i = 0; i < order; i++)
-            {
-                Priors.Add(NormalGenerator.Next().Value);
-            }
+            Priors.Add(NormalGenerator.Next().Value);
         }
-
-        private List<double> Priors { get; }
-        private int Order { get; }
-        private double[] Lambdas { get; }
-        private NormalRandomNumberGenerator NormalGenerator { get; }
-
-        /// <summary>
-        /// Gets next <see cref="MovingAverageRandomNumber"/> in the sequence
-        /// </summary>
-        /// <returns><see cref="MovingAverageRandomNumber"/></returns>
-        public MovingAverageRandomNumber Next()
-        {
-            double ei = NormalGenerator.Next().Value;
-            double priorSum = Priors.Zip(Lambdas, (First, Second) => new { First, Second }).Select(x => x.First * x.Second).Sum();
-            Priors.Remove(Priors.Last());
-            Priors.Insert(0, ei);
-            return new MovingAverageRandomNumber(ei + priorSum);
-        }
-
-        /// <summary>
-        /// Gets the next n number of <see cref="MovingAverageRandomNumber"/>
-        /// </summary>
-        /// <param name="number"></param>
-        /// <returns><see cref="IEnumerable{MovingAverageRandomNumber}"/></returns>
-        public IEnumerable<MovingAverageRandomNumber> Next(int number)
-        {
-            List<MovingAverageRandomNumber> list = new();
-            for (int i = 0; i < number; i++)
-                list.Add(Next());
-
-            return list;
-        }
-
     }
+
+    private List<double> Priors { get; }
+    private int Order { get; }
+    private double[] Lambdas { get; }
+    private NormalRandomNumberGenerator NormalGenerator { get; }
+
+    /// <summary>
+    /// Gets next <see cref="MovingAverageRandomNumber"/> in the sequence
+    /// </summary>
+    /// <returns><see cref="MovingAverageRandomNumber"/></returns>
+    public MovingAverageRandomNumber Next()
+    {
+        double ei = NormalGenerator.Next().Value;
+        double priorSum = Priors.Zip(Lambdas, (First, Second) => new { First, Second }).Select(x => x.First * x.Second).Sum();
+        Priors.Remove(Priors.Last());
+        Priors.Insert(0, ei);
+        return new MovingAverageRandomNumber(ei + priorSum);
+    }
+
+    /// <summary>
+    /// Gets the next n number of <see cref="MovingAverageRandomNumber"/>
+    /// </summary>
+    /// <param name="number"></param>
+    /// <returns><see cref="IEnumerable{MovingAverageRandomNumber}"/></returns>
+    public IEnumerable<MovingAverageRandomNumber> Next(int number)
+    {
+        List<MovingAverageRandomNumber> list = new();
+        for (int i = 0; i < number; i++)
+            list.Add(Next());
+
+        return list;
+    }
+
 }

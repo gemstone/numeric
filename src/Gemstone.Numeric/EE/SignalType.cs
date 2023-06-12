@@ -25,126 +25,125 @@ using System;
 using Gemstone.EnumExtensions;
 
 // ReSharper disable InconsistentNaming
-namespace Gemstone.Numeric.EE
+namespace Gemstone.Numeric.EE;
+
+/// <summary>
+/// Fundamental signal type enumeration for common EE measurements that represents an explicit type of signal.
+/// </summary>
+/// <remarks>
+/// <para>
+/// This enumeration represents the explicit type of a signal that a value represents.
+/// </para>
+/// <para>
+/// Contrast this to the <see cref="SignalKind"/> enumeration which only defines an
+/// abstract type for a signal (e.g., simply a phase or an angle).
+/// </para>
+/// </remarks>
+[Serializable]
+public enum SignalType
 {
     /// <summary>
-    /// Fundamental signal type enumeration for common EE measurements that represents an explicit type of signal.
+    /// Current phase magnitude.
     /// </summary>
-    /// <remarks>
-    /// <para>
-    /// This enumeration represents the explicit type of a signal that a value represents.
-    /// </para>
-    /// <para>
-    /// Contrast this to the <see cref="SignalKind"/> enumeration which only defines an
-    /// abstract type for a signal (e.g., simply a phase or an angle).
-    /// </para>
-    /// </remarks>
-    [Serializable]
-    public enum SignalType
-    {
-        /// <summary>
-        /// Current phase magnitude.
-        /// </summary>
-        IPHM = 1,
-        /// <summary>
-        /// Current phase angle.
-        /// </summary>
-        IPHA = 2,
-        /// <summary>
-        /// Voltage phase magnitude.
-        /// </summary>
-        VPHM = 3,
-        /// <summary>
-        /// Voltage phase angle.
-        /// </summary>
-        VPHA = 4,
-        /// <summary>
-        /// Frequency.
-        /// </summary>
-        FREQ = 5,
-        /// <summary>
-        /// Frequency delta (dF/dt).
-        /// </summary>
-        DFDT = 6,
-        /// <summary>
-        /// Analog value.
-        /// </summary>
-        ALOG = 7,
-        /// <summary>
-        /// Status flags.
-        /// </summary>
-        FLAG = 8,
-        /// <summary>
-        /// Digital values.
-        /// </summary>
-        DIGI = 9,
-        /// <summary>
-        /// Calculated value.
-        /// </summary>
-        CALC = 10,
-        /// <summary>
-        /// Statistical value.
-        /// </summary>
-        STAT = 11,
-        /// <summary>
-        /// Alarm value.
-        /// </summary>
-        ALRM = 12,
-        /// <summary>
-        /// Quality flags.
-        /// </summary>
-        QUAL = 13,
-        /// <summary>
-        /// Undefined signal.
-        /// </summary>
-        NONE = -1
-    }
-
+    IPHM = 1,
     /// <summary>
-    /// Defines extension functions for the <see cref="SignalType"/> enumeration.
+    /// Current phase angle.
     /// </summary>
-    public static class SignalTypeExtensions
+    IPHA = 2,
+    /// <summary>
+    /// Voltage phase magnitude.
+    /// </summary>
+    VPHM = 3,
+    /// <summary>
+    /// Voltage phase angle.
+    /// </summary>
+    VPHA = 4,
+    /// <summary>
+    /// Frequency.
+    /// </summary>
+    FREQ = 5,
+    /// <summary>
+    /// Frequency delta (dF/dt).
+    /// </summary>
+    DFDT = 6,
+    /// <summary>
+    /// Analog value.
+    /// </summary>
+    ALOG = 7,
+    /// <summary>
+    /// Status flags.
+    /// </summary>
+    FLAG = 8,
+    /// <summary>
+    /// Digital values.
+    /// </summary>
+    DIGI = 9,
+    /// <summary>
+    /// Calculated value.
+    /// </summary>
+    CALC = 10,
+    /// <summary>
+    /// Statistical value.
+    /// </summary>
+    STAT = 11,
+    /// <summary>
+    /// Alarm value.
+    /// </summary>
+    ALRM = 12,
+    /// <summary>
+    /// Quality flags.
+    /// </summary>
+    QUAL = 13,
+    /// <summary>
+    /// Undefined signal.
+    /// </summary>
+    NONE = -1
+}
+
+/// <summary>
+/// Defines extension functions for the <see cref="SignalType"/> enumeration.
+/// </summary>
+public static class SignalTypeExtensions
+{
+    /// <summary>
+    /// Returns display friendly signal type name.
+    /// </summary>
+    /// <param name="signalType"><see cref="SignalType"/> to return display name for.</param>
+    /// <returns>Friendly protocol display name for specified <paramref name="signalType"/>.</returns>
+    public static string GetFormattedName(this SignalType signalType)
     {
-        /// <summary>
-        /// Returns display friendly signal type name.
-        /// </summary>
-        /// <param name="signalType"><see cref="SignalType"/> to return display name for.</param>
-        /// <returns>Friendly protocol display name for specified <paramref name="signalType"/>.</returns>
-        public static string GetFormattedName(this SignalType signalType)
+        switch (signalType)
         {
-            switch (signalType)
-            {
-                case SignalType.IPHM:
-                    return "Current phase magnitude";
-                case SignalType.IPHA:
-                    return "Current phase angle";
-                case SignalType.VPHM:
-                    return "Voltage phase magnitude";
-                case SignalType.VPHA:
-                    return "Voltage phase angle";
-                case SignalType.FREQ:
-                    return "Frequency";
-                case SignalType.DFDT:
-                    return "Frequency delta (dF/dt)";
-                case SignalType.ALOG:
-                    return "Analog";
-                case SignalType.FLAG:
-                    return "Status flags";
-                case SignalType.DIGI:
-                    return "Digital Values";
-                case SignalType.CALC:
-                    return "Calculated Value";
-                case SignalType.STAT:
-                    return "Statistic";
-                case SignalType.ALRM:
-                    return "Alarm";
-                case SignalType.QUAL:
-                    return "Quality Flags";
-                case SignalType.NONE:
-                    return "Undefined";
-                default:
-                    return ((Enum)signalType).GetFormattedName();
-            }
+            case SignalType.IPHM:
+                return "Current phase magnitude";
+            case SignalType.IPHA:
+                return "Current phase angle";
+            case SignalType.VPHM:
+                return "Voltage phase magnitude";
+            case SignalType.VPHA:
+                return "Voltage phase angle";
+            case SignalType.FREQ:
+                return "Frequency";
+            case SignalType.DFDT:
+                return "Frequency delta (dF/dt)";
+            case SignalType.ALOG:
+                return "Analog";
+            case SignalType.FLAG:
+                return "Status flags";
+            case SignalType.DIGI:
+                return "Digital Values";
+            case SignalType.CALC:
+                return "Calculated Value";
+            case SignalType.STAT:
+                return "Statistic";
+            case SignalType.ALRM:
+                return "Alarm";
+            case SignalType.QUAL:
+                return "Quality Flags";
+            case SignalType.NONE:
+                return "Undefined";
+            default:
+                return ((Enum)signalType).GetFormattedName();
         }
     }
 }

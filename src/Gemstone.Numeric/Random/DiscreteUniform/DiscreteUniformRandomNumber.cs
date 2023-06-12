@@ -22,27 +22,27 @@
 //******************************************************************************************************
 
 using System;
+using Gemstone.Numeric.Random.Uniform;
 
-namespace Gemstone.Numeric.Random
+namespace Gemstone.Numeric.Random.DiscreteUniform;
+
+/// <summary>
+///  Discrete Pseudo-Random number distributed across Uniform(lower limit, upper limit)
+/// </summary>
+public class DiscreteUniformRandomNumber
 {
     /// <summary>
-    ///  Discrete Pseudo-Random number distributed across Uniform(lower limit, upper limit)
+    /// Property holding the actual value of the Discrete Unif(lower limit, upper limit) random number.
     /// </summary>
-    public class DiscreteUniformRandomNumber
-    {
-        /// <summary>
-        /// Property holding the actual value of the Discrete Unif(lower limit, upper limit) random number.
-        /// </summary>
-        public double Value { get; }
+    public double Value { get; }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="uniform"><see cref="UniformRandomNumber"/>Uniform(0,1)</param>
-        /// <param name="upperLimit">Upper limit of distribution</param>
-        /// <param name="lowerLimit">Lower limit of distribution</param>
-        public DiscreteUniformRandomNumber(UniformRandomNumber uniform, double upperLimit, double lowerLimit = 0) {
-            Value = Math.Ceiling((upperLimit - lowerLimit) * uniform.Value + lowerLimit);
-        }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="uniform"><see cref="UniformRandomNumber"/>Uniform(0,1)</param>
+    /// <param name="upperLimit">Upper limit of distribution</param>
+    /// <param name="lowerLimit">Lower limit of distribution</param>
+    public DiscreteUniformRandomNumber(UniformRandomNumber uniform, double upperLimit, double lowerLimit = 0) {
+        Value = Math.Ceiling((upperLimit - lowerLimit) * uniform.Value + lowerLimit);
     }
 }

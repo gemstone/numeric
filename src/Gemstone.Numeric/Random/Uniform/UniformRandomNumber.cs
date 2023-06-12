@@ -23,27 +23,26 @@
 
 using System;
 
-namespace Gemstone.Numeric.Random
+namespace Gemstone.Numeric.Random.Uniform;
+
+/// <summary>
+/// Pseudo-Random number distributed across the Uniform(0,1) distribution
+/// </summary>
+public class UniformRandomNumber
 {
     /// <summary>
-    /// Pseudo-Random number distributed across the Uniform(0,1) distribution
+    /// Takes a <see cref="double"/> between zero and 1 and sets the Value. 
     /// </summary>
-    public class UniformRandomNumber
-    {
-        /// <summary>
-        /// Takes a <see cref="double"/> between zero and 1 and sets the Value. 
-        /// </summary>
-        /// <param name="value"> <see cref="double"/> used to set Value.</param>
-        public UniformRandomNumber(double value) {
-            if (value is >= 0 and <= 1)
-                Value = value;
-            else
-                throw new Exception("Unable to create Uniform random number because the value lies outside the distribution");
-        }
-
-        /// <summary>
-        /// Property holding the actual value of the Uniform random number.
-        /// </summary>
-        public double Value { get; }
+    /// <param name="value"> <see cref="double"/> used to set Value.</param>
+    public UniformRandomNumber(double value) {
+        if (value is >= 0 and <= 1)
+            Value = value;
+        else
+            throw new Exception("Unable to create Uniform random number because the value lies outside the distribution");
     }
+
+    /// <summary>
+    /// Property holding the actual value of the Uniform random number.
+    /// </summary>
+    public double Value { get; }
 }

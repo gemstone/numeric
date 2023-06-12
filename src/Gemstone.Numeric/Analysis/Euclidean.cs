@@ -25,195 +25,194 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Gemstone.Numeric.Analysis
+namespace Gemstone.Numeric.Analysis;
+
+/// <summary>
+/// Contains an implementation of greatest common denominator
+/// and least common multiple using the Euclidean algorithm.
+/// </summary>
+public static class Euclidean
 {
     /// <summary>
-    /// Contains an implementation of greatest common denominator
-    /// and least common multiple using the Euclidean algorithm.
+    /// Implementation of the modulo operator using Euclidean division.
     /// </summary>
-    public static class Euclidean
+    /// <param name="numerator">The number to be divided.</param>
+    /// <param name="denominator">The number to divide by.</param>
+    /// <returns></returns>
+    public static double Mod(double numerator, double denominator)
     {
-        /// <summary>
-        /// Implementation of the modulo operator using Euclidean division.
-        /// </summary>
-        /// <param name="numerator">The number to be divided.</param>
-        /// <param name="denominator">The number to divide by.</param>
-        /// <returns></returns>
-        public static double Mod(double numerator, double denominator)
-        {
-            double quotient = Math.Floor(numerator / denominator);
-            return numerator - quotient * denominator;
-        }
+        double quotient = Math.Floor(numerator / denominator);
+        return numerator - quotient * denominator;
+    }
 
-        /// <summary>
-        /// Wraps a value to a range of values defined
-        /// by the given minimum value and range.
-        /// </summary>
-        /// <param name="value">The value to be wrapped.</param>
-        /// <param name="minimum">The minimum value of the range.</param>
-        /// <param name="range">The size of the range.</param>
-        /// <returns>The given value wrapped to the given range.</returns>
-        /// <remarks>
-        /// This method wraps the given value based on the assumption that
-        /// for every pair of values x and y where x-y=range, the values are
-        /// equivalent. This is probably most widely understood in terms of
-        /// angles, where 0, 360, 720, etc. are all equivalent angles. If
-        /// you wanted to wrap an angle such that it is between 120 and 480,
-        /// for instance, you could call Euclidean.Wrap(angle, 120, 360).
-        /// </remarks>
-        public static double Wrap(double value, double minimum, double range)
-        {
-            double transform = value - minimum;
-            double remainder = Mod(transform, range);
-            return remainder + minimum;
-        }
+    /// <summary>
+    /// Wraps a value to a range of values defined
+    /// by the given minimum value and range.
+    /// </summary>
+    /// <param name="value">The value to be wrapped.</param>
+    /// <param name="minimum">The minimum value of the range.</param>
+    /// <param name="range">The size of the range.</param>
+    /// <returns>The given value wrapped to the given range.</returns>
+    /// <remarks>
+    /// This method wraps the given value based on the assumption that
+    /// for every pair of values x and y where x-y=range, the values are
+    /// equivalent. This is probably most widely understood in terms of
+    /// angles, where 0, 360, 720, etc. are all equivalent angles. If
+    /// you wanted to wrap an angle such that it is between 120 and 480,
+    /// for instance, you could call Euclidean.Wrap(angle, 120, 360).
+    /// </remarks>
+    public static double Wrap(double value, double minimum, double range)
+    {
+        double transform = value - minimum;
+        double remainder = Mod(transform, range);
+        return remainder + minimum;
+    }
 
-        /// <summary>
-        /// Gets the greatest common denominator of all the integers in the source collection.
-        /// </summary>
-        /// <param name="source">The collection of integers.</param>
-        /// <returns>The greatest common denominator.</returns>
-        public static int GreatestCommonDenominator(this IEnumerable<int> source)
-        {
-            if (source is null)
-                throw new ArgumentNullException(nameof(source), "source is null");
+    /// <summary>
+    /// Gets the greatest common denominator of all the integers in the source collection.
+    /// </summary>
+    /// <param name="source">The collection of integers.</param>
+    /// <returns>The greatest common denominator.</returns>
+    public static int GreatestCommonDenominator(this IEnumerable<int> source)
+    {
+        if (source is null)
+            throw new ArgumentNullException(nameof(source), "source is null");
 
-            return source.Aggregate(GreatestCommonDenominator);
-        }
+        return source.Aggregate(GreatestCommonDenominator);
+    }
 
-        /// <summary>
-        /// Gets the greatest common denominator of all the integers in the source collection.
-        /// </summary>
-        /// <param name="source">The collection of integers.</param>
-        /// <returns>The greatest common denominator.</returns>
-        public static int GreatestCommonDenominator(params int[] source)
-        {
-            if (source is null)
-                throw new ArgumentNullException(nameof(source), "source is null");
+    /// <summary>
+    /// Gets the greatest common denominator of all the integers in the source collection.
+    /// </summary>
+    /// <param name="source">The collection of integers.</param>
+    /// <returns>The greatest common denominator.</returns>
+    public static int GreatestCommonDenominator(params int[] source)
+    {
+        if (source is null)
+            throw new ArgumentNullException(nameof(source), "source is null");
 
-            return source.Aggregate(GreatestCommonDenominator);
-        }
+        return source.Aggregate(GreatestCommonDenominator);
+    }
 
-        /// <summary>
-        /// Gets the greatest common denominator of the given integers.
-        /// </summary>
-        /// <param name="a">The first of the given integers.</param>
-        /// <param name="b">The second of the given integers.</param>
-        /// <returns>The greatest common denominator.</returns>
-        public static int GreatestCommonDenominator(int a, int b)
-        {
-            return b != 0 ? GreatestCommonDenominator(b, a % b) : a;
-        }
+    /// <summary>
+    /// Gets the greatest common denominator of the given integers.
+    /// </summary>
+    /// <param name="a">The first of the given integers.</param>
+    /// <param name="b">The second of the given integers.</param>
+    /// <returns>The greatest common denominator.</returns>
+    public static int GreatestCommonDenominator(int a, int b)
+    {
+        return b != 0 ? GreatestCommonDenominator(b, a % b) : a;
+    }
 
-        /// <summary>
-        /// Gets the greatest common denominator of all the integers in the source collection.
-        /// </summary>
-        /// <param name="source">The collection of integers.</param>
-        /// <returns>The greatest common denominator.</returns>
-        public static long GreatestCommonDenominator(this IEnumerable<long> source)
-        {
-            if (source is null)
-                throw new ArgumentNullException(nameof(source), "source is null");
+    /// <summary>
+    /// Gets the greatest common denominator of all the integers in the source collection.
+    /// </summary>
+    /// <param name="source">The collection of integers.</param>
+    /// <returns>The greatest common denominator.</returns>
+    public static long GreatestCommonDenominator(this IEnumerable<long> source)
+    {
+        if (source is null)
+            throw new ArgumentNullException(nameof(source), "source is null");
 
-            return source.Aggregate(GreatestCommonDenominator);
-        }
+        return source.Aggregate(GreatestCommonDenominator);
+    }
 
-        /// <summary>
-        /// Gets the greatest common denominator of all the integers in the source collection.
-        /// </summary>
-        /// <param name="source">The collection of integers.</param>
-        /// <returns>The greatest common denominator.</returns>
-        public static long GreatestCommonDenominator(params long[] source)
-        {
-            if (source is null)
-                throw new ArgumentNullException(nameof(source), "source is null");
+    /// <summary>
+    /// Gets the greatest common denominator of all the integers in the source collection.
+    /// </summary>
+    /// <param name="source">The collection of integers.</param>
+    /// <returns>The greatest common denominator.</returns>
+    public static long GreatestCommonDenominator(params long[] source)
+    {
+        if (source is null)
+            throw new ArgumentNullException(nameof(source), "source is null");
 
-            return source.Aggregate(GreatestCommonDenominator);
-        }
+        return source.Aggregate(GreatestCommonDenominator);
+    }
 
-        /// <summary>
-        /// Gets the greatest common denominator of the given integers.
-        /// </summary>
-        /// <param name="a">The first of the given integers.</param>
-        /// <param name="b">The second of the given integers.</param>
-        /// <returns>The greatest common denominator.</returns>
-        public static long GreatestCommonDenominator(long a, long b)
-        {
-            return b != 0 ? GreatestCommonDenominator(b, a % b) : a;
-        }
+    /// <summary>
+    /// Gets the greatest common denominator of the given integers.
+    /// </summary>
+    /// <param name="a">The first of the given integers.</param>
+    /// <param name="b">The second of the given integers.</param>
+    /// <returns>The greatest common denominator.</returns>
+    public static long GreatestCommonDenominator(long a, long b)
+    {
+        return b != 0 ? GreatestCommonDenominator(b, a % b) : a;
+    }
 
-        /// <summary>
-        /// Gets the least common multiple of all the integers in the source collection.
-        /// </summary>
-        /// <param name="source">The collection of integers.</param>
-        /// <returns>The least common multiple.</returns>
-        public static int LeastCommonMultiple(this IEnumerable<int> source)
-        {
-            if (source is null)
-                throw new ArgumentNullException(nameof(source), "source is null");
+    /// <summary>
+    /// Gets the least common multiple of all the integers in the source collection.
+    /// </summary>
+    /// <param name="source">The collection of integers.</param>
+    /// <returns>The least common multiple.</returns>
+    public static int LeastCommonMultiple(this IEnumerable<int> source)
+    {
+        if (source is null)
+            throw new ArgumentNullException(nameof(source), "source is null");
 
-            return source.Aggregate(LeastCommonMultiple);
-        }
+        return source.Aggregate(LeastCommonMultiple);
+    }
 
-        /// <summary>
-        /// Gets the least common multiple of all the integers in the source collection.
-        /// </summary>
-        /// <param name="source">The collection of integers.</param>
-        /// <returns>The least common multiple.</returns>
-        public static int LeastCommonMultiple(params int[] source)
-        {
-            if (source is null)
-                throw new ArgumentNullException(nameof(source), "source is null");
+    /// <summary>
+    /// Gets the least common multiple of all the integers in the source collection.
+    /// </summary>
+    /// <param name="source">The collection of integers.</param>
+    /// <returns>The least common multiple.</returns>
+    public static int LeastCommonMultiple(params int[] source)
+    {
+        if (source is null)
+            throw new ArgumentNullException(nameof(source), "source is null");
 
-            return source.Aggregate(LeastCommonMultiple);
-        }
+        return source.Aggregate(LeastCommonMultiple);
+    }
 
-        /// <summary>
-        /// Gets the least common multiple of the given integers.
-        /// </summary>
-        /// <param name="a">The first of the given integers.</param>
-        /// <param name="b">The second of the given integers.</param>
-        /// <returns>The least common multiple.</returns>
-        public static int LeastCommonMultiple(int a, int b)
-        {
-            return a * (b / GreatestCommonDenominator(a, b));
-        }
+    /// <summary>
+    /// Gets the least common multiple of the given integers.
+    /// </summary>
+    /// <param name="a">The first of the given integers.</param>
+    /// <param name="b">The second of the given integers.</param>
+    /// <returns>The least common multiple.</returns>
+    public static int LeastCommonMultiple(int a, int b)
+    {
+        return a * (b / GreatestCommonDenominator(a, b));
+    }
 
-        /// <summary>
-        /// Gets the least common multiple of all the integers in the source collection.
-        /// </summary>
-        /// <param name="source">The collection of integers.</param>
-        /// <returns>The least common multiple.</returns>
-        public static long LeastCommonMultiple(this IEnumerable<long> source)
-        {
-            if (source is null)
-                throw new ArgumentNullException(nameof(source), "source is null");
+    /// <summary>
+    /// Gets the least common multiple of all the integers in the source collection.
+    /// </summary>
+    /// <param name="source">The collection of integers.</param>
+    /// <returns>The least common multiple.</returns>
+    public static long LeastCommonMultiple(this IEnumerable<long> source)
+    {
+        if (source is null)
+            throw new ArgumentNullException(nameof(source), "source is null");
 
-            return source.Aggregate(LeastCommonMultiple);
-        }
+        return source.Aggregate(LeastCommonMultiple);
+    }
 
-        /// <summary>
-        /// Gets the least common multiple of all the integers in the source collection.
-        /// </summary>
-        /// <param name="source">The collection of integers.</param>
-        /// <returns>The least common multiple.</returns>
-        public static long LeastCommonMultiple(params long[] source)
-        {
-            if (source is null)
-                throw new ArgumentNullException(nameof(source), "source is null");
+    /// <summary>
+    /// Gets the least common multiple of all the integers in the source collection.
+    /// </summary>
+    /// <param name="source">The collection of integers.</param>
+    /// <returns>The least common multiple.</returns>
+    public static long LeastCommonMultiple(params long[] source)
+    {
+        if (source is null)
+            throw new ArgumentNullException(nameof(source), "source is null");
 
-            return source.Aggregate(LeastCommonMultiple);
-        }
+        return source.Aggregate(LeastCommonMultiple);
+    }
 
-        /// <summary>
-        /// Gets the least common multiple of the given integers.
-        /// </summary>
-        /// <param name="a">The first of the given integers.</param>
-        /// <param name="b">The second of the given integers.</param>
-        /// <returns>The least common multiple.</returns>
-        public static long LeastCommonMultiple(long a, long b)
-        {
-            return a * (b / GreatestCommonDenominator(a, b));
-        }
+    /// <summary>
+    /// Gets the least common multiple of the given integers.
+    /// </summary>
+    /// <param name="a">The first of the given integers.</param>
+    /// <param name="b">The second of the given integers.</param>
+    /// <returns>The least common multiple.</returns>
+    public static long LeastCommonMultiple(long a, long b)
+    {
+        return a * (b / GreatestCommonDenominator(a, b));
     }
 }

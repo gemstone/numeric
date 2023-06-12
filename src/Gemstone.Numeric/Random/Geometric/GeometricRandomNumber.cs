@@ -23,28 +23,28 @@
 
 
 using System;
+using Gemstone.Numeric.Random.Uniform;
 
-namespace Gemstone.Numeric.Random
+namespace Gemstone.Numeric.Random.Geometric;
+
+/// <summary>
+/// Pseudo-Random number distributed across Geometric(probability)
+/// </summary>
+public class GeometricRandomNumber
 {
+
     /// <summary>
-    /// Pseudo-Random number distributed across Geometric(probability)
+    /// Property holding the actual value of the Geometric(probability) random number.
     /// </summary>
-    public class GeometricRandomNumber
+    public int Value { get; }
+
+    /// <summary>
+    /// Transforms a Uniform(0,1) into a Geometric(probability)
+    /// </summary>
+    /// <param name="uniform"><see cref="UniformRandomNumber"/>Uniform(0,1)</param>
+    /// <param name="probability">Probability of bernoulli trial success</param>
+    public GeometricRandomNumber(UniformRandomNumber uniform, double probability)
     {
-
-        /// <summary>
-        /// Property holding the actual value of the Geometric(probability) random number.
-        /// </summary>
-        public int Value { get; }
-
-        /// <summary>
-        /// Transforms a Uniform(0,1) into a Geometric(probability)
-        /// </summary>
-        /// <param name="uniform"><see cref="UniformRandomNumber"/>Uniform(0,1)</param>
-        /// <param name="probability">Probability of bernoulli trial success</param>
-        public GeometricRandomNumber(UniformRandomNumber uniform, double probability)
-        {
-            Value = (int)Math.Ceiling(Math.Log(uniform.Value)/ Math.Log(1 - probability));
-        }
+        Value = (int)Math.Ceiling(Math.Log(uniform.Value)/ Math.Log(1 - probability));
     }
 }

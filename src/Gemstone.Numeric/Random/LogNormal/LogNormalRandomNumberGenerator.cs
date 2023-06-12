@@ -23,58 +23,58 @@
 
 using System;
 using System.Collections.Generic;
+using Gemstone.Numeric.Random.Uniform;
 
-namespace Gemstone.Numeric.Random
+namespace Gemstone.Numeric.Random.LogNormal;
+
+/// <summary>
+/// Generates LogNormal(mean,variance) distribution, full period cycle length > 2 billion
+/// </summary>
+public class LogNormalRandomNumberGenerator
 {
     /// <summary>
-    /// Generates LogNormal(mean,variance) distribution, full period cycle length > 2 billion
+    /// Instantiates Normal distribution generator to LogNormal(mean,variance)
     /// </summary>
-    public class LogNormalRandomNumberGenerator
+    /// <param name="seed">Seed value for Uniform generator</param>
+    /// <param name="power">Power of the Log Normal distribution</param>
+    /// <param name="mean">Mean of the Normal distribution</param>
+    /// <param name="variance">Variance of the Normal distribution</param>
+    public LogNormalRandomNumberGenerator(int seed, double power = Math.E, double mean = 0, double variance = 1)
     {
-        /// <summary>
-        /// Instantiates Normal distribution generator to LogNormal(mean,variance)
-        /// </summary>
-        /// <param name="seed">Seed value for Uniform generator</param>
-        /// <param name="power">Power of the Log Normal distribution</param>
-        /// <param name="mean">Mean of the Normal distribution</param>
-        /// <param name="variance">Variance of the Normal distribution</param>
-        public LogNormalRandomNumberGenerator(int seed, double power = Math.E, double mean = 0, double variance = 1)
-        {
-            Power = power;
-            Mean = mean;
-            Variance = variance;
-            UniformGenerator = new UniformRandomNumberGenerator(seed);
-        }
-
-        private double Power { get; set; }
-        private double Mean { get; set; }
-        private double Variance { get; set; }
-        private UniformRandomNumberGenerator UniformGenerator { get; }
-
-        /// <summary>
-        /// Gets next <see cref="LogNormalRandomNumber"/> in the sequence
-        /// </summary>
-        /// <returns><see cref="LogNormalRandomNumber"/></returns>
-        public LogNormalRandomNumber Next()
-        {
-            UniformRandomNumber rv = UniformGenerator.Next();
-            return new LogNormalRandomNumber(rv, Power, Mean, Variance);
-        }
-
-        /// <summary>
-        /// Gets the next n number of <see cref="LogNormalRandomNumber"/>
-        /// </summary>
-        /// <param name="number"></param>
-        /// <returns><see cref="IEnumerable{LogNormalRandomNumber}"/></returns>
-        public IEnumerable<LogNormalRandomNumber> Next(int number)
-        {
-            List<LogNormalRandomNumber> list = new();
-            for (int i = 0; i < number; i++)
-                list.Add(Next());
-
-            return list;
-        }
-
-
+        Power = power;
+        Mean = mean;
+        Variance = variance;
+        UniformGenerator = new UniformRandomNumberGenerator(seed);
     }
+
+    private double Power { get; set; }
+    private double Mean { get; set; }
+    private double Variance { get; set; }
+    private UniformRandomNumberGenerator UniformGenerator { get; }
+
+    /// <summary>
+    /// Gets next <see cref="LogNormalRandomNumber"/> in the sequence
+    /// </summary>
+    /// <returns><see cref="LogNormalRandomNumber"/></returns>
+    public LogNormalRandomNumber Next()
+    {
+        UniformRandomNumber rv = UniformGenerator.Next();
+        return new LogNormalRandomNumber(rv, Power, Mean, Variance);
+    }
+
+    /// <summary>
+    /// Gets the next n number of <see cref="LogNormalRandomNumber"/>
+    /// </summary>
+    /// <param name="number"></param>
+    /// <returns><see cref="IEnumerable{LogNormalRandomNumber}"/></returns>
+    public IEnumerable<LogNormalRandomNumber> Next(int number)
+    {
+        List<LogNormalRandomNumber> list = new();
+        for (int i = 0; i < number; i++)
+            list.Add(Next());
+
+        return list;
+    }
+
+
 }

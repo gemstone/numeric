@@ -22,52 +22,52 @@
 //******************************************************************************************************
 
 using System.Collections.Generic;
+using Gemstone.Numeric.Random.Uniform;
 
-namespace Gemstone.Numeric.Random
+namespace Gemstone.Numeric.Random.Geometric;
+
+/// <summary>
+/// Generates Geometric(probability) distribution, full period cycle length > 2 billion
+/// </summary>
+public class GeometricRandomNumberGenerator
 {
     /// <summary>
-    /// Generates Geometric(probability) distribution, full period cycle length > 2 billion
+    /// Instantiates Normal distribution generator to Geometric(probability)
     /// </summary>
-    public class GeometricRandomNumberGenerator
+    /// <param name="seed">Seed value for Uniform generator</param>
+    /// <param name="probability">Probability of bernoulli trial success</param>
+    public GeometricRandomNumberGenerator(int seed, double probability)
     {
-        /// <summary>
-        /// Instantiates Normal distribution generator to Geometric(probability)
-        /// </summary>
-        /// <param name="seed">Seed value for Uniform generator</param>
-        /// <param name="probability">Probability of bernoulli trial success</param>
-        public GeometricRandomNumberGenerator(int seed, double probability)
-        {
-            Probability = probability;
-            UniformGenerator = new UniformRandomNumberGenerator(seed);
-        }
-
-        private double Probability { get; set; }
-        private UniformRandomNumberGenerator UniformGenerator { get; }
-
-        /// <summary>
-        /// Gets next <see cref="GeometricRandomNumber"/> in the sequence
-        /// </summary>
-        /// <returns><see cref="GeometricRandomNumber"/></returns>
-        public GeometricRandomNumber Next()
-        {
-            UniformRandomNumber rv = UniformGenerator.Next();
-            return new GeometricRandomNumber(rv, Probability);
-        }
-
-        /// <summary>
-        /// Gets the next n number of <see cref="GeometricRandomNumber"/>
-        /// </summary>
-        /// <param name="number"></param>
-        /// <returns><see cref="IEnumerable{GeometricRandomNumber}"/></returns>
-        public IEnumerable<GeometricRandomNumber> Next(int number)
-        {
-            List<GeometricRandomNumber> list = new();
-            for (int i = 0; i < number; i++)
-                list.Add(Next());
-
-            return list;
-        }
-
-
+        Probability = probability;
+        UniformGenerator = new UniformRandomNumberGenerator(seed);
     }
+
+    private double Probability { get; set; }
+    private UniformRandomNumberGenerator UniformGenerator { get; }
+
+    /// <summary>
+    /// Gets next <see cref="GeometricRandomNumber"/> in the sequence
+    /// </summary>
+    /// <returns><see cref="GeometricRandomNumber"/></returns>
+    public GeometricRandomNumber Next()
+    {
+        UniformRandomNumber rv = UniformGenerator.Next();
+        return new GeometricRandomNumber(rv, Probability);
+    }
+
+    /// <summary>
+    /// Gets the next n number of <see cref="GeometricRandomNumber"/>
+    /// </summary>
+    /// <param name="number"></param>
+    /// <returns><see cref="IEnumerable{GeometricRandomNumber}"/></returns>
+    public IEnumerable<GeometricRandomNumber> Next(int number)
+    {
+        List<GeometricRandomNumber> list = new();
+        for (int i = 0; i < number; i++)
+            list.Add(Next());
+
+        return list;
+    }
+
+
 }

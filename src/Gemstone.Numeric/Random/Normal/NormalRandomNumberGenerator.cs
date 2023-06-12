@@ -22,55 +22,55 @@
 //******************************************************************************************************
 
 using System.Collections.Generic;
+using Gemstone.Numeric.Random.Uniform;
 
-namespace Gemstone.Numeric.Random
+namespace Gemstone.Numeric.Random.Normal;
+
+/// <summary>
+/// Generates Normal(mean,variance) distribution, full period cycle length > 2 billion
+/// </summary>
+public class NormalRandomNumberGenerator
 {
     /// <summary>
-    /// Generates Normal(mean,variance) distribution, full period cycle length > 2 billion
+    /// Instantiates Normal distribution generator to Normal(mean,variance)
     /// </summary>
-    public class NormalRandomNumberGenerator
+    /// <param name="seed">Seed value for Uniform generator</param>
+    /// <param name="mean">Mean of the Normal distribution</param>
+    /// <param name="variance">Variance of the Normal distribution</param>
+    public NormalRandomNumberGenerator(int seed, double mean = 0, double variance = 1)
     {
-        /// <summary>
-        /// Instantiates Normal distribution generator to Normal(mean,variance)
-        /// </summary>
-        /// <param name="seed">Seed value for Uniform generator</param>
-        /// <param name="mean">Mean of the Normal distribution</param>
-        /// <param name="variance">Variance of the Normal distribution</param>
-        public NormalRandomNumberGenerator(int seed, double mean = 0, double variance = 1)
-        {
-            Mean = mean;
-            Variance = variance;
-            UniformGenerator = new UniformRandomNumberGenerator(seed);
-        }
-
-        private double Mean { get; set; }
-        private double Variance { get; set; }
-        private UniformRandomNumberGenerator UniformGenerator { get; }
-
-        /// <summary>
-        /// Gets next <see cref="NormalRandomNumber"/> in the sequence
-        /// </summary>
-        /// <returns><see cref="NormalRandomNumber"/></returns>
-        public NormalRandomNumber Next()
-        {
-            UniformRandomNumber rv = UniformGenerator.Next();
-            return new NormalRandomNumber(rv, Mean, Variance);
-        }
-
-        /// <summary>
-        /// Gets the next n number of <see cref="NormalRandomNumber"/>
-        /// </summary>
-        /// <param name="number"></param>
-        /// <returns><see cref="IEnumerable{NormalRandomNumber}"/></returns>
-        public IEnumerable<NormalRandomNumber> Next(int number)
-        {
-            List<NormalRandomNumber> list = new();
-            for (int i = 0; i < number; i++)
-                list.Add(Next());
-
-            return list;
-        }
-
-
+        Mean = mean;
+        Variance = variance;
+        UniformGenerator = new UniformRandomNumberGenerator(seed);
     }
+
+    private double Mean { get; set; }
+    private double Variance { get; set; }
+    private UniformRandomNumberGenerator UniformGenerator { get; }
+
+    /// <summary>
+    /// Gets next <see cref="NormalRandomNumber"/> in the sequence
+    /// </summary>
+    /// <returns><see cref="NormalRandomNumber"/></returns>
+    public NormalRandomNumber Next()
+    {
+        UniformRandomNumber rv = UniformGenerator.Next();
+        return new NormalRandomNumber(rv, Mean, Variance);
+    }
+
+    /// <summary>
+    /// Gets the next n number of <see cref="NormalRandomNumber"/>
+    /// </summary>
+    /// <param name="number"></param>
+    /// <returns><see cref="IEnumerable{NormalRandomNumber}"/></returns>
+    public IEnumerable<NormalRandomNumber> Next(int number)
+    {
+        List<NormalRandomNumber> list = new();
+        for (int i = 0; i < number; i++)
+            list.Add(Next());
+
+        return list;
+    }
+
+
 }

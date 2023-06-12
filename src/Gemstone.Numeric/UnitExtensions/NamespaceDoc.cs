@@ -23,13 +23,12 @@
 
 using System.Runtime.CompilerServices;
 
-namespace Gemstone.Numeric.UnitExtensions
+namespace Gemstone.Numeric.UnitExtensions;
+
+/// <summary>
+/// Contains numeric extension methods for types in <see cref="Gemstone.Units"/> namespace.
+/// </summary>
+[CompilerGenerated]
+class NamespaceDoc
 {
-    /// <summary>
-    /// Contains numeric extension methods for types in <see cref="Gemstone.Units"/> namespace.
-    /// </summary>
-    [CompilerGenerated]
-    class NamespaceDoc
-    {
-    }
 }

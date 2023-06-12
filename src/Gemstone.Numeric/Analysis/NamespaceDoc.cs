@@ -25,13 +25,12 @@
 
 using System.Runtime.CompilerServices;
 
-namespace Gemstone.Numeric.Analysis
+namespace Gemstone.Numeric.Analysis;
+
+/// <summary>
+/// Contains classes and extension functions used to calculate common numerical operations such as curve fits and standard deviations.
+/// </summary>
+[CompilerGenerated]
+internal class NamespaceDoc
 {
-    /// <summary>
-    /// Contains classes and extension functions used to calculate common numerical operations such as curve fits and standard deviations.
-    /// </summary>
-    [CompilerGenerated]
-    internal class NamespaceDoc
-    {
-    }
 }

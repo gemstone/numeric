@@ -23,21 +23,20 @@
 
 using System;
 
-namespace Gemstone.Numeric.EE
+namespace Gemstone.Numeric.EE;
+
+/// <summary>
+/// Nominal line frequencies enumeration.
+/// </summary>
+[Serializable]
+public enum LineFrequency
 {
     /// <summary>
-    /// Nominal line frequencies enumeration.
+    /// 50Hz nominal frequency.
     /// </summary>
-    [Serializable]
-    public enum LineFrequency
-    {
-        /// <summary>
-        /// 50Hz nominal frequency.
-        /// </summary>
-        Hz50 = 50,
-        /// <summary>
-        /// 60Hz nominal frequency.
-        /// </summary>
-        Hz60 = 60
-    }
+    Hz50 = 50,
+    /// <summary>
+    /// 60Hz nominal frequency.
+    /// </summary>
+    Hz60 = 60
 }

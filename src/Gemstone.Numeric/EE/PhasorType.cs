@@ -23,21 +23,20 @@
 
 using System;
 
-namespace Gemstone.Numeric.EE
+namespace Gemstone.Numeric.EE;
+
+/// <summary>
+/// Phasor types enumeration.
+/// </summary>
+[Serializable]
+public enum PhasorType : byte
 {
     /// <summary>
-    /// Phasor types enumeration.
+    /// Voltage phasor.
     /// </summary>
-    [Serializable]
-    public enum PhasorType : byte
-    {
-        /// <summary>
-        /// Voltage phasor.
-        /// </summary>
-        Voltage,
-        /// <summary>
-        /// Current phasor.
-        /// </summary>
-        Current
-    }
+    Voltage,
+    /// <summary>
+    /// Current phasor.
+    /// </summary>
+    Current
 }
