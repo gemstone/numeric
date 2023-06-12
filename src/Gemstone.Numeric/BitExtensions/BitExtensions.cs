@@ -71,7 +71,7 @@ namespace Gemstone.Numeric.BitExtensions;
 public static class BitExtensions
 {
     private static string RemoveSign(string value) =>
-    value.Length > 0 && value[0] == '-' ? value[1..] : value;
+        value.Length > 0 && value[0] == '-' ? value[1..] : value;
 
     /// <summary>
     /// Encodes <paramref name="value"/> as binary, i.e., a string of bit values (0 or 1).

@@ -86,10 +86,8 @@ public static class BinaryCodedDecimal
     /// <param name="bcd">Binary-coded decimal value.</param>
     /// <returns>Standard binary representation of binary-coded decimal value.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static byte Decode(byte bcd)
-    {
-        return (byte)(bcd.HighNibble() * TenP1 + bcd.LowNibble());
-    }
+    public static byte Decode(byte bcd) => 
+        (byte)(bcd.HighNibble() * TenP1 + bcd.LowNibble());
 
     /// <summary>
     /// Gets binary value from two-byte binary-coded decimal.
@@ -97,10 +95,8 @@ public static class BinaryCodedDecimal
     /// <param name="bcd">Two-byte binary-coded decimal value.</param>
     /// <returns>Standard binary representation of binary-coded decimal value.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static ushort Decode(ushort bcd)
-    {
-        return (ushort)(Decode(bcd.HighByte()) * TenP2 + Decode(bcd.LowByte()));
-    }
+    public static ushort Decode(ushort bcd) => 
+        (ushort)(Decode(bcd.HighByte()) * TenP2 + Decode(bcd.LowByte()));
 
     /// <summary>
     /// Gets binary value from four-byte binary-coded decimal.
@@ -108,10 +104,8 @@ public static class BinaryCodedDecimal
     /// <param name="bcd">Four-byte binary-coded decimal value.</param>
     /// <returns>Standard binary representation of binary-coded decimal value.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static uint Decode(uint bcd)
-    {
-        return (uint)(Decode(bcd.HighWord()) * TenP4 + Decode(bcd.LowWord()));
-    }
+    public static uint Decode(uint bcd) => 
+        (uint)(Decode(bcd.HighWord()) * TenP4 + Decode(bcd.LowWord()));
 
     /// <summary>
     /// Gets binary value from eight-byte binary-coded decimal.
@@ -119,10 +113,8 @@ public static class BinaryCodedDecimal
     /// <param name="bcd">Eight-byte binary-coded decimal value.</param>
     /// <returns>Standard binary representation of binary-coded decimal value.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static ulong Decode(ulong bcd)
-    {
-        return (ulong)(Decode(bcd.HighDoubleWord()) * TenP8 + Decode(bcd.LowDoubleWord()));
-    }
+    public static ulong Decode(ulong bcd) => 
+        (ulong)(Decode(bcd.HighDoubleWord()) * TenP8 + Decode(bcd.LowDoubleWord()));
 
     /// <summary>
     /// Gets binary-coded decimal from binary value.
