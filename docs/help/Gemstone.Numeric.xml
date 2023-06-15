@@ -4,6 +4,271 @@
     <name>Gemstone.Numeric</name>
   </assembly>
   <members>
+    <member name="T:Gemstone.Numeric.BinaryCodedDecimal">
+      <summary>
+            Defines functions related to binary-coded decimals.
+            </summary>
+      <remarks>
+            See <a href="http://en.wikipedia.org/wiki/Binary-coded_decimal">Binary-coded decimal</a> for details.
+            </remarks>
+    </member>
+    <member name="M:Gemstone.Numeric.BinaryCodedDecimal.Decode(System.Byte)">
+      <summary>
+            Gets binary value from binary-coded decimal.
+            </summary>
+      <param name="bcd">Binary-coded decimal value.</param>
+      <returns>Standard binary representation of binary-coded decimal value.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.BinaryCodedDecimal.Decode(System.UInt16)">
+      <summary>
+            Gets binary value from two-byte binary-coded decimal.
+            </summary>
+      <param name="bcd">Two-byte binary-coded decimal value.</param>
+      <returns>Standard binary representation of binary-coded decimal value.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.BinaryCodedDecimal.Decode(System.UInt32)">
+      <summary>
+            Gets binary value from four-byte binary-coded decimal.
+            </summary>
+      <param name="bcd">Four-byte binary-coded decimal value.</param>
+      <returns>Standard binary representation of binary-coded decimal value.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.BinaryCodedDecimal.Decode(System.UInt64)">
+      <summary>
+            Gets binary value from eight-byte binary-coded decimal.
+            </summary>
+      <param name="bcd">Eight-byte binary-coded decimal value.</param>
+      <returns>Standard binary representation of binary-coded decimal value.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.BinaryCodedDecimal.Encode(System.Byte)">
+      <summary>
+            Gets binary-coded decimal from binary value.
+            </summary>
+      <param name="value">Binary value.</param>
+      <returns>Binary-coded decimal representation of standard binary value.</returns>
+      <exception cref="T:System.ArgumentOutOfRangeException">A binary-coded decimal has a maximum value of 99 for a single byte.</exception>
+    </member>
+    <member name="M:Gemstone.Numeric.BinaryCodedDecimal.Encode(System.UInt16)">
+      <summary>
+            Gets binary-coded decimal from binary value.
+            </summary>
+      <param name="value">Binary value.</param>
+      <returns>Binary-coded decimal representation of standard binary value.</returns>
+      <exception cref="T:System.ArgumentOutOfRangeException">A binary-coded decimal has a maximum value of 9,999 for two bytes.</exception>
+    </member>
+    <member name="M:Gemstone.Numeric.BinaryCodedDecimal.Encode(System.UInt32)">
+      <summary>
+            Gets binary-coded decimal from binary value.
+            </summary>
+      <param name="value">Binary value.</param>
+      <returns>Binary-coded decimal representation of standard binary value.</returns>
+      <exception cref="T:System.ArgumentOutOfRangeException">A binary-coded decimal has a maximum value of 99,999,999 for four bytes.</exception>
+    </member>
+    <member name="M:Gemstone.Numeric.BinaryCodedDecimal.Encode(System.UInt64)">
+      <summary>
+            Gets binary-coded decimal from binary value.
+            </summary>
+      <param name="value">Binary value.</param>
+      <returns>Binary-coded decimal representation of standard binary value.</returns>
+      <exception cref="T:System.ArgumentOutOfRangeException">A binary-coded decimal has a maximum value of 9,999,999,999,999,999 for eight bytes.</exception>
+    </member>
+    <member name="T:Gemstone.Numeric.ComplexNumber">
+      <summary>
+            Represents a complex number.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.#ctor(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Creates a <see cref="T:Gemstone.Numeric.ComplexNumber" /> from the given <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+      <param name="z">
+        <see cref="T:Gemstone.Numeric.ComplexNumber" /> to be copied.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.#ctor(Gemstone.Units.Angle,System.Double)">
+      <summary>
+            Creates a <see cref="T:Gemstone.Numeric.ComplexNumber" /> from the given polar values.
+            </summary>
+      <param name="angle">The <see cref="P:Gemstone.Numeric.ComplexNumber.Angle" /> component, in radians, of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
+      <param name="magnitude">The magnitude (or absolute value) component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.#ctor(System.Double,System.Double)">
+      <summary>
+            Creates a <see cref="T:Gemstone.Numeric.ComplexNumber" /> from the given rectangular values. 
+            </summary>
+      <param name="real">The real component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
+      <param name="imaginary">The imaginary component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.AllAssigned">
+      <summary>
+            Gets a boolean value indicating if each composite value of the <see cref="T:Gemstone.Numeric.ComplexNumber" /> (i.e., real and imaginary) has been assigned a value.
+            </summary>
+      <returns>True, if all composite values have been assigned a value; otherwise, false.</returns>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.Angle">
+      <summary>
+            Gets or sets the <see cref="P:Gemstone.Numeric.ComplexNumber.Angle" /> (a.k.a. the argument) in radians of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.Conjugate">
+      <summary>
+            Gets the complex conjugate of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.Equals(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Returns a value indicating whether this instance is equal to a specified ComplexNumber value.
+            </summary>
+      <param name="obj">A <see cref="T:Gemstone.Numeric.ComplexNumber" /> to compare to this instance.</param>
+      <returns>
+            True if <paramref name="obj" /> has the same value as this instance; otherwise, False.
+            </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.Equals(System.Object)">
+      <summary>
+            Returns a value indicating whether this instance is equal to a specified object.
+            </summary>
+      <param name="obj">An object to compare, or null.</param>
+      <returns>
+            True if <paramref name="obj" /> is an instance of ComplexNumber and equals the value of this instance;
+            otherwise, False.
+            </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.GetHashCode">
+      <summary>
+            Returns the hash code for this instance.
+            </summary>
+      <returns>
+            A 32-bit signed integer hash code.
+            </returns>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.Imaginary">
+      <summary>
+            Gets or sets the imaginary component of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.Magnitude">
+      <summary>
+            Gets or sets the magnitude (a.k.a. the modulus or absolute value) of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.NoneAssigned">
+      <summary>
+            Gets a boolean value indicating if each composite value of the <see cref="T:Gemstone.Numeric.ComplexNumber" /> (i.e., real and imaginary) has not been assigned a value.
+            </summary>
+      <returns>True, if none of the composite values have been assigned a value; otherwise, false.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Addition(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Returns computed sum of values.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>ComplexNumber representing the result of the addition operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Division(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Returns computed division of values.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>ComplexNumber representing the result of the division operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Equality(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Compares the two values for equality.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>Boolean representing the result of the addition operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Exponent(Gemstone.Numeric.ComplexNumber,System.Double)">
+      <summary>
+             Returns result of first value raised to power of second value.
+             </summary>
+      <param name="z">Complex number to be raised to power <paramref name="y" />.</param>
+      <param name="y">Power to raise <see cref="T:Gemstone.Numeric.ComplexNumber" /><paramref name="z" />.</param>
+      <returns>ComplexNumber representing the result of the operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Implicit(Gemstone.Numeric.ComplexNumber)~System.Numerics.Complex">
+      <summary>
+            Implicitly converts a <see cref="T:Gemstone.Numeric.ComplexNumber" /> to a .NET <see cref="T:System.Numerics.Complex" /> value.
+            </summary>
+      <param name="value">Operand.</param>
+      <returns>Complex representing the result of the operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Implicit(System.Double)~Gemstone.Numeric.ComplexNumber">
+      <summary>
+            Implicitly converts a <see cref="T:System.Double" /> to a <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+      <param name="value">Operand.</param>
+      <returns>ComplexNumber representing the result of the operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Implicit(System.Numerics.Complex)~Gemstone.Numeric.ComplexNumber">
+      <summary>
+            Implicitly converts a .NET <see cref="T:System.Numerics.Complex" /> value to a <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+      <param name="value">Operand.</param>
+      <returns>ComplexNumber representing the result of the operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Inequality(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Compares the two values for inequality.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>Boolean representing the result of the inequality operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Multiply(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Returns computed product of values.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>ComplexNumber representing the result of the multiplication operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Subtraction(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Returns computed difference of values.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>ComplexNumber representing the result of the subtraction operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_UnaryNegation(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+            Returns the negated value.
+            </summary>
+      <param name="z">Left hand operand.</param>
+      <returns>ComplexNumber representing the result of the unary negation operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.Parse(System.String)">
+      <summary>
+            Converts the string representation of a complex number to its complex number equivalent.
+            </summary>
+      <param name="str">A string that contains a number to convert.</param>
+      <returns>A complex number that is equivalent to the numeric value or symbols specified in <paramref name="str" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.Pow(Gemstone.Numeric.ComplexNumber,System.Double)">
+      <summary>
+             Returns specified <see cref="T:Gemstone.Numeric.ComplexNumber" /> raised to the specified power.
+            </summary>
+      <param name="z">Complex number to be raised to power <paramref name="y" />.</param>
+      <param name="y">Power to raise <see cref="T:Gemstone.Numeric.ComplexNumber" /><paramref name="z" />.</param>
+      <returns>ComplexNumber representing the result of the operation.</returns>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.Real">
+      <summary>
+            Gets or sets the real component of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.ToString">
+      <summary>
+            Converts the numeric value of this instance to its equivalent string representation.
+            </summary>
+      <returns>
+            The string representation of the value of this <see cref="T:Gemstone.Numeric.ComplexNumber" /> instance.
+            </returns>
+    </member>
     <member name="T:Gemstone.Numeric.Int24">
       <summary>Represents a 3-byte, 24-bit signed integer.</summary>
       <remarks>
@@ -2651,6 +2916,81 @@
       <param name="frequency">The frequency of the sine wave, in Hz.</param>
       <returns>A <see cref="T:Gemstone.Numeric.Analysis.SineWave" /> approximated from the given data points.</returns>
     </member>
+    <member name="T:Gemstone.Numeric.BitExtensions.BitExtensions">
+      <summary>
+            Defines extension methods related to bit operations.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.BitExtensions.BitExtensions.ToBinaryString(Gemstone.Numeric.Int24)">
+      <summary>
+            Encodes <paramref name="value" /> as binary, i.e., a string of bit values (0 or 1).
+            </summary>
+      <param name="value">Integer value to encode.</param>
+      <returns>Binary encoding of <paramref name="value" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.BitExtensions.BitExtensions.ToBinaryString(Gemstone.Numeric.UInt24)">
+      <summary>
+            Encodes <paramref name="value" /> as binary, i.e., a string of bit values (0 or 1).
+            </summary>
+      <param name="value">Integer value to encode.</param>
+      <returns>Binary encoding of <paramref name="value" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.BitExtensions.BitExtensions.ToBinaryString(System.Byte)">
+      <summary>
+            Encodes <paramref name="value" /> as binary, i.e., a string of bit values (0 or 1).
+            </summary>
+      <param name="value">Integer value to encode.</param>
+      <returns>Binary encoding of <paramref name="value" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.BitExtensions.BitExtensions.ToBinaryString(System.Int16)">
+      <summary>
+            Encodes <paramref name="value" /> as binary, i.e., a string of bit values (0 or 1).
+            </summary>
+      <param name="value">Integer value to encode.</param>
+      <returns>Binary encoding of <paramref name="value" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.BitExtensions.BitExtensions.ToBinaryString(System.Int32)">
+      <summary>
+            Encodes <paramref name="value" /> as binary, i.e., a string of bit values (0 or 1).
+            </summary>
+      <param name="value">Integer value to encode.</param>
+      <returns>Binary encoding of <paramref name="value" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.BitExtensions.BitExtensions.ToBinaryString(System.Int64)">
+      <summary>
+            Encodes <paramref name="value" /> as binary, i.e., a string of bit values (0 or 1).
+            </summary>
+      <param name="value">Integer value to encode.</param>
+      <returns>Binary encoding of <paramref name="value" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.BitExtensions.BitExtensions.ToBinaryString(System.SByte)">
+      <summary>
+            Encodes <paramref name="value" /> as binary, i.e., a string of bit values (0 or 1).
+            </summary>
+      <param name="value">Integer value to encode.</param>
+      <returns>Binary encoding of <paramref name="value" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.BitExtensions.BitExtensions.ToBinaryString(System.UInt16)">
+      <summary>
+            Encodes <paramref name="value" /> as binary, i.e., a string of bit values (0 or 1).
+            </summary>
+      <param name="value">Integer value to encode.</param>
+      <returns>Binary encoding of <paramref name="value" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.BitExtensions.BitExtensions.ToBinaryString(System.UInt32)">
+      <summary>
+            Encodes <paramref name="value" /> as binary, i.e., a string of bit values (0 or 1).
+            </summary>
+      <param name="value">Integer value to encode.</param>
+      <returns>Binary encoding of <paramref name="value" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.BitExtensions.BitExtensions.ToBinaryString(System.UInt64)">
+      <summary>
+            Encodes <paramref name="value" /> as binary, i.e., a string of bit values (0 or 1).
+            </summary>
+      <param name="value">Integer value to encode.</param>
+      <returns>Binary encoding of <paramref name="value" />.</returns>
+    </member>
     <member name="T:Gemstone.Numeric.ComplexExtensions.ComplexExtensions">
       <summary>
             Defines extension methods for complex numbers.
@@ -4010,29 +4350,275 @@
             The collection of splines used to interpolate a curve.
             </summary>
     </member>
-    <member name="T:Gemstone.Numeric.Random.AutoregressiveRandomNumber">
+    <member name="T:Gemstone.Numeric.Random.RandomNumberExtensions">
+      <summary>
+            Extension functions for Random number generation.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.RandomNumberExtensions.ToDiscreteUniformDistribution(System.Collections.Generic.IEnumerable{Gemstone.Numeric.Random.Uniform.UniformRandomNumber},System.Double,System.Double)">
+      <summary>
+            Linq extension function used to Transform an enumerable of <see cref="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber" /> to an enumerable of <see cref="T:Gemstone.Numeric.Random.DiscreteUniform.DiscreteUniformRandomNumber" /></summary>
+      <param name="uniforms">enumerable of <see cref="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber" /></param>
+      <param name="upperLimit">Upper limit of distribution</param>
+      <param name="lowerLimit">Lower limit of distribution</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Random.RandomNumberExtensions.ToDiscreteUniformDistribution(System.Collections.Generic.IEnumerable{Gemstone.Numeric.Random.Uniform.UniformRandomNumber},System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.RandomNumberExtensions.ToGeometricDistribution(System.Collections.Generic.IEnumerable{Gemstone.Numeric.Random.Uniform.UniformRandomNumber},System.Double)">
+      <summary>
+            Linq extension function used to Transform an enumerable of <see cref="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber" /> to an enumerable of <see cref="T:Gemstone.Numeric.Random.Geometric.GeometricRandomNumber" /></summary>
+      <param name="uniforms">enumerable of <see cref="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber" /></param>
+      <param name="probability">Probability of bernoulli trial success</param>
+      <returns>
+        <see cref="T:System.Collections.Generic.IEnumerable`1" />
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.RandomNumberExtensions.ToLogNormalDistribution(System.Collections.Generic.IEnumerable{Gemstone.Numeric.Random.Uniform.UniformRandomNumber},System.Double,System.Double,System.Double)">
+      <summary>
+            Linq extension function used to Transform an enumerable of <see cref="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber" /> to an enumerable of <see cref="T:Gemstone.Numeric.Random.LogNormal.LogNormalRandomNumber" /></summary>
+      <param name="uniforms">enumerable of <see cref="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber" /></param>
+      <param name="power">Power of the Log Normal distribution</param>
+      <param name="mean">Mean of normal distribution</param>
+      <param name="variance">Variance of normal distribution</param>
+      <returns>
+        <see cref="T:System.Collections.Generic.IEnumerable`1" />
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.RandomNumberExtensions.ToNormalDistribution(System.Collections.Generic.IEnumerable{Gemstone.Numeric.Random.Uniform.UniformRandomNumber},System.Double,System.Double)">
+      <summary>
+            Linq extension function used to Transform an enumerable of <see cref="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber" /> to an enumerable of <see cref="T:Gemstone.Numeric.Random.Normal.NormalRandomNumber" /></summary>
+      <param name="uniforms">enumerable of <see cref="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber" /></param>
+      <param name="mean">Mean of normal distribution</param>
+      <param name="variance">Variance of normal distribution</param>
+      <returns>
+        <see cref="T:System.Collections.Generic.IEnumerable`1" />
+      </returns>
+    </member>
+    <member name="T:Gemstone.Numeric.Random.DiscreteUniform.DiscreteUniformRandomNumber">
+      <summary>
+             Discrete Pseudo-Random number distributed across Uniform(lower limit, upper limit)
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.DiscreteUniform.DiscreteUniformRandomNumber.#ctor(Gemstone.Numeric.Random.Uniform.UniformRandomNumber,System.Double,System.Double)">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Gemstone.Numeric.Random.DiscreteUniform.DiscreteUniformRandomNumber</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="uniform">
+        <see cref="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber" />Uniform(0,1)</param>
+      <param name="upperLimit">Upper limit of distribution</param>
+      <param name="lowerLimit">Lower limit of distribution</param>
+    </member>
+    <member name="P:Gemstone.Numeric.Random.DiscreteUniform.DiscreteUniformRandomNumber.Value">
+      <summary>
+            Property holding the actual value of the Discrete Unif(lower limit, upper limit) random number.
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.Random.DiscreteUniform.DiscreteUniformRandomNumberGenerator">
+      <summary>
+            Generates Normal(mean,variance) distribution, full period cycle length &gt; 2 billion
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.DiscreteUniform.DiscreteUniformRandomNumberGenerator.#ctor(System.Int32,System.Double,System.Double)">
+      <summary>
+            Instantiates Normal distribution generator to Normal(mean,variance)
+            </summary>
+      <param name="seed">Seed value for Uniform generator</param>
+      <param name="upperLimit">Upper limit of distribution</param>
+      <param name="lowerLimit">Lower limit of distribution</param>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.DiscreteUniform.DiscreteUniformRandomNumberGenerator.Next">
+      <summary>
+            Gets next <see cref="T:Gemstone.Numeric.Random.DiscreteUniform.DiscreteUniformRandomNumber" /> in the sequence
+            </summary>
+      <returns>
+        <see cref="T:Gemstone.Numeric.Random.DiscreteUniform.DiscreteUniformRandomNumber" />
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.DiscreteUniform.DiscreteUniformRandomNumberGenerator.Next(System.Int32)">
+      <summary>
+            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.DiscreteUniform.DiscreteUniformRandomNumber" /></summary>
+      <param name="number"></param>
+      <returns>
+        <see cref="T:System.Collections.Generic.IEnumerable`1" />
+      </returns>
+    </member>
+    <member name="T:Gemstone.Numeric.Random.Geometric.GeometricRandomNumber">
+      <summary>
+            Pseudo-Random number distributed across Geometric(probability)
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.Geometric.GeometricRandomNumber.#ctor(Gemstone.Numeric.Random.Uniform.UniformRandomNumber,System.Double)">
+      <summary>
+            Transforms a Uniform(0,1) into a Geometric(probability)
+            </summary>
+      <param name="uniform">
+        <see cref="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber" />Uniform(0,1)</param>
+      <param name="probability">Probability of bernoulli trial success</param>
+    </member>
+    <member name="P:Gemstone.Numeric.Random.Geometric.GeometricRandomNumber.Value">
+      <summary>
+            Property holding the actual value of the Geometric(probability) random number.
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.Random.Geometric.GeometricRandomNumberGenerator">
+      <summary>
+            Generates Geometric(probability) distribution, full period cycle length &gt; 2 billion
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.Geometric.GeometricRandomNumberGenerator.#ctor(System.Int32,System.Double)">
+      <summary>
+            Instantiates Normal distribution generator to Geometric(probability)
+            </summary>
+      <param name="seed">Seed value for Uniform generator</param>
+      <param name="probability">Probability of bernoulli trial success</param>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.Geometric.GeometricRandomNumberGenerator.Next">
+      <summary>
+            Gets next <see cref="T:Gemstone.Numeric.Random.Geometric.GeometricRandomNumber" /> in the sequence
+            </summary>
+      <returns>
+        <see cref="T:Gemstone.Numeric.Random.Geometric.GeometricRandomNumber" />
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.Geometric.GeometricRandomNumberGenerator.Next(System.Int32)">
+      <summary>
+            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.Geometric.GeometricRandomNumber" /></summary>
+      <param name="number"></param>
+      <returns>
+        <see cref="T:System.Collections.Generic.IEnumerable`1" />
+      </returns>
+    </member>
+    <member name="T:Gemstone.Numeric.Random.LogNormal.LogNormalRandomNumber">
+      <summary>
+            Pseudo-Random number distributed across LogNormal(mean,variance)
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.LogNormal.LogNormalRandomNumber.#ctor(Gemstone.Numeric.Random.Uniform.UniformRandomNumber,System.Double,System.Double,System.Double)">
+      <summary>
+            Transforms a Uniform(0,1) into a LogNormal(mean,variance)
+            </summary>
+      <param name="uniform">
+        <see cref="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber" />Uniform(0,1)</param>
+      <param name="power">Power of the Log Normal distribution</param>
+      <param name="mean">Mean of the Normal distribution</param>
+      <param name="variance">Variance of the Normal distribution</param>
+    </member>
+    <member name="P:Gemstone.Numeric.Random.LogNormal.LogNormalRandomNumber.Value">
+      <summary>
+            Property holding the actual value of the LogNormal(mean,variance) random number.
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.Random.LogNormal.LogNormalRandomNumberGenerator">
+      <summary>
+            Generates LogNormal(mean,variance) distribution, full period cycle length &gt; 2 billion
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.LogNormal.LogNormalRandomNumberGenerator.#ctor(System.Int32,System.Double,System.Double,System.Double)">
+      <summary>
+            Instantiates Normal distribution generator to LogNormal(mean,variance)
+            </summary>
+      <param name="seed">Seed value for Uniform generator</param>
+      <param name="power">Power of the Log Normal distribution</param>
+      <param name="mean">Mean of the Normal distribution</param>
+      <param name="variance">Variance of the Normal distribution</param>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.LogNormal.LogNormalRandomNumberGenerator.Next">
+      <summary>
+            Gets next <see cref="T:Gemstone.Numeric.Random.LogNormal.LogNormalRandomNumber" /> in the sequence
+            </summary>
+      <returns>
+        <see cref="T:Gemstone.Numeric.Random.LogNormal.LogNormalRandomNumber" />
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.LogNormal.LogNormalRandomNumberGenerator.Next(System.Int32)">
+      <summary>
+            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.LogNormal.LogNormalRandomNumber" /></summary>
+      <param name="number"></param>
+      <returns>
+        <see cref="T:System.Collections.Generic.IEnumerable`1" />
+      </returns>
+    </member>
+    <member name="T:Gemstone.Numeric.Random.Normal.NormalRandomNumber">
+      <summary>
+            Pseudo-Random number distributed across Normal(mean,variance)
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.Normal.NormalRandomNumber.#ctor(Gemstone.Numeric.Random.Uniform.UniformRandomNumber,System.Double,System.Double)">
+      <summary>
+            Transforms a Uniform(0,1) into a Normal(mean,variance)
+            </summary>
+      <param name="uniform">
+        <see cref="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber" />Uniform(0,1)</param>
+      <param name="mean">Mean of the Normal distribution</param>
+      <param name="variance">Variance of the Normal distribution</param>
+    </member>
+    <member name="P:Gemstone.Numeric.Random.Normal.NormalRandomNumber.Value">
+      <summary>
+            Property holding the actual value of the Normal(mean,variance) random number.
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.Random.Normal.NormalRandomNumberGenerator">
+      <summary>
+            Generates Normal(mean,variance) distribution, full period cycle length &gt; 2 billion
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.Normal.NormalRandomNumberGenerator.#ctor(System.Int32,System.Double,System.Double)">
+      <summary>
+            Instantiates Normal distribution generator to Normal(mean,variance)
+            </summary>
+      <param name="seed">Seed value for Uniform generator</param>
+      <param name="mean">Mean of the Normal distribution</param>
+      <param name="variance">Variance of the Normal distribution</param>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.Normal.NormalRandomNumberGenerator.Next">
+      <summary>
+            Gets next <see cref="T:Gemstone.Numeric.Random.Normal.NormalRandomNumber" /> in the sequence
+            </summary>
+      <returns>
+        <see cref="T:Gemstone.Numeric.Random.Normal.NormalRandomNumber" />
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Random.Normal.NormalRandomNumberGenerator.Next(System.Int32)">
+      <summary>
+            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.Normal.NormalRandomNumber" /></summary>
+      <param name="number"></param>
+      <returns>
+        <see cref="T:System.Collections.Generic.IEnumerable`1" />
+      </returns>
+    </member>
+    <member name="T:Gemstone.Numeric.Random.TimeSeries.Autoregressive.AutoregressiveRandomNumber">
       <summary>
             Pseudo-Random Autoregressive generated Random number
             </summary>
     </member>
-    <member name="M:Gemstone.Numeric.Random.AutoregressiveRandomNumber.#ctor(System.Double)">
+    <member name="M:Gemstone.Numeric.Random.TimeSeries.Autoregressive.AutoregressiveRandomNumber.#ctor(System.Double)">
       <summary>
             Constructor to set Value of random variate. 
             </summary>
       <param name="value">
         <see cref="T:System.Double" /> used to set Value.</param>
     </member>
-    <member name="P:Gemstone.Numeric.Random.AutoregressiveRandomNumber.Value">
+    <member name="P:Gemstone.Numeric.Random.TimeSeries.Autoregressive.AutoregressiveRandomNumber.Value">
       <summary>
             Value of random variate
             </summary>
     </member>
-    <member name="T:Gemstone.Numeric.Random.AutoregressiveRandomNumberGenerator">
+    <member name="T:Gemstone.Numeric.Random.TimeSeries.Autoregressive.AutoregressiveRandomNumberGenerator">
       <summary>
             Generates specifed order Autoregressive time-series distribution, full period cycle length &gt; 2 billion
             </summary>
     </member>
-    <member name="M:Gemstone.Numeric.Random.AutoregressiveRandomNumberGenerator.#ctor(System.Int32,System.Int32,System.Double[],System.Double,System.Double)">
+    <member name="M:Gemstone.Numeric.Random.TimeSeries.Autoregressive.AutoregressiveRandomNumberGenerator.#ctor(System.Int32,System.Int32,System.Double[],System.Double,System.Double)">
       <summary>
              Instantiates Autoregressive time series generator.
             </summary>
@@ -4042,193 +4628,45 @@
       <param name="mean">Mean of the Normal distribution</param>
       <param name="variance">Variance of the Normal distribution</param>
     </member>
-    <member name="M:Gemstone.Numeric.Random.AutoregressiveRandomNumberGenerator.Next">
+    <member name="M:Gemstone.Numeric.Random.TimeSeries.Autoregressive.AutoregressiveRandomNumberGenerator.Next">
       <summary>
-            Gets next <see cref="T:Gemstone.Numeric.Random.AutoregressiveRandomNumber" /> in the sequence
+            Gets next <see cref="T:Gemstone.Numeric.Random.TimeSeries.Autoregressive.AutoregressiveRandomNumber" /> in the sequence
             </summary>
       <returns>
-        <see cref="T:Gemstone.Numeric.Random.AutoregressiveRandomNumber" />
+        <see cref="T:Gemstone.Numeric.Random.TimeSeries.Autoregressive.AutoregressiveRandomNumber" />
       </returns>
     </member>
-    <member name="M:Gemstone.Numeric.Random.AutoregressiveRandomNumberGenerator.Next(System.Int32)">
+    <member name="M:Gemstone.Numeric.Random.TimeSeries.Autoregressive.AutoregressiveRandomNumberGenerator.Next(System.Int32)">
       <summary>
-            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.AutoregressiveRandomNumber" /></summary>
+            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.TimeSeries.Autoregressive.AutoregressiveRandomNumber" /></summary>
       <param name="number"></param>
       <returns>
         <see cref="T:System.Collections.Generic.IEnumerable`1" />
       </returns>
     </member>
-    <member name="T:Gemstone.Numeric.Random.DiscreteUniformRandomNumber">
-      <summary>
-             Discrete Pseudo-Random number distributed across Uniform(lower limit, upper limit)
-            </summary>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.DiscreteUniformRandomNumber.#ctor(Gemstone.Numeric.Random.UniformRandomNumber,System.Double,System.Double)">
-      <summary>
-        <markup>
-          <include item="SMCAutoDocConstructor">
-            <parameter>Gemstone.Numeric.Random.DiscreteUniformRandomNumber</parameter>
-          </include>
-        </markup>
-      </summary>
-      <param name="uniform">
-        <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" />Uniform(0,1)</param>
-      <param name="upperLimit">Upper limit of distribution</param>
-      <param name="lowerLimit">Lower limit of distribution</param>
-    </member>
-    <member name="P:Gemstone.Numeric.Random.DiscreteUniformRandomNumber.Value">
-      <summary>
-            Property holding the actual value of the Discrete Unif(lower limit, upper limit) random number.
-            </summary>
-    </member>
-    <member name="T:Gemstone.Numeric.Random.DiscreteUniformRandomNumberGenerator">
-      <summary>
-            Generates Normal(mean,variance) distribution, full period cycle length &gt; 2 billion
-            </summary>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.DiscreteUniformRandomNumberGenerator.#ctor(System.Int32,System.Double,System.Double)">
-      <summary>
-            Instantiates Normal distribution generator to Normal(mean,variance)
-            </summary>
-      <param name="seed">Seed value for Uniform generator</param>
-      <param name="upperLimit">Upper limit of distribution</param>
-      <param name="lowerLimit">Lower limit of distribution</param>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.DiscreteUniformRandomNumberGenerator.Next">
-      <summary>
-            Gets next <see cref="T:Gemstone.Numeric.Random.DiscreteUniformRandomNumber" /> in the sequence
-            </summary>
-      <returns>
-        <see cref="T:Gemstone.Numeric.Random.DiscreteUniformRandomNumber" />
-      </returns>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.DiscreteUniformRandomNumberGenerator.Next(System.Int32)">
-      <summary>
-            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.DiscreteUniformRandomNumber" /></summary>
-      <param name="number"></param>
-      <returns>
-        <see cref="T:System.Collections.Generic.IEnumerable`1" />
-      </returns>
-    </member>
-    <member name="T:Gemstone.Numeric.Random.GeometricRandomNumber">
-      <summary>
-            Pseudo-Random number distributed across Geometric(probability)
-            </summary>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.GeometricRandomNumber.#ctor(Gemstone.Numeric.Random.UniformRandomNumber,System.Double)">
-      <summary>
-            Transforms a Uniform(0,1) into a Geometric(probability)
-            </summary>
-      <param name="uniform">
-        <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" />Uniform(0,1)</param>
-      <param name="probability">Probability of bernoulli trial success</param>
-    </member>
-    <member name="P:Gemstone.Numeric.Random.GeometricRandomNumber.Value">
-      <summary>
-            Property holding the actual value of the Geometric(probability) random number.
-            </summary>
-    </member>
-    <member name="T:Gemstone.Numeric.Random.GeometricRandomNumberGenerator">
-      <summary>
-            Generates Geometric(probability) distribution, full period cycle length &gt; 2 billion
-            </summary>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.GeometricRandomNumberGenerator.#ctor(System.Int32,System.Double)">
-      <summary>
-            Instantiates Normal distribution generator to Geometric(probability)
-            </summary>
-      <param name="seed">Seed value for Uniform generator</param>
-      <param name="probability">Probability of bernoulli trial success</param>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.GeometricRandomNumberGenerator.Next">
-      <summary>
-            Gets next <see cref="T:Gemstone.Numeric.Random.GeometricRandomNumber" /> in the sequence
-            </summary>
-      <returns>
-        <see cref="T:Gemstone.Numeric.Random.GeometricRandomNumber" />
-      </returns>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.GeometricRandomNumberGenerator.Next(System.Int32)">
-      <summary>
-            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.GeometricRandomNumber" /></summary>
-      <param name="number"></param>
-      <returns>
-        <see cref="T:System.Collections.Generic.IEnumerable`1" />
-      </returns>
-    </member>
-    <member name="T:Gemstone.Numeric.Random.LogNormalRandomNumber">
-      <summary>
-            Pseudo-Random number distributed across LogNormal(mean,variance)
-            </summary>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.LogNormalRandomNumber.#ctor(Gemstone.Numeric.Random.UniformRandomNumber,System.Double,System.Double,System.Double)">
-      <summary>
-            Transforms a Uniform(0,1) into a LogNormal(mean,variance)
-            </summary>
-      <param name="uniform">
-        <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" />Uniform(0,1)</param>
-      <param name="power">Power of the Log Normal distribution</param>
-      <param name="mean">Mean of the Normal distribution</param>
-      <param name="variance">Variance of the Normal distribution</param>
-    </member>
-    <member name="P:Gemstone.Numeric.Random.LogNormalRandomNumber.Value">
-      <summary>
-            Property holding the actual value of the LogNormal(mean,variance) random number.
-            </summary>
-    </member>
-    <member name="T:Gemstone.Numeric.Random.LogNormalRandomNumberGenerator">
-      <summary>
-            Generates LogNormal(mean,variance) distribution, full period cycle length &gt; 2 billion
-            </summary>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.LogNormalRandomNumberGenerator.#ctor(System.Int32,System.Double,System.Double,System.Double)">
-      <summary>
-            Instantiates Normal distribution generator to LogNormal(mean,variance)
-            </summary>
-      <param name="seed">Seed value for Uniform generator</param>
-      <param name="power">Power of the Log Normal distribution</param>
-      <param name="mean">Mean of the Normal distribution</param>
-      <param name="variance">Variance of the Normal distribution</param>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.LogNormalRandomNumberGenerator.Next">
-      <summary>
-            Gets next <see cref="T:Gemstone.Numeric.Random.LogNormalRandomNumber" /> in the sequence
-            </summary>
-      <returns>
-        <see cref="T:Gemstone.Numeric.Random.LogNormalRandomNumber" />
-      </returns>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.LogNormalRandomNumberGenerator.Next(System.Int32)">
-      <summary>
-            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.LogNormalRandomNumber" /></summary>
-      <param name="number"></param>
-      <returns>
-        <see cref="T:System.Collections.Generic.IEnumerable`1" />
-      </returns>
-    </member>
-    <member name="T:Gemstone.Numeric.Random.MovingAverageRandomNumber">
+    <member name="T:Gemstone.Numeric.Random.TimeSeries.MovingAverage.MovingAverageRandomNumber">
       <summary>
             Pseudo-Random Moving Average generated Random number
             </summary>
     </member>
-    <member name="M:Gemstone.Numeric.Random.MovingAverageRandomNumber.#ctor(System.Double)">
+    <member name="M:Gemstone.Numeric.Random.TimeSeries.MovingAverage.MovingAverageRandomNumber.#ctor(System.Double)">
       <summary>
             Constructor to set Value of random variate. 
             </summary>
       <param name="value">
         <see cref="T:System.Double" /> used to set Value.</param>
     </member>
-    <member name="P:Gemstone.Numeric.Random.MovingAverageRandomNumber.Value">
+    <member name="P:Gemstone.Numeric.Random.TimeSeries.MovingAverage.MovingAverageRandomNumber.Value">
       <summary>
             Value of random variate
             </summary>
     </member>
-    <member name="T:Gemstone.Numeric.Random.MovingAverageRandomNumberGenerator">
+    <member name="T:Gemstone.Numeric.Random.TimeSeries.MovingAverage.MovingAverageRandomNumberGenerator">
       <summary>
             Generates specifed order Moving Average time-series distribution, full period cycle length &gt; 2 billion
             </summary>
     </member>
-    <member name="M:Gemstone.Numeric.Random.MovingAverageRandomNumberGenerator.#ctor(System.Int32,System.Int32,System.Double[],System.Double,System.Double)">
+    <member name="M:Gemstone.Numeric.Random.TimeSeries.MovingAverage.MovingAverageRandomNumberGenerator.#ctor(System.Int32,System.Int32,System.Double[],System.Double,System.Double)">
       <summary>
             Instantiates Moving Average generator.
             </summary>
@@ -4238,160 +4676,62 @@
       <param name="mean">Mean of the Normal distribution</param>
       <param name="variance">Variance of the Normal distribution</param>
     </member>
-    <member name="M:Gemstone.Numeric.Random.MovingAverageRandomNumberGenerator.Next">
+    <member name="M:Gemstone.Numeric.Random.TimeSeries.MovingAverage.MovingAverageRandomNumberGenerator.Next">
       <summary>
-            Gets next <see cref="T:Gemstone.Numeric.Random.MovingAverageRandomNumber" /> in the sequence
+            Gets next <see cref="T:Gemstone.Numeric.Random.TimeSeries.MovingAverage.MovingAverageRandomNumber" /> in the sequence
             </summary>
       <returns>
-        <see cref="T:Gemstone.Numeric.Random.MovingAverageRandomNumber" />
+        <see cref="T:Gemstone.Numeric.Random.TimeSeries.MovingAverage.MovingAverageRandomNumber" />
       </returns>
     </member>
-    <member name="M:Gemstone.Numeric.Random.MovingAverageRandomNumberGenerator.Next(System.Int32)">
+    <member name="M:Gemstone.Numeric.Random.TimeSeries.MovingAverage.MovingAverageRandomNumberGenerator.Next(System.Int32)">
       <summary>
-            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.MovingAverageRandomNumber" /></summary>
+            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.TimeSeries.MovingAverage.MovingAverageRandomNumber" /></summary>
       <param name="number"></param>
       <returns>
         <see cref="T:System.Collections.Generic.IEnumerable`1" />
       </returns>
     </member>
-    <member name="T:Gemstone.Numeric.Random.NormalRandomNumber">
-      <summary>
-            Pseudo-Random number distributed across Normal(mean,variance)
-            </summary>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.NormalRandomNumber.#ctor(Gemstone.Numeric.Random.UniformRandomNumber,System.Double,System.Double)">
-      <summary>
-            Transforms a Uniform(0,1) into a Normal(mean,variance)
-            </summary>
-      <param name="uniform">
-        <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" />Uniform(0,1)</param>
-      <param name="mean">Mean of the Normal distribution</param>
-      <param name="variance">Variance of the Normal distribution</param>
-    </member>
-    <member name="P:Gemstone.Numeric.Random.NormalRandomNumber.Value">
-      <summary>
-            Property holding the actual value of the Normal(mean,variance) random number.
-            </summary>
-    </member>
-    <member name="T:Gemstone.Numeric.Random.NormalRandomNumberGenerator">
-      <summary>
-            Generates Normal(mean,variance) distribution, full period cycle length &gt; 2 billion
-            </summary>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.NormalRandomNumberGenerator.#ctor(System.Int32,System.Double,System.Double)">
-      <summary>
-            Instantiates Normal distribution generator to Normal(mean,variance)
-            </summary>
-      <param name="seed">Seed value for Uniform generator</param>
-      <param name="mean">Mean of the Normal distribution</param>
-      <param name="variance">Variance of the Normal distribution</param>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.NormalRandomNumberGenerator.Next">
-      <summary>
-            Gets next <see cref="T:Gemstone.Numeric.Random.NormalRandomNumber" /> in the sequence
-            </summary>
-      <returns>
-        <see cref="T:Gemstone.Numeric.Random.NormalRandomNumber" />
-      </returns>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.NormalRandomNumberGenerator.Next(System.Int32)">
-      <summary>
-            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.NormalRandomNumber" /></summary>
-      <param name="number"></param>
-      <returns>
-        <see cref="T:System.Collections.Generic.IEnumerable`1" />
-      </returns>
-    </member>
-    <member name="T:Gemstone.Numeric.Random.RandomNumberExtensions">
-      <summary>
-            Extension functions for Random number generation.
-            </summary>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.RandomNumberExtensions.ToDiscreteUniformDistribution(System.Collections.Generic.IEnumerable{Gemstone.Numeric.Random.UniformRandomNumber},System.Double,System.Double)">
-      <summary>
-            Linq extension function used to Transform an enumerable of <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" /> to an enumerable of <see cref="T:Gemstone.Numeric.Random.DiscreteUniformRandomNumber" /></summary>
-      <param name="uniforms">enumerable of <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" /></param>
-      <param name="upperLimit">Upper limit of distribution</param>
-      <param name="lowerLimit">Lower limit of distribution</param>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:Gemstone.Numeric.Random.RandomNumberExtensions.ToDiscreteUniformDistribution(System.Collections.Generic.IEnumerable{Gemstone.Numeric.Random.UniformRandomNumber},System.Double,System.Double)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.RandomNumberExtensions.ToGeometricDistribution(System.Collections.Generic.IEnumerable{Gemstone.Numeric.Random.UniformRandomNumber},System.Double)">
-      <summary>
-            Linq extension function used to Transform an enumerable of <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" /> to an enumerable of <see cref="T:Gemstone.Numeric.Random.GeometricRandomNumber" /></summary>
-      <param name="uniforms">enumerable of <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" /></param>
-      <param name="probability">Probability of bernoulli trial success</param>
-      <returns>
-        <see cref="T:System.Collections.Generic.IEnumerable`1" />
-      </returns>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.RandomNumberExtensions.ToLogNormalDistribution(System.Collections.Generic.IEnumerable{Gemstone.Numeric.Random.UniformRandomNumber},System.Double,System.Double,System.Double)">
-      <summary>
-            Linq extension function used to Transform an enumerable of <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" /> to an enumerable of <see cref="T:Gemstone.Numeric.Random.LogNormalRandomNumber" /></summary>
-      <param name="uniforms">enumerable of <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" /></param>
-      <param name="power">Power of the Log Normal distribution</param>
-      <param name="mean">Mean of normal distribution</param>
-      <param name="variance">Variance of normal distribution</param>
-      <returns>
-        <see cref="T:System.Collections.Generic.IEnumerable`1" />
-      </returns>
-    </member>
-    <member name="M:Gemstone.Numeric.Random.RandomNumberExtensions.ToNormalDistribution(System.Collections.Generic.IEnumerable{Gemstone.Numeric.Random.UniformRandomNumber},System.Double,System.Double)">
-      <summary>
-            Linq extension function used to Transform an enumerable of <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" /> to an enumerable of <see cref="T:Gemstone.Numeric.Random.NormalRandomNumber" /></summary>
-      <param name="uniforms">enumerable of <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" /></param>
-      <param name="mean">Mean of normal distribution</param>
-      <param name="variance">Variance of normal distribution</param>
-      <returns>
-        <see cref="T:System.Collections.Generic.IEnumerable`1" />
-      </returns>
-    </member>
-    <member name="T:Gemstone.Numeric.Random.UniformRandomNumber">
+    <member name="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber">
       <summary>
             Pseudo-Random number distributed across the Uniform(0,1) distribution
             </summary>
     </member>
-    <member name="M:Gemstone.Numeric.Random.UniformRandomNumber.#ctor(System.Double)">
+    <member name="M:Gemstone.Numeric.Random.Uniform.UniformRandomNumber.#ctor(System.Double)">
       <summary>
             Takes a <see cref="T:System.Double" /> between zero and 1 and sets the Value. 
             </summary>
       <param name="value">
         <see cref="T:System.Double" /> used to set Value.</param>
     </member>
-    <member name="P:Gemstone.Numeric.Random.UniformRandomNumber.Value">
+    <member name="P:Gemstone.Numeric.Random.Uniform.UniformRandomNumber.Value">
       <summary>
             Property holding the actual value of the Uniform random number.
             </summary>
     </member>
-    <member name="T:Gemstone.Numeric.Random.UniformRandomNumberGenerator">
+    <member name="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumberGenerator">
       <summary>
             Based on 16807 (BFS 1987) LCG implementation, full period cycle length &gt; 2 billion, generates Uniform(0,1) distribution
             </summary>
     </member>
-    <member name="M:Gemstone.Numeric.Random.UniformRandomNumberGenerator.#ctor(System.Int32)">
+    <member name="M:Gemstone.Numeric.Random.Uniform.UniformRandomNumberGenerator.#ctor(System.Int32)">
       <summary>
             Instantiates generator with given seed
             </summary>
       <param name="seed">
         <see cref="T:System.Int32" /> value used to set generator seed.</param>
     </member>
-    <member name="M:Gemstone.Numeric.Random.UniformRandomNumberGenerator.Next">
+    <member name="M:Gemstone.Numeric.Random.Uniform.UniformRandomNumberGenerator.Next">
       <summary>
-            Gets next <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" /> in the sequence
+            Gets next <see cref="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber" /> in the sequence
             </summary>
       <returns>
-        <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" />
+        <see cref="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber" />
       </returns>
     </member>
-    <member name="M:Gemstone.Numeric.Random.UniformRandomNumberGenerator.Next(System.Int32)">
+    <member name="M:Gemstone.Numeric.Random.Uniform.UniformRandomNumberGenerator.Next(System.Int32)">
       <summary>
-            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.UniformRandomNumber" /></summary>
+            Gets the next n number of <see cref="T:Gemstone.Numeric.Random.Uniform.UniformRandomNumber" /></summary>
       <param name="number"></param>
       <returns>
         <see cref="T:System.Collections.Generic.IEnumerable`1" />
