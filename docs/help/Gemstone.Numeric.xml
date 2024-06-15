@@ -4217,19 +4217,19 @@
         <para>
             Here is an example of how to use this class.
             </para>
-        <code>
-            Func&lt;double, double&gt; piecewiseLinearFunc = new PiecewiseLinearFunction()
-                .SetDomain(-1, 0, 1)
-                .SetRange(0, 1, 0);
-                
-            Console.WriteLine(piecewiseLinearFunc(-10));   // -9
-            Console.WriteLine(piecewiseLinearFunc(-1));    // 0 
-            Console.WriteLine(piecewiseLinearFunc(-0.5));  // 0.5
-            Console.WriteLine(piecewiseLinearFunc(0));     // 1
-            Console.WriteLine(piecewiseLinearFunc(0.5));   // 0.5
-            Console.WriteLine(piecewiseLinearFunc(1));     // 0
-            Console.WriteLine(piecewiseLinearFunc(10));    // -9
-            </code>
+        <codeSnippetGroup>
+          <code language="cs" codeLanguage="CSharp" style="cs">Func&lt;double, double&gt; piecewiseLinearFunc = new PiecewiseLinearFunction()
+    .SetDomain(-1, 0, 1)
+    .SetRange(0, 1, 0);
+
+Console.WriteLine(piecewiseLinearFunc(-10));   // -9
+Console.WriteLine(piecewiseLinearFunc(-1));    // 0 
+Console.WriteLine(piecewiseLinearFunc(-0.5));  // 0.5
+Console.WriteLine(piecewiseLinearFunc(0));     // 1
+Console.WriteLine(piecewiseLinearFunc(0.5));   // 0.5
+Console.WriteLine(piecewiseLinearFunc(1));     // 0
+Console.WriteLine(piecewiseLinearFunc(10));    // -9</code>
+        </codeSnippetGroup>
       </remarks>
     </member>
     <member name="M:Gemstone.Numeric.Interpolation.PiecewiseLinearFunction.#ctor">
@@ -4310,7 +4310,9 @@
             </summary>
       <remarks>
         <para>The array index matches the exponent to which the x-value is raised.</para>
-        <code>term[i] = Coefficients[i] * Math.Pow(x - XValue, i);</code>
+        <codeSnippetGroup>
+          <code language="cs" codeLanguage="CSharp" style="cs">term[i] = Coefficients[i] * Math.Pow(x - XValue, i);</code>
+        </codeSnippetGroup>
       </remarks>
     </member>
     <member name="P:Gemstone.Numeric.Interpolation.Spline.XValue">
