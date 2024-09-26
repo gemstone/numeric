@@ -69,6 +69,46 @@ using Gemstone.ArrayExtensions;
 
 namespace Gemstone.Numeric;
 
+/// <summary>
+/// Provides a type converter to convert <see cref="UInt24"/>> values to and from various other representations.
+/// </summary>
+/// <remarks>
+/// Since <see cref="UInt24"/> reports a type code of <see cref="TypeCode.UInt32"/>, the converter will convert
+/// to and from <c>uint</c> values as well as other types supported by <see cref="UInt32Converter"/>.
+/// </remarks>
+public class UInt24Converter : UInt32Converter
+{
+    /// <inheritdoc/>
+    public override bool CanConvertTo(ITypeDescriptorContext? context, Type? destinationType)
+    {
+        return destinationType == typeof(uint) || base.CanConvertTo(context, destinationType);
+    }
+
+    /// <inheritdoc/>
+    public override bool CanConvertFrom(ITypeDescriptorContext? context, Type sourceType)
+    {
+        return sourceType == typeof(uint) || base.CanConvertFrom(context, sourceType);
+    }
+
+    /// <inheritdoc/>
+    public override object? ConvertTo(ITypeDescriptorContext? context, CultureInfo? culture, object? value, Type destinationType)
+    {
+        if (destinationType == typeof(uint) && value is UInt24 uInt24)
+            return (uint)uInt24;
+
+        return base.ConvertTo(context, culture, value, destinationType);
+    }
+
+    /// <inheritdoc/>
+    public override object? ConvertFrom(ITypeDescriptorContext? context, CultureInfo? culture, object value)
+    {
+        if (value is uint uint32)
+            return new UInt24(uint32);
+
+        return base.ConvertFrom(context, culture, value);
+    }
+}
+
 /// <summary>Represents a 3-byte, 24-bit unsigned integer.</summary>
 /// <remarks>
 /// <para>
@@ -92,6 +132,7 @@ namespace Gemstone.Numeric;
 /// </para>
 /// </remarks>
 [Serializable]
+[TypeConverter(typeof(UInt24Converter))]
 public struct UInt24 : IComparable, IFormattable, IConvertible, IComparable<UInt24>, IComparable<uint>, IEquatable<UInt24>, IEquatable<uint>
 {
     #region [ Members ]

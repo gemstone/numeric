@@ -71,6 +71,46 @@ using Gemstone.ArrayExtensions;
 
 namespace Gemstone.Numeric;
 
+/// <summary>
+/// Provides a type converter to convert <see cref="Int24"/>> values to and from various other representations.
+/// </summary>
+/// <remarks>
+/// Since <see cref="Int24"/> reports a type code of <see cref="TypeCode.Int32"/>, the converter will convert
+/// to and from <c>int</c> values as well as other types supported by <see cref="Int32Converter"/>.
+/// </remarks>
+public class Int24Converter : Int32Converter
+{
+    /// <inheritdoc/>
+    public override bool CanConvertTo(ITypeDescriptorContext? context, Type? destinationType)
+    {
+        return destinationType == typeof(int) || base.CanConvertTo(context, destinationType);
+    }
+
+    /// <inheritdoc/>
+    public override bool CanConvertFrom(ITypeDescriptorContext? context, Type sourceType)
+    {
+        return sourceType == typeof(int) || base.CanConvertFrom(context, sourceType);
+    }
+
+    /// <inheritdoc/>
+    public override object? ConvertTo(ITypeDescriptorContext? context, CultureInfo? culture, object? value, Type destinationType)
+    {
+        if (destinationType == typeof(int) && value is Int24 int24)
+            return (int)int24;
+
+        return base.ConvertTo(context, culture, value, destinationType);
+    }
+
+    /// <inheritdoc/>
+    public override object? ConvertFrom(ITypeDescriptorContext? context, CultureInfo? culture, object value)
+    {
+        if (value is int int32)
+            return new Int24(int32);
+
+        return base.ConvertFrom(context, culture, value);
+    }
+}
+
 /// <summary>Represents a 3-byte, 24-bit signed integer.</summary>
 /// <remarks>
 /// <para>
@@ -94,6 +134,7 @@ namespace Gemstone.Numeric;
 /// </para>
 /// </remarks>
 [Serializable]
+[TypeConverter(typeof(Int24Converter))]
 public struct Int24 : IComparable, IFormattable, IConvertible, IComparable<Int24>, IComparable<int>, IEquatable<Int24>, IEquatable<int>
 {
     #region [ Members ]
