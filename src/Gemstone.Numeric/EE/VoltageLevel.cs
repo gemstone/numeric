@@ -20,13 +20,13 @@
 //       Generated original version of source code.
 //
 //******************************************************************************************************
+// ReSharper disable InconsistentNaming
 
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using Gemstone.EnumExtensions;
-
-#pragma warning disable IDE1006 // Naming Styles
 
 namespace Gemstone.Numeric.EE;
 
@@ -99,20 +99,39 @@ public enum VoltageLevel : byte
 }
 
 /// <summary>
+/// Defines common transmission voltage levels.
+/// </summary>
+// TODO: Enable auto-gen [GenerateVoltageLevels("VoltageLevel", 44, 69, 115, 138, 161, 169, 230, 345, 500, 765, 1100)]
+public static class CommonVoltageLevels
+{
+    /// <summary>
+    /// Gets common transmission voltage level values.
+    /// </summary>
+    public static readonly string[] Values;
+
+    static CommonVoltageLevels()
+    {
+        Values = VoltageLevelExtensions.VoltageLevelMap.Values
+            .OrderByDescending(voltage => voltage)
+            .Select(voltage => voltage.ToString()).ToArray();
+    }
+}
+
+/// <summary>
 /// Defines extension functions related to <see cref="VoltageLevel"/> enumeration.
 /// </summary>
 public static class VoltageLevelExtensions
 {
-    private static readonly Dictionary<VoltageLevel, int> m_voltageLevelMap;
+    internal static readonly Dictionary<VoltageLevel, int> VoltageLevelMap;
 
     static VoltageLevelExtensions()
     {
-        m_voltageLevelMap = new Dictionary<VoltageLevel, int>();
+        VoltageLevelMap = new Dictionary<VoltageLevel, int>();
 
         foreach (VoltageLevel value in Enum.GetValues(typeof(VoltageLevel)))
         {
             if (int.TryParse(value.GetDescription(), out int level))
-                m_voltageLevelMap[value] = level;
+                VoltageLevelMap[value] = level;
         }
     }
 
@@ -121,8 +140,10 @@ public static class VoltageLevelExtensions
     /// </summary>
     /// <param name="level">Target <see cref="VoltageLevel"/> enum value.</param>
     /// <returns>Voltage level for the specified <paramref name="level"/>.</returns>
-    public static int Value(this VoltageLevel level) =>
-        m_voltageLevelMap.TryGetValue(level, out int value) ? value : 0;
+    public static int Value(this VoltageLevel level)
+    {
+        return VoltageLevelMap.GetValueOrDefault(level, 0);
+    }
 
     /// <summary>
     /// Attempts to get the <see cref="VoltageLevel"/> enum value for the source kV <paramref name="value"/>.
@@ -135,13 +156,13 @@ public static class VoltageLevelExtensions
     /// </returns>
     public static bool TryGetVoltageLevel(this int value, out VoltageLevel level)
     {
-        foreach (KeyValuePair<VoltageLevel, int> kvp in m_voltageLevelMap)
+        foreach (KeyValuePair<VoltageLevel, int> kvp in VoltageLevelMap)
         {
-            if (kvp.Value == value)
-            {
-                level = kvp.Key;
-                return true;
-            }
+            if (kvp.Value != value)
+                continue;
+
+            level = kvp.Key;
+            return true;
         }
 
         level = default;
