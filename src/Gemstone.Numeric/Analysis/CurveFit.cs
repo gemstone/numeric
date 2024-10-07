@@ -7,17 +7,12 @@ namespace Gemstone.Numeric.Analysis;
 /// <summary>
 /// Used to hold x-y coordinates
 /// </summary>
-public class Point
+/// <param name="X">x-coordinate</param>
+/// <param name="Y">y-coordinate</param>
+public record Point(double X, double Y)
 {
-    /// <summary>
-    /// x coordinate
-    /// </summary>
-    public double X { get; set; }
-    /// <summary>
-    /// y coordinate
-    /// </summary>
-    public double Y { get; set; }
 }
+
 /// <summary>
 /// Linear regression algorithm.
 /// </summary>
