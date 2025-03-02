@@ -29,7 +29,10 @@
 
 using System;
 using System.Collections.Generic;
+using System.DirectoryServices.ActiveDirectory;
 using System.Linq;
+using System.Numerics;
+using Gemstone.Collections.CollectionExtensions;
 
 namespace Gemstone.Numeric.Analysis;
 
@@ -165,5 +168,28 @@ public static class NumericAnalysisExtensions
             throw new ArgumentNullException(nameof(source), "source is null");
 
         return source.Select(selector).StandardDeviation(calculateForSample);
+    }
+
+    /// <summary>
+    /// median calculates the median values of a sequence of <see cref="double"/> values. while being aware of NaN values.
+    /// </summary>
+    /// <param name="source"></param>
+    /// <param name="ommitNaN"></param>
+    /// <returns></returns>
+    /// <exception cref="ArgumentNullException"></exception>
+    public static double NaNAwareMedian(this IEnumerable<double> source, bool ommitNaN)
+    {
+        if (source is null)
+            throw new ArgumentNullException(nameof(source), "source is null");
+
+        if (!ommitNaN && source.Any(d => double.IsNaN(d)))
+            return double.NaN;
+
+        IEnumerable<double> sampleData = source.Where(d => !double.IsNaN(d));
+
+        if (sampleData.Count() == 0)
+            return double.NaN;
+
+        return sampleData.Median()?.Average() ?? double.NaN;
     }
 }
