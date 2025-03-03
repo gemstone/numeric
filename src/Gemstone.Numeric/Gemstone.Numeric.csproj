@@ -61,6 +61,10 @@
     <PackageReference Include="Gemstone.Common" Version="1.0.128" Condition="'$(Configuration)'!='Development'" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Geo\" />
+  </ItemGroup>
+
   <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.targets" />
 
   <PropertyGroup Condition="'$(SIGNTOOL)' != ''">
