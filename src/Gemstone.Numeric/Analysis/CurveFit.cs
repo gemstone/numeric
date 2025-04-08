@@ -233,4 +233,55 @@ public static class CurveFit
         b = (coeff10 - c * coeff13) / coeff12;
         a = (coeff00 - b * coeff02 - c * coeff03) / coeff01;
     }
+
+    /// <summary>
+    /// Uses least squares linear regression to estimate the coefficients a and b
+    /// from the given (x,y) data points for the equation y = a + bx.
+    /// </summary>
+    /// <param name="xValues">x-value array</param>
+    /// <param name="yValues">y-value array</param>
+    /// <param name="a">the out a coefficient</param>
+    /// <param name="b">the out b coefficient</param>
+    public static void LeastSquares(double[] xValues, double[] yValues, out double a, out double b)
+    {
+        double n = xValues.Length;
+
+        double xSum = 0;
+        double ySum = 0;
+
+        double xySum = 0;
+
+        double xxSum = 0;
+        double yySum = 0;
+
+        for (int i = 0; i < n; i++)
+        {
+            double x = xValues[i];
+            double y = yValues[i];
+
+            xSum += x;
+            ySum += y;
+
+            xySum += x * y;
+
+            xxSum += x * x;
+            yySum += y * y;
+        }
+
+        // XtX = [n, x; x, xx]
+
+        // inv(XtX) = 1/div * [xx, -x; -x, n]
+
+        // XtY = [y; xy]
+
+        // veta = inv(XtX) * XtY = 1/d [xx*y - x*xy; -x*y + n*xy]
+        double coeff00 = xxSum*ySum - xSum*xySum;
+        double coeff01 = n * xySum - xSum * ySum;
+
+        double divisor = 1.0D/(-xSum*xSum + xxSum*n);
+      
+        b = coeff00 * divisor;
+        a = coeff01 * divisor;
+    }
+
 }
