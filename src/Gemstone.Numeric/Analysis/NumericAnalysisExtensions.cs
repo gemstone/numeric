@@ -171,13 +171,13 @@ public static class NumericAnalysisExtensions
     }
 
     /// <summary>
-    /// median calculates the median values of a sequence of <see cref="double"/> values. while being aware of NaN values.
+    /// median calculates the median values of a sequence of <see cref="double"/> values, while being aware of NaN values.
     /// </summary>
-    /// <param name="source"></param>
-    /// <param name="ommitNaN"></param>
+    /// <param name="source">Source data sample.</param>
+    /// <param name="ommitNaN">A Flag indicating whether any NaN should be skipped.</param>
     /// <returns></returns>
-    /// <exception cref="ArgumentNullException"></exception>
-    public static double NaNAwareMedian(this IEnumerable<double> source, bool ommitNaN)
+    /// <exception cref="ArgumentNullException"><paramref name="source"/> is <c>null</c></exception>
+    public static double NaNAwareMedian(this IEnumerable<double> source, bool ommitNaN=true)
     {
         if (source is null)
             throw new ArgumentNullException(nameof(source), "source is null");
