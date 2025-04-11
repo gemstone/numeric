@@ -80,7 +80,7 @@ namespace Gemstone.Numeric;
 /// <summary>
 /// Represents a complex number.
 /// </summary>
-public struct ComplexNumber : IEquatable<ComplexNumber>
+public struct ComplexNumber : IEquatable<ComplexNumber>, IAdditionOperators<ComplexNumber,ComplexNumber,ComplexNumber>, IUnaryNegationOperators<ComplexNumber, ComplexNumber>, ISubtractionOperators<ComplexNumber, ComplexNumber, ComplexNumber>, IMultiplyOperators<ComplexNumber, ComplexNumber, ComplexNumber>
 {
     #region [ Members ]
 
