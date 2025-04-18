@@ -38,7 +38,7 @@ namespace Gemstone.Numeric;
 /// <summary>
 /// Represents a complex number.
 /// </summary>
-public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionOperators<T, T, T>, IUnaryNegationOperators<T, T>, ISubtractionOperators<T,T,T>, IMultiplyOperators<T,T,T>
+public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionOperators<T, T, T>, IUnaryNegationOperators<T, T>, ISubtractionOperators<T, T, T>, IMultiplyOperators<T, T, T>, IDivisionOperators<T, T, T>
 {
     #region [ Members ]
 
@@ -130,7 +130,7 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
     /// </summary>
     public int NColumns
     {
-        get => NRows > 0? m_value[0].Length : 0;
+        get => NRows > 0 ? m_value[0].Length : 0;
     }
 
     /// <summary>
@@ -149,7 +149,7 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
             int i = 0;
             T[] columnSums = new T[m_value.Length];
 
-            while ( i < m_value.Length)
+            while (i < m_value.Length)
             {
                 columnSums[i] = m_value[i][0];
                 int j = 1;
@@ -187,7 +187,7 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
         }
     }
 
-    public T this[Tuple<int,int> key]
+    public T this[Tuple<int, int> key]
     {
         get { return m_value[key.Item1][key.Item2]; }
         set { m_value[key.Item1][key.Item2] = value; }
@@ -203,7 +203,7 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
 
     #region [ Methods ]
 
-    public Matrix<T> TransposeAndMultiply(Matrix<T> value)
+    public Matrix<T> TransposeAndMultiply<U>(Matrix<U> value) where U : struct, IEquatable<U>, IAdditionOperators<U, U, U>, IUnaryNegationOperators<U, U>, ISubtractionOperators<U, U, U>, IMultiplyOperators<U, U, U>, IMultiplyOperators<U, T, T>, IDivisionOperators<U, U, U>
     {
 
         if (NColumns != value.NRows)
@@ -215,13 +215,60 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
             {
                 for (int j = 0; j < NColumns; ++j)
                 {
-                    data[i][j] += m_value[i][k] * value[k][j];
+                    data[i][j] += value[k][j] * m_value[i][k];
                 }
             }
         }
         return data;
     }
 
+    public Matrix<T> TransposeAndMultiply<U>(U[] value) where U : struct, IEquatable<U>, IAdditionOperators<U, U, U>, IUnaryNegationOperators<U, U>, ISubtractionOperators<U, U, U>, IMultiplyOperators<U, U, U>, IMultiplyOperators<U, T, T>, IDivisionOperators<U, U, U>
+    {
+        if (NColumns == value.Length)
+            return TransposeAndMultiply(new Matrix<U>(value, 1));
+        if (NRows == value.Length)
+            return TransposeAndMultiply(new Matrix<U>(1, value));
+        throw new ArgumentException("Cannot multiply matrices due to dimension missmatch.");
+    }
+
+
+    /// <summary>
+    /// Applies the given function to each row of the <see cref="Matrix{T}"/>.
+    /// </summary>
+    /// <param name="func"></param>
+    public void OperateByRow(Action<T[]> func)
+    {
+        for (int i = 0; i < NRows; ++i)
+            func.Invoke(m_value[i]);
+    }
+
+    /// <summary>
+    /// Applies the given function to each value of the <see cref="Matrix{T}"/>.
+    /// </summary>
+    /// <param name="func"></param>
+    public void OperateByValue(Func<T, T> func)
+    {
+        for (int i = 0; i < NRows; ++i)
+        {
+            for (int k = 0; k < NColumns; ++k)
+            {
+                this[i][k] = func.Invoke(this[i][k]);
+            }
+        }
+    }
+
+    public Matrix<U> TransformByValue<U>(Func<T, U> func) where U : struct, IEquatable<U>, IAdditionOperators<U, U, U>, IUnaryNegationOperators<U, U>, ISubtractionOperators<U, U, U>, IMultiplyOperators<U, U, U>, IDivisionOperators<U, U, U>
+    {
+        Matrix<U> data = new Matrix<U>(NRows, NColumns, default(U));
+        for (int i = 0; i < NRows; ++i)
+        {
+            for (int k = 0; k < NColumns; ++k)
+            {
+                data[i][k] = func.Invoke(this[i][k]);
+            }
+        }
+        return data;
+    }
 
     public T[] GetRow(int index) => m_value[index];
 
@@ -244,9 +291,8 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
         }
     }
 
-
-    public Matrix<T> GetSubmatrix(int startRow, int startColumn, int numRows, int numCols) 
-    { 
+    public Matrix<T> GetSubmatrix(int startRow, int startColumn, int numRows, int numCols)
+    {
         if (startRow < 0 || startRow >= NRows)
             throw new ArgumentOutOfRangeException(nameof(startRow), "Index out of range.");
         if (startColumn < 0 || startColumn >= NColumns)
@@ -285,12 +331,12 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
         {
             for (int j = 0; j < subMatrix.NColumns; ++j)
             {
-                this[i+ startRow][j+ startColumn] = subMatrix[i][j];
+                this[i + startRow][j + startColumn] = subMatrix[i][j];
             }
         }
     }
 
-    public Matrix<T> PointWhiseMultiply(Matrix<T> matrix) 
+    public Matrix<T> PointWhiseMultiply(Matrix<T> matrix)
     {
         if (this.NColumns != matrix.NColumns || matrix.NRows != this.NRows)
             throw new ArgumentException("Matrix sizes do not match.");
@@ -300,7 +346,7 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
         {
             for (int k = 0; k < NColumns; ++k)
             {
-                data[i][k] = this[i][k]*matrix[i][k];
+                data[i][k] = this[i][k] * matrix[i][k];
             }
         }
         return data;
@@ -310,7 +356,6 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
     {
         return new Matrix<T>(m_value.Select(v => (T[])v.Clone()).ToArray());
     }
-
     #endregion
 
     #region [ Operators ]
@@ -320,7 +365,7 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
     /// </summary>
     /// <param name="value">Operand.</param>
     /// <returns>ComplexNumber representing the result of the operation.</returns>
-    public static implicit operator Matrix<T>(T[][] value) => 
+    public static implicit operator Matrix<T>(T[][] value) =>
         new(value);
 
     /// <summary>
@@ -336,7 +381,7 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
     /// </summary>
     /// <param name="z">Left hand operand.</param>
     /// <returns>ComplexNumber representing the result of the unary negation operation.</returns>
-    public static Matrix<T> operator -(Matrix<T> z) => 
+    public static Matrix<T> operator -(Matrix<T> z) =>
         new(z.Value.Select(v => v.Select((x) => -x).ToArray()).ToArray());
 
     /// <summary>
@@ -352,6 +397,19 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
         return new(value1.Value.Select((v, i) => v.Select((x, j) => x + value2.Value[i][j]).ToArray()).ToArray());
     }
 
+    /// <summary>
+    /// Returns computed sum of values.
+    /// </summary>
+    /// <param name="value1">Left hand operand.</param>
+    /// <param name="value2">Right hand operand.</param>
+    /// <returns><see cref="Matrix{T}"/> representing the result of the addition operation.</returns>
+    public static Matrix<T> operator +(Matrix<T> value1, T value2)
+    {
+        return new(value1.Value.Select((v, i) => v.Select((x, j) => x + value2).ToArray()).ToArray());
+    }
+
+    public static Matrix<T> operator +(T value1, Matrix<T> value2) => value2 + value1;
+
 
     /// <summary>
     /// Returns computed difference of values.
@@ -365,6 +423,26 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
             throw new ArgumentException("Matrix sizes do not match.");
         return new(value1.Value.Select((v, i) => v.Select((x, j) => x - value2.Value[i][j]).ToArray()).ToArray());
     }
+
+    public static Matrix<T> operator -(Matrix<T> value1, T value2)
+    {
+        return new(value1.Value.Select((v, i) => v.Select((x, j) => x - value2).ToArray()).ToArray());
+    }
+
+    public static Matrix<T> operator -(T value1, Matrix<T> value2) => (-value2) + value1;
+
+    public static Matrix<T> operator -(Matrix<T> value1, T[] value2)
+    {
+        if (value1.NColumns == value2.Length)
+            return new(value1.Value.Select((v, i) => v.Select((x, j) => x - value2[j]).ToArray()).ToArray());
+        if (value1.NRows == value2.Length)
+            return new(value1.Value.Select((v, i) => v.Select((x, j) => x - value2[i]).ToArray()).ToArray());
+
+        throw new ArgumentException("Matrix sizes do not match.");
+
+
+    }
+
     /// <summary>
     /// Returns computed product of values.
     /// </summary>
@@ -381,7 +459,47 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
         {
             for (int k = 0; k < value2.NColumns; ++k)
             {
-                data[i][k] = value1.GetRow(i).Zip(value2.GetColumnEnumerable(k),(v1,v2) => v1*v2).Aggregate(default(T),(s,v) => s + v);
+                data[i][k] = value1.GetRow(i).Zip(value2.GetColumnEnumerable(k), (v1, v2) => v1 * v2).Aggregate(default(T), (s, v) => s + v);
+            }
+        }
+        return data;
+    }
+
+    /// <summary>
+    /// Returns computed product of values.
+    /// </summary>
+    /// <param name="value1">Left hand operand.</param>
+    /// <param name="value2">Right hand operand.</param>
+    /// <returns><see cref="Matrix{T}"/> representing the result of the multiplication operation.</returns>
+    public static Matrix<T> operator *(Matrix<T> value1, T value2)
+    {
+        return new(value1.Value.Select((v, i) => v.Select((x, j) => x * value2).ToArray()).ToArray());
+    }
+
+    /// <summary>
+    /// Returns computed product of values.
+    /// </summary>
+    /// <param name="value1">Left hand operand.</param>
+    /// <param name="value2">Right hand operand.</param>
+    /// <returns><see cref="Matrix{T}"/> representing the result of the multiplication operation.</returns>
+    public static Matrix<T> operator *(T value1, Matrix<T> value2) => value2 * value1;
+
+    public static Matrix<T> operator /(Matrix<T> value1, T value2)
+    {
+        return new(value1.Value.Select((v, i) => v.Select((x, j) => x / value2).ToArray()).ToArray());
+    }
+
+    public static Matrix<T> operator /(Matrix<T> value1, Matrix<T> value2)
+    {
+        if (value1.NColumns != value2.NColumns || value1.NRows != value2.NRows)
+            throw new ArgumentException("Matrix sizes do not match.");
+
+        Matrix<T> data = new Matrix<T>(value1.NRows, value1.NColumns, default(T));
+        for (int i = 0; i < value1.NRows; ++i)
+        {
+            for (int k = 0; k < value1.NColumns; ++k)
+            {
+                data[i][k] = value1[i][k] * value2[i][k];
             }
         }
         return data;
@@ -391,5 +509,17 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
 
     #region [ Static ]
 
+    public static Matrix<T> Combine(IEnumerable<Matrix<T>> matrices)
+    {
+        if (matrices.Count() == 0)
+            throw new ArgumentException("List of matrices cannot be empty.");
+        int nCols = matrices.Sum(m => m.NColumns);
+        int nRows = matrices.First().NRows;
+
+        if (matrices.Any(m => m.NRows != nRows))
+            throw new ArgumentException("All matrices must have the same number of rows.");
+        
+        return new Matrix<T>(matrices.SelectMany((m) => m.Value).ToArray());
+    }
     #endregion
 }
