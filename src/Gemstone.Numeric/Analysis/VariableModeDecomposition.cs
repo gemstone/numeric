@@ -71,10 +71,10 @@ public static class VariableModeDecomposition
     /// <param name="MaxIterations">The maximum Numebr of Itterations. </param>
     /// <param name="NumIMFs">The number of intrinsic mode Functions to be found.</param>
     /// <param name="PenaltyFactor"> The penalty factor for the VMD algorithm. </param>
-    public static Matrix<double> vmd(IEnumerable<double> x, int MaxIterations = 500, int NumIMFs = 5, double PenaltyFactor = 10000)
+    public static Matrix<double> vmd(IEnumerable<double> x, int MaxIterations = 500, int NumIMFs = 5, double PenaltyFactor = 1000)
     {
         // not sure how we get the opts...
-        int nFFt = 10621;
+        int nFFt = 2 * x.Count();
 
         double tau = 0.01;
         int nSignalLength = x.Count();
@@ -92,83 +92,82 @@ public static class VariableModeDecomposition
         else
             NumHalfFreqSamples = (nFFTLength + 1) / 2;
 
-        Matrix<ComplexNumber> initIMFfd = new (nSignalLength, NumIMFs,new ComplexNumber(0.0D,0.0D));
-        Matrix<ComplexNumber> initialLM = new(NumHalfFreqSamples,1,new(0.0D, 0));
+        Matrix<ComplexNumber> initIMFfd = new(NumHalfFreqSamples, NumIMFs, new ComplexNumber(0.0D, 0.0D));
+        Matrix<ComplexNumber> initialLM = new(NumHalfFreqSamples, 1, new(0.0D, 0));
 
-        Matrix<ComplexNumber> xComplex = new(x.Select(v => new ComplexNumber(v, 0.0D)).ToArray(), nSignalLength);
-
-        Matrix<ComplexNumber> sigFDFull = SignalBoundary(xComplex, nHalfSignalLenght, nMirroredSignalLength, nSignalLength, false);
-
-        Matrix<ComplexNumber> sigFD = sigFDFull.GetSubmatrix(0,0,NumHalfFreqSamples,1);
+        Matrix<ComplexNumber> xComplex = new(x.Select(v => new ComplexNumber(v, 0.0D)).ToArray(), 1);
+        Matrix<ComplexNumber> sigFD = SignalBoundary(xComplex, nHalfSignalLenght, nMirroredSignalLength, nSignalLength, false).GetSubmatrix(0, 0, NumHalfFreqSamples, 1);
 
         // fft for initial IMFs and get half of bandwidth
-        initIMFfd.OperateByRow((c) =>
+        initIMFfd.OperateByColumn((c) =>
         {
-            Complex32[] fft = c.Select((v) => new Complex32((float)v.Real, (float)v.Imaginary)).ToArray();
+            Complex32[] fft = c.Select((v) => new Complex32((float)v.Real, (float)v.Imaginary)).Concat(Enumerable.Repeat(new Complex32(0, 0), nFFt - c.Length)).ToArray();
 
             MathNet.Numerics.IntegralTransforms.Fourier.Forward(fft, MathNet.Numerics.IntegralTransforms.FourierOptions.Matlab);
-            c = fft.Select((c) => new ComplexNumber((double)c.Real, (double)c.Imaginary)).ToArray();
+            c = fft.Take(NumHalfFreqSamples).Select((c) => new ComplexNumber((double)c.Real, (double)c.Imaginary)).ToArray();
         });
 
 
         initIMFfd = initIMFfd + 2.2204e-16;
 
         //IMFfd = initIMFfd;
-        ComplexNumber[] sumIMF = initIMFfd.ColumnSums;
+        ComplexNumber[] sumIMF = initIMFfd.RowSums;
         Matrix<ComplexNumber> LM = (Matrix<ComplexNumber>)initialLM.Clone();
 
         // Frequency vector from[0, 0.5) for odd nfft and[0, 0.5] for even nfft
-        Matrix<double> f = new(Enumerable.Range(0, (nFFt / 2)+1).Select((v) => (double)(v/ (double)nFFt)).ToArray(),1);
+        Matrix<double> f = new(Enumerable.Range(0, (nFFt / 2) + 1).Select((v) => (double)(v / (double)nFFt)).ToArray(), 1);
         // Get the initial central frequencies
-        double[] centralFreq = InitialCentralFreqByFindPeaks(sigFD[0].Select(v => v.Magnitude), f[0], nFFTLength, NumIMFs);
+        double[] centralFreq = InitialCentralFreqByFindPeaks(sigFD.GetColumnEnumerable(0).Select(v => v.Magnitude), f.GetColumnEnumerable(0), nFFTLength, NumIMFs);
 
         int iter = 0;
-        Matrix<double> initIMFNorm = initIMFfd.TransformByValue<double>(((v) => v.Magnitude*v.Magnitude));
-        Matrix<double> normIMF = new(initIMFNorm.NColumns, initIMFNorm.NRows, 0.0D);
+        Matrix<double> initIMFNorm = initIMFfd.TransformByValue<double>(((v, i, j) => v.Magnitude * v.Magnitude));
+        Matrix<double> normIMF = new(initIMFNorm.NRows, initIMFNorm.NColumns, 0.0D);
 
         Matrix<ComplexNumber> imffd = (Matrix<ComplexNumber>)initIMFfd.Clone();
 
         while (iter < MaxIterations && (relativeDiff > relativeTolerance || absoluteDiff > absoluteTolerance))
-
         {
             for (int kk = 0; kk < NumIMFs; kk++)
             {
-                sumIMF = sumIMF.Select((s, i) => s - imffd[kk][i]).ToArray();
-                imffd[kk] = ((sigFD - sumIMF + LM * 1 / 2)/(1 + PenaltyFactor * (f.TransformByValue((v) => new ComplexNumber(v,0.0D)) - centralFreq[kk]) * (f.TransformByValue((v) => new ComplexNumber(v, 0.0D)) - centralFreq[kk])))[0];
-                normIMF[kk] = imffd[kk].Select((v, i) => v.Magnitude * v.Magnitude).ToArray();
-
-                centralFreq[kk] = f.TransposeAndMultiply(normIMF[kk])[0][0] / normIMF[kk].Sum();          
-                sumIMF = sumIMF.Select((s, i) => s + imffd[kk][i]).ToArray();
+                sumIMF = sumIMF.Select((s, i) => s - imffd[i][kk]).ToArray();
+                imffd.ReplaceSubmatrix(sigFD.TransformByValue((v, i, j) => (v - sumIMF[i] + LM[i][j] * 0.5D) / (PenaltyFactor * (f[i][j] - centralFreq[kk]) * (f[i][j] - centralFreq[kk]) + 1.0D)), 0, kk);
+                normIMF.ReplaceSubmatrix(new(imffd.GetColumnEnumerable(kk).Select((v, i) => v.Magnitude * v.Magnitude).ToArray(), 1), 0, kk);
+                centralFreq[kk] = f.TransposeAndMultiply(normIMF.GetColumn(kk))[0][0] / normIMF.GetColumnEnumerable(kk).Sum();
+                sumIMF = sumIMF.Select((s, i) => s + imffd[i][kk]).ToArray();
             }
 
 
-            LM = LM + tau*(sigFD - sumIMF);
-            double[] absDiff = (imffd - initIMFfd).TransformByValue((v) => v.Magnitude * v.Magnitude / imffd.NRows).ColumnSums;
+            LM = LM + tau * (sigFD - sumIMF);
+            double[] absDiff = (imffd - initIMFfd).TransformByValue((v, i, j) => v.Magnitude * v.Magnitude / imffd.NRows).ColumnSums;
             absoluteDiff = absDiff.Sum();
             relativeDiff = absDiff.Select((v, i) => v / initIMFNorm.GetColumn(i).Average()).Sum();
 
-            IEnumerable<int> sortedIndex = imffd.TransformByValue((v) => v.Magnitude*v.Magnitude).ColumnSums.Select((v,i) => new Tuple<int,double>(i,v)).OrderByDescending((v) => v.Item2).Select(v=> v.Item1);
-            imffd = sortedIndex.Select((i) => imffd[i]).ToArray();
+            int[] sortedIndex = imffd.TransformByValue((v, i, j) => v.Magnitude * v.Magnitude).ColumnSums.Select((v, i) => new Tuple<int, double>(i, v)).OrderByDescending((v) => v.Item2).Select(v => v.Item1).ToArray();
+            imffd = Matrix<ComplexNumber>.Combine(sortedIndex.Select((i) => new Matrix<ComplexNumber>(imffd.GetColumn(i), 1)));
 
             centralFreq = sortedIndex.Take(centralFreq.Length).Select((i) => centralFreq[i]).ToArray();
-            imffd[0] = imffd[0].OrderByDescending((v) => v.Magnitude * v.Magnitude).ToArray();
-
 
             initIMFfd = (Matrix<ComplexNumber>)imffd.Clone();
             initIMFNorm = (Matrix<double>)normIMF;
-            
+
             iter = iter + 1;
         }
 
         // Transform to time domain
-        Matrix<ComplexNumber> IMFfdFull = new(nFFt, NumIMFs,new ComplexNumber(0.0D, 0.0D));
+        Matrix<ComplexNumber> IMFfdFull = new(nFFt, NumIMFs, new ComplexNumber(0.0D, 0.0D));
         IMFfdFull.ReplaceSubmatrix(imffd, 0, 0);
+
+
+        if (nFFTLength % 2 == 0)
+            IMFfdFull.ReplaceSubmatrix(imffd.FlipUpsideDown().GetSubmatrix(1,0,imffd.NRows - 2, imffd.NColumns).TransformByValue<ComplexNumber>((c) => c.Conjugate), imffd.NRows, 0); 
+        else
+            IMFfdFull.ReplaceSubmatrix(imffd.FlipUpsideDown().GetSubmatrix(0, 0, imffd.NRows - 1, imffd.NColumns), imffd.NRows, 0);
+
 
 
         IEnumerable<int> sortIndex = centralFreq.Select((v, i) => new Tuple<int, double>(i, v)).OrderByDescending((v) => v.Item2).Select(v => v.Item1);
 
-        return Matrix<double>.Combine(sortIndex.Select((i) => SignalBoundary(new (IMFfdFull[i],1), nHalfSignalLenght, nMirroredSignalLength, nSignalLength, true).TransformByValue(v => v.Magnitude)));
-
+        return Matrix<double>.Combine(sortIndex.Select((i) => SignalBoundary(new(IMFfdFull.GetColumn(i), 1), nHalfSignalLenght, nMirroredSignalLength, nSignalLength, true).TransformByValue((v, i, j) => v.Real)));
     }
 
     /// <summary>
@@ -188,10 +187,10 @@ public static class VariableModeDecomposition
             fft = x.GetColumn(0).Select((v) => new Complex32((float)v.Real, (float)v.Imaginary)).ToArray();
             
             MathNet.Numerics.IntegralTransforms.Fourier.Inverse(fft, MathNet.Numerics.IntegralTransforms.FourierOptions.Matlab);
-            return new(fft.Select((c) => new ComplexNumber((double)c.Real,(double)c.Imaginary)).Skip(nHalfSignalLenght).Take(nMirroredSignalLength).ToArray(),1);
+            return new(fft.Select((c) => new ComplexNumber((double)c.Real,(double)c.Imaginary)).Skip(nHalfSignalLenght).Take(nMirroredSignalLength-2*nHalfSignalLenght).ToArray(),1);
         }
 
-        fft = x.GetColumn(0).Take(nHalfSignalLenght).Reverse().Concat(x.GetColumn(0)).Concat(x.GetColumn(0).Skip((int)Math.Ceiling(nSignalLength / 2.0D)).Reverse())
+        fft = x.GetColumnEnumerable(0).Take(nHalfSignalLenght).Reverse().Concat(x.GetColumnEnumerable(0)).Concat(x.GetColumnEnumerable(0).Skip((int)Math.Ceiling(nSignalLength / 2.0D)).Reverse())
             .Select((v) => new Complex32((float)v.Real, (float)v.Imaginary)).ToArray();
 
         MathNet.Numerics.IntegralTransforms.Fourier.Forward(fft, MathNet.Numerics.IntegralTransforms.FourierOptions.Matlab);
@@ -251,7 +250,7 @@ public static class VariableModeDecomposition
             return Enumerable.Repeat(false, x.Count()).ToArray();
         
 
-        s = FillMissing<double>(s, v => v == 0);
+        s = FillMissing<double>(s, v => v == 0).ToArray();
 
         IEnumerable<bool> maxVals = s.Skip(1).Zip(s, (a, b) => a < b).Prepend(false).Append(false);
 
@@ -264,7 +263,7 @@ public static class VariableModeDecomposition
         inflectionPoints = s.Skip(1).Zip(s, (a, b) => a != b).Zip(inflectionPoints.Skip(1), (a, b) => a && b).Prepend(true).Append(true);
 
         // This will also restrict to the top N most prominent maxima.
-        IEnumerable<int> locMaxima = maxVals.Select((t, i) => new Tuple<int, bool>(i, t)).Where(v => v.Item2).Select(v => v.Item1);
+        int[] locMaxima = maxVals.Select((t, i) => new Tuple<int, bool>(i, t)).Where(v => v.Item2).Select(v => v.Item1).ToArray();
 
         double[] P = ComputeProminence(x, locMaxima).ToArray();
 
@@ -282,14 +281,14 @@ public static class VariableModeDecomposition
         int right = 0;
 
         bool[] filteredMaxVals = maxVals.ToArray();
-        for(int i = 0; i < locMaxima.Count(); i++)
+        for(int i = 0; i < locMaxima.Length; i++)
         {
             while ((flatIndices[i].Item1 - flatIndices[left].Item2) >= minSepperation)
                     left++;
 
             right = Math.Max(right, i);
 
-            while ((right <= (locMaxima.Count() - 2)) && ((flatIndices[right + 1].Item1 - flatIndices[i].Item2) < minSepperation))
+            while ((right <= (locMaxima.Length - 2)) && ((flatIndices[right + 1].Item1 - flatIndices[i].Item2) < minSepperation))
                 right = right + 1;
 
             IEnumerable<int> leftIdx = locMaxima.Skip(left).Take(i - left);
@@ -298,14 +297,14 @@ public static class VariableModeDecomposition
             if (leftIdx.Count() > 0)
             {
                 double leftMax = leftIdx.Select((i) => P[i]).Max();
-                if (leftMax >= P[locMaxima.ElementAt(i)])
-                    filteredMaxVals[locMaxima.ElementAt(i)] = false;
+                if (leftMax >= P[locMaxima[i]])
+                    filteredMaxVals[locMaxima[i]] = false;
             }
             if (right - i > 0)
             { 
                 double rightMax = locMaxima.Skip(i+1).Take(right-i).Select((index) => P[index]).Max();           
-                if (rightMax > P[locMaxima.ElementAt(i)])
-                    filteredMaxVals[locMaxima.ElementAt(i)] = false;
+                if (rightMax > P[locMaxima[i]])
+                    filteredMaxVals[locMaxima[i]] = false;
             }
         }
 
@@ -370,28 +369,6 @@ public static class VariableModeDecomposition
         while (dataEnumerator.MoveNext())
             yield return 0.0D;
         }
-
-    private static IEnumerable<double> Sum(IEnumerable<IEnumerable<double>> data)
-    {
-        List<IEnumerator<double>> enumerators = data
-               .DefaultIfEmpty([])
-               .Select(item => item.GetEnumerator())
-               .ToList();
-
-        while (enumerators.All(item => item.MoveNext()))
-            yield return enumerators.Select(item => item.Current).Sum();
-    }
-
-    private static IEnumerable<ComplexNumber> Sum(IEnumerable<IEnumerable<ComplexNumber>> data)
-    {
-        List<IEnumerator<ComplexNumber>> enumerators = data
-               .DefaultIfEmpty([])
-               .Select(item => item.GetEnumerator())
-               .ToList();
-
-        while (enumerators.All(item => item.MoveNext()))
-            yield return enumerators.Select(item => item.Current).Aggregate(new ComplexNumber(0.0D,0.0D),(c1,c2) => c1 + c2);
-    }
 
     /// <summary>
     /// Replace values meeting condition in <see cref="replace"/> with the next Value not meeting this criteria.
