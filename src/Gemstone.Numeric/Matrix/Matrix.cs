@@ -58,7 +58,8 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
     public Matrix(int rows, int cols, T value)
         : this()
     {
-        m_value = Enumerable.Repeat(Enumerable.Repeat(value, cols).ToArray(), rows).ToArray();
+        T[] row = Enumerable.Repeat(value, cols).ToArray();
+        m_value = Enumerable.Repeat(0, rows).Select((v) => (T[])row.Clone()).ToArray();
     }
 
     /// <summary>
@@ -80,7 +81,7 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
     public Matrix(int rows, T[] row)
         : this()
     {
-        m_value = Enumerable.Repeat(row, rows).ToArray();
+        m_value = Enumerable.Repeat(0, rows).Select((v) => (T[])row.Clone()).ToArray();
     }
 
     /// <summary>
@@ -101,7 +102,7 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
     {
         get
         {
-            Matrix<T> transposed = new Matrix<T>(NRows, NColumns, default(T));
+            Matrix<T> transposed = new Matrix<T>(NColumns, NRows, default(T));
             for (int j = 0; j < NColumns; j++)
             {
                 for (int i = 0; i < NRows; i++)
@@ -141,58 +142,68 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
         get => m_value.Length;
     }
 
-    // Needs to be Fixed
+    /// <summary>
+    /// Gets the sum of each column of the <see cref="Matrix{T}"/>.
+    /// </summary>
     public T[] ColumnSums
     {
         get
         {
-            int i = 0;
-            T[] columnSums = new T[m_value.Length];
+            T[] columnSums = new T[NColumns];
 
-            while (i < m_value.Length)
+            for (int i =0; i < NRows; i++)
             {
-                columnSums[i] = m_value[i][0];
-                int j = 1;
-                while (j < m_value[i].Length)
+                for (int j = 0; j < NColumns; j++)
                 {
-                    columnSums[i] = columnSums[i] + m_value[i][j];
-                    j++;
+                    if (i == 0)
+                        columnSums[j] = m_value[i][j];
+                    else
+                        columnSums[j] = columnSums[j] + m_value[i][j];
                 }
-                i++;
             }
             return columnSums;
         }
     }
 
-    // Needs to be Fixed
+    /// <summary>
+    /// Gets the sum of each row of the <see cref="Matrix{T}"/>.
+    /// </summary>
     public T[] RowSums
     {
         get
         {
-            int i = 0;
-            T[] columnSums = new T[m_value.Length];
+            T[] rowSums = new T[NRows];
 
-            while (i < m_value.Length)
+            for (int i = 0; i < NRows; i++)
             {
-                columnSums[i] = m_value[i][0];
-                int j = 1;
-                while (j < m_value[i].Length)
+                for (int j = 0; j < NColumns; j++)
                 {
-                    columnSums[i] = columnSums[i] + m_value[i][j];
-                    j++;
+                    if (j == 0)
+                        rowSums[i] = m_value[i][j];
+                    else
+                        rowSums[i] = rowSums[i] + m_value[i][j];
                 }
-                i++;
             }
-            return columnSums;
+            return rowSums;
         }
     }
 
+    /// <summary>
+    /// Accesses the element stored at (i,j)
+    /// </summary>
+    /// <param name="key"></param>
+    /// <returns></returns>
     public T this[Tuple<int, int> key]
     {
         get { return m_value[key.Item1][key.Item2]; }
         set { m_value[key.Item1][key.Item2] = value; }
     }
 
+    /// <summary>
+    /// Accesses the element stored at (i,j)
+    /// </summary>
+    /// <param name="key"></param>
+    /// <returns></returns>
     public T[] this[int key]
     {
         get { return m_value[key]; }
@@ -203,31 +214,49 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
 
     #region [ Methods ]
 
+    /// <summary>
+    /// Returns a <see cref="Matrix{T}"/> resulting from transposing this matrix and multiplying it with a <see cref="Matrix{U}"/>
+    /// </summary>
+    /// <typeparam name="U"></typeparam>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    /// <exception cref="ArgumentException"></exception>
     public Matrix<T> TransposeAndMultiply<U>(Matrix<U> value) where U : struct, IEquatable<U>, IAdditionOperators<U, U, U>, IUnaryNegationOperators<U, U>, ISubtractionOperators<U, U, U>, IMultiplyOperators<U, U, U>, IMultiplyOperators<U, T, T>, IDivisionOperators<U, U, U>
     {
 
-        if (NColumns != value.NRows)
+        if (NRows != value.NRows)
             throw new ArgumentException("Cannot multiply matrices due to dimension missmatch.");
-        Matrix<T> data = new Matrix<T>(value.NColumns, value.NRows, default(T));
+        Matrix<T> data = new Matrix<T>(NColumns, value.NColumns, default(T));
         for (int i = 0; i < NColumns; ++i)
         {
             for (int k = 0; k < NRows; ++k)
             {
-                for (int j = 0; j < NColumns; ++j)
+                for (int j = 0; j < value.NColumns; ++j)
                 {
-                    data[i][j] += value[k][j] * m_value[i][k];
+                    if (k == 0)
+                        data[i][j] = value[k][j] * m_value[k][i];
+                    else
+                        data[i][j] += value[k][j] * m_value[k][i];
                 }
             }
         }
         return data;
     }
 
+
+    /// <summary>
+    /// Returns a <see cref="Matrix{T}"/> resulting from transposing this matrix and multiplying it with a 1xN <see cref="Matrix{U}"/>
+    /// </summary>
+    /// <typeparam name="U"></typeparam>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    /// <exception cref="ArgumentException"></exception>
     public Matrix<T> TransposeAndMultiply<U>(U[] value) where U : struct, IEquatable<U>, IAdditionOperators<U, U, U>, IUnaryNegationOperators<U, U>, ISubtractionOperators<U, U, U>, IMultiplyOperators<U, U, U>, IMultiplyOperators<U, T, T>, IDivisionOperators<U, U, U>
     {
         if (NColumns == value.Length)
-            return TransposeAndMultiply(new Matrix<U>(value, 1));
-        if (NRows == value.Length)
             return TransposeAndMultiply(new Matrix<U>(1, value));
+        if (NRows == value.Length)
+            return TransposeAndMultiply(new Matrix<U>(value, 1));
         throw new ArgumentException("Cannot multiply matrices due to dimension missmatch.");
     }
 
@@ -243,36 +272,64 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
     }
 
     /// <summary>
+    /// Applies the given function to each column of the <see cref="Matrix{T}"/>.
+    /// </summary>
+    /// <param name="func"></param>
+    public void OperateByColumn(Action<T[]> func)
+    {
+        for (int i = 0; i < NColumns; ++i)
+        {
+            T[] col = GetColumn(i);
+            func.Invoke(col);
+            for (int j = 0; j < col.Length; j++)
+                m_value[j][i] = col[j];
+        }
+    }
+
+    /// <summary>
     /// Applies the given function to each value of the <see cref="Matrix{T}"/>.
     /// </summary>
     /// <param name="func"></param>
-    public void OperateByValue(Func<T, T> func)
+    public void OperateByValue(Func<T,int,int, T> func)
     {
         for (int i = 0; i < NRows; ++i)
         {
             for (int k = 0; k < NColumns; ++k)
             {
-                this[i][k] = func.Invoke(this[i][k]);
+                this[i][k] = func.Invoke(this[i][k],i,k);
             }
         }
     }
 
-    public Matrix<U> TransformByValue<U>(Func<T, U> func) where U : struct, IEquatable<U>, IAdditionOperators<U, U, U>, IUnaryNegationOperators<U, U>, ISubtractionOperators<U, U, U>, IMultiplyOperators<U, U, U>, IDivisionOperators<U, U, U>
+    public Matrix<U> TransformByValue<U>(Func<T, int,int, U> func) where U : struct, IEquatable<U>, IAdditionOperators<U, U, U>, IUnaryNegationOperators<U, U>, ISubtractionOperators<U, U, U>, IMultiplyOperators<U, U, U>, IDivisionOperators<U, U, U>
     {
         Matrix<U> data = new Matrix<U>(NRows, NColumns, default(U));
         for (int i = 0; i < NRows; ++i)
         {
             for (int k = 0; k < NColumns; ++k)
             {
-                data[i][k] = func.Invoke(this[i][k]);
+                data[i][k] = func.Invoke(this[i][k], i, k);
             }
         }
         return data;
     }
 
+    public Matrix<U> TransformByValue<U>(Func<T, U> func) where U : struct, IEquatable<U>, IAdditionOperators<U, U, U>, IUnaryNegationOperators<U, U>, ISubtractionOperators<U, U, U>, IMultiplyOperators<U, U, U>, IDivisionOperators<U, U, U>
+        => TransformByValue((v, i, j) => func.Invoke(v));
+    
+
+    /// <summary>
+    /// returns the speciefied row of the Matrix
+    /// </summary>
+    /// <param name="index"></param>
+    /// <returns></returns>
     public T[] GetRow(int index) => m_value[index];
 
-
+    /// <summary>
+    /// returns the specified column of the Matrix
+    /// </summary>
+    /// <param name="index"></param>
+    /// <returns></returns>
     public T[] GetColumn(int index)
     {
         return GetColumnEnumerable(index).ToArray();
@@ -284,13 +341,22 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
             throw new ArgumentOutOfRangeException(nameof(index), "Index out of range.");
 
         int i = 0;
-        while (i < NColumns)
+        while (i < NRows)
         {
             yield return m_value[i][index];
             i++;
         }
     }
 
+    /// <summary>
+    /// Gets a submatrix of the <see cref="Matrix{T}"/> starting at the given row and column, with the given number of rows and columns.
+    /// </summary>
+    /// <param name="startRow"> the first row of the submatrix. </param>
+    /// <param name="startColumn"> the first column of the submarix. </param>
+    /// <param name="numRows"> the number of rows of the submatrix. </param>
+    /// <param name="numCols"> the number of columns of the submatrix. </param>
+    /// <returns>A new <see cref="Matrix{T}"/> that is the submatrix speciffied. </returns>
+    /// <exception cref="ArgumentOutOfRangeException"></exception>
     public Matrix<T> GetSubmatrix(int startRow, int startColumn, int numRows, int numCols)
     {
         if (startRow < 0 || startRow >= NRows)
@@ -356,15 +422,26 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
     {
         return new Matrix<T>(m_value.Select(v => (T[])v.Clone()).ToArray());
     }
+
+    public Matrix<T> FlipUpsideDown()
+    {
+        Matrix<T> data = new Matrix<T>(NRows, NColumns, default(T));
+        for (int i = 0; i < NRows; ++i)
+        {
+            data[NRows - i - 1] = (T[])m_value[i].Clone();
+        }
+        return data;
+    }
+
     #endregion
 
-    #region [ Operators ]
+        #region [ Operators ]
 
-    /// <summary>
-    /// Implicitly converts a <see cref="Double"/> to a <see cref="ComplexNumber"/>.
-    /// </summary>
-    /// <param name="value">Operand.</param>
-    /// <returns>ComplexNumber representing the result of the operation.</returns>
+        /// <summary>
+        /// Implicitly converts a <see cref="Double"/> to a <see cref="ComplexNumber"/>.
+        /// </summary>
+        /// <param name="value">Operand.</param>
+        /// <returns>ComplexNumber representing the result of the operation.</returns>
     public static implicit operator Matrix<T>(T[][] value) =>
         new(value);
 
@@ -519,7 +596,14 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
         if (matrices.Any(m => m.NRows != nRows))
             throw new ArgumentException("All matrices must have the same number of rows.");
         
-        return new Matrix<T>(matrices.SelectMany((m) => m.Value).ToArray());
+        Matrix<T> matrix = new Matrix<T>(nRows, nCols, default(T));
+      
+        for (int j = 0; j < nRows; j++)
+        {
+            matrix[j] = matrices.SelectMany(m => m[j]).ToArray();
+        }
+        
+        return matrix;
     }
     #endregion
 }
