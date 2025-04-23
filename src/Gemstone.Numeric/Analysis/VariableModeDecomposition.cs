@@ -115,7 +115,12 @@ public static class VariableModeDecomposition
         Matrix<ComplexNumber> LM = (Matrix<ComplexNumber>)initialLM.Clone();
 
         // Frequency vector from[0, 0.5) for odd nfft and[0, 0.5] for even nfft
-        Matrix<double> f = new(Enumerable.Range(0, (nFFt / 2) + 1).Select((v) => (double)(v / (double)nFFt)).ToArray(), 1);
+        Matrix<double> f;
+        if (nFFt % 2 == 0)
+            f = new(Enumerable.Range(0, (nFFt / 2)).Select((v) => (double)(v / (double)nFFt)).ToArray(), 1);
+        else
+            f = new(Enumerable.Range(0, (nFFt / 2) + 1 ).Select((v) => (double)(v / (double)nFFt)).ToArray(), 1);
+
         // Get the initial central frequencies
         double[] centralFreq = InitialCentralFreqByFindPeaks(sigFD.GetColumnEnumerable(0).Select(v => v.Magnitude), f.GetColumnEnumerable(0), nFFTLength, NumIMFs);
 
