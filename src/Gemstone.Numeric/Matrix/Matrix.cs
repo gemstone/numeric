@@ -30,6 +30,7 @@ using Gemstone.Units;
 using System.Numerics;
 using System.Linq;
 using System.Collections.Generic;
+using System.Data;
 
 // ReSharper disable CompareOfFloatsByEqualityOperator
 // ReSharper disable PossibleInvalidOperationException
@@ -58,8 +59,18 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
     public Matrix(int rows, int cols, T value)
         : this()
     {
-        T[] row = Enumerable.Repeat(value, cols).ToArray();
-        m_value = Enumerable.Repeat(0, rows).Select((v) => (T[])row.Clone()).ToArray();
+        T[] row = new T[cols];
+        for (int i = 0; i < cols;  i++)
+        {
+            row[i] = value;
+        }
+        m_value = new T[rows][];
+
+        for (int j = 0; j < rows; j++)
+        {
+            m_value[j] = (T[])row.Clone();
+        }
+
     }
 
     /// <summary>
@@ -81,7 +92,12 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
     public Matrix(int rows, T[] row)
         : this()
     {
-        m_value = Enumerable.Repeat(0, rows).Select((v) => (T[])row.Clone()).ToArray();
+        m_value = new T[rows][];
+
+        for (int j = 0; j < rows; j++)
+        {
+            m_value[j] = (T[])row.Clone();
+        }
     }
 
     /// <summary>
@@ -586,21 +602,30 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
 
     #region [ Static ]
 
-    public static Matrix<T> Combine(IEnumerable<Matrix<T>> matrices)
+    public static Matrix<T> Combine(Matrix<T>[] matrices)
     {
-        if (matrices.Count() == 0)
+        if (matrices.Length == 0)
             throw new ArgumentException("List of matrices cannot be empty.");
         int nCols = matrices.Sum(m => m.NColumns);
-        int nRows = matrices.First().NRows;
+        int nRows = matrices[0].NRows;
 
         if (matrices.Any(m => m.NRows != nRows))
             throw new ArgumentException("All matrices must have the same number of rows.");
         
         Matrix<T> matrix = new Matrix<T>(nRows, nCols, default(T));
-      
+
+        int count = 0;
         for (int j = 0; j < nRows; j++)
         {
-            matrix[j] = matrices.SelectMany(m => m[j]).ToArray();
+            count = 0;
+            for (int i = 0; i < matrices.Length; i++)
+            {
+                for (int k = 0; k < matrices[i].NColumns; k++)
+                {
+                    matrix[j][count] = matrices[i][j][k];
+                    count++;
+                }
+            }
         }
         
         return matrix;

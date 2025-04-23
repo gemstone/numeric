@@ -148,7 +148,7 @@ public static class VariableModeDecomposition
             relativeDiff = absDiff.Select((v, i) => v / initIMFNorm.GetColumn(i).Average()).Sum();
 
             int[] sortedIndex = imffd.TransformByValue((v, i, j) => v.Magnitude * v.Magnitude).ColumnSums.Select((v, i) => new Tuple<int, double>(i, v)).OrderByDescending((v) => v.Item2).Select(v => v.Item1).ToArray();
-            imffd = Matrix<ComplexNumber>.Combine(sortedIndex.Select((i) => new Matrix<ComplexNumber>(imffd.GetColumn(i), 1)));
+            imffd = Matrix<ComplexNumber>.Combine(sortedIndex.Select((i) => new Matrix<ComplexNumber>(imffd.GetColumn(i), 1)).ToArray());
 
             centralFreq = sortedIndex.Take(centralFreq.Length).Select((i) => centralFreq[i]).ToArray();
 
@@ -172,7 +172,7 @@ public static class VariableModeDecomposition
 
         IEnumerable<int> sortIndex = centralFreq.Select((v, i) => new Tuple<int, double>(i, v)).OrderByDescending((v) => v.Item2).Select(v => v.Item1);
 
-        return Matrix<double>.Combine(sortIndex.Select((i) => SignalBoundary(new(IMFfdFull.GetColumn(i), 1), nHalfSignalLenght, nMirroredSignalLength, nSignalLength, true).TransformByValue((v, i, j) => v.Real)));
+        return Matrix<double>.Combine(sortIndex.Select((i) => SignalBoundary(new(IMFfdFull.GetColumn(i), 1), nHalfSignalLenght, nMirroredSignalLength, nSignalLength, true).TransformByValue((v, i, j) => v.Real)).ToArray());
     }
 
     /// <summary>
