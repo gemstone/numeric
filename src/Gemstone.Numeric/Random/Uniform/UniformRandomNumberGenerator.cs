@@ -68,7 +68,7 @@ public class UniformRandomNumberGenerator
     /// <returns><see cref="IEnumerable{UniformRandomNumber}"/></returns>
     public IEnumerable<UniformRandomNumber> Next(int number)
     {
-        List<UniformRandomNumber> list = new();
+        List<UniformRandomNumber> list = [];
         for (int i = 0; i < number; i++)
             list.Add(Next());
 

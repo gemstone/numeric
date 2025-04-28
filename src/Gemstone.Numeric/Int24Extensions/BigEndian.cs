@@ -136,12 +136,12 @@ public static class BigEndian
     {
         int int32 = value;
 
-        return new[]
-        {
+        return
+        [
             (byte)(int32 >> 16),
             (byte)(int32 >> 8),
             (byte)int32
-        };
+        ];
     }
         
     /// <summary>

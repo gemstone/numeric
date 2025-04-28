@@ -69,7 +69,7 @@ public class LogNormalRandomNumberGenerator
     /// <returns><see cref="IEnumerable{LogNormalRandomNumber}"/></returns>
     public IEnumerable<LogNormalRandomNumber> Next(int number)
     {
-        List<LogNormalRandomNumber> list = new();
+        List<LogNormalRandomNumber> list = [];
         for (int i = 0; i < number; i++)
             list.Add(Next());
 

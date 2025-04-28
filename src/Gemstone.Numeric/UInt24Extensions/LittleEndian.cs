@@ -108,12 +108,12 @@ public static class LittleEndian
     {
         uint uint32 = value;
 
-        return new[]
-        {
+        return
+        [
             (byte)uint32,
             (byte)(uint32 >> 8),
             (byte)(uint32 >> 16)
-        };
+        ];
     }
         
     /// <summary>

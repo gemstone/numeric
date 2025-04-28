@@ -65,17 +65,17 @@ public class InverseDistanceWeightingFunction
     /// <summary>
     /// Gets the collection of x-coordinates of points at which the values are known.
     /// </summary>
-    public double[] XCoordinates { get; private set; } = Array.Empty<double>();
+    public double[] XCoordinates { get; private set; } = [];
 
     /// <summary>
     /// Gets the collection of y-coordinates of points at which the values are known.
     /// </summary>
-    public double[] YCoordinates { get; private set; } = Array.Empty<double>();
+    public double[] YCoordinates { get; private set; } = [];
 
     /// <summary>
     /// Gets the collection of values of points at which the values are known.
     /// </summary>
-    public double[] Values { get; private set; } = Array.Empty<double>();
+    public double[] Values { get; private set; } = [];
 
     /// <summary>
     /// Gets the power applied to the inverse distance to control the speed of value's decay.

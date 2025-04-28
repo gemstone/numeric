@@ -65,7 +65,7 @@ public class DiscreteUniformRandomNumberGenerator
     /// <returns><see cref="IEnumerable{DiscreteUniformRandomNumber}"/></returns>
     public IEnumerable<DiscreteUniformRandomNumber> Next(int number)
     {
-        List<DiscreteUniformRandomNumber> list = new();
+        List<DiscreteUniformRandomNumber> list = [];
         for (int i = 0; i < number; i++)
             list.Add(Next());
 

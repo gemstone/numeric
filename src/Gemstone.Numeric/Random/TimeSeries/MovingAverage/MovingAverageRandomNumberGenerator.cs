@@ -80,7 +80,7 @@ public class MovingAverageRandomNumberGenerator
     /// <returns><see cref="IEnumerable{MovingAverageRandomNumber}"/></returns>
     public IEnumerable<MovingAverageRandomNumber> Next(int number)
     {
-        List<MovingAverageRandomNumber> list = new();
+        List<MovingAverageRandomNumber> list = [];
         for (int i = 0; i < number; i++)
             list.Add(Next());
 

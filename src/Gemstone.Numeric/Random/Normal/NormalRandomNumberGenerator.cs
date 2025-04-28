@@ -65,7 +65,7 @@ public class NormalRandomNumberGenerator
     /// <returns><see cref="IEnumerable{NormalRandomNumber}"/></returns>
     public IEnumerable<NormalRandomNumber> Next(int number)
     {
-        List<NormalRandomNumber> list = new();
+        List<NormalRandomNumber> list = [];
         for (int i = 0; i < number; i++)
             list.Add(Next());
 

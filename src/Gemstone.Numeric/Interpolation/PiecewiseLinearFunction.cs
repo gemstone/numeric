@@ -69,12 +69,12 @@ public class PiecewiseLinearFunction
     /// <summary>
     /// Gets the x-values of the pivot points in the piecewise linear function.
     /// </summary>
-    public double[] Domain { get; private set; } = Array.Empty<double>();
+    public double[] Domain { get; private set; } = [];
 
     /// <summary>
     /// Gets the y-values of the pivot points in the piecewise linear function.
     /// </summary>
-    public double[] Range { get; private set; } = Array.Empty<double>();
+    public double[] Range { get; private set; } = [];
 
     #endregion
 

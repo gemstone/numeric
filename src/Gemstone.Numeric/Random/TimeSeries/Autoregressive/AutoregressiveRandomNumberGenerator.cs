@@ -89,7 +89,7 @@ public class AutoregressiveRandomNumberGenerator
     /// <returns><see cref="IEnumerable{AutoregressiveRandomNumber}"/></returns>
     public IEnumerable<AutoregressiveRandomNumber> Next(int number)
     {
-        List<AutoregressiveRandomNumber> list = new();
+        List<AutoregressiveRandomNumber> list = [];
         for (int i = 0; i < number; i++)
             list.Add(Next());
 

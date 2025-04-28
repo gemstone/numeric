@@ -62,7 +62,7 @@ public class GeometricRandomNumberGenerator
     /// <returns><see cref="IEnumerable{GeometricRandomNumber}"/></returns>
     public IEnumerable<GeometricRandomNumber> Next(int number)
     {
-        List<GeometricRandomNumber> list = new();
+        List<GeometricRandomNumber> list = [];
         for (int i = 0; i < number; i++)
             list.Add(Next());
 

@@ -162,7 +162,7 @@ public class SplineFit
         Spline[] splines = new Spline[n];
         for (int i = 0; i < n; i++)
         {
-            double[] coefficients = { a[i], b[i], c[i], d[i] };
+            double[] coefficients = [a[i], b[i], c[i], d[i]];
             splines[i] = new Spline(x[i], coefficients);
         }
 
