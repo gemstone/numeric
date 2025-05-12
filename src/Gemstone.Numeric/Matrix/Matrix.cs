@@ -39,7 +39,7 @@ namespace Gemstone.Numeric;
 /// <summary>
 /// Represents a complex number.
 /// </summary>
-public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionOperators<T, T, T>, IUnaryNegationOperators<T, T>, ISubtractionOperators<T, T, T>, IMultiplyOperators<T, T, T>, IDivisionOperators<T, T, T>
+public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparisonOperators<T, T, bool>
 {
     #region [ Members ]
 
@@ -60,7 +60,7 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
         : this()
     {
         T[] row = new T[cols];
-        for (int i = 0; i < cols;  i++)
+        for (int i = 0; i < cols; i++)
         {
             row[i] = value;
         }
@@ -167,7 +167,7 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
         {
             T[] columnSums = new T[NColumns];
 
-            for (int i =0; i < NRows; i++)
+            for (int i = 0; i < NRows; i++)
             {
                 for (int j = 0; j < NColumns; j++)
                 {
@@ -237,9 +237,8 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
     /// <param name="value"></param>
     /// <returns></returns>
     /// <exception cref="ArgumentException"></exception>
-    public Matrix<T> TransposeAndMultiply<U>(Matrix<U> value) where U : struct, IEquatable<U>, IAdditionOperators<U, U, U>, IUnaryNegationOperators<U, U>, ISubtractionOperators<U, U, U>, IMultiplyOperators<U, U, U>, IMultiplyOperators<U, T, T>, IDivisionOperators<U, U, U>
+    public Matrix<T> TransposeAndMultiply<U>(Matrix<U> value) where U : struct, INumberBase<U>, IMultiplyOperators<U, T, T>, IComparisonOperators<U, U, bool>
     {
-
         if (NRows != value.NRows)
             throw new ArgumentException("Cannot multiply matrices due to dimension missmatch.");
         Matrix<T> data = new Matrix<T>(NColumns, value.NColumns, default(T));
@@ -267,8 +266,8 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
     /// <param name="value"></param>
     /// <returns></returns>
     /// <exception cref="ArgumentException"></exception>
-    public Matrix<T> TransposeAndMultiply<U>(U[] value) where U : struct, IEquatable<U>, IAdditionOperators<U, U, U>, IUnaryNegationOperators<U, U>, ISubtractionOperators<U, U, U>, IMultiplyOperators<U, U, U>, IMultiplyOperators<U, T, T>, IDivisionOperators<U, U, U>
-    {
+    public Matrix<T> TransposeAndMultiply<U>(U[] value) where U : struct, INumberBase<U>, IMultiplyOperators<U, T, T>, IComparisonOperators<U, U, bool>
+    { 
         if (NColumns == value.Length)
             return TransposeAndMultiply(new Matrix<U>(1, value));
         if (NRows == value.Length)
@@ -306,18 +305,18 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
     /// Applies the given function to each value of the <see cref="Matrix{T}"/>.
     /// </summary>
     /// <param name="func"></param>
-    public void OperateByValue(Func<T,int,int, T> func)
+    public void OperateByValue(Func<T, int, int, T> func)
     {
         for (int i = 0; i < NRows; ++i)
         {
             for (int k = 0; k < NColumns; ++k)
             {
-                this[i][k] = func.Invoke(this[i][k],i,k);
+                this[i][k] = func.Invoke(this[i][k], i, k);
             }
         }
     }
 
-    public Matrix<U> TransformByValue<U>(Func<T, int,int, U> func) where U : struct, IEquatable<U>, IAdditionOperators<U, U, U>, IUnaryNegationOperators<U, U>, ISubtractionOperators<U, U, U>, IMultiplyOperators<U, U, U>, IDivisionOperators<U, U, U>
+    public Matrix<U> TransformByValue<U>(Func<T, int, int, U> func) where U : struct, INumberBase<U>, IComparisonOperators<U, U, bool>
     {
         Matrix<U> data = new Matrix<U>(NRows, NColumns, default(U));
         for (int i = 0; i < NRows; ++i)
@@ -330,9 +329,9 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
         return data;
     }
 
-    public Matrix<U> TransformByValue<U>(Func<T, U> func) where U : struct, IEquatable<U>, IAdditionOperators<U, U, U>, IUnaryNegationOperators<U, U>, ISubtractionOperators<U, U, U>, IMultiplyOperators<U, U, U>, IDivisionOperators<U, U, U>
+    public Matrix<U> TransformByValue<U>(Func<T, U> func) where U : struct, INumberBase<U>, IComparisonOperators<U, U, bool>
         => TransformByValue((v, i, j) => func.Invoke(v));
-    
+
 
     /// <summary>
     /// returns the speciefied row of the Matrix
@@ -449,15 +448,160 @@ public struct Matrix<T> : ICloneable where T : struct, IEquatable<T>, IAdditionO
         return data;
     }
 
+
+    /// <summary>
+    /// Returns the inverse of the matrix.
+    /// </summary>
+    public Matrix<T> Inverse()
+    {
+        Matrix<T> result = (Matrix<T>)this.Clone();
+
+        int[] Permutation;
+        Matrix<T> Lower;
+        Matrix<T> Upper;
+
+        this.LUDecomposition(out Lower, out Upper, out Permutation);
+
+        T[] b = Enumerable.Repeat(T.Zero, NRows).ToArray();
+       
+        for (int i = 0; i < NRows; ++i)
+        {
+            int j = Permutation.TakeWhile(x => x != i).Count() - 1;
+            b[j] = T.One;
+
+            T[] x = HelperSolve(Lower, Upper, b); // 
+            b[j] = T.Zero;
+            for (int k = 0; k < NRows; k++)
+                result[k][i] = x[k];
+        }
+        return result;
+    }
+
+    /// <summary>
+    /// Does an LUP Decomposition.
+    /// </summary>
+    /// <param name="Lower"> The Lower Triangular Matrix</param>
+    /// <param name="Upper"> The upper Triangular Matrix </param>
+    /// <param name="Permutation"> The Permutation Matrix P</param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
+    public void LUDecomposition(out Matrix<T> Lower, out Matrix<T> Upper, out int[] Permutation)
+    {
+        // Doolittle LUP decomposition with partial pivoting.
+        // rerturns: result is L (with 1s on diagonal) and U;
+        // perm holds row permutations; toggle is +1 or -1 (even or odd)
+        if (NRows != NColumns)
+            throw new Exception("Attempt to decompose a non-square m");
+
+        Lower = new Matrix<T>(NRows, NColumns, default(T));
+        Upper = new Matrix<T>(this);
+
+        Permutation = Enumerable.Range(0, NRows).ToArray();
+
+      
+
+        for (int j = 0; j < NColumns; ++j) // each column
+        {
+            T colMax = this[j][j];
+            int pRow = j; // row of largest value in column j
+            for (int i = j + 1; i < NRows; ++i)
+            {
+                if (T.Abs(this[i][j]) > T.Abs(colMax))
+                {
+                    colMax = T.Abs(this[i][j]);
+                    pRow = i;
+                }
+            }
+
+            if (pRow != j) // if largest value not on pivot, swap rows
+            {
+                T[] row = Upper[pRow];
+                Upper[j] = Upper[j].Select((v, i) => (i <= j ? v : row[i])).ToArray();
+
+                row = Lower[pRow];
+                Lower[j] = Lower[j].Select((v, i) => (i > j ? v : row[i])).ToArray();
+
+                int tmp = Permutation[pRow]; // and swap perm info
+                Permutation[pRow] = Permutation[j];
+                Permutation[j] = tmp;
+            }
+
+            //  if (result[j][j] == 0.0)
+            //  {
+            //      // find a good row to swap
+            //      int goodRow = -1;
+            //      for (int row = j + 1; row less - than n;
+            //      ++row)
+            //{
+            //          if (result[row][j] != 0.0)
+            //              goodRow = row;
+            //      }
+
+            //      if (goodRow == -1)
+            //          throw new Exception("Cannot use Doolittle's method");
+
+            //      // swap rows so 0.0 no longer on diagonal
+            //      double[] rowPtr = result[goodRow];
+            //      result[goodRow] = result[j];
+            //      result[j] = rowPtr;
+
+            //      int tmp = perm[goodRow]; // and swap perm info
+            //      perm[goodRow] = perm[j];
+            //      perm[j] = tmp;
+
+            //      toggle = -toggle; // adjust the row-swap toggle
+            //  }
+            //  // --------------------------------------------------
+            //  // if diagonal after swap is zero . .
+            //  //if (Math.Abs(result[j][j]) less-than 1.0E-20) 
+            //  //  return null; // consider a throw
+
+            for (int i = j + 1; i < NRows; ++i)
+            {
+                T lowerVal = Upper[i][j] / Upper[j][j];
+                Lower[i][j] = lowerVal;
+                T[] row = Upper[j];
+                Upper[i] = Upper[i].Select((v, k) => (k < j ? v : v - lowerVal * row[k])).ToArray();
+            }
+        }
+    }
+
+    private T[] HelperSolve(Matrix<T> Lower, Matrix<T> Upper, T[] b)
+    {
+        // before calling this helper, permute b using the perm array
+        // from MatrixDecompose that generated luMatrix
+
+        T[] x = new T[b.Length];
+        x[0] = b[0];
+      
+        for (int i = 1; i < Lower.NRows; ++i)
+        {
+            x[i] = b[i];
+            for (int j = 0; j < i; ++j)
+                x[i] -= Lower[i][j] * x[j];
+        }
+
+        x[Lower.NRows - 1] /= Upper[Lower.NRows - 1][Lower.NRows - 1];
+
+        for (int i = Lower.NRows - 2; i >= 0; --i)
+        {
+            for (int j = i + 1; j < Lower.NRows; ++j)
+                x[i] -= Lower[i][j] * x[j];
+            x[i] = x[i] / Upper[i][i];
+        }
+
+        return x;
+    }
+
     #endregion
 
-        #region [ Operators ]
+    #region [ Operators ]
 
-        /// <summary>
-        /// Implicitly converts a <see cref="Double"/> to a <see cref="ComplexNumber"/>.
-        /// </summary>
-        /// <param name="value">Operand.</param>
-        /// <returns>ComplexNumber representing the result of the operation.</returns>
+    /// <summary>
+    /// Implicitly converts a <see cref="Double"/> to a <see cref="ComplexNumber"/>.
+    /// </summary>
+    /// <param name="value">Operand.</param>
+    /// <returns>ComplexNumber representing the result of the operation.</returns>
     public static implicit operator Matrix<T>(T[][] value) =>
         new(value);
 
