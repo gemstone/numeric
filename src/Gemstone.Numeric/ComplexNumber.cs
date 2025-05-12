@@ -72,6 +72,8 @@ using System.Runtime.CompilerServices;
 using Gemstone.Numeric.ComplexExtensions;
 using Gemstone.Units;
 using System.Numerics;
+using System.Globalization;
+using System.Diagnostics.CodeAnalysis;
 
 // ReSharper disable CompareOfFloatsByEqualityOperator
 // ReSharper disable PossibleInvalidOperationException
@@ -80,7 +82,7 @@ namespace Gemstone.Numeric;
 /// <summary>
 /// Represents a complex number.
 /// </summary>
-public struct ComplexNumber : IEquatable<ComplexNumber>, IAdditionOperators<ComplexNumber,ComplexNumber,ComplexNumber>, IUnaryNegationOperators<ComplexNumber, ComplexNumber>, ISubtractionOperators<ComplexNumber, ComplexNumber, ComplexNumber>, IMultiplyOperators<ComplexNumber, ComplexNumber, ComplexNumber>,  IDivisionOperators<ComplexNumber, ComplexNumber, ComplexNumber>
+public struct ComplexNumber : INumberBase<ComplexNumber>, IComparisonOperators<ComplexNumber, ComplexNumber, bool>
 {
     #region [ Members ]
 
@@ -442,6 +444,32 @@ public struct ComplexNumber : IEquatable<ComplexNumber>, IAdditionOperators<Comp
         return new ComplexNumber(real, imaginary);
     }
 
+    public static bool operator >(ComplexNumber left, ComplexNumber right) =>
+        left.Magnitude > right.Magnitude;
+
+    public static bool operator >=(ComplexNumber left, ComplexNumber right) =>
+        left.Magnitude >= right.Magnitude;
+
+    public static bool operator <(ComplexNumber left, ComplexNumber right) =>
+        left.Magnitude < right.Magnitude;
+    
+    public static bool operator <=(ComplexNumber left, ComplexNumber right) =>
+        left.Magnitude <= right.Magnitude;
+
+    public static ComplexNumber operator --(ComplexNumber value)
+    {
+        value.Magnitude--;
+        return value;
+    }
+
+    public static ComplexNumber operator ++(ComplexNumber value)
+    {
+        value.Magnitude++;
+        return value;
+    }
+
+    public static ComplexNumber operator +(ComplexNumber value) => value;
+
     ///<summary>
     /// Returns specified <see cref="ComplexNumber"/> raised to the specified power.
     ///</summary>
@@ -477,6 +505,159 @@ public struct ComplexNumber : IEquatable<ComplexNumber>, IAdditionOperators<Comp
     /// <returns>A complex number that is equivalent to the numeric value or symbols specified in <paramref name="str"/>.</returns>
     public static ComplexNumber Parse(string str) => 
         str.FromComplexNotation();
+
+    public static ComplexNumber One => new(1.0,0.0);
+
+    public static int Radix => 10;
+
+    public static ComplexNumber Zero => new(0.0,0.0);
+
+    public static ComplexNumber AdditiveIdentity => Zero;
+
+    public static ComplexNumber MultiplicativeIdentity => One;
+
+    public static ComplexNumber Abs(ComplexNumber value) => value.Magnitude;
+   
+
+    public static bool IsCanonical(ComplexNumber value)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static bool IsComplexNumber(ComplexNumber value) => value.Imaginary != 0.0D && value.Real != 0.0D;
+
+    public static bool IsEvenInteger(ComplexNumber value) => double.IsEvenInteger(value.Real) && double.IsEvenInteger(value.Imaginary);
+
+    public static bool IsFinite(ComplexNumber value) => double.IsFinite(value.Magnitude);
+
+    public static bool IsImaginaryNumber(ComplexNumber value) => value.Imaginary != 0.0D && value.Real == 0.0D;
+
+    public static bool IsInfinity(ComplexNumber value) => double.IsInfinity(value.Magnitude);
+  
+    public static bool IsInteger(ComplexNumber value) => double.IsInteger(value.Magnitude);
+
+    public static bool IsNaN(ComplexNumber value) => double.IsNaN(value.Real) || double.IsNaN(value.Imaginary) ;
+
+    public static bool IsNegative(ComplexNumber value) => value.Real < 0.0D;
+   
+    public static bool IsNegativeInfinity(ComplexNumber value) => double.IsNegativeInfinity(value.Real) || double.IsNegativeInfinity(value.Imaginary);
+    
+    public static bool IsNormal(ComplexNumber value)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static bool IsOddInteger(ComplexNumber value) => double.IsOddInteger(value.Real) && double.IsOddInteger(value.Imaginary);
+
+    public static bool IsPositive(ComplexNumber value) => value.Real > 0.0D;
+    
+    public static bool IsPositiveInfinity(ComplexNumber value) => double.IsPositiveInfinity(value.Real) || double.IsPositiveInfinity(value.Imaginary);
+
+    public static bool IsRealNumber(ComplexNumber value) => value.Imaginary == 0.0D && value.Real != 0.0D;
+
+    public static bool IsSubnormal(ComplexNumber value)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static bool IsZero(ComplexNumber value) => value.Magnitude == 0.0D;
+
+    public static ComplexNumber MaxMagnitude(ComplexNumber x, ComplexNumber y) => x.Magnitude > y.Magnitude ? x : y;
+
+    public static ComplexNumber MaxMagnitudeNumber(ComplexNumber x, ComplexNumber y)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static ComplexNumber MinMagnitude(ComplexNumber x, ComplexNumber y)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static ComplexNumber MinMagnitudeNumber(ComplexNumber x, ComplexNumber y)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static ComplexNumber Parse(ReadOnlySpan<char> s, NumberStyles style, IFormatProvider? provider)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static ComplexNumber Parse(string s, NumberStyles style, IFormatProvider? provider)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static bool TryParse(ReadOnlySpan<char> s, NumberStyles style, IFormatProvider? provider, [MaybeNullWhen(false)] out ComplexNumber result)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static bool TryParse([NotNullWhen(true)] string? s, NumberStyles style, IFormatProvider? provider, [MaybeNullWhen(false)] out ComplexNumber result)
+    {
+        throw new NotImplementedException();
+    }
+
+    public bool TryFormat(Span<char> destination, out int charsWritten, ReadOnlySpan<char> format, IFormatProvider? provider)
+    {
+        throw new NotImplementedException();
+    }
+
+    public string ToString(string? format, IFormatProvider? formatProvider)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static ComplexNumber Parse(ReadOnlySpan<char> s, IFormatProvider? provider)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static bool TryParse(ReadOnlySpan<char> s, IFormatProvider? provider, [MaybeNullWhen(false)] out ComplexNumber result)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static ComplexNumber Parse(string s, IFormatProvider? provider)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static bool TryParse([NotNullWhen(true)] string? s, IFormatProvider? provider, [MaybeNullWhen(false)] out ComplexNumber result)
+    {
+        throw new NotImplementedException();
+    }
+
+    static bool INumberBase<ComplexNumber>.TryConvertFromChecked<TOther>(TOther value, out ComplexNumber result)
+    {
+        throw new NotImplementedException();
+    }
+
+    static bool INumberBase<ComplexNumber>.TryConvertFromSaturating<TOther>(TOther value, out ComplexNumber result)
+    {
+        throw new NotImplementedException();
+    }
+
+    static bool INumberBase<ComplexNumber>.TryConvertFromTruncating<TOther>(TOther value, out ComplexNumber result)
+    {
+        throw new NotImplementedException();
+    }
+
+    static bool INumberBase<ComplexNumber>.TryConvertToChecked<TOther>(ComplexNumber value, out TOther result)
+    {
+        throw new NotImplementedException();
+    }
+
+    static bool INumberBase<ComplexNumber>.TryConvertToSaturating<TOther>(ComplexNumber value, out TOther result)
+    {
+        throw new NotImplementedException();
+    }
+
+    static bool INumberBase<ComplexNumber>.TryConvertToTruncating<TOther>(ComplexNumber value, out TOther result)
+    {
+        throw new NotImplementedException();
+    }
 
     #endregion
 }
