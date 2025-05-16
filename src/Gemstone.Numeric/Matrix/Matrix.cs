@@ -457,19 +457,16 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
         Matrix<T> result = (Matrix<T>)this.Clone();
 
         int[] Permutation;
-        Matrix<T> Lower;
-        Matrix<T> Upper;
-
-        this.LUDecomposition(out Lower, out Upper, out Permutation);
+        Matrix<T> LU = CombinedLUPDecomposition(out Permutation);
 
         T[] b = Enumerable.Repeat(T.Zero, NRows).ToArray();
        
         for (int i = 0; i < NRows; ++i)
         {
-            int j = Permutation.TakeWhile(x => x != i).Count() - 1;
+            int j = Permutation.TakeWhile(x => x != i).Count();
             b[j] = T.One;
 
-            T[] x = HelperSolve(Lower, Upper, b); // 
+            T[] x = HelperSolve(LU, b); // 
             b[j] = T.Zero;
             for (int k = 0; k < NRows; k++)
                 result[k][i] = x[k];
@@ -489,16 +486,34 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
     {
         // Doolittle LUP decomposition with partial pivoting.
         // rerturns: result is L (with 1s on diagonal) and U;
+        // perm holds row permutations;
+       
+        Upper = CombinedLUPDecomposition(out Permutation);
+        Lower = Idendity(NRows);
+
+        for (int i = 1; i  < NRows; i++)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                Lower[i][j] = Upper[i][j];
+                Upper[i][j] = T.Zero;
+            }
+        }
+    }
+
+    private Matrix<T> CombinedLUPDecomposition(out int[] Permutation)
+    {
+        // Doolittle LUP decomposition with partial pivoting.
+        // rerturns: result is L (with 1s on diagonal) and U;
         // perm holds row permutations; toggle is +1 or -1 (even or odd)
         if (NRows != NColumns)
             throw new Exception("Attempt to decompose a non-square m");
 
-        Lower = new Matrix<T>(NRows, NColumns, default(T));
-        Upper = new Matrix<T>(this);
+        Matrix<T> result = new(this);
 
         Permutation = Enumerable.Range(0, NRows).ToArray();
 
-      
+
 
         for (int j = 0; j < NColumns; ++j) // each column
         {
@@ -515,11 +530,8 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
 
             if (pRow != j) // if largest value not on pivot, swap rows
             {
-                T[] row = Upper[pRow];
-                Upper[j] = Upper[j].Select((v, i) => (i <= j ? v : row[i])).ToArray();
-
-                row = Lower[pRow];
-                Lower[j] = Lower[j].Select((v, i) => (i > j ? v : row[i])).ToArray();
+                T[] row = result[pRow];
+                result[j] = result[j].Select((v, i) => (i <= j ? v : row[i])).ToArray();
 
                 int tmp = Permutation[pRow]; // and swap perm info
                 Permutation[pRow] = Permutation[j];
@@ -558,15 +570,18 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
 
             for (int i = j + 1; i < NRows; ++i)
             {
-                T lowerVal = Upper[i][j] / Upper[j][j];
-                Lower[i][j] = lowerVal;
-                T[] row = Upper[j];
-                Upper[i] = Upper[i].Select((v, k) => (k < j ? v : v - lowerVal * row[k])).ToArray();
+                result[i][j] /= result[j][j];
+
+                for (int k = j + 1; k < NRows; ++k)
+                    result[i][k] -= result[i][j] * result[j][k];                
             }
+
         }
+
+        return result;
     }
 
-    private T[] HelperSolve(Matrix<T> Lower, Matrix<T> Upper, T[] b)
+    private T[] HelperSolve(Matrix<T> LU, T[] b)
     {
         // before calling this helper, permute b using the perm array
         // from MatrixDecompose that generated luMatrix
@@ -574,20 +589,20 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
         T[] x = new T[b.Length];
         x[0] = b[0];
       
-        for (int i = 1; i < Lower.NRows; ++i)
+        for (int i = 1; i < LU.NRows; ++i)
         {
             x[i] = b[i];
             for (int j = 0; j < i; ++j)
-                x[i] -= Lower[i][j] * x[j];
+                x[i] -= LU[i][j] * x[j];
         }
 
-        x[Lower.NRows - 1] /= Upper[Lower.NRows - 1][Lower.NRows - 1];
+        x[LU.NRows - 1] /= LU[LU.NRows - 1][LU.NRows - 1];
 
-        for (int i = Lower.NRows - 2; i >= 0; --i)
+        for (int i = LU.NRows - 2; i >= 0; --i)
         {
-            for (int j = i + 1; j < Lower.NRows; ++j)
-                x[i] -= Lower[i][j] * x[j];
-            x[i] = x[i] / Upper[i][i];
+            for (int j = i + 1; j < LU.NRows; ++j)
+                x[i] -= LU[i][j] * x[j];
+            x[i] = x[i] / LU[i][i];
         }
 
         return x;
@@ -773,6 +788,14 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
         }
         
         return matrix;
+    }
+
+    public static Matrix<T> Idendity(int n)
+    {
+        Matrix<T> result = new Matrix<T>(n, n, T.Zero);
+        for (int i = 0; i < n; i++)
+            result[i][i] = T.One;
+        return result;
     }
     #endregion
 }
