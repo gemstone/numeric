@@ -489,7 +489,7 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
         // perm holds row permutations;
        
         Upper = CombinedLUPDecomposition(out Permutation);
-        Lower = Idendity(NRows);
+        Lower = Identity(NRows);
 
         for (int i = 1; i  < NRows; i++)
         {
@@ -790,7 +790,7 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
         return matrix;
     }
 
-    public static Matrix<T> Idendity(int n)
+    public static Matrix<T> Identity(int n)
     {
         Matrix<T> result = new Matrix<T>(n, n, T.Zero);
         for (int i = 0; i < n; i++)
