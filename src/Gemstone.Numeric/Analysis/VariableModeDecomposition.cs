@@ -99,7 +99,7 @@ public static class VariableModeDecomposition
         Matrix<ComplexNumber> sigFD = SignalBoundary(xComplex, nHalfSignalLenght, nMirroredSignalLength, nSignalLength, false).GetSubmatrix(0, 0, NumHalfFreqSamples, 1);
 
         // fft for initial IMFs and get half of bandwidth
-        initIMFfd.OperateByColumn((c) =>
+        initIMFfd.OperateByColumn((c, _) =>
         {
             Complex32[] fft = c.Select((v) => new Complex32((float)v.Real, (float)v.Imaginary)).Concat(Enumerable.Repeat(new Complex32(0, 0), nFFt - c.Length)).ToArray();
 
@@ -153,7 +153,7 @@ public static class VariableModeDecomposition
             centralFreq = sortedIndex.Take(centralFreq.Length).Select((i) => centralFreq[i]).ToArray();
 
             initIMFfd = (Matrix<ComplexNumber>)imffd.Clone();
-            initIMFNorm = (Matrix<double>)normIMF;
+            initIMFNorm = (Matrix<double>)normIMF.Clone();
 
             iter = iter + 1;
         }
@@ -166,7 +166,7 @@ public static class VariableModeDecomposition
         if (nFFTLength % 2 == 0)
             IMFfdFull.ReplaceSubmatrix(imffd.FlipUpsideDown().GetSubmatrix(1,0,imffd.NRows - 2, imffd.NColumns).TransformByValue<ComplexNumber>((c) => c.Conjugate), imffd.NRows, 0); 
         else
-            IMFfdFull.ReplaceSubmatrix(imffd.FlipUpsideDown().GetSubmatrix(0, 0, imffd.NRows - 1, imffd.NColumns), imffd.NRows, 0);
+            IMFfdFull.ReplaceSubmatrix(imffd.FlipUpsideDown().GetSubmatrix(0, 0, imffd.NRows - 1, imffd.NColumns).TransformByValue<ComplexNumber>((c) => c.Conjugate), imffd.NRows, 0);
 
 
 
