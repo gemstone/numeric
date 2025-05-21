@@ -436,6 +436,61 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
         }
     }
 
+
+    /// <summary>
+    /// Returns the solution for Ax = B, given this as A and the arg as B.
+    /// Uses a reduced row echelon algorithm.
+    /// </summary>
+    public T[] RREF(T[] Vector)
+    {
+        if (this.NColumns != this.NRows)
+            throw new InvalidOperationException("This function is only supported for nxn matrices, for nxm where m>n, use GetLeastSquares");
+
+        int[] permutationVector = new int[this.NColumns];
+        Matrix<T> rref = new Matrix<T>(this.NRows, this.NColumns + 1, T.Zero);
+        for (int row = 0; row < this.NRows; row++)
+            for (int col = 0; col < this.NColumns; col++)
+                rref[row][col] = this[row][col];
+        for (int row = 0; row < this.NRows; row++)
+            rref[row][rref.NColumns - 1] = Vector[row];
+
+        for (int col = 0; col < this.NColumns; col++)
+        {
+            // Find first non-zero leading 1
+            int currentRow = -1;
+            for(int row = col; row < rref.NRows; row++)
+                if (rref[row][col] != T.Zero)
+                {
+                    currentRow = row;
+                    break;
+                }
+
+            if (currentRow == -1)
+                throw new InvalidOperationException("Could not find RREF form");
+
+            permutationVector[col] = currentRow;
+
+            // Divde each element by the leading value
+            T divisor = rref[currentRow][col];
+            for (int currentCol = col; currentCol < rref.NColumns; currentCol++)
+                rref[currentRow][currentCol] /= divisor;
+
+            for (int scaleRow = 0; scaleRow < rref.NRows; scaleRow++)
+            {
+                if (scaleRow == currentRow)
+                    continue;
+                if (rref[scaleRow][col] == T.Zero)
+                    continue;
+                T multiplier = rref[scaleRow][col];
+                for (int currentCol = col; currentCol < rref.NColumns; currentCol++)
+                    rref[scaleRow][currentCol] -= multiplier * rref[currentRow][currentCol];
+            }
+        }
+
+        return permutationVector.Select(row => rref[row][rref.NColumns - 1]).ToArray();
+    }
+
+
     /// <summary>
     /// Returns the solution for Ax = B, given this as A and the arg as B.
     /// Uses a least squares algorithm.
