@@ -302,6 +302,25 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
     }
 
     /// <summary>
+    /// Applies the given function to each column of the <see cref="Matrix{T}"/>.
+    /// Function does not mutate this <see cref="Matrix{T}"/>, it returns a new <see cref="Matrix{T}"/>.
+    /// </summary>
+    /// <param name="func"></param>
+    public Matrix<U> TransformByColumn<U>(Func<T[], int, U[]> func) where U : struct, INumberBase<U>, IComparisonOperators<U, U, bool>
+    {
+        Matrix<U> data = new Matrix<U>(NRows, NColumns, default(U));
+        for (int j = 0; j < NColumns; j++)
+        {
+            U[] col = func.Invoke(this.GetColumn(j), j);
+            for (int i = 0; i < NRows; i++)
+            {
+                data[i][j] = col[i];
+            }
+        }
+        return data;
+    }
+
+    /// <summary>
     /// Applies the given function to each value of the <see cref="Matrix{T}"/>.
     /// </summary>
     /// <param name="func"></param>
