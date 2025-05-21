@@ -37,7 +37,7 @@ public class DigitalFilter
     private List<double> m_b; // Numerator coefficients
     private List<double> m_a; // Denominator coefficients
 
-    private DigitalFilter(double[] b, double[] a, int size)
+    public DigitalFilter(double[] b, double[] a, int size)
     {
         m_b = new List<double>(size);
         m_b.AddRange(b);
@@ -50,7 +50,7 @@ public class DigitalFilter
     }
 
     // Inspired by https://github.com/pgii/FiltfiltSharp
-    private double[] FiltFilt(double[] x)
+    public double[] FiltFilt(double[] x)
     {
         if (x == null)
             throw new ArgumentNullException(nameof(x));
