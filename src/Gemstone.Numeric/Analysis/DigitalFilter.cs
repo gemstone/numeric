@@ -24,6 +24,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
+using Gemstone.Units;
 
 namespace Gemstone.Numeric.Analysis;
 
@@ -128,9 +130,9 @@ public class DigitalFilter
 
         double[] segment1 = Segment(m_b, 1, order - 1);
         double[] segment2 = Segment(m_a, 1, order - 1);
-        Matrix<double> mzi = sp.Inverse() * Calc(segment1, m_b.ToArray()[0], segment2);
+        double[] mzi = sp.RREF(Calc(segment1, m_b.ToArray()[0], segment2));
 
-        Resize(zi, mzi.NRows, 1);
+        Resize(zi, mzi.Length, 1);
         ScaleZi(mzi, zi, signal1[0]);
         Filter(signal1, signal2, zi);
 
@@ -214,18 +216,18 @@ public class DigitalFilter
         return result;
     }
 
-    private static void ScaleZi(Matrix<double> mzi, List<double> zi, double factor)
+    private static void ScaleZi(double[] mzi, List<double> zi, double factor)
     {
-        for (int i = 0; i < mzi.NRows; i++)
-            zi[i] = mzi[i][0] * factor;
+        for (int i = 0; i < mzi.Length; i++)
+            zi[i] = mzi[i] * factor;
     }
 
-    private static Matrix<double> Calc(double[] segment1, double d, double[] segment2)
+    private static double[] Calc(double[] segment1, double d, double[] segment2)
     {
-        Matrix<double> result = new (segment1.Length, 1, 0.0D);
+        double[] result = new double[segment1.Length];
 
         for (int i = 0; i < segment1.Length; i++)
-            result[i][0] = segment1[i] - d * segment2[i];
+            result[i] = segment1[i] - d * segment2[i];
 
         return result;
     }
