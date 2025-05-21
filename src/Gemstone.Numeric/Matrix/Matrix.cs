@@ -577,7 +577,7 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
     /// </summary>
     /// <param name="Lower"> The Lower Triangular Matrix</param>
     /// <param name="Upper"> The upper Triangular Matrix </param>
-    /// <param name="Permutation"> The Permutation Matrix P</param>
+    /// <param name="Permutation"> The Permutation Matrix, represented by a vector of row order P</param>
     /// <returns></returns>
     /// <exception cref="Exception"></exception>
     public void LUDecomposition(out Matrix<T> Lower, out Matrix<T> Upper, out int[] Permutation)
