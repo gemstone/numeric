@@ -290,12 +290,12 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
     /// Applies the given function to each column of the <see cref="Matrix{T}"/>.
     /// </summary>
     /// <param name="func"></param>
-    public void OperateByColumn(Action<T[]> func)
+    public void OperateByColumn(Action<T[], int> func)
     {
         for (int i = 0; i < NColumns; ++i)
         {
             T[] col = GetColumn(i);
-            func.Invoke(col);
+            func.Invoke(col, i);
             for (int j = 0; j < col.Length; j++)
                 m_value[j][i] = col[j];
         }
