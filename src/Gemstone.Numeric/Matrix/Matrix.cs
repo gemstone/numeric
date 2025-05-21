@@ -804,7 +804,7 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
         if (value1.NColumns != value2.NRows)
             throw new ArgumentException("Cannot multiply matrices due to dimension missmatch.");
 
-        Matrix<T> data = new Matrix<T>(value2.NRows, value2.NColumns, default(T));
+        Matrix<T> data = new Matrix<T>(value1.NRows, value2.NColumns, default(T));
         for (int i = 0; i < value1.NRows; ++i)
         {
             for (int k = 0; k < value2.NColumns; ++k)
