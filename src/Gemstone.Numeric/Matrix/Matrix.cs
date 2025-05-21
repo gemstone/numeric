@@ -436,6 +436,85 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
         }
     }
 
+    /// <summary>
+    /// Returns the solution for Ax = B, given this as A and the arg as B.
+    /// Uses a least squares algorithm.
+    /// </summary>
+    public Matrix<T> GetLeastSquares(T[] vector)
+    {
+        Matrix<T> transpose = this.Transpose;
+        return (transpose * this).GetInverseMatrix() * transpose * new Matrix<T>(vector, 1);
+    }
+
+    public Matrix<T> GetInverseMatrix()
+    {
+        if (this.NColumns != this.NRows)
+            throw new InvalidOperationException("Inverse only supported for square matrices");
+
+
+        Matrix<T> cofactor = new Matrix<T>(this.NRows, this.NColumns, default(T));
+        for (int row = 0; row < this.NRows; ++row)
+        {
+            for (int col = 0; col < this.NColumns; ++col)
+            {
+                Matrix<T> subMatrix = new Matrix<T>(this.NRows - 1, this.NColumns - 1, default(T));
+                int ii = 0;
+                for (int i = 0; i < this.NRows; i++)
+                {
+                    int jj = 0;
+                    if (i == row)
+                        continue;
+                    for (int j = 0; j < this.NColumns; j++)
+                    {
+                        if (j == col)
+                            continue;
+                        subMatrix[ii][jj] = this[i][j];
+                        jj++;
+                    }
+                    ii++;
+                }
+                if ((row+col) % 2 == 0)
+                    cofactor[row][col] = subMatrix.GetDeterminant();
+                else
+                    cofactor[row][col] = -subMatrix.GetDeterminant();
+            }
+        }
+        return cofactor.Transpose / this.GetDeterminant();
+    }
+
+    public T GetDeterminant()
+    {
+        if (this.NColumns != this.NRows)
+            throw new InvalidOperationException("Determinant only supported for square matrices");
+
+        if (this.NColumns == 1)
+            return this[0][0];
+        if (this.NColumns == 2)
+            return this[0][0] * this[1][1] - this[0][1] * this[1][0];
+
+        T sum = default(T);
+        for (int col = 0; col < this.NColumns; ++col)
+        {
+            Matrix<T> subMatrix = new Matrix<T>(this.NRows - 1, this.NColumns - 1, default(T));
+            for (int i = 1; i < this.NRows; i++)
+            {
+                int jj = 0;
+                for (int j = 0; j < this.NColumns; j++)
+                {
+                    if (j == col)
+                        continue;
+                    subMatrix[i - 1][jj] = this[i][j];
+                    jj++;
+                }
+            }
+            if (col % 2 == 0)
+                sum += this[0][col] * subMatrix.GetDeterminant();
+            else 
+                sum -= this[0][col] * subMatrix.GetDeterminant();
+        }
+        return sum;
+    }
+
     public Matrix<T> PointWhiseMultiply(Matrix<T> matrix)
     {
         if (this.NColumns != matrix.NColumns || matrix.NRows != this.NRows)
