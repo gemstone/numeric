@@ -51,7 +51,6 @@ public class ButterworthFilter
         public static AnalogFilter BPButterworth(double omega1, double omega2, double attenuationStop, int order)
         {
             AnalogFilter result = NormalButter(order);
-            result.ScaleAttenuation(attenuationStop);
             result.LowPassToBandPassTransform(omega1, omega2);
             return result;
         }
@@ -71,24 +70,9 @@ public class ButterworthFilter
                 analogPoles.Add(new Complex(re, im));
             }
 
-
-            Complex Gain = -analogPoles[0];
-            for (int i = 1; i < order; i++)
-            {
-                Gain = Gain * -analogPoles[i];
-            }
-
-
             //scale to fit new filter
-            AnalogFilter result = new AnalogFilter(analogPoles, analogZeros, Gain.Real);
+            AnalogFilter result = new AnalogFilter(analogPoles, analogZeros, 1);
             return result;
-        }
-
-        public void ScaleAttenuation(double attenuationStop)
-        {
-            // This won't effect gain, no need to worry about gain scaling
-            double poleScale = Math.Pow(Math.Pow(10, attenuationStop/10.0D) - 1, -1.0D /(2*this.ContinousPoles.Count));
-            this.ContinousPoles = this.ContinousPoles.Select(p => p * poleScale).ToList();
         }
 
         private void LowPassToBandPassTransform(double omega1, double omega2)
