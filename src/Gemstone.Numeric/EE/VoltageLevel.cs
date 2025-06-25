@@ -42,6 +42,12 @@ public enum VoltageLevel : byte
     // (int)VoltageLevel.kV115 == 3 && VoltageLevel.kV115.Value() == 115
 
     /// <summary>
+    /// 34 kV.
+    /// </summary>
+    [Description("34")]
+    kV34 = 1,
+
+    /// <summary>
     /// 44 kV.
     /// </summary>
     [Description("44")]
