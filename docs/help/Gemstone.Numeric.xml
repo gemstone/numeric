@@ -98,6 +98,43 @@
       <param name="real">The real component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
       <param name="imaginary">The imaginary component of the <see cref="T:Gemstone.Numeric.ComplexNumber" />.</param>
     </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.Abs(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Abs(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Abs(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Abs(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.AdditiveIdentity">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:Gemstone.Numeric.ComplexNumber.AdditiveIdentity</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="P:Gemstone.Numeric.ComplexNumber.AllAssigned">
       <summary>
             Gets a boolean value indicating if each composite value of the <see cref="T:Gemstone.Numeric.ComplexNumber" /> (i.e., real and imaginary) has been assigned a value.
@@ -146,16 +183,639 @@
             Gets or sets the imaginary component of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
             </summary>
     </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsCanonical(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsCanonical(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsCanonical(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsCanonical(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsComplexNumber(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsComplexNumber(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsComplexNumber(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsComplexNumber(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsEvenInteger(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsEvenInteger(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsEvenInteger(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsEvenInteger(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsFinite(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsFinite(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsFinite(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsFinite(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsImaginaryNumber(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsImaginaryNumber(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsImaginaryNumber(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsImaginaryNumber(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsInfinity(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsInfinity(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsInfinity(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsInfinity(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsInteger(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsInteger(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsInteger(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsInteger(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsNaN(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsNaN(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsNaN(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsNaN(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsNegative(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsNegative(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsNegative(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsNegative(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsNegativeInfinity(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsNegativeInfinity(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsNegativeInfinity(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsNegativeInfinity(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsNormal(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsNormal(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsNormal(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsNormal(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsOddInteger(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsOddInteger(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsOddInteger(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsOddInteger(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsPositive(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsPositive(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsPositive(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsPositive(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsPositiveInfinity(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsPositiveInfinity(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsPositiveInfinity(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsPositiveInfinity(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsRealNumber(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsRealNumber(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsRealNumber(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsRealNumber(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsSubnormal(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsSubnormal(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsSubnormal(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsSubnormal(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.IsZero(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsZero(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsZero(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.IsZero(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="P:Gemstone.Numeric.ComplexNumber.Magnitude">
       <summary>
             Gets or sets the magnitude (a.k.a. the modulus or absolute value) of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
             </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.MaxMagnitude(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MaxMagnitude(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="x">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>x</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MaxMagnitude(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="y">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>y</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MaxMagnitude(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MaxMagnitude(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.MaxMagnitudeNumber(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MaxMagnitudeNumber(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="x">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>x</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MaxMagnitudeNumber(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="y">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>y</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MaxMagnitudeNumber(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MaxMagnitudeNumber(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.MinMagnitude(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MinMagnitude(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="x">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>x</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MinMagnitude(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="y">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>y</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MinMagnitude(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MinMagnitude(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.MinMagnitudeNumber(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MinMagnitudeNumber(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="x">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>x</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MinMagnitudeNumber(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="y">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>y</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MinMagnitudeNumber(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.MinMagnitudeNumber(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.MultiplicativeIdentity">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:Gemstone.Numeric.ComplexNumber.MultiplicativeIdentity</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="P:Gemstone.Numeric.ComplexNumber.NoneAssigned">
       <summary>
             Gets a boolean value indicating if each composite value of the <see cref="T:Gemstone.Numeric.ComplexNumber" /> (i.e., real and imaginary) has not been assigned a value.
             </summary>
       <returns>True, if none of the composite values have been assigned a value; otherwise, false.</returns>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.One">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:Gemstone.Numeric.ComplexNumber.One</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="M:Gemstone.Numeric.ComplexNumber.op_Addition(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
       <summary>
@@ -164,6 +824,33 @@
       <param name="value1">Left hand operand.</param>
       <param name="value2">Right hand operand.</param>
       <returns>ComplexNumber representing the result of the addition operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Decrement(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_Decrement(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_Decrement(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_Decrement(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="M:Gemstone.Numeric.ComplexNumber.op_Division(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
       <summary>
@@ -189,6 +876,78 @@
       <param name="y">Power to raise <see cref="T:Gemstone.Numeric.ComplexNumber" /><paramref name="z" />.</param>
       <returns>ComplexNumber representing the result of the operation.</returns>
     </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_GreaterThan(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_GreaterThan(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="left">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>left</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_GreaterThan(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="right">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>right</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_GreaterThan(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_GreaterThan(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_GreaterThanOrEqual(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_GreaterThanOrEqual(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="left">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>left</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_GreaterThanOrEqual(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="right">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>right</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_GreaterThanOrEqual(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_GreaterThanOrEqual(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="M:Gemstone.Numeric.ComplexNumber.op_Implicit(Gemstone.Numeric.ComplexNumber)~System.Numerics.Complex">
       <summary>
             Implicitly converts a <see cref="T:Gemstone.Numeric.ComplexNumber" /> to a .NET <see cref="T:System.Numerics.Complex" /> value.
@@ -210,6 +969,33 @@
       <param name="value">Operand.</param>
       <returns>ComplexNumber representing the result of the operation.</returns>
     </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_Increment(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_Increment(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_Increment(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_Increment(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="M:Gemstone.Numeric.ComplexNumber.op_Inequality(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
       <summary>
             Compares the two values for inequality.
@@ -217,6 +1003,78 @@
       <param name="value1">Left hand operand.</param>
       <param name="value2">Right hand operand.</param>
       <returns>Boolean representing the result of the inequality operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_LessThan(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_LessThan(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="left">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>left</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_LessThan(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="right">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>right</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_LessThan(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_LessThan(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_LessThanOrEqual(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_LessThanOrEqual(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="left">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>left</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_LessThanOrEqual(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="right">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>right</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_LessThanOrEqual(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_LessThanOrEqual(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="M:Gemstone.Numeric.ComplexNumber.op_Multiply(Gemstone.Numeric.ComplexNumber,Gemstone.Numeric.ComplexNumber)">
       <summary>
@@ -241,12 +1099,201 @@
       <param name="z">Left hand operand.</param>
       <returns>ComplexNumber representing the result of the unary negation operation.</returns>
     </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.op_UnaryPlus(Gemstone.Numeric.ComplexNumber)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_UnaryPlus(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_UnaryPlus(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.op_UnaryPlus(Gemstone.Numeric.ComplexNumber)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.Parse(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="s">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>s</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="style">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>style</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="provider">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>provider</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="s">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>s</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="provider">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>provider</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="M:Gemstone.Numeric.ComplexNumber.Parse(System.String)">
       <summary>
             Converts the string representation of a complex number to its complex number equivalent.
             </summary>
       <param name="str">A string that contains a number to convert.</param>
       <returns>A complex number that is equivalent to the numeric value or symbols specified in <paramref name="str" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="s">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>s</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="style">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>style</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="provider">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>provider</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.Parse(System.String,System.IFormatProvider)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.String,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="s">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>s</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.String,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="provider">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>provider</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.String,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.Parse(System.String,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="M:Gemstone.Numeric.ComplexNumber.Pow(Gemstone.Numeric.ComplexNumber,System.Double)">
       <summary>
@@ -256,10 +1303,290 @@
       <param name="y">Power to raise <see cref="T:Gemstone.Numeric.ComplexNumber" /><paramref name="z" />.</param>
       <returns>ComplexNumber representing the result of the operation.</returns>
     </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.Radix">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:Gemstone.Numeric.ComplexNumber.Radix</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
     <member name="P:Gemstone.Numeric.ComplexNumber.Real">
       <summary>
             Gets or sets the real component of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
             </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromChecked``1(``0,Gemstone.Numeric.ComplexNumber@)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromChecked``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromChecked``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="result">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>result</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromChecked``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TOther">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TOther</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromChecked``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromChecked``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromSaturating``1(``0,Gemstone.Numeric.ComplexNumber@)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromSaturating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromSaturating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="result">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>result</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromSaturating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TOther">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TOther</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromSaturating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromSaturating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromTruncating``1(``0,Gemstone.Numeric.ComplexNumber@)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromTruncating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromTruncating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="result">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>result</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromTruncating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TOther">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TOther</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromTruncating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromTruncating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToChecked``1(Gemstone.Numeric.ComplexNumber,``0@)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToChecked``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToChecked``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="result">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>result</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToChecked``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TOther">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TOther</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToChecked``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToChecked``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToSaturating``1(Gemstone.Numeric.ComplexNumber,``0@)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToSaturating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToSaturating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="result">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>result</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToSaturating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TOther">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TOther</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToSaturating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToSaturating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToTruncating``1(Gemstone.Numeric.ComplexNumber,``0@)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToTruncating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToTruncating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="result">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>result</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToTruncating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="TOther">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>TOther</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToTruncating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToTruncating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="M:Gemstone.Numeric.ComplexNumber.ToString">
       <summary>
@@ -268,6 +1595,304 @@
       <returns>
             The string representation of the value of this <see cref="T:Gemstone.Numeric.ComplexNumber" /> instance.
             </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.ToString(System.String,System.IFormatProvider)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.ToString(System.String,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="format">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>format</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.ToString(System.String,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="formatProvider">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>formatProvider</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.ToString(System.String,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.ToString(System.String,System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="destination">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>destination</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="charsWritten">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>charsWritten</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="format">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>format</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="provider">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>provider</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.TryParse(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="s">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>s</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="style">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>style</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="provider">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>provider</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="result">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>result</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.ReadOnlySpan{System.Char},System.Globalization.NumberStyles,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="s">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>s</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="provider">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>provider</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="result">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>result</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="s">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>s</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="style">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>style</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="provider">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>provider</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="result">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>result</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.ComplexNumber.TryParse(System.String,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.String,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="s">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>s</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.String,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="provider">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>provider</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.String,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="result">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>result</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.String,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.ComplexNumber.TryParse(System.String,System.IFormatProvider,Gemstone.Numeric.ComplexNumber@)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Gemstone.Numeric.ComplexNumber.Zero">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>P:Gemstone.Numeric.ComplexNumber.Zero</parameter>
+          </include>
+        </markup>
+      </summary>
     </member>
     <member name="T:Gemstone.Numeric.Int24">
       <summary>Represents a 3-byte, 24-bit signed integer.</summary>
@@ -1197,6 +2822,921 @@
             style is not a System.Globalization.NumberStyles value. -or- style is not a combination of
             System.Globalization.NumberStyles.AllowHexSpecifier and System.Globalization.NumberStyles.HexNumber values.
             </exception>
+    </member>
+    <member name="T:Gemstone.Numeric.Int24Converter">
+      <summary>
+            Provides a type converter to convert <see cref="T:Gemstone.Numeric.Int24" />&gt; values to and from various other representations.
+            </summary>
+      <remarks>
+            Since <see cref="T:Gemstone.Numeric.Int24" /> reports a type code of <see cref="F:System.TypeCode.Int32" />, the converter will convert
+            to and from <c>int</c> values as well as other types supported by <see cref="T:System.ComponentModel.Int32Converter" />.
+            </remarks>
+    </member>
+    <member name="M:Gemstone.Numeric.Int24Converter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Gemstone.Numeric.Int24Converter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Int24Converter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Determines if this converter can convert an object in the given source type to the native type of the converter.</summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+      <param name="sourceType">A <see cref="T:System.Type" /> that represents the type from which you want to convert.</param>
+      <returns>
+        <see langword="true" /> if this converter can perform the operation; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Int24Converter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Returns a value indicating whether this converter can convert an object to the given destination type using the context.</summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+      <param name="destinationType">A <see cref="T:System.Type" /> that represents the type to which you want to convert.</param>
+      <returns>
+        <see langword="true" /> if this converter can perform the operation; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Int24Converter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Converts the given object to the converter's native type.</summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+      <param name="culture">A <see cref="T:System.Globalization.CultureInfo" /> that specifies the culture to represent the number.</param>
+      <param name="value">The object to convert.</param>
+      <returns>An <see cref="T:System.Object" /> that represents the converted value.</returns>
+      <exception cref="T:System.Exception">
+        <paramref name="value" /> is not a valid value for the target type.</exception>
+      <exception cref="T:System.NotSupportedException">The conversion cannot be performed.</exception>
+    </member>
+    <member name="M:Gemstone.Numeric.Int24Converter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Converts the specified object to another type.</summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+      <param name="culture">A <see cref="T:System.Globalization.CultureInfo" /> that specifies the culture to represent the number.</param>
+      <param name="value">The object to convert.</param>
+      <param name="destinationType">The type to convert the object to.</param>
+      <returns>An <see cref="T:System.Object" /> that represents the converted value.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> is <see langword="null" />.</exception>
+      <exception cref="T:System.NotSupportedException">The conversion cannot be performed.</exception>
+    </member>
+    <member name="T:Gemstone.Numeric.Matrix`1">
+      <summary>
+            Represents a complex number.
+            </summary>
+      <typeparam name="T">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>T</parameter>
+            <parameter>T:Gemstone.Numeric.Matrix`1</parameter>
+          </include>
+        </markup>
+      </typeparam>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.#ctor(System.Int32,System.Int32,`0)">
+      <summary>
+            Creates a <see cref="T:Gemstone.Numeric.Matrix`1" /> of given size, prepopulated with a value. 
+            </summary>
+      <param name="cols">The number of columns of this <see cref="T:Gemstone.Numeric.Matrix`1" />.</param>
+      <param name="rows">The number of rows of this <see cref="T:Gemstone.Numeric.Matrix`1" />.</param>
+      <param name="value"> The value to populate the <see cref="T:Gemstone.Numeric.Matrix`1" /> with.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.#ctor(System.Int32,`0[])">
+      <summary>
+            Creates a <see cref="T:Gemstone.Numeric.Matrix`1" /> of repeating rows. 
+            </summary>
+      <param name="rows">The number of rows of this <see cref="T:Gemstone.Numeric.Matrix`1" />.</param>
+      <param name="row">The values of a row of this <see cref="T:Gemstone.Numeric.Matrix`1" />.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.#ctor(`0[],System.Int32)">
+      <summary>
+            Creates a <see cref="T:Gemstone.Numeric.Matrix`1" /> of repeating columns. 
+            </summary>
+      <param name="cols">The number of columns of this <see cref="T:Gemstone.Numeric.Matrix`1" />.</param>
+      <param name="column">The values of a collumn of this <see cref="T:Gemstone.Numeric.Matrix`1" />.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.#ctor(`0[][])">
+      <summary>
+            Creates a <see cref="T:Gemstone.Numeric.Matrix`1" /> from the given data. 
+            </summary>
+      <param name="data">The data of this <see cref="T:Gemstone.Numeric.Matrix`1" />.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.Clone">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.Clone</parameter>
+          </include>
+        </markup>
+      </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.Clone</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Gemstone.Numeric.Matrix`1.ColumnSums">
+      <summary>
+            Gets the sum of each column of the <see cref="T:Gemstone.Numeric.Matrix`1" />.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.Combine(Gemstone.Numeric.Matrix{`0}[])">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.Combine(Gemstone.Numeric.Matrix{`0}[])</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="matrices">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>matrices</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.Combine(Gemstone.Numeric.Matrix{`0}[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.Combine(Gemstone.Numeric.Matrix{`0}[])</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.FlipUpsideDown">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.FlipUpsideDown</parameter>
+          </include>
+        </markup>
+      </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.FlipUpsideDown</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.GetColumn(System.Int32)">
+      <summary>
+            returns the specified column of the Matrix
+            </summary>
+      <param name="index">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>index</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.GetColumn(System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.GetColumn(System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.GetColumnEnumerable(System.Int32)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.GetColumnEnumerable(System.Int32)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="index">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>index</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.GetColumnEnumerable(System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.GetColumnEnumerable(System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.GetDeterminant">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.GetDeterminant</parameter>
+          </include>
+        </markup>
+      </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.GetDeterminant</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.GetInverseMatrix">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.GetInverseMatrix</parameter>
+          </include>
+        </markup>
+      </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.GetInverseMatrix</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.GetLeastSquares(`0[])">
+      <summary>
+            Returns the solution for Ax = B, given this as A and the arg as B.
+            Uses a least squares algorithm.
+            </summary>
+      <param name="vector">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>vector</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.GetLeastSquares(`0[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.GetLeastSquares(`0[])</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.GetRow(System.Int32)">
+      <summary>
+            returns the speciefied row of the Matrix
+            </summary>
+      <param name="index">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>index</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.GetRow(System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.GetRow(System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.GetSubmatrix(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Gets a submatrix of the <see cref="T:Gemstone.Numeric.Matrix`1" /> starting at the given row and column, with the given number of rows and columns.
+            </summary>
+      <param name="startRow"> the first row of the submatrix. </param>
+      <param name="startColumn"> the first column of the submarix. </param>
+      <param name="numRows"> the number of rows of the submatrix. </param>
+      <param name="numCols"> the number of columns of the submatrix. </param>
+      <returns>A new <see cref="T:Gemstone.Numeric.Matrix`1" /> that is the submatrix speciffied. </returns>
+      <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.Identity(System.Int32)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.Identity(System.Int32)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="n">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>n</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.Identity(System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.Identity(System.Int32)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.Inverse">
+      <summary>
+            Returns the inverse of the matrix.
+            </summary>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.Inverse</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Gemstone.Numeric.Matrix`1.Item(System.Int32)">
+      <summary>
+            Accesses the element stored at (i,j)
+            </summary>
+      <param name="key"></param>
+      <returns></returns>
+    </member>
+    <member name="P:Gemstone.Numeric.Matrix`1.Item(System.Tuple{System.Int32,System.Int32})">
+      <summary>
+            Accesses the element stored at (i,j)
+            </summary>
+      <param name="key"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.LUDecomposition(Gemstone.Numeric.Matrix{`0}@,Gemstone.Numeric.Matrix{`0}@,System.Int32[]@)">
+      <summary>
+            Does an LUP Decomposition.
+            </summary>
+      <param name="Lower"> The Lower Triangular Matrix</param>
+      <param name="Upper"> The upper Triangular Matrix </param>
+      <param name="Permutation"> The Permutation Matrix, represented by a vector of row order P</param>
+      <returns></returns>
+      <exception cref="T:System.Exception"></exception>
+    </member>
+    <member name="P:Gemstone.Numeric.Matrix`1.NColumns">
+      <summary>
+            Gets the number of columns in this <see cref="T:Gemstone.Numeric.Matrix`1" />.
+            </summary>
+    </member>
+    <member name="P:Gemstone.Numeric.Matrix`1.NRows">
+      <summary>
+            Gets the number of rows in this <see cref="T:Gemstone.Numeric.Matrix`1" />.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.op_Addition(Gemstone.Numeric.Matrix{`0},Gemstone.Numeric.Matrix{`0})">
+      <summary>
+            Returns computed sum of values.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>
+        <see cref="T:Gemstone.Numeric.Matrix`1" /> representing the result of the addition operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.op_Addition(Gemstone.Numeric.Matrix{`0},`0)">
+      <summary>
+            Returns computed sum of values.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>
+        <see cref="T:Gemstone.Numeric.Matrix`1" /> representing the result of the addition operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.op_Addition(`0,Gemstone.Numeric.Matrix{`0})">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Addition(`0,Gemstone.Numeric.Matrix{`0})</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value1">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value1</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Addition(`0,Gemstone.Numeric.Matrix{`0})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="value2">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value2</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Addition(`0,Gemstone.Numeric.Matrix{`0})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Addition(`0,Gemstone.Numeric.Matrix{`0})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.op_Division(Gemstone.Numeric.Matrix{`0},Gemstone.Numeric.Matrix{`0})">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Division(Gemstone.Numeric.Matrix{`0},Gemstone.Numeric.Matrix{`0})</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value1">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value1</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Division(Gemstone.Numeric.Matrix{`0},Gemstone.Numeric.Matrix{`0})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="value2">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value2</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Division(Gemstone.Numeric.Matrix{`0},Gemstone.Numeric.Matrix{`0})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Division(Gemstone.Numeric.Matrix{`0},Gemstone.Numeric.Matrix{`0})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.op_Division(Gemstone.Numeric.Matrix{`0},`0)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Division(Gemstone.Numeric.Matrix{`0},`0)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value1">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value1</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Division(Gemstone.Numeric.Matrix{`0},`0)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="value2">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value2</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Division(Gemstone.Numeric.Matrix{`0},`0)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Division(Gemstone.Numeric.Matrix{`0},`0)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.op_Implicit(Gemstone.Numeric.Matrix{`0})~`0[][]">
+      <summary>
+            Implicitly converts a <see cref="T:Gemstone.Numeric.ComplexNumber" /> to a .NET <see cref="T:System.Numerics.Complex" /> value.
+            </summary>
+      <param name="value">Operand.</param>
+      <returns>Complex representing the result of the operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.op_Implicit(`0[][])~Gemstone.Numeric.Matrix{`0}">
+      <summary>
+            Implicitly converts a <see cref="T:System.Double" /> to a <see cref="T:Gemstone.Numeric.ComplexNumber" />.
+            </summary>
+      <param name="value">Operand.</param>
+      <returns>ComplexNumber representing the result of the operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.op_Multiply(Gemstone.Numeric.Matrix{`0},Gemstone.Numeric.Matrix{`0})">
+      <summary>
+            Returns computed product of values.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>
+        <see cref="T:Gemstone.Numeric.Matrix`1" /> representing the result of the multiplication operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.op_Multiply(Gemstone.Numeric.Matrix{`0},`0)">
+      <summary>
+            Returns computed product of values.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>
+        <see cref="T:Gemstone.Numeric.Matrix`1" /> representing the result of the multiplication operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.op_Multiply(`0,Gemstone.Numeric.Matrix{`0})">
+      <summary>
+            Returns computed product of values.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>
+        <see cref="T:Gemstone.Numeric.Matrix`1" /> representing the result of the multiplication operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.op_Subtraction(Gemstone.Numeric.Matrix{`0},Gemstone.Numeric.Matrix{`0})">
+      <summary>
+            Returns computed difference of values.
+            </summary>
+      <param name="value1">Left hand operand.</param>
+      <param name="value2">Right hand operand.</param>
+      <returns>
+        <see cref="T:Gemstone.Numeric.Matrix`1" /> representing the result of the subtraction operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.op_Subtraction(Gemstone.Numeric.Matrix{`0},`0)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Subtraction(Gemstone.Numeric.Matrix{`0},`0)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value1">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value1</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Subtraction(Gemstone.Numeric.Matrix{`0},`0)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="value2">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value2</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Subtraction(Gemstone.Numeric.Matrix{`0},`0)</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Subtraction(Gemstone.Numeric.Matrix{`0},`0)</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.op_Subtraction(Gemstone.Numeric.Matrix{`0},`0[])">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Subtraction(Gemstone.Numeric.Matrix{`0},`0[])</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value1">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value1</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Subtraction(Gemstone.Numeric.Matrix{`0},`0[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="value2">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value2</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Subtraction(Gemstone.Numeric.Matrix{`0},`0[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Subtraction(Gemstone.Numeric.Matrix{`0},`0[])</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.op_Subtraction(`0,Gemstone.Numeric.Matrix{`0})">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Subtraction(`0,Gemstone.Numeric.Matrix{`0})</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="value1">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value1</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Subtraction(`0,Gemstone.Numeric.Matrix{`0})</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="value2">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>value2</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Subtraction(`0,Gemstone.Numeric.Matrix{`0})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.op_Subtraction(`0,Gemstone.Numeric.Matrix{`0})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.op_UnaryNegation(Gemstone.Numeric.Matrix{`0})">
+      <summary>
+            Returns the negated value.
+            </summary>
+      <param name="z">Left hand operand.</param>
+      <returns>ComplexNumber representing the result of the unary negation operation.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.OperateByColumn(System.Action{`0[],System.Int32})">
+      <summary>
+            Applies the given function to each column of the <see cref="T:Gemstone.Numeric.Matrix`1" />.
+            </summary>
+      <param name="func"></param>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.OperateByRow(System.Action{`0[]})">
+      <summary>
+            Applies the given function to each row of the <see cref="T:Gemstone.Numeric.Matrix`1" />.
+            </summary>
+      <param name="func"></param>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.OperateByValue(System.Func{`0,System.Int32,System.Int32,`0})">
+      <summary>
+            Applies the given function to each value of the <see cref="T:Gemstone.Numeric.Matrix`1" />.
+            </summary>
+      <param name="func"></param>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.PointWhiseMultiply(Gemstone.Numeric.Matrix{`0})">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.PointWhiseMultiply(Gemstone.Numeric.Matrix{`0})</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="matrix">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>matrix</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.PointWhiseMultiply(Gemstone.Numeric.Matrix{`0})</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.PointWhiseMultiply(Gemstone.Numeric.Matrix{`0})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.ReplaceSubmatrix(Gemstone.Numeric.Matrix{`0},System.Int32,System.Int32)">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.ReplaceSubmatrix(Gemstone.Numeric.Matrix{`0},System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="subMatrix">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>subMatrix</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.ReplaceSubmatrix(Gemstone.Numeric.Matrix{`0},System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="startRow">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>startRow</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.ReplaceSubmatrix(Gemstone.Numeric.Matrix{`0},System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="startColumn">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>startColumn</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.ReplaceSubmatrix(Gemstone.Numeric.Matrix{`0},System.Int32,System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="P:Gemstone.Numeric.Matrix`1.RowSums">
+      <summary>
+            Gets the sum of each row of the <see cref="T:Gemstone.Numeric.Matrix`1" />.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.RREF(`0[])">
+      <summary>
+            Returns the solution for Ax = B, given this as A and the arg as B.
+            Uses a reduced row echelon algorithm.
+            </summary>
+      <param name="Vector">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>Vector</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.RREF(`0[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.RREF(`0[])</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.TransformByColumn``1(System.Func{`0[],System.Int32,``0[]})">
+      <summary>
+            Applies the given function to each column of the <see cref="T:Gemstone.Numeric.Matrix`1" />.
+            Function does not mutate this <see cref="T:Gemstone.Numeric.Matrix`1" />, it returns a new <see cref="T:Gemstone.Numeric.Matrix`1" />.
+            </summary>
+      <param name="func"></param>
+      <typeparam name="U">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>U</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.TransformByColumn``1(System.Func{`0[],System.Int32,``0[]})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.TransformByColumn``1(System.Func{`0[],System.Int32,``0[]})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.TransformByValue``1(System.Func{`0,``0})">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.TransformByValue``1(System.Func{`0,``0})</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="func">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>func</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.TransformByValue``1(System.Func{`0,``0})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="U">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>U</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.TransformByValue``1(System.Func{`0,``0})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.TransformByValue``1(System.Func{`0,``0})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.TransformByValue``1(System.Func{`0,System.Int32,System.Int32,``0})">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.TransformByValue``1(System.Func{`0,System.Int32,System.Int32,``0})</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="func">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>func</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.TransformByValue``1(System.Func{`0,System.Int32,System.Int32,``0})</parameter>
+          </include>
+        </markup>
+      </param>
+      <typeparam name="U">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>typeparam</parameter>
+            <parameter>U</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.TransformByValue``1(System.Func{`0,System.Int32,System.Int32,``0})</parameter>
+          </include>
+        </markup>
+      </typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.TransformByValue``1(System.Func{`0,System.Int32,System.Int32,``0})</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="P:Gemstone.Numeric.Matrix`1.Transpose">
+      <summary>
+            Gets the Transpose of the <see cref="T:Gemstone.Numeric.Matrix`1" />.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.TransposeAndMultiply``1(Gemstone.Numeric.Matrix{``0})">
+      <summary>
+            Returns a <see cref="T:Gemstone.Numeric.Matrix`1" /> resulting from transposing this matrix and multiplying it with a <see cref="T:Gemstone.Numeric.Matrix`1" /></summary>
+      <param name="value"></param>
+      <typeparam name="U"></typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.TransposeAndMultiply``1(Gemstone.Numeric.Matrix{``0})</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.ArgumentException"></exception>
+    </member>
+    <member name="M:Gemstone.Numeric.Matrix`1.TransposeAndMultiply``1(``0[])">
+      <summary>
+            Returns a <see cref="T:Gemstone.Numeric.Matrix`1" /> resulting from transposing this matrix and multiplying it with a 1xN <see cref="T:Gemstone.Numeric.Matrix`1" /></summary>
+      <param name="value"></param>
+      <typeparam name="U"></typeparam>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Matrix`1.TransposeAndMultiply``1(``0[])</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.ArgumentException"></exception>
+    </member>
+    <member name="P:Gemstone.Numeric.Matrix`1.Value">
+      <summary>
+            Gets  the value of this <see cref="T:Gemstone.Numeric.Matrix`1" />.
+            </summary>
     </member>
     <member name="T:Gemstone.Numeric.RadixCodec">
       <summary>
@@ -2569,6 +5109,159 @@
             System.Globalization.NumberStyles.AllowHexSpecifier and System.Globalization.NumberStyles.HexNumber values.
             </exception>
     </member>
+    <member name="T:Gemstone.Numeric.UInt24Converter">
+      <summary>
+            Provides a type converter to convert <see cref="T:Gemstone.Numeric.UInt24" />&gt; values to and from various other representations.
+            </summary>
+      <remarks>
+            Since <see cref="T:Gemstone.Numeric.UInt24" /> reports a type code of <see cref="F:System.TypeCode.UInt32" />, the converter will convert
+            to and from <c>uint</c> values as well as other types supported by <see cref="T:System.ComponentModel.UInt32Converter" />.
+            </remarks>
+    </member>
+    <member name="M:Gemstone.Numeric.UInt24Converter.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Gemstone.Numeric.UInt24Converter</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.UInt24Converter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Determines if this converter can convert an object in the given source type to the native type of the converter.</summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+      <param name="sourceType">A <see cref="T:System.Type" /> that represents the type from which you want to convert.</param>
+      <returns>
+        <see langword="true" /> if this converter can perform the operation; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.UInt24Converter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Returns a value indicating whether this converter can convert an object to the given destination type using the context.</summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+      <param name="destinationType">A <see cref="T:System.Type" /> that represents the type to which you want to convert.</param>
+      <returns>
+        <see langword="true" /> if this converter can perform the operation; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.UInt24Converter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Converts the given object to the converter's native type.</summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+      <param name="culture">A <see cref="T:System.Globalization.CultureInfo" /> that specifies the culture to represent the number.</param>
+      <param name="value">The object to convert.</param>
+      <returns>An <see cref="T:System.Object" /> that represents the converted value.</returns>
+      <exception cref="T:System.Exception">
+        <paramref name="value" /> is not a valid value for the target type.</exception>
+      <exception cref="T:System.NotSupportedException">The conversion cannot be performed.</exception>
+    </member>
+    <member name="M:Gemstone.Numeric.UInt24Converter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Converts the specified object to another type.</summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+      <param name="culture">A <see cref="T:System.Globalization.CultureInfo" /> that specifies the culture to represent the number.</param>
+      <param name="value">The object to convert.</param>
+      <param name="destinationType">The type to convert the object to.</param>
+      <returns>An <see cref="T:System.Object" /> that represents the converted value.</returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> is <see langword="null" />.</exception>
+      <exception cref="T:System.NotSupportedException">The conversion cannot be performed.</exception>
+    </member>
+    <member name="T:Gemstone.Numeric.Analysis.ButterworthFilter">
+      <summary>
+            A class that implements a butterworth digital filter.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.ButterworthFilter.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+      <summary>
+            Implements a bandpass filter
+            </summary>
+      <param name="fStop1">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>fStop1</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.ButterworthFilter.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="fPass1">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>fPass1</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.ButterworthFilter.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="fPass2">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>fPass2</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.ButterworthFilter.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="fStop2">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>fStop2</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.ButterworthFilter.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="stopAttenuation">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>stopAttenuation</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.ButterworthFilter.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="passRipple">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>passRipple</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.ButterworthFilter.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="samplingFreq">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>samplingFreq</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.ButterworthFilter.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.ButterworthFilter.FiltFilt(System.Double[])">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.ButterworthFilter.FiltFilt(System.Double[])</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="x">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>x</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.ButterworthFilter.FiltFilt(System.Double[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.ButterworthFilter.FiltFilt(System.Double[])</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
     <member name="T:Gemstone.Numeric.Analysis.CurveFit">
       <summary>
             Linear regression algorithm.
@@ -2591,6 +5284,16 @@
       <param name="yValues">A list of <see cref="T:System.Double" /> y-values.</param>
       <returns>An array of <see cref="T:System.Double" /> values.</returns>
     </member>
+    <member name="M:Gemstone.Numeric.Analysis.CurveFit.LeastSquares(System.Double[],System.Double[],System.Double@,System.Double@)">
+      <summary>
+            Uses least squares linear regression to estimate the coefficients a and b
+            from the given (x,y) data points for the equation y = a + bx.
+            </summary>
+      <param name="xValues">x-value array</param>
+      <param name="yValues">y-value array</param>
+      <param name="a">the out a coefficient</param>
+      <param name="b">the out b coefficient</param>
+    </member>
     <member name="M:Gemstone.Numeric.Analysis.CurveFit.LeastSquares(System.Double[],System.Double[],System.Double[],System.Double@,System.Double@,System.Double@)">
       <summary>
             Uses least squares linear regression to estimate the coefficients a, b, and c
@@ -2602,6 +5305,119 @@
       <param name="a">the out a coefficient</param>
       <param name="b">the out b coefficient</param>
       <param name="c">the out c coefficient</param>
+    </member>
+    <member name="T:Gemstone.Numeric.Analysis.DigitalFilter">
+      <summary>
+            A class that implements a digital filter.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.DigitalFilter.#ctor(System.Double[],System.Double[],System.Int32)">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Gemstone.Numeric.Analysis.DigitalFilter</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="b">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>b</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.DigitalFilter.#ctor(System.Double[],System.Double[],System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="a">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>a</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.DigitalFilter.#ctor(System.Double[],System.Double[],System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="size">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>size</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.DigitalFilter.#ctor(System.Double[],System.Double[],System.Int32)</parameter>
+          </include>
+        </markup>
+      </param>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.DigitalFilter.FiltFilt(System.Double[])">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.DigitalFilter.FiltFilt(System.Double[])</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="x">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>x</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.DigitalFilter.FiltFilt(System.Double[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.DigitalFilter.FiltFilt(System.Double[])</parameter>
+          </include>
+        </markup>
+      </returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.DigitalFilter.FiltFilt(System.Double[],System.Double[],System.Double[])">
+      <summary>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>summary</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.DigitalFilter.FiltFilt(System.Double[],System.Double[],System.Double[])</parameter>
+          </include>
+        </markup>
+      </summary>
+      <param name="b">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>b</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.DigitalFilter.FiltFilt(System.Double[],System.Double[],System.Double[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="a">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>a</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.DigitalFilter.FiltFilt(System.Double[],System.Double[],System.Double[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <param name="x">
+        <markup>
+          <include item="SMCMissingParamTag">
+            <parameter>param</parameter>
+            <parameter>x</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.DigitalFilter.FiltFilt(System.Double[],System.Double[],System.Double[])</parameter>
+          </include>
+        </markup>
+      </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.DigitalFilter.FiltFilt(System.Double[],System.Double[],System.Double[])</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="T:Gemstone.Numeric.Analysis.Euclidean">
       <summary>
@@ -2756,10 +5572,91 @@
         </markup>
       </returns>
     </member>
+    <member name="T:Gemstone.Numeric.Analysis.KalmanFilter">
+      <summary>
+            Predicts the next state based on the current estimate.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.KalmanFilter.#ctor(System.Double,System.Double,System.Double)">
+      <summary>
+            Creates a new Kalman filter.
+            </summary>
+      <param name="processNoise">
+        <para>
+            Determines how much the system state is expected to change between measurements.
+            </para>
+        <para>
+            Start with a very small value (e.g., 1e-5) and gradually increase it. Too small a value can
+            make the filter slow to adapt to changes, while too large can make it over-responsive to noise.
+            </para>
+      </param>
+      <param name="measurementNoise">
+        <para>
+            Reflects the confidence in the measurements. A lower value gives more weight to the measurements.
+            </para>
+        <para>
+            If your measurements are accurate, set R to a small value (e.g., 1e-3). Increase it if the
+            measurements are noisy.
+            </para>
+      </param>
+      <param name="estimatedError">
+        <para>
+            Represents the initial guess about the error in the state estimate.
+            </para>
+        <para></para>
+            Start with a value that reflects the expected variability in the initial state.
+            </param>
+    </member>
+    <member name="F:Gemstone.Numeric.Analysis.KalmanFilter.DefaultEstimateError">
+      <summary>
+            Default estimate error.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.Analysis.KalmanFilter.DefaultMeasurementNoise">
+      <summary>
+            Default measurement noise covariance.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.Analysis.KalmanFilter.DefaultProcessNoise">
+      <summary>
+            Default process noise covariance.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.KalmanFilter.Filter(System.Collections.Generic.IReadOnlyList{System.Double})">
+      <summary>
+            Filters a set of measurements.
+            </summary>
+      <param name="measurements">Signals to filter.</param>
+      <returns>Measurements with Kalman filter applied.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.KalmanFilter.Update(System.Double)">
+      <summary>
+            Updates the filter with a new measurement.
+            </summary>
+      <param name="measurement">New measurement value.</param>
+      <returns>Predicted next state.</returns>
+    </member>
     <member name="T:Gemstone.Numeric.Analysis.NumericAnalysisExtensions">
       <summary>
             Defines extension functions related to numerical analysis over a sequence of data.
             </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.NumericAnalysisExtensions.NaNAwareMedian(System.Collections.Generic.IEnumerable{System.Double},System.Boolean)">
+      <summary>
+            median calculates the median values of a sequence of <see cref="T:System.Double" /> values, while being aware of NaN values.
+            </summary>
+      <param name="source">Source data sample.</param>
+      <param name="ommitNaN">A Flag indicating whether any NaN should be skipped.</param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.NumericAnalysisExtensions.NaNAwareMedian(System.Collections.Generic.IEnumerable{System.Double},System.Boolean)</parameter>
+          </include>
+        </markup>
+      </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> is <c>null</c></exception>
     </member>
     <member name="M:Gemstone.Numeric.Analysis.NumericAnalysisExtensions.StandardDeviation(System.Collections.Generic.IEnumerable{System.Decimal},System.Boolean)">
       <summary>
@@ -2843,25 +5740,21 @@
       <summary>
             Used to hold x-y coordinates
             </summary>
+      <param name="X">x-coordinate</param>
+      <param name="Y">y-coordinate</param>
     </member>
-    <member name="M:Gemstone.Numeric.Analysis.Point.#ctor">
+    <member name="M:Gemstone.Numeric.Analysis.Point.#ctor(System.Double,System.Double)">
       <summary>
-        <markup>
-          <include item="SMCAutoDocConstructor">
-            <parameter>Gemstone.Numeric.Analysis.Point</parameter>
-          </include>
-        </markup>
-      </summary>
+            Used to hold x-y coordinates
+            </summary>
+      <param name="X">x-coordinate</param>
+      <param name="Y">y-coordinate</param>
     </member>
     <member name="P:Gemstone.Numeric.Analysis.Point.X">
-      <summary>
-            x coordinate
-            </summary>
+      <summary>x-coordinate</summary>
     </member>
     <member name="P:Gemstone.Numeric.Analysis.Point.Y">
-      <summary>
-            y coordinate
-            </summary>
+      <summary>y-coordinate</summary>
     </member>
     <member name="T:Gemstone.Numeric.Analysis.SineWave">
       <summary>
@@ -2901,6 +5794,28 @@
       <summary>
             2 * pi
             </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.Analysis.VariableModeDecomposition">
+      <summary>
+            Implements a BoxMuller method for generating statistically normal random numbers.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Analysis.VariableModeDecomposition.vmd(System.Collections.Generic.IEnumerable{System.Double},System.Int32,System.Int32,System.Double)">
+      <summary>
+            returns intrinsic mode functions (IMFs) and a residual signal corresponding to the variational mode decomposition (VMD) of X, with default decomposition parameters.
+            </summary>
+      <param name="x">The input signal to oeprate on </param>
+      <param name="MaxIterations">The maximum Numebr of Itterations. </param>
+      <param name="NumIMFs">The number of intrinsic mode Functions to be found.</param>
+      <param name="PenaltyFactor"> The penalty factor for the VMD algorithm. </param>
+      <returns>
+        <markup>
+          <include item="SMCMissingTag">
+            <parameter>returns</parameter>
+            <parameter>M:Gemstone.Numeric.Analysis.VariableModeDecomposition.vmd(System.Collections.Generic.IEnumerable{System.Double},System.Int32,System.Int32,System.Double)</parameter>
+          </include>
+        </markup>
+      </returns>
     </member>
     <member name="T:Gemstone.Numeric.Analysis.WaveFit">
       <summary>
@@ -3146,6 +6061,16 @@
     <member name="F:Gemstone.Numeric.ComplexExtensions.ComplexNotationOptions.None">
       <summary>
             No options are enabled.
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.EE.CommonVoltageLevels">
+      <summary>
+            Defines common transmission voltage levels.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.CommonVoltageLevels.Values">
+      <summary>
+            Gets common transmission voltage level values.
             </summary>
     </member>
     <member name="T:Gemstone.Numeric.EE.LineFrequency">
@@ -3730,6 +6655,11 @@
             Common transmission voltage levels enumeration.
             </summary>
     </member>
+    <member name="F:Gemstone.Numeric.EE.VoltageLevel.kV34">
+      <summary>
+            34 kV.
+            </summary>
+    </member>
     <member name="F:Gemstone.Numeric.EE.VoltageLevel.kV44">
       <summary>
             44 kV.
@@ -3807,6 +6737,244 @@
             </summary>
       <param name="level">Target <see cref="T:Gemstone.Numeric.EE.VoltageLevel" /> enum value.</param>
       <returns>Voltage level for the specified <paramref name="level" />.</returns>
+    </member>
+    <member name="T:Gemstone.Numeric.Geo.CoordinateReferenceSystem">
+      <summary>
+            Abstract class that defines coordinate reference systems for projecting
+            geographical points into pixel (screen) coordinates and back.
+            </summary>
+      <remarks>http://en.wikipedia.org/wiki/Coordinate_reference_system</remarks>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.CoordinateReferenceSystem.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Gemstone.Numeric.Geo.CoordinateReferenceSystem</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.CoordinateReferenceSystem.Distance(Gemstone.Numeric.Geo.GeoCoordinate,Gemstone.Numeric.Geo.GeoCoordinate)">
+      <summary>
+            Returns the distance between two geographical coordinates.
+            </summary>
+      <param name="coordinate1">The first geographical coordinate.</param>
+      <param name="coordinate2">The second geographical coordinate.</param>
+      <returns>The distance between two geographical coordinates.</returns>
+    </member>
+    <member name="P:Gemstone.Numeric.Geo.CoordinateReferenceSystem.Projection">
+      <summary>
+            Gets the projection used by the CRS.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.CoordinateReferenceSystem.Scale(System.Double)">
+      <summary>
+            Returns the scale used when transforming projected coordinates into
+            pixel coordinates for a particular zoom. For example, it returns
+            <c>256 * 2^zoom</c> for Mercator-based CRS.
+            </summary>
+      <param name="zoom">The zoom level.</param>
+      <returns>The scale at the given zoom level.</returns>
+    </member>
+    <member name="P:Gemstone.Numeric.Geo.CoordinateReferenceSystem.Transformation">
+      <summary>
+            Gets the transformation used by the CRS.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.CoordinateReferenceSystem.Translate(Gemstone.Numeric.Analysis.Point,System.Double)">
+      <summary>
+            Translates the given cartesian point to a
+            geographical coordinate at the given zoom level.
+            </summary>
+      <param name="point">The point to be translated.</param>
+      <param name="zoom">The zoom level.</param>
+      <returns>The geographical location of the point.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.CoordinateReferenceSystem.Translate(Gemstone.Numeric.Geo.GeoCoordinate,System.Double)">
+      <summary>
+            Translates the given geographical coordinate
+            to a cartesian point at the given zoom level.
+            </summary>
+      <param name="coordinate">The coordinate to be translated.</param>
+      <param name="zoom">The zoom level.</param>
+      <returns>The cartesian point corresponding to the given coordinate.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.CoordinateReferenceSystem.Zoom(System.Double)">
+      <summary>
+            Returns the zoom level corresponding to the given scale factor.
+            </summary>
+      <param name="scale">The scale factor.</param>
+      <returns>The zoom level corresponding to the given scale factor.</returns>
+    </member>
+    <member name="T:Gemstone.Numeric.Geo.Earth">
+      <summary>
+            Serves as the base for CRS that are global such that they cover the earth.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.Earth.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Gemstone.Numeric.Geo.Earth</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.Earth.Distance(Gemstone.Numeric.Geo.GeoCoordinate,Gemstone.Numeric.Geo.GeoCoordinate)">
+      <summary>
+            Returns the distance, in meters, between two geographical coordinates.
+            </summary>
+      <param name="coordinate1">The first geographical coordinate.</param>
+      <param name="coordinate2">The second geographical coordinate.</param>
+      <returns>The distance between two geographical coordinates.</returns>
+    </member>
+    <member name="T:Gemstone.Numeric.Geo.EPSG3857">
+      <summary>
+            The most common CRS for online maps.
+            Uses Spherical Mercator projection.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.EPSG3857.#ctor">
+      <summary>
+            Creates a new instance of the <see cref="T:Gemstone.Numeric.Geo.EPSG3857" /> class.
+            </summary>
+    </member>
+    <member name="P:Gemstone.Numeric.Geo.EPSG3857.Projection">
+      <summary>
+            Gets the projection used by the CRS.
+            </summary>
+    </member>
+    <member name="P:Gemstone.Numeric.Geo.EPSG3857.Transformation">
+      <summary>
+            Gets the transformation used by the CRS.
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.Geo.GeoCoordinate">
+      <summary>
+            Represents a location in the geographical coordinate system.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.GeoCoordinate.#ctor(System.Double,System.Double)">
+      <summary>
+            Creates a new instance of the <see cref="T:Gemstone.Numeric.Geo.GeoCoordinate" /> class.
+            </summary>
+      <param name="latitude">The latitude of the geographical coordinate.</param>
+      <param name="longitude">The longitude of the geographical coordinate.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.GeoCoordinate.Distance(Gemstone.Numeric.Geo.GeoCoordinate)">
+      <summary>
+            Calculates distance between this and another <see cref="T:Gemstone.Numeric.Geo.GeoCoordinate" /> value.
+            Base on the <see cref="T:Gemstone.Numeric.Geo.EPSG3857" /> reference system.
+            </summary>
+      <param name="other">Other <see cref="T:Gemstone.Numeric.Geo.GeoCoordinate" />.</param>
+      <returns>Distance between two <see cref="T:Gemstone.Numeric.Geo.GeoCoordinate" /> values.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.GeoCoordinate.Distance(Gemstone.Numeric.Geo.GeoCoordinate,Gemstone.Numeric.Geo.CoordinateReferenceSystem)">
+      <summary>
+            Calculates distance between this and another <see cref="T:Gemstone.Numeric.Geo.GeoCoordinate" /> value.
+            using the specified <see cref="T:Gemstone.Numeric.Geo.CoordinateReferenceSystem" /></summary>
+      <param name="other">Other <see cref="T:Gemstone.Numeric.Geo.GeoCoordinate" />.</param>
+      <param name="referenceSystem">The <see cref="T:Gemstone.Numeric.Geo.CoordinateReferenceSystem" /> used.</param>
+      <returns>Distance between two <see cref="T:Gemstone.Numeric.Geo.GeoCoordinate" /> values.</returns>
+    </member>
+    <member name="P:Gemstone.Numeric.Geo.GeoCoordinate.Latitude">
+      <summary>
+            Gets the latitude of the geographical coordinate.
+            </summary>
+    </member>
+    <member name="P:Gemstone.Numeric.Geo.GeoCoordinate.Longitude">
+      <summary>
+            Gets the longitude of the geographical coordinate.
+            </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.Geo.IProjection">
+      <summary>
+            Defines a map projection to translate geographical
+            coordinates to points in an xy-coordinate system.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.IProjection.Project(Gemstone.Numeric.Geo.GeoCoordinate)">
+      <summary>
+            Projects the given coordinates onto the xy-coordinate system.
+            </summary>
+      <param name="coordinate">The geographical coordinates to be projected.</param>
+      <returns>The given coordinates projected onto the xy-coordinate system.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.IProjection.Unproject(Gemstone.Numeric.Analysis.Point)">
+      <summary>
+            Unprojects the given point to the geographical coordinate system.
+            </summary>
+      <param name="point">The point to be unprojected.</param>
+      <returns>The geographical coordinates of the given point.</returns>
+    </member>
+    <member name="T:Gemstone.Numeric.Geo.SphericalMercator">
+      <summary>
+            Spherical Mercator projection; the most common projection for online maps.
+            Assumes that Earth is a sphere. Used by the <c>EPSG:3857</c> CRS.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.SphericalMercator.#ctor">
+      <summary>
+        <markup>
+          <include item="SMCAutoDocConstructor">
+            <parameter>Gemstone.Numeric.Geo.SphericalMercator</parameter>
+          </include>
+        </markup>
+      </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.Geo.SphericalMercator.MaxLatitude">
+      <summary>
+            The maximum latitude.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.SphericalMercator.Project(Gemstone.Numeric.Geo.GeoCoordinate)">
+      <summary>
+            Projects the given coordinates onto the xy-coordinate system.
+            </summary>
+      <param name="coordinate">The geographical coordinates to be projected.</param>
+      <returns>The given coordinates projected onto the xy-coordinate system.</returns>
+    </member>
+    <member name="F:Gemstone.Numeric.Geo.SphericalMercator.R">
+      <summary>
+            Radius of the Earth (meters).
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.SphericalMercator.Unproject(Gemstone.Numeric.Analysis.Point)">
+      <summary>
+            Unprojects the given point to the geographical coordinate system.
+            </summary>
+      <param name="point">The point to be unprojected.</param>
+      <returns>The geographical coordinates of the given point.</returns>
+    </member>
+    <member name="T:Gemstone.Numeric.Geo.Transformation">
+      <summary>
+            Represents a linear transformation over an xy-coordinate system.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.Transformation.#ctor(System.Double,System.Double,System.Double,System.Double)">
+      <summary>
+            Creates a new instance of the <see cref="T:Gemstone.Numeric.Geo.Transformation" /> class.
+            </summary>
+      <param name="xScale">The scale to be applied to the x-value of the point.</param>
+      <param name="xOffset">The offset to be applied to the x-value of the point.</param>
+      <param name="yScale">The scale to be applied to the y-value of the point.</param>
+      <param name="yOffset">The offset to be applied to the y-value of the point.</param>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.Transformation.Transform(Gemstone.Numeric.Analysis.Point,System.Double)">
+      <summary>
+            Transforms the given point to another location.
+            </summary>
+      <param name="point">The point to be transformed.</param>
+      <param name="scale">The scale to apply after the transformation.</param>
+      <returns>The transformed point.</returns>
+    </member>
+    <member name="M:Gemstone.Numeric.Geo.Transformation.Untransform(Gemstone.Numeric.Analysis.Point,System.Double)">
+      <summary>
+            Untransforms the given point to its original location.
+            </summary>
+      <param name="point">The transformed point.</param>
+      <param name="scale">The scale that was applied after the transformation.</param>
+      <returns>The original point.</returns>
     </member>
     <member name="T:Gemstone.Numeric.Int24Extensions.BigEndian">
       <summary>
@@ -4201,6 +7369,20 @@
       <summary>
             Gets the collection of y-coordinates of points at which the values are known.
             </summary>
+    </member>
+    <member name="T:Gemstone.Numeric.Interpolation.Pchip">
+      <summary>
+            Represents a piecebut-three-order Hermite Interpolation similar to Matlab Pchip.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.Interpolation.Pchip.Interp1(System.Double[],System.Double[],System.Double[])">
+      <summary>
+            interpolates to find Vq, the values of the underlying function y=F(x) at the query points Xq.
+            </summary>
+      <param name="x"> The x-values provided for the estimation of F(x).</param>
+      <param name="y"> The y-values provided for the estimation of y = F(x) </param>
+      <param name="new_x"> The x values to be estimated </param>
+      <returns> the estimated y-values at location x = <see paramref="new_x" /></returns>
     </member>
     <member name="T:Gemstone.Numeric.Interpolation.PiecewiseLinearFunction">
       <summary>
