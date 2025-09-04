@@ -7492,7 +7492,7 @@
             </summary>
       <remarks>
         <para>The array index matches the exponent to which the x-value is raised.</para>
-        <code language="cs">term[i] = Coefficients[i] * Math.Pow(x - XValue, i);</code>
+        <code>term[i] = Coefficients[i] * Math.Pow(x - XValue, i);</code>
       </remarks>
     </member>
     <member name="P:Gemstone.Numeric.Interpolation.Spline.XValue">
