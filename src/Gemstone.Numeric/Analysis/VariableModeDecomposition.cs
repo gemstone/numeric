@@ -266,7 +266,12 @@ public static class VariableModeDecomposition
         // This will also restrict to the top N most prominent maxima.
         int[] locMaxima = maxVals.Select((t, i) => new Tuple<int, bool>(i, t)).Where(v => v.Item2).Select(v => v.Item1).ToArray();
 
-        double[] P = ComputeProminence(x, locMaxima).ToArray();
+        double[] P;
+        if (locMaxima.Length == 0)
+            P = x.Select(x => 0.0D).ToArray();
+        else
+            P = ComputeProminence(x, locMaxima).ToArray();
+       
 
         Tuple<int,int>[] flatIndices = locMaxima.Select((v) => { 
             double val = x.ElementAt(v);
@@ -342,7 +347,6 @@ public static class VariableModeDecomposition
                 i++;
                 continue;
             }
-
             int right = i;
             int left = i;
             double v = dataEnumerator.Current;
