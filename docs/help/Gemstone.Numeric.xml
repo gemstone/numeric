@@ -7399,7 +7399,7 @@
         <para>
             Here is an example of how to use this class.
             </para>
-        <code language="cs">
+        <code>
             Func&lt;double, double&gt; piecewiseLinearFunc = new PiecewiseLinearFunction()
                 .SetDomain(-1, 0, 1)
                 .SetRange(0, 1, 0);
