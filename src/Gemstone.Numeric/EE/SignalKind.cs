@@ -87,6 +87,14 @@ public enum SignalKind
     /// </summary>
     Quality,
     /// <summary>
+    /// Point-on-wave current.
+    /// </summary>
+    PoWCurrent,
+    /// <summary>
+    /// Point-on-wave voltage.
+    /// </summary>
+    PoWVoltage,
+    /// <summary>
     /// Undetermined signal type.
     /// </summary>
     Unknown
@@ -128,6 +136,10 @@ public static class SignalKindExtensions
                 return "AL"; // Alarm Value
             case SignalKind.Quality:
                 return "QF"; // Quality Flags
+            case SignalKind.PoWCurrent:
+                return "IW"; // Point-on-Wave Current
+            case SignalKind.PoWVoltage:
+                return "VW"; // Point-on-Wave Voltage
             default:
                 return "??";
         }
@@ -140,32 +152,35 @@ public static class SignalKindExtensions
     /// <returns>The <see cref="SignalKind"/> for the specified <paramref name="acronym"/>.</returns>
     public static SignalKind ParseSignalKind(this string acronym)
     {
-        switch (acronym)
+        return acronym switch
         {
-            case "PA": // Phase Angle
-                return SignalKind.Angle;
-            case "PM": // Phase Magnitude
-                return SignalKind.Magnitude;
-            case "FQ": // Frequency
-                return SignalKind.Frequency;
-            case "DF": // dF/dt
-                return SignalKind.DfDt;
-            case "SF": // Status Flags
-                return SignalKind.Status;
-            case "DV": // Digital Value
-                return SignalKind.Digital;
-            case "AV": // Analog Value
-                return SignalKind.Analog;
-            case "CV": // Calculated Value
-                return SignalKind.Calculation;
-            case "ST": // Statistical Value
-                return SignalKind.Statistic;
-            case "AL": // Alarm Value
-                return SignalKind.Alarm;
-            case "QF": // Quality Flags
-                return SignalKind.Quality;
-            default:
-                return SignalKind.Unknown;
-        }
+            "PA" => // Phase Angle
+                SignalKind.Angle,
+            "PM" => // Phase Magnitude
+                SignalKind.Magnitude,
+            "FQ" => // Frequency
+                SignalKind.Frequency,
+            "DF" => // dF/dt
+                SignalKind.DfDt,
+            "SF" => // Status Flags
+                SignalKind.Status,
+            "DV" => // Digital Value
+                SignalKind.Digital,
+            "AV" => // Analog Value
+                SignalKind.Analog,
+            "CV" => // Calculated Value
+                SignalKind.Calculation,
+            "ST" => // Statistical Value
+                SignalKind.Statistic,
+            "AL" => // Alarm Value
+                SignalKind.Alarm,
+            "QF" => // Quality Flags
+                SignalKind.Quality,
+            "IW" => // Point-on-wave Current
+                SignalKind.PoWCurrent,
+            "VW" => // Point-on-wave Voltage
+                SignalKind.PoWVoltage,
+            _ => SignalKind.Unknown
+        };
     }
 }

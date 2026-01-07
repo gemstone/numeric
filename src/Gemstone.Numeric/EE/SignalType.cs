@@ -95,6 +95,14 @@ public enum SignalType
     /// </summary>
     QUAL = 13,
     /// <summary>
+    /// Point-on-Wave current.
+    /// </summary>
+    IPOW = 14,
+    /// <summary>
+    /// Point-on-Wave voltage.
+    /// </summary>
+    VPOW = 15,
+    /// <summary>
     /// Undefined signal.
     /// </summary>
     NONE = -1
@@ -131,15 +139,19 @@ public static class SignalTypeExtensions
             case SignalType.FLAG:
                 return "Status flags";
             case SignalType.DIGI:
-                return "Digital Values";
+                return "Digital values";
             case SignalType.CALC:
-                return "Calculated Value";
+                return "Calculated value";
             case SignalType.STAT:
                 return "Statistic";
             case SignalType.ALRM:
                 return "Alarm";
             case SignalType.QUAL:
-                return "Quality Flags";
+                return "Quality flags";
+            case SignalType.IPOW:
+                return "Point-on-Wave current";
+            case SignalType.VPOW:
+                return "Point-on-Wave voltage";
             case SignalType.NONE:
                 return "Undefined";
             default:
