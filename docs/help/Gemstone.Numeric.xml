@@ -6385,6 +6385,16 @@
             Quality flags.
             </summary>
     </member>
+    <member name="F:Gemstone.Numeric.EE.SignalKind.PoWCurrent">
+      <summary>
+            Point-on-wave current.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalKind.PoWVoltage">
+      <summary>
+            Point-on-wave voltage.
+            </summary>
+    </member>
     <member name="F:Gemstone.Numeric.EE.SignalKind.Unknown">
       <summary>
             Undetermined signal type.
@@ -6630,6 +6640,16 @@
     <member name="F:Gemstone.Numeric.EE.SignalType.QUAL">
       <summary>
             Quality flags.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.IPOW">
+      <summary>
+            Point-on-Wave current.
+            </summary>
+    </member>
+    <member name="F:Gemstone.Numeric.EE.SignalType.VPOW">
+      <summary>
+            Point-on-Wave voltage.
             </summary>
     </member>
     <member name="F:Gemstone.Numeric.EE.SignalType.NONE">
