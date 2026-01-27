@@ -662,7 +662,7 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
         if (NRows != NColumns)
             throw new Exception("Attempt to decompose a non-square m");
 
-        Matrix<T> result = new(this);
+        Matrix<T> result = (Matrix<T>)this.Clone();
 
         Permutation = Enumerable.Range(0, NRows).ToArray();
 
@@ -683,12 +683,8 @@ public struct Matrix<T> : ICloneable where T : struct, INumberBase<T>, IComparis
 
             if (pRow != j) // if largest value not on pivot, swap rows
             {
-                T[] row = result[pRow];
-                result[j] = result[j].Select((v, i) => (i <= j ? v : row[i])).ToArray();
-
-                int tmp = Permutation[pRow]; // and swap perm info
-                Permutation[pRow] = Permutation[j];
-                Permutation[j] = tmp;
+                (result[pRow], result[j]) = (result[j], result[pRow]);
+                (Permutation[pRow], Permutation[j]) = (Permutation[j], Permutation[pRow]);
             }
 
             //  if (result[j][j] == 0.0)
