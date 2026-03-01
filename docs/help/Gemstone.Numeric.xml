@@ -1318,276 +1318,6 @@
             Gets or sets the real component of this <see cref="T:Gemstone.Numeric.ComplexNumber" />.
             </summary>
     </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromChecked``1(``0,Gemstone.Numeric.ComplexNumber@)">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromChecked``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
-          </include>
-        </markup>
-      </summary>
-      <param name="value">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>value</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromChecked``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="result">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>result</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromChecked``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <typeparam name="TOther">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TOther</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromChecked``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
-          </include>
-        </markup>
-      </typeparam>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromChecked``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromSaturating``1(``0,Gemstone.Numeric.ComplexNumber@)">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromSaturating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
-          </include>
-        </markup>
-      </summary>
-      <param name="value">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>value</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromSaturating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="result">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>result</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromSaturating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <typeparam name="TOther">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TOther</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromSaturating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
-          </include>
-        </markup>
-      </typeparam>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromSaturating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromTruncating``1(``0,Gemstone.Numeric.ComplexNumber@)">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromTruncating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
-          </include>
-        </markup>
-      </summary>
-      <param name="value">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>value</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromTruncating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="result">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>result</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromTruncating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <typeparam name="TOther">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TOther</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromTruncating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
-          </include>
-        </markup>
-      </typeparam>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertFromTruncating``1(``0,Gemstone.Numeric.ComplexNumber@)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToChecked``1(Gemstone.Numeric.ComplexNumber,``0@)">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToChecked``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
-          </include>
-        </markup>
-      </summary>
-      <param name="value">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>value</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToChecked``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="result">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>result</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToChecked``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <typeparam name="TOther">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TOther</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToChecked``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
-          </include>
-        </markup>
-      </typeparam>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToChecked``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToSaturating``1(Gemstone.Numeric.ComplexNumber,``0@)">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToSaturating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
-          </include>
-        </markup>
-      </summary>
-      <param name="value">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>value</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToSaturating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="result">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>result</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToSaturating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <typeparam name="TOther">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TOther</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToSaturating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
-          </include>
-        </markup>
-      </typeparam>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToSaturating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
-    <member name="M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToTruncating``1(Gemstone.Numeric.ComplexNumber,``0@)">
-      <summary>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>summary</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToTruncating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
-          </include>
-        </markup>
-      </summary>
-      <param name="value">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>value</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToTruncating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <param name="result">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>param</parameter>
-            <parameter>result</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToTruncating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
-          </include>
-        </markup>
-      </param>
-      <typeparam name="TOther">
-        <markup>
-          <include item="SMCMissingParamTag">
-            <parameter>typeparam</parameter>
-            <parameter>TOther</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToTruncating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
-          </include>
-        </markup>
-      </typeparam>
-      <returns>
-        <markup>
-          <include item="SMCMissingTag">
-            <parameter>returns</parameter>
-            <parameter>M:Gemstone.Numeric.ComplexNumber.System.Numerics.INumberBase&lt;Gemstone.Numeric.ComplexNumber&gt;.TryConvertToTruncating``1(Gemstone.Numeric.ComplexNumber,``0@)</parameter>
-          </include>
-        </markup>
-      </returns>
-    </member>
     <member name="M:Gemstone.Numeric.ComplexNumber.ToString">
       <summary>
             Converts the numeric value of this instance to its equivalent string representation.
@@ -6400,6 +6130,11 @@
             Undetermined signal type.
             </summary>
     </member>
+    <member name="M:Gemstone.Numeric.EE.SignalKindExtensions.GetAcronym(Gemstone.Numeric.EE.SignalKind)">
+      <summary>
+            Gets the acronym for the specified <see cref="T:Gemstone.Numeric.EE.SignalKind" />.
+            </summary>
+    </member>
     <member name="T:Gemstone.Numeric.EE.SignalKindExtensions">
       <summary>
             Defines extension functions for the <see cref="T:Gemstone.Numeric.EE.SignalKind" /> enumeration.
@@ -6657,6 +6392,11 @@
             Undefined signal.
             </summary>
     </member>
+    <member name="M:Gemstone.Numeric.EE.SignalTypeExtensions.GetFormattedName(Gemstone.Numeric.EE.SignalType)">
+      <summary>
+            Returns display friendly signal type name.
+            </summary>
+    </member>
     <member name="T:Gemstone.Numeric.EE.SignalTypeExtensions">
       <summary>
             Defines extension functions for the <see cref="T:Gemstone.Numeric.EE.SignalType" /> enumeration.
@@ -6733,6 +6473,11 @@
     <member name="F:Gemstone.Numeric.EE.VoltageLevel.kV1100">
       <summary>
             1100 kV.
+            </summary>
+    </member>
+    <member name="M:Gemstone.Numeric.EE.VoltageLevelExtensions.Value(Gemstone.Numeric.EE.VoltageLevel)">
+      <summary>
+            Gets the voltage level for the specified <see cref="T:Gemstone.Numeric.EE.VoltageLevel" /> enum value.
             </summary>
     </member>
     <member name="T:Gemstone.Numeric.EE.VoltageLevelExtensions">
