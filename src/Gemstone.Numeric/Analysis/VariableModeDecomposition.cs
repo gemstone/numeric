@@ -26,27 +26,10 @@
 //------------------------------------------------------------------------------------------------------
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Diagnostics;
-using System.DirectoryServices.ActiveDirectory;
-using System.Drawing;
 using System.Linq;
-using System.Reflection;
-using System.Security.Cryptography;
-using System.Security.Cryptography.Xml;
-using System.Xml.Linq;
-using Gemstone.Numeric.Random.Normal;
 using Gemstone.Numeric.Random.Uniform;
-using JetBrains.Annotations;
 using MathNet.Numerics;
-using MathNet.Numerics.Data.Matlab;
-using MathNet.Numerics.LinearAlgebra;
-using MathNet.Numerics.LinearAlgebra.Factorization;
-using MathNet.Numerics.LinearAlgebra.Solvers;
-using MathNet.Numerics.Random;
-using Microsoft.Extensions.Hosting;
 
 namespace Gemstone.Numeric.Analysis;
 

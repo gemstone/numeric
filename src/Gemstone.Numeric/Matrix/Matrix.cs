@@ -23,14 +23,9 @@
 
 
 using System;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using Gemstone.Numeric.ComplexExtensions;
-using Gemstone.Units;
 using System.Numerics;
 using System.Linq;
 using System.Collections.Generic;
-using System.Data;
 
 // ReSharper disable CompareOfFloatsByEqualityOperator
 // ReSharper disable PossibleInvalidOperationException
